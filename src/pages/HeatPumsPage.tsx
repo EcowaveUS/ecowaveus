@@ -1,4 +1,3 @@
-import React from 'react'
 import { Layout } from '../utils/Layout'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
