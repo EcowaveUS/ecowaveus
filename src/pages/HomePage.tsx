@@ -12,7 +12,7 @@ export const HomePage = () => {
     <StyledHome>
       <Container>
         <Title>SWITCH TO THE FUTURE</Title>
-        <StyledImage src="/src/assets/images/fondo.png"/>
+        <StyledImage src="/src/assets/fondo.png"/>
         <ServiceInfo>
           <Subtitle>Great Service. <span>Fair Prices.</span></Subtitle>
           <SubtitleInfo>Quality HVAC & Plumbing Services for Your Home or Business</SubtitleInfo>
@@ -24,14 +24,14 @@ export const HomePage = () => {
         </ServiceInfo>
       </Container>
       <StyledContent>
-        <StyledLogo src="/src/assets/images/logo-ecowave.png"/>
+        <StyledLogo src="/src/assets/logo-ecowave.png"/>
         <ContentTitle>Riding the wave of innovation</ContentTitle>
         <Text>At ecoWAVEus, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.</Text>
         <ContentWrapper>
-          <Image src="/src/assets/images/dreamstime.jpg"/>
-          <Image src="/src/assets/images/ev-chargers.jpg"/>
-          <Image src="/src/assets/images/heat-pumps.jpg"/>
-          <Image src="/src/assets/images/energy-storage.jpg"/>
+          <Image src="/src/assets/dreamstime.jpg"/>
+          <Image src="/src/assets/ev-chargers.jpg"/>
+          <Image src="/src/assets/heat-pumps.jpg"/>
+          <Image src="/src/assets/energy-storage.jpg"/>
         </ContentWrapper>
       </StyledContent>
       <ServiceContainer>

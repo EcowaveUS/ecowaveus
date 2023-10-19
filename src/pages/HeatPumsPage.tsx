@@ -11,7 +11,7 @@ export const HeatPumsPage = () => {
         <PageTitle>HEAT PUMPS</PageTitle>
         <PumpsWrapper>
           <ImageWrapper>
-            <PumpsImage src='/src/assets/images/heat-pumps.jpg' alt='heat-pumps' />
+            <PumpsImage src='/src/assets/heat-pumps.jpg' alt='heat-pumps' />
           </ImageWrapper>
           <PumpsContent>
             <PumpsContentTitle>What is a heat pump?</PumpsContentTitle>
@@ -117,9 +117,9 @@ export const HeatPumsPage = () => {
         <BrandsWrapper>
           <PumpsContentTitle>Brands We Trust:</PumpsContentTitle>
           <BrandsContainer>
-            <BrandsImage src='/src/assets/images/Mitsubishi_Electric_logo.png'/>
-            <BrandsImage src='/src/assets/images/LG-Air-Conditioning-Logo.png'/>
-            <BrandsImage src='/src/assets/images/Fujitsu-logo.png'/>
+            <BrandsImage src='/src/assets/Mitsubishi_Electric_logo.png'/>
+            <BrandsImage src='/src/assets/LG-Air-Conditioning-Logo.png'/>
+            <BrandsImage src='/src/assets/Fujitsu-logo.png'/>
           </BrandsContainer>
         </BrandsWrapper>
       </StyledPage>

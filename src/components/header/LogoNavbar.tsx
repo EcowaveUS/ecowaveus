@@ -5,7 +5,7 @@ export const LogoNavbar = () => {
   return (
     <Wrapper>
       <Link to="/">
-        <Logo src="/src/assets/images/logo-ecowave.png" alt="logo" />
+        <Logo src="/src/assets/logo-ecowave.png" alt="logo" />
       </Link>
     </Wrapper>
   )

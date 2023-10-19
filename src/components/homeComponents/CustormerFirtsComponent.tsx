@@ -8,49 +8,49 @@ export const CustormerFirtsComponent = () => {
       <ListWrapper>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>Quality Technicians & Brands</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>Preventative Maintenance Plans</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>Local & Community Involved</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>We're On Time for Appointments</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>24 Hour Emergency Service</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>BBB A+ Rated + 5 Star Reviews</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>In Business Since 1998</p>
           </LiwWrapper>
         </li>
         <li>
           <LiwWrapper>
-            <StyledIcon src='/src/assets/images/logo-ecowave.png' alt='logo-ecowave' />
+            <StyledIcon src='/src/assets/logo-ecowave.png' alt='logo-ecowave' />
             <p>Free Estimates Available</p>
           </LiwWrapper>
         </li>
