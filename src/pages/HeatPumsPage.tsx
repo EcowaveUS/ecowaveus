@@ -18,7 +18,7 @@ export const HeatPumsPage = () => {
         <ServiceInfo
           title='What is a heat pump?'
           images={[
-            '/src/assets/heat-pumps.jpg'
+            '/images/heat-pumps.jpg'
           ]}
           content=
             'A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'

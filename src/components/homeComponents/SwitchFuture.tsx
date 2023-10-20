@@ -5,7 +5,7 @@ export const SwitchFuture = () => {
   return (
     <Container>
       <Title>SWITCH TO THE FUTURE</Title>
-      <StyledImage src="/src/assets/fondo.png"/>
+      <StyledImage src="/images/fondo.png"/>
       <ServiceInfo>
         <Subtitle>Great Service. <span>Fair Prices.</span></Subtitle>
         <SubtitleInfo>

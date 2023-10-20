@@ -18,12 +18,12 @@ export const HomePage = () => {
           title= 'Riding the wave of innovation'
           content='At ecoWAVEus, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.'
           images= {[
-            '/src/assets/dreamstime.jpg',
-            '/src/assets/ev-chargers.jpg',
-            '/src/assets/heat-pumps.jpg',
-            '/src/assets/energy-storage.jpg'
+            '/public/images/dreamstime.jpg',
+            '/public/images/ev-chargers.jpg',
+            '/public/images/heat-pumps.jpg',
+            '/public/images/energy-storage.jpg'
           ]}
-          logo='/src/assets/logo-ecowave.png'
+          logo='/public/images/logo-ecowave.png'
         />
         <Separator />
         <Services
@@ -34,44 +34,44 @@ export const HomePage = () => {
           subtitle= 'Why We’re The First Choice'
           listContent={[
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/images/logo-ecowave.png',
               content: 'Quality Technicians & Brands'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/images/logo-ecowave.png',
               content: 'Preventative Maintenance Plans'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/images/logo-ecowave.png',
               content: 'Local & Community Involved'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/images/logo-ecowave.png',
               content: 'We’re On Time for Appointments'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/images/logo-ecowave.png',
               content: '24 Hour Emergency Service'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/images/logo-ecowave.png',
               content: 'BBB A+ Rated + 5 Star Reviews'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/public/images/logo-ecowave.png',
               content: 'BBB A+ Rated + 5 Star Reviews'
             },
             {
-              icon: '/src/assets/logo-ecowave.png',
+              icon: '/public/images/logo-ecowave.png',
               content: 'BBB A+ Rated + 5 Star Reviews'
             },
           ]}
         />
         <OursBrands
           images={[
-              '/src/assets/Mitsubishi_Electric_logo.png',
-              '/src/assets/LG-Air-Conditioning-Logo.png',
-              '/src/assets/Fujitsu-logo.png'
+              '/images/Mitsubishi_Electric_logo.png',
+              '/images/LG-Air-Conditioning-Logo.png',
+              '/images/Fujitsu-logo.png'
             ]}
         />
       </StyledHome>

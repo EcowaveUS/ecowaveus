@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const LogoFooter = () => {
   return (
     <FooterWrapper>
-      <Logo src='/src/assets/logo-ecowave.png'/>
+      <Logo src='/images/logo-ecowave.png'/>
       <ContactText>CONTACT US TODAY</ContactText>
       <NumberText>(978) 500 - 4081</NumberText>
     </FooterWrapper>
