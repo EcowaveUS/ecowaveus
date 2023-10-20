@@ -11,6 +11,7 @@ export const LogoNavbar = () => {
   )
 }
 const Wrapper = styled.div`
+  padding: 0 0 0 20px;
 `;
 const Logo = styled.img`
   width: 280px;

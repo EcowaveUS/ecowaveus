@@ -1,45 +1,29 @@
 import { Layout } from '../utils/Layout'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faMoneyBill1, faLeaf } from '@fortawesome/free-solid-svg-icons'
+import { OursBrands } from '../components/brands/OursBrands'
+import { ServiceTitle } from '../components/services/ServiceTitle'
+import { ServiceInfo } from '../components/services/ServiceInfo'
+import { ServiceBenefits } from '../components/services/ServiceBenefits'
 
 export const HeatPumsPage = () => {
   return (
     <Layout>
       <StyledPage>
-        <PageTitle>HEAT PUMPS</PageTitle>
-        <PumpsWrapper>
-          <ImageWrapper>
-            <PumpsImage src='/src/assets/heat-pumps.jpg' alt='heat-pumps' />
-          </ImageWrapper>
-          <PumpsContent>
-            <PumpsContentTitle>What is a heat pump?</PumpsContentTitle>
-            <PumpsContentText>
-             A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.
-            </PumpsContentText>
-          </PumpsContent>
-        </PumpsWrapper>
-        <IconsWrapper>
-          <IconCard>
-            <HouseIcon>
-              <FontAwesomeIcon icon={faHouse} />
-            </HouseIcon>
-            <IconText>Increase home value</IconText>
-          </IconCard>
-          <IconCard>
-            <MonyIcon>
-              <FontAwesomeIcon icon={faMoneyBill1} />
-            </MonyIcon>
-            <IconText>Energy efficient and cost efficient</IconText>
-          </IconCard>
-          <IconCard>
-            <LeafIcon>
-              <FontAwesomeIcon icon={faLeaf} />
-            </LeafIcon>
-            <IconText>Environmentally Friendly</IconText>
-          </IconCard>
-        </IconsWrapper>
+        <ServiceTitle title='Heat Pumps'/>
+        <Separator/>
+        <ServiceInfo
+          title='What is a heat pump?'
+          images={[
+            '/src/assets/heat-pumps.jpg'
+          ]}
+          content=
+            'A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
+        />
+        <Separator/>
+        <ServiceBenefits
+          title='Benefits of heat pumps'
+        />
         <Separator/>
         <StepsWrapper>
           <PumpsContentTitle>Step-By-Step Process:</PumpsContentTitle>
@@ -114,14 +98,13 @@ export const HeatPumsPage = () => {
           </RebatesInfo>
         </RebatesWrapper>
         <Separator/>
-        <BrandsWrapper>
-          <PumpsContentTitle>Brands We Trust:</PumpsContentTitle>
-          <BrandsContainer>
-            <BrandsImage src='/src/assets/Mitsubishi_Electric_logo.png'/>
-            <BrandsImage src='/src/assets/LG-Air-Conditioning-Logo.png'/>
-            <BrandsImage src='/src/assets/Fujitsu-logo.png'/>
-          </BrandsContainer>
-        </BrandsWrapper>
+        <OursBrands
+          images={[
+              '/src/assets/Mitsubishi_Electric_logo.png',
+              '/src/assets/LG-Air-Conditioning-Logo.png',
+              '/src/assets/Fujitsu-logo.png'
+            ]}
+        />
       </StyledPage>
     </Layout>
   )
@@ -133,105 +116,13 @@ const StyledPage = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const PageTitle = styled.h1`
-  font-size: 50px;
-  font-weight: 300;
-  color: grey;
-`;
-const PumpsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-const ImageWrapper = styled.div`
-  width: 60%;
-  height: 100%;
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
-const PumpsImage = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-`;
-const PumpsContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 40%;
-  padding: 0 20px;
-  @media (max-width: 1024px) {
-    padding: 0 2rem;
-    align-items: center;
-    width: 90%;
-  }
-`;
+
 const PumpsContentTitle = styled.h3`
   font-size: 30px;
   font-weight: 600;
   color: grey;
   text-align: left;
   margin: 0;
-`;
-const PumpsContentText = styled.p`
-  font-size: 15px;
-  font-weight: 300;
-  color: grey;
-  text-align: left;
-`;
-const IconsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 90%;
-  margin: 2rem 0;
-`;
-const IconCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
-`;
-const MonyIcon = styled.div`
-  font-size: 100px;
-  color: #3D8139;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    scale: 1.3;
-  }
-`;
-const HouseIcon = styled.div`
-  font-size: 100px;
-  color: #50A0CE;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    scale: 1.3;
-  }
-`;
-const LeafIcon = styled.div`
-  font-size: 100px;
-  color: #23BF5C;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    scale: 1.3;
-  }
-`;
-
-const IconText = styled.p`
-  font-size: 20px;
-  font-weight: 400;
-  color: #7A7A7A;
-  text-align: center;
-
 `;
 const Separator = styled.div`
   width: 90%;
@@ -294,24 +185,4 @@ const RebatesTitle = styled.h5`
   color: grey;
   text-align: left;
   margin: 0;
-`;
-const BrandsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 80%;
-`;
-const BrandsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 2rem 0;
-`;
-const BrandsImage = styled.img`
-  width: 25%;
-  height: auto;
-  object-fit: cover;
 `;

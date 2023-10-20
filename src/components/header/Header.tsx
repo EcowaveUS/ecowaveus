@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   with: 100vw;
   height: auto;
-  background-image: url("/src/assets/images/fondoWave.png");
+  background-image: url("/src/assets/fondoWave.png");
   background-size: cover;
   background-position: center center;
   @media(max-width: 800px){
