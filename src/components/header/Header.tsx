@@ -1,9 +1,9 @@
 import { LogoNavbar } from './LogoNavbar';
 import { Navbar } from './Navbar';
 import styled from 'styled-components';
+import Fondo from '../../assets/fondoWave.png';
 
 export const Header = () => {
-
   return (
     <Wrapper>
       <LogoNavbar />
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   with: 100vw;
   height: auto;
-  background-image: url("/src/assets/fondoWave.png");
+  background-image: ${Fondo};
   background-size: cover;
   background-position: center center;
   @media(max-width: 800px){
