@@ -5,9 +5,6 @@ import { OursBrands } from '../components/brands/OursBrands'
 import { ServiceTitle } from '../components/services/ServiceTitle'
 import { ServiceInfo } from '../components/services/ServiceInfo'
 import { ServiceBenefits } from '../components/services/ServiceBenefits'
-import Mitsubishi from '../assets/Mitsubishi_Electric_logo.png'
-import LG from '../assets/LG-Air-Conditioning-Logo.png'
-import Fujitsu from '../assets/Fujitsu-logo.png'
 
 export const HeatPumsPage = () => {
   return (
@@ -103,9 +100,9 @@ export const HeatPumsPage = () => {
         <Separator/>
         <OursBrands
           images={[
-            Mitsubishi,
-            LG,
-            Fujitsu
+              '/images/Mitsubishi_Electric_logo.png',
+              '/images/LG-Air-Conditioning-Logo.png',
+              '/images/Fujitsu-logo.png'
             ]}
         />
       </StyledPage>
