@@ -102,7 +102,7 @@ export const HeatPumsPage = () => {
           images={[
               '/images/Mitsubishi_Electric_logo.png',
               '/images/LG-Air-Conditioning-Logo.png',
-              '/images/Fujitsu-logo.png'
+              '/images/Fujitsu-Logo.png'
             ]}
         />
       </StyledPage>
