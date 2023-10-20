@@ -3,16 +3,21 @@ import { Navbar } from './Navbar';
 import styled from 'styled-components';
 import Fondo from '../../assets/fondoWave.png';
 
+interface Props {
+  fondo: string;
+}
+
 export const Header = () => {
+  const fondo = Fondo;
   return (
-    <Wrapper>
+    <Wrapper fondo={fondo}>
       <LogoNavbar />
       <Navbar />
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<Props>`
   display: flex;
   align-items: center;
   justify-content: space-between;
