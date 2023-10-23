@@ -5,6 +5,8 @@ import { OursBrands } from '../components/brands/OursBrands'
 import { Inovation } from '../components/homeComponents/Inovation'
 import { Services } from '../components/homeComponents/Services'
 import { SwitchFuture } from '../components/homeComponents/SwitchFuture'
+import { ReviewsComponents } from '../components/reviews/ReviewsComponents'
+import { HomeReview } from '../components/reviews/HomeReview'
 
 
 export const HomePage = () => {
@@ -29,6 +31,8 @@ export const HomePage = () => {
         <Services
           title= 'The Best Solution for Your Home or Business'
         />
+        <Separator />
+        <HomeReview />
         <CustormerFirst
           title= 'A Customer-Prioritized Company'
           subtitle= 'Why We’re The First Choice'
@@ -74,6 +78,7 @@ export const HomePage = () => {
               '/images/Fujitsu-Logo.png'
             ]}
         />
+        <ReviewsComponents />
       </StyledHome>
     </Layout>
   )
@@ -82,6 +87,7 @@ const StyledHome = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `
 const Separator = styled.div`
   width: 90%;

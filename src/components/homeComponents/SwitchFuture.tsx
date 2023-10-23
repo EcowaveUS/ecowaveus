@@ -26,8 +26,11 @@ export const SwitchFuture = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   width: 100%;
+  border-color: #1b5b8d;
 `;
 const StyledImage = styled.img`
   width: 100%;
@@ -50,8 +53,9 @@ const ServiceInfo = styled.div`
   align-items: center;
   width: 35vw;
   @media (max-width: 1024px) {
-    position: relative;
-    width: 80%;
+    align-items: center;
+    position: static;
+    width: 90%;
     margin-top: 2rem;
   }
 `

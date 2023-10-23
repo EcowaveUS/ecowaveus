@@ -14,6 +14,11 @@ export const BenefitsContent: React.FC<Props> = ({
     <BenefitsWrapper>
       <Title>{title}</Title>
       <Text>{content}</Text>
+      <ImagesWrapper>
+        <Image src="https://via.placeholder.com/150" alt="placeholder" />
+        <Image src="https://via.placeholder.com/150" alt="placeholder" />
+        <Image src="https://via.placeholder.com/150" alt="placeholder" />
+      </ImagesWrapper>
     </BenefitsWrapper>
   )
 }
@@ -37,4 +42,18 @@ const Text = styled.p`
   font-weight: 400;
   color: #7A7A7A;
   text-align: center;
+`;
+const ImagesWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: 2rem 0;
+`;
+const Image = styled.img`
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 `;

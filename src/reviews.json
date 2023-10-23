@@ -1,0 +1,92 @@
+[
+  {
+      "id": 1,
+      "score": 5,
+      "firstName": "John",
+      "lastName": "Doe",
+      "title": "Excellent product! I am very satisfied.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-23"
+  },
+  {
+      "id": 2,
+      "score": 4,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "title": "Good product, but could improve in some aspects.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi",
+      "createdAt": "2023-10-22"
+  },
+  {
+      "id": 3,
+      "score": 3,
+      "firstName": "Chris",
+      "lastName": "Johnson",
+      "title": "Average, meets expectations.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-21"
+  },
+  {
+      "id": 4,
+      "score": 2,
+      "firstName": "Mary",
+      "lastName": "Williams",
+      "title": "Not very good, needs improvement.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-20"
+  },
+  {
+      "id": 5,
+      "score": 1,
+      "firstName": "Patricia",
+      "lastName": "Brown",
+      "title": "Bad, I would not recommend it.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi",
+      "createdAt": "2023-10-19"
+  },
+  {
+      "id": 7,
+      "score": 5,
+      "firstName": "Michael",
+      "lastName": "Jones",
+      "title": "Excellent product! I am very satisfied.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-18"
+  },
+  {
+      "id": 7,
+      "score": 4,
+      "firstName": "Linda",
+      "lastName": "Garcia",
+      "title": "Good product, but could improve in some aspects.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-17"
+  },
+  {
+      "id": 8,
+      "score": 3,
+      "firstName": "William",
+      "lastName": "Miller",
+      "title": "Average, meets expectations.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-16"
+  },
+  {
+      "id": 9,
+      "score": 2,
+      "firstName": "Elizabeth",
+      "lastName": "Davis",
+      "title": "Not very good, needs improvement.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-15"
+  },
+  {
+      "id": 10,
+      "score": 1,
+      "firstName": "David",
+      "lastName": "Rodriguez",
+      "title": "Bad, I would not recommend it.",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
+      "createdAt": "2023-10-14"
+  }
+]

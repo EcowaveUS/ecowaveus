@@ -26,6 +26,10 @@ export const ServiceInfo: React.FC<Props> = ({
         <PumpsContentText>
           {content}
         </PumpsContentText>
+        <PumpsContentTitle>{title}</PumpsContentTitle>
+        <PumpsContentText>
+          {content}
+        </PumpsContentText>
       </PumpsContent>
     </PumpsWrapper>
   )

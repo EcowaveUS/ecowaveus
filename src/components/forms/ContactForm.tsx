@@ -1,21 +1,65 @@
-import { useState } from 'react';
-import {Box, TextField, MenuItem} from '@mui/material';
+import {
+  Box,
+  TextField,
+  MenuItem,
+  Checkbox,
+  FormGroup,
+  FormControlLabel,
+  FormLabel,
+  Select
+} from '@mui/material';
 import styled from 'styled-components';
-import { TextareaAutosize } from '@mui/base';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 
 
 export const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phone: '',
-    email: '',
-    address: '',
-    address2: '',
-    option: '',
-    message: '',
+
+  const validationSchema = yup.object({
+    firstName: yup
+      .string()
+      .required('First name is required'),
+    lastName: yup
+      .string()
+      .required('Last name is required'),
+    phone: yup
+      .string()
+      .required('Phone is required'),
+    email: yup
+      .string()
+      .email('Enter a valid email')
+      .required('Email is required'),
+    address: yup
+      .string()
+      .required('Address is required'),
+    option: yup
+      .string()
+      .required('Option is required'),
+    message: yup
+      .string()
+      .required('Message is required'),
   });
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      address: '',
+      address2: '',
+      option: '',
+      message: '',
+      evChargers: false,
+      heatPumps: false,
+      energyStorage: false,
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
 
   const options = [
     'Yes, I am a potential new client',
@@ -23,30 +67,15 @@ export const ContactForm = () => {
     'I m neither',
   ];
 
-  const handleChange = (event: SelectChangeEvent | React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(formData);
-  }
-
   return (
     <FormWrapper>
       <FormTitle>Contact Form</FormTitle>
       <Box
         component="form"
-        sx={{
-          '& > :not(style)': { m: 1, Width: '90%' },
-        }}
+        sx={{ m: 3, width: '90%' }}
         noValidate
         autoComplete="off"
-        onSubmit={handleSubmit}
+        onSubmit={formik.handleSubmit}
       >
         <FormInputs>
           <TextField
@@ -54,32 +83,44 @@ export const ContactForm = () => {
             label="First Name"
             variant="outlined"
             name='firstName'
-            value={formData.firstName}
-            onChange={handleChange}
+            value={formik.values.firstName}
+            onChange={formik.handleChange}
+            error={formik.touched.firstName && Boolean(formik.errors.firstName)}
+            helperText={formik.touched.firstName && formik.errors.firstName}
+            onBlur={formik.handleBlur}
           />
           <TextField
             id="outlined-basic"
             label="Last Name"
             variant="outlined"
             name='lastName'
-            value={formData.lastName}
-            onChange={handleChange}
+            value={formik.values.lastName}
+            onChange={formik.handleChange}
+            error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+            helperText={formik.touched.lastName && formik.errors.lastName}
+            onBlur={formik.handleBlur}
           />
           <TextField
             id="outlined-basic"
             label="Phone"
             variant="outlined"
             name='phone'
-            value={formData.phone}
-            onChange={handleChange}
+            value={formik.values.phone}
+            onChange={formik.handleChange}
+            error={formik.touched.phone && Boolean(formik.errors.phone)}
+            helperText={formik.touched.phone && formik.errors.phone}
+            onBlur={formik.handleBlur}
           />
           <TextField
             id="outlined-basic"
             label="Email"
             variant="outlined"
             name='email'
-            value={formData.email}
-            onChange={handleChange}
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+            onBlur={formik.handleBlur}
           />
         </FormInputs>
         <InputContainer>
@@ -89,8 +130,11 @@ export const ContactForm = () => {
             label="Address"
             variant="outlined"
             name='address'
-            value={formData.address}
-            onChange={handleChange}
+            value={formik.values.address}
+            onChange={formik.handleChange}
+            error={formik.touched.address && Boolean(formik.errors.address)}
+            helperText={formik.touched.address && formik.errors.address}
+            onBlur={formik.handleBlur}
           />
         </InputContainer>
         <InputContainer>
@@ -100,17 +144,22 @@ export const ContactForm = () => {
             label="Address 2"
             variant="outlined"
             name='address2'
-            value={formData.address2}
-            onChange={handleChange}
+            value={formik.values.address2}
+            onChange={formik.handleChange}
+            error={formik.touched.address2 && Boolean(formik.errors.address2)}
+            helperText={formik.touched.address2 && formik.errors.address2}
+            onBlur={formik.handleBlur}
           />
         </InputContainer>
         <InputContainer>
+          <FormLabel component="legend">Select an option</FormLabel>
           <Select
             fullWidth
-            label="Select an option?"
-            value={formData.option}
             name='option'
-            onChange={handleChange}
+            value={formik.values.option}
+            onChange={formik.handleChange}
+            error={formik.touched.option && Boolean(formik.errors.option)}
+            onBlur={formik.handleBlur}
           >
             {options?.map((option) => (
               <MenuItem key={option} value={option}>
@@ -119,14 +168,40 @@ export const ContactForm = () => {
             ))}
           </Select>
         </InputContainer>
+        <FormLabel component="legend">Select an option</FormLabel>
+        <FormGroup>
+          <FormControlLabel
+            control={
+              <Checkbox  name='heatPumps' value={formik.values.heatPumps} onChange={formik.handleChange} />
+            }
+            label={<span style={{ color: '#000' }}>Heat Pumps</span>}
+          />
+            <FormControlLabel
+            control={
+            <Checkbox name='evChargers' value={formik.values.evChargers} onChange={formik.handleChange} />
+          }
+            label={<span style={{ color: '#000' }}>EV Chargers</span>}
+          />
+            <FormControlLabel
+            control={
+              <Checkbox  name='energyStorage' value={formik.values.energyStorage} onChange={formik.handleChange} />
+            }
+            label={<span style={{ color: '#000' }}>Energy Storage</span>}
+          />
+        </FormGroup>
         <InputContainer>
-          <TextareaAutosize
-            aria-label="minimum height"
-            minRows={6}
-            placeholder="How can we help you?"
+          <TextField
+            id="outlined-multiline-flexible"
+            label="How con we help you?"
+            multiline
+            maxRows={4}
+            sx={{ width: '100%' }}
             name='message'
-            value={formData.message}
-            onChange={handleChange}
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            error={formik.touched.message && Boolean(formik.errors.message)}
+            helperText={formik.touched.message && formik.errors.message}
+            onBlur={formik.handleBlur}
           />
         </InputContainer>
         <StyledButton type='submit'>Submit</StyledButton>
@@ -138,22 +213,21 @@ export const ContactForm = () => {
 const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  background-color: #fff;
+  align-items: center;
+  width: 70%;
 `;
 const FormInputs = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 1rem;
-  width: 90%;
 `;
 const FormTitle = styled.h3`
   font-size: 2rem;
-  margin-left: 5rem;
   color: #000;
   width: 100%;
-  margin-left: 3rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
 `;
 const StyledButton = styled.button`
   display: flex;
@@ -179,5 +253,4 @@ const StyledButton = styled.button`
 `;
 const InputContainer = styled.div`
   margin-bottom: 1rem;
-  width: 90%;
 `;
