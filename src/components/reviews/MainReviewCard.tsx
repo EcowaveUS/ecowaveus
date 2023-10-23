@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 import styled from 'styled-components'
-import { StandardButton } from '../buttons/StandardButton';
+
 interface MainReviewCardProps {
   title: string
   firstName: string
