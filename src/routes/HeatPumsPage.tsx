@@ -78,20 +78,20 @@ export const HeatPumsPage = () => {
           <RebatesContainer>
             <RebatesInfo>
               <RebatesTitle>Mass Save Rebates</RebatesTitle>
-              <p>
+              <RebatesText>
                 To verify if your town is eligible please click the following link: <br/>
-                <Link to='https://frontdoor.portal.poweredbyefi.org/initiative/marebates'><span>https://frontdoor.portal.poweredbyefi.org/initiative/marebates</span></Link>
-              </p>
+              </RebatesText>
+                <Link to='https://frontdoor.portal.poweredbyefi.org/initiative/marebates'><RebatesText>https://frontdoor.portal.poweredbyefi.org/initiative/marebates</RebatesText></Link>
               <div>
                 <ul>
-                  <li>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)</li>
-                  <li>Partial-home rebates are offered based on equipment/outdoor unit  (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)</li>
+                  <li><RebatesText>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)</RebatesText></li>
+                  <li><RebatesText>Partial-home rebates are offered based on equipment/outdoor unit  (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)</RebatesText></li>
                 </ul>
               </div>
               <RebatesTitle>Federal incentives</RebatesTitle>
-              <p>
+              <RebatesText>
                 30% of the cost of the heat pump installation up to $2,000
-              </p>
+              </RebatesText>
             </RebatesInfo>
             <RebatesImage src='/images/green-money.jpg' alt='energy-star-logo' />
           </RebatesContainer>
@@ -200,6 +200,13 @@ const RebatesInfo = styled.div`
 const RebatesTitle = styled.h5`
   font-size: 15px;
   font-weight: 700;
+  color: grey;
+  text-align: left;
+  margin: 0;
+`;
+const RebatesText = styled.p`
+  font-size: 15px;
+  font-weight: 300;
   color: grey;
   text-align: left;
   margin: 0;
