@@ -54,21 +54,24 @@ export const ServiceBenefits: React.FC<Props> = ({
         showEfficency &&
         <BenefitsContent
           title='Efficiency'
-          content='A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
+          content='Efficient heat pumps offer a cost-effective solution for heating and cooling. They use less energy, resulting in lower utility bills and long-term savings. With extended lifespans and minimal maintenance, they incur fewer unexpected costs. Additionally, their reduced reliance on fossil fuels leads to a greener footprint. By serving both heating and cooling functions, they streamline installations. Overall, investing in efficient heat pumps proves economically wise, providing comfort, savings, and sustainability.'
+          images={['/images/heat-pumps.jpg','/images/heat-pumps.jpg','/images/heat-pumps.jpg']}
         />
       }
       {
         showComfort &&
         <BenefitsContent
           title='Comfort'
-          content='A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
+          content='Efficient heat pumps redefine comfort in heating and cooling. Their advanced technology ensures consistent temperature control, eliminating the hot and cold spots often experienced with traditional systems. They operate quietly and evenly, creating a cozy environment without disruptions. Additionally, heat pumps offer customizable settings, allowing you to tailor your indoor climate to perfection. With their ability to both heat and cool, they provide year-round comfort, making them an ideal choice for any season. Experience unparalleled comfort with efficient heat pumps.'
+          images={['/images/heat-pumps.jpg','/images/heat-pumps.jpg','/images/heat-pumps.jpg']}
         />
       }
       {
         showEnvironmentally &&
         <BenefitsContent
           title='Environmentally friendly'
-          content='A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
+          content='Heat pumps present a multitude of benefits, making them a standout choice for heating and cooling needs. They boast remarkable energy efficiency, resulting in lower utility bills and reduced environmental impact. Offering both heating and cooling capabilities, they ensure year-round comfort. With quiet operation and zoning options, they create a comfortable and customizable indoor environment. Moreover, their extended lifespan and minimal maintenance requirements contribute to long-term cost savings. By reducing reliance on fossil fuels, heat pumps also play a crucial role in fostering a sustainable future. Financial incentives further sweeten the deal, making them a wise and economical choice for any home or business.'
+          images={['/images/heat-pumps.jpg','/images/heat-pumps.jpg','/images/heat-pumps.jpg']}
         />
       }
     </BenefitsWrapper>
@@ -86,7 +89,7 @@ const IconsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90%;
   margin: 2rem 0;
 `;

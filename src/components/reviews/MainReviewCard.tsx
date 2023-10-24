@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 interface MainReviewCardProps {
   title: string
@@ -23,7 +24,7 @@ export const MainReviewCard: React.FC<MainReviewCardProps> = ({
       </StarsWrapper>
       <ReviewTitle>{title}</ReviewTitle>
       <p>-{`${firstName.toUpperCase()} ${lastName.toUpperCase()}`}</p>
-      <StyledButtom>More Reviews</StyledButtom>
+      <Link to='/about-us'><StyledButtom>More Reviews</StyledButtom></Link>
     </CardWrapper>
   )
 }
@@ -65,8 +66,8 @@ const ReviewTitle = styled.h1`
   margin-bottom: 1rem;
 `;
 const StyledButtom = styled.button`
-  width: 50%;
   height: 40px;
+  padding: 0 2rem;
   background-color: #4e9d40;
   color: #fff;
   border: none;

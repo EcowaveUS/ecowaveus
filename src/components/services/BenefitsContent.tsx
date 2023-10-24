@@ -4,20 +4,27 @@ import styled from 'styled-components'
 interface Props {
   title: string,
   content: string,
+  images?: string[],
 }
 
 export const BenefitsContent: React.FC<Props> = ({
   title,
   content,
+  images,
 }) => {
   return (
     <BenefitsWrapper>
       <Title>{title}</Title>
       <Text>{content}</Text>
       <ImagesWrapper>
-        <Image src="https://via.placeholder.com/150" alt="placeholder" />
-        <Image src="https://via.placeholder.com/150" alt="placeholder" />
-        <Image src="https://via.placeholder.com/150" alt="placeholder" />
+        {
+          images?.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+            />
+          ))
+        }
       </ImagesWrapper>
     </BenefitsWrapper>
   )

@@ -40,6 +40,12 @@ const TopFooter = styled.div`
     align-items: center;
     justify-items: center;
   }
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
 
 `;
 const Separator = styled.div`

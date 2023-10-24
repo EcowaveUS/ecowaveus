@@ -16,15 +16,17 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  with: 100vw;
   height: auto;
   background-image: url("/images/fondoWave.png");
   background-size: cover;
   background-position: center center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   @media(max-width: 800px){
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   `;
 

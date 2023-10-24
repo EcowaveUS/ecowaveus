@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { AiOutlineMenu } from "react-icons/ai";
-import { MenuComponent } from './MenuComponent';
 import { Link } from 'react-router-dom';
 import { StandardButton } from '../buttons/StandardButton';
+import { SideBar } from './SideBar';
 
 export const Navbar = () => {
-  const [ menuModal, setMenuModal ] = useState(false)
   const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
+  const [ sidebar, setsidebar ] = useState(false);
 
-  const toogleMenu = () => {
-    setMenuModal(!menuModal)
-  }
+  const showSidebar = () => setsidebar(!sidebar);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,48 +25,55 @@ export const Navbar = () => {
 
   return (
     <>
-      {menuModal ?
-        <MenuComponent
-          toogleMenu={toogleMenu}
-          menuModal={menuModal}
-        />
-        :
-        <Wrapper>
-          <TopNavbar>
-            <NavbarInfo>
-              <Infotext>Hour hours 8:00am top 5:00pm Mon to Sat</Infotext>
-              <TelText>(978)-500-4081</TelText>
-            </NavbarInfo>
-            <StyledLinks>
-              <Link to='/'><li>HOME</li></Link>
-              <Link to='/heat-pumps'><li>HEAT PUMPS</li></Link>
-              <Link to='/ev-chargers'><li>EV CHARGERS</li></Link>
-              <Link to='/energy-storage'><li>ENERGY STORAGE</li></Link>
-            </StyledLinks>
-          </TopNavbar>
-          {
-            windowWidth > 800 ?
-              (
-                <ButtonContainer>
-                  <StandardButton
-                    title='Free stimate'
-                  />
-                  <StandardButton
-                    title='Menu'
-                    Icon={AiOutlineMenu}
-                    onClick={toogleMenu}
-                  />
-              </ButtonContainer>
-              )
-              :
-              (<HambuguerMenu>
-                <AiOutlineMenu
-                  size={40}
-                  onClick={toogleMenu}
+      <Wrapper>
+        <TopNavbar>
+          <NavbarInfo>
+            <Infotext>Hour hours 8:00am top 5:00pm Mon to Sat</Infotext>
+            <TelText>(978)-500-4081</TelText>
+          </NavbarInfo>
+          <StyledLinks>
+            <Link to='/'><li>HOME</li></Link>
+            <Link to='/heat-pumps'><li>HEAT PUMPS</li></Link>
+            <Link to='/ev-chargers'><li>EV CHARGERS</li></Link>
+            <Link to='/energy-storage'><li>ENERGY STORAGE</li></Link>
+            <Link to='/about-us'>
+              <li>
+                ABOUT US
+              </li>
+            </Link>
+            <Link to='/contact-us'><li>CONTACT US</li></Link>
+          </StyledLinks>
+        </TopNavbar>
+        {
+          windowWidth > 800 ?
+            (
+              <ButtonContainer>
+                <StandardButton
+                  title='Free stimate'
                 />
-              </HambuguerMenu>)
-          }
-        </Wrapper>
+                <StandardButton
+                  title='Menu'
+                  Icon={AiOutlineMenu}
+                  onClick={showSidebar}
+                />
+            </ButtonContainer>
+            )
+            :
+            (<HambuguerMenu>
+              <AiOutlineMenu
+                size={40}
+                onClick={showSidebar}
+              />
+            </HambuguerMenu>
+          )
+        }
+      </Wrapper>
+      {
+        sidebar &&
+        <div>
+          <SideBar showSidebar={showSidebar} sidebar={sidebar} />
+        </div>
+
       }
     </>
   )
@@ -93,7 +98,7 @@ const TopNavbar = styled.div`
 `;
 const NavbarInfo = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   gap: 2rem;
@@ -122,18 +127,22 @@ const TelText = styled.p`
   @media(max-width: 1280px){
     margin-right: 1.5rem;
   }
+  @media(max-width: 800px){
+    display: none;
+  }
 `;
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: 4.5rem;
   @media(max-width: 1024px){
     display: none;
   }
   li {
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #1b5b8d;
     padding: 0 1rem 1rem 0;
