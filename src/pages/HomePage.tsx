@@ -33,6 +33,8 @@ export const HomePage = () => {
         />
         <Separator />
         <HomeReview />
+        <ReviewsComponents />
+
         <CustormerFirst
           title= 'A Customer-Prioritized Company'
           subtitle= 'Why We’re The First Choice'
@@ -78,7 +80,6 @@ export const HomePage = () => {
               '/images/Fujitsu-Logo.png'
             ]}
         />
-        <ReviewsComponents />
       </StyledHome>
     </Layout>
   )

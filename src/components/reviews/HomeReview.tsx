@@ -31,24 +31,24 @@ export const HomeReview = () => {
   position: relative;
   margin-bottom: 8rem;
   @media (max-width: 1240px) {
+    justify-content: center;
     align-items: center;
-    background-image: url('/images/reviews-background.jpg');
-    background-size: cover;
   }
 `
 const StyledImg = styled.img`
   width: 100%;
-  height: 100%;
+  height: 480px;
   object-fit: cover;
   z-index: -1;
   @media (max-width: 1240px) {
-    display: none;
+    align-items: center;
+    height: 280px;
+    width: 100%;
   }
 `;
 const ReviewsTitle = styled.h1`
-  position: relative;
-  left: calc(50% - 100px);
-  margin: 1rem;
+  width: 100%;
+  align-self: center;
   font-size: 35px;
   font-weight: 400;
   color: grey;
@@ -62,16 +62,21 @@ const WrapperComponets = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 90%;
+  width: 100%;
   position: absolute;
   top: calc(50% + 120px);
 
   @media (max-width: 1240px) {
     position: static;
     top: auto;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
     justify-content: center;
-    opacity: 0.8;
+    align-items: center;
+    width: 90%;
   }
 `
 

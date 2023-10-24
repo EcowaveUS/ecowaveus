@@ -31,5 +31,5 @@ const StyledReviews = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 `;

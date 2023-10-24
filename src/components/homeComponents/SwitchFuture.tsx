@@ -38,10 +38,13 @@ const StyledImage = styled.img`
 `;
 const Title = styled.h1`
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 400;
   color: grey;
   text-align: center;
-`
+  font-style: oblique;
+  letter-spacing: 3px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+`;
 const ServiceInfo = styled.div`
   margin-top: 7rem;
   display: flex;

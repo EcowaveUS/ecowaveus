@@ -33,12 +33,21 @@ const CardWrapper = styled.div`
   padding: 1rem;
   margin: 1rem;
   width: 380px;
-  height: 140px;
+  height: auto;
   background-color: #1b5b8d;
-  padding: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0 8px 8px 0;
   &:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
+  }
+  @media (max-width: 1240px) {
+    width: 100%;
+    height:auto;
+  }
+  @media (max-width: 768px) {
+    border-radius: 8px;
   }
 `;
 const StarsWrapper = styled.div`

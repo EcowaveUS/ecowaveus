@@ -16,17 +16,17 @@ export const Inovation: React.FC<Props> = ({
 }) => {
   return (
     <StyledContent>
-    <StyledLogo src={logo}/>
-    <ContentTitle>{title}</ContentTitle>
-    <Text>{content}</Text>
-    <ContentWrapper>
-      {
-        images.map((image, index) => (
-          <Image key={index} src={image} />
-        ))
-      }
-    </ContentWrapper>
-  </StyledContent>
+      <StyledLogo src={logo}/>
+      <ContentTitle>{title}</ContentTitle>
+      <Text>{content}</Text>
+      <ContentWrapper>
+        {
+          images.map((image, index) => (
+            <Image key={index} src={image} />
+          ))
+        }
+      </ContentWrapper>
+    </StyledContent>
   )
 }
 
@@ -36,7 +36,7 @@ const StyledContent = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
-  width: 70%;
+  width: 90%;
 `;
 const StyledLogo = styled.img`
   width: 280px;
@@ -52,19 +52,14 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: #f2f2f2;
   gap: 0.5rem;
   border-radius: 8px;
-  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
   margin: 2rem;
   padding: 0.5rem;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  width: 90%;
 `;
 const Image = styled.img`
-border-radius: 5px;
+  border-radius: 5px;
   width: 100%;
   height: auto;
   object-fit: cover;
