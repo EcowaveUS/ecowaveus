@@ -73,26 +73,6 @@ const ContentTitle = styled.h3`
   font-weight: 400;
   color: grey;
 `
-const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0.5rem;
-  border-radius: 8px;
-  margin: 2rem;
-  padding: 0.5rem;
-  width: 90%;
-`;
-const Image = styled.img`
-  border-radius: 5px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
 const Text = styled.p`
   font-size: 20px;
   font-weight: 300;

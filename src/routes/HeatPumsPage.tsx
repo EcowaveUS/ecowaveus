@@ -1,4 +1,3 @@
-import { Layout } from '../utils/Layout'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { OursBrands } from '../components/brands/OursBrands'
