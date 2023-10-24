@@ -117,10 +117,11 @@ const WrapperComponents = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
   margin: 2rem auto;
   padding:  2rem;
   background-color: #f5f5f5;
+  border-radius: 1rem;
 `;
 
 
