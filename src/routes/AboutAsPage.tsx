@@ -69,6 +69,9 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 const StyledButton = styled.button`
   padding: 8px 8px;

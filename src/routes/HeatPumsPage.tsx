@@ -206,7 +206,7 @@ const RebatesContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
   }
 `;
 const RebatesImage = styled.img`
@@ -223,6 +223,10 @@ const RebatesInfo = styled.div`
   justify-content: center;
   align-items: flex-start;
   margin-left: 1rem;
+  @media (max-width: 1024px) {
+    margin: 0;
+    width: 100%;
+  }
 `;
 const RebatesTitle = styled.h5`
   font-size: 1.3rem;
