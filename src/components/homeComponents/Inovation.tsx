@@ -65,7 +65,7 @@ const StyledContent = styled.div`
 `;
 const StyledLogo = styled.img`
   width: 280px;
-  height: 80px;
+  height: 65px;
 `;
 const ContentTitle = styled.h3`
   margin: 1rem;

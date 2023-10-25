@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
+import { MapContainer } from '../components/maps/MapContainer'
 
 export const ContactPage = () => {
   return (
@@ -13,6 +14,7 @@ export const ContactPage = () => {
           <LocationInfo />
           <ContactForm />
         </WrapperComponents>
+        <MapContainer />
       </StyledPage>
   )
 }
@@ -48,6 +50,13 @@ const WrapperComponents = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   width: 90%;
+  margin: 2rem auto;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
 `;
 const Separator = styled.div`
   width: 90%;

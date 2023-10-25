@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaHouseChimney, FaMoneyBill, FaEnvira } from "react-icons/fa6";
 import { BenefitsCard } from './BenefitsCard'
 import { BenefitsContent } from './BenefitsContent'
 
@@ -24,9 +23,8 @@ export const ServiceBenefits: React.FC<Props> = ({
           onMouseLeave={()=>setShowEfficency(false)}
         >
           <BenefitsCard
-            title= 'Efficiency'
-            Icon= {FaMoneyBill}
-            color= 'red'
+            title= 'Increase home value'
+            image='/images/efficiency.jpg'
           />
         </div>
         <div
@@ -34,9 +32,8 @@ export const ServiceBenefits: React.FC<Props> = ({
           onMouseLeave={()=>setShowComfort(false)}
         >
           <BenefitsCard
-            title= 'Comfort'
-            Icon= {FaHouseChimney}
-            color= 'blue'
+            title= 'Cost savings'
+            image='/images/comfort.jpg'
           />
         </div>
         <div
@@ -45,8 +42,7 @@ export const ServiceBenefits: React.FC<Props> = ({
         >
           <BenefitsCard
             title= 'Environmentally friendly'
-            Icon= {FaEnvira}
-            color= 'green'
+            image='/images/enviroment.jpg'
           />
         </div>
       </IconsWrapper>
@@ -82,16 +78,22 @@ const BenefitsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width:90%;
+  width:80%;
   margin: 2rem 0;
 `;
 const IconsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: space-evenly;
+  width: 100%;
   margin: 2rem 0;
+  gap: 2rem;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const Title = styled.h3`
   font-size: 30px;
@@ -99,4 +101,6 @@ const Title = styled.h3`
   color: grey;
   text-align: left;
   margin: 0;
+  font-style: italic;
+  letter-spacing: 0.1rem;
 `;

@@ -25,9 +25,9 @@ const Logo = styled.img`
 `;
 const TelText = styled.p`
   display: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #4e9d40;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #000;
   text-align: center;
   @media(max-width: 800px){
     display: block;

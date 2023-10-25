@@ -14,6 +14,9 @@ export const ServiceTitle: React.FC<Props> = ({
 }
 const Title = styled.h1`
   font-size: 50px;
-  font-weight: 300;
-  color: grey;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
 `;

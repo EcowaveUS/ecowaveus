@@ -42,7 +42,7 @@ const StyledImg = styled.img`
   z-index: -1;
   @media (max-width: 1240px) {
     align-items: center;
-    height: 280px;
+    height: auto;
     width: 100%;
   }
 `;

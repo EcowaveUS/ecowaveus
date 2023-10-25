@@ -26,10 +26,6 @@ export const ServiceInfo: React.FC<Props> = ({
         <PumpsContentText>
           {content}
         </PumpsContentText>
-        <PumpsContentTitle>{title}</PumpsContentTitle>
-        <PumpsContentText>
-          {content}
-        </PumpsContentText>
       </PumpsContent>
     </PumpsWrapper>
   )
@@ -38,8 +34,8 @@ export const ServiceInfo: React.FC<Props> = ({
 const PumpsWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   width:90%;
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -48,7 +44,7 @@ const PumpsWrapper = styled.div`
   }
 `;
 const ImageWrapper = styled.div`
-  width: 60%;
+  width: 45%;
   height: 100%;
   @media (max-width: 1024px) {
     width: 100%;
@@ -58,13 +54,13 @@ const PumpsImage = styled.img`
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 10px;
 `;
 const PumpsContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   width: 40%;
-  padding: 0 20px;
+  height: 100%;
   @media (max-width: 1024px) {
     padding: 0 2rem;
     align-items: center;
@@ -79,7 +75,7 @@ const PumpsContentTitle = styled.h3`
   margin: 0;
 `;
 const PumpsContentText = styled.p`
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 300;
   color: grey;
   text-align: left;

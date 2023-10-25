@@ -35,14 +35,15 @@ const BenefitsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width:80%;
+  width:70%;
 `
 const Title = styled.h3`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   color: grey;
   text-align: center;
   margin: 0;
+  font-style: italic;
 `;
 const Text = styled.p`
   font-size: 15px;
@@ -54,9 +55,16 @@ const ImagesWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 90%;
+  gap: 1rem;
   margin: 2rem 0;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `;
 const Image = styled.img`
   width: 250px;

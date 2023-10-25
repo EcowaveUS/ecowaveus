@@ -31,6 +31,10 @@ const InfoWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @media (max-width: 1024px) {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const FormTitle = styled.h3`
   font-size: 40px;

@@ -24,7 +24,7 @@ export const MainReviewCard: React.FC<MainReviewCardProps> = ({
       </StarsWrapper>
       <ReviewTitle>{title}</ReviewTitle>
       <p>-{`${firstName.toUpperCase()} ${lastName.toUpperCase()}`}</p>
-      <Link to='/about-us'><StyledButtom>More Reviews</StyledButtom></Link>
+      <Link to='/about-us/reviews'><StyledButtom>More Reviews</StyledButtom></Link>
     </CardWrapper>
   )
 }

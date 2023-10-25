@@ -7,6 +7,7 @@ import { SwitchFuture } from '../components/homeComponents/SwitchFuture'
 import { HomeReview } from '../components/reviews/HomeReview'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
+import { MapContainer } from '../components/maps/MapContainer'
 
 
 export const HomePage = () => {
@@ -14,7 +15,6 @@ export const HomePage = () => {
       <StyledHome>
         <SwitchFuture
         />
-        <Separator />
         <Inovation
           title= 'Riding the wave of innovation'
           content='At ecoWAVEus, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.'
@@ -42,11 +42,9 @@ export const HomePage = () => {
           ]}
           logo='/images/logo-ecowave.png'
         />
-        <Separator />
         <Services
           title= 'The Best Solution for Your Home or Business'
         />
-        <Separator />
         <HomeReview />
         <CustormerFirst
           title= 'A Customer-Prioritized Company'
@@ -90,11 +88,17 @@ export const HomePage = () => {
           <LocationInfo  />
           <ContactForm />
         </WrapperComponents>
+        <MapContainer />
         <OursBrands
           images={[
               '/images/Mitsubishi_Electric_logo.png',
               '/images/LG-Air-Conditioning-Logo.png',
-              '/images/Fujitsu-Logo.png'
+              '/images/Fujitsu-Logo.png',
+              '/images/daikin-logo.png',
+              '/images/tesla-logo.jpg',
+              '/images/emphase-logo.png',
+              '/images/encharge-logo.png',
+              '/images/juicebox-logo.png'
             ]}
         />
       </StyledHome>
@@ -105,12 +109,6 @@ const StyledHome = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
-const Separator = styled.div`
-  width: 90%;
-  height: 1px;
-  background-color: grey;
-  margin: 2rem 0;
 `;
 const WrapperComponents = styled.div`
   display: flex;
@@ -122,6 +120,12 @@ const WrapperComponents = styled.div`
   padding:  2rem;
   background-color: #f5f5f5;
   border-radius: 1rem;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
 `;
 
 

@@ -64,4 +64,5 @@ const ContentTitle = styled.h3`
   font-size: 35px;
   font-weight: 400;
   color: grey;
+  text-align: center;
 `

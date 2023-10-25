@@ -51,7 +51,7 @@ const TopFooter = styled.div`
 const Separator = styled.div`
   width: 95%;
   height: 1px;
-  background-color: #fff;
+  background-color: grey;
   margin: 0 auto;
 `;
 

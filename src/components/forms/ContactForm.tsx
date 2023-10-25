@@ -72,7 +72,7 @@ export const ContactForm = () => {
       <FormTitle>Contact Form</FormTitle>
       <Box
         component="form"
-        sx={{ m: 1, width: '90%' }}
+        sx={{ s: 1, width: '100%' }}
         noValidate
         autoComplete="off"
         onSubmit={formik.handleSubmit}
@@ -217,12 +217,21 @@ const FormWrapper = styled.div`
   width: 70%;
   border-left: 1px solid grey;
   padding-left: 1rem;
+  @media (max-width: 1024px) {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+  }
 `;
 const FormInputs = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 1rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
 `;
 const FormTitle = styled.h3`
   font-size: 40px;

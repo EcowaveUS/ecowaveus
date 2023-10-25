@@ -8,8 +8,9 @@ import { ServiceBenefits } from '../components/services/ServiceBenefits'
 export const HeatPumsPage = () => {
   return (
       <StyledPage>
-        <ServiceTitle title='Heat Pumps'/>
-        <Separator/>
+        <TitleContainer>
+          <ServiceTitle title='Heat Pumps'/>
+        </TitleContainer>
         <ServiceInfo
           title='What is a heat pump?'
           images={[
@@ -22,9 +23,8 @@ export const HeatPumsPage = () => {
         <ServiceBenefits
           title='Benefits of heat pumps'
         />
-        <Separator/>
         <StepsWrapper>
-          <PumpsContentTitle>Step-By-Step Process:</PumpsContentTitle>
+          <PumpsContentTitle>Instalation Procces Step-By-Step</PumpsContentTitle>
           <ListContainer>
             <StepsList>
                 <ListText>
@@ -45,7 +45,7 @@ export const HeatPumsPage = () => {
                 <ListText>
                   5. Sign a contract.
                 </ListText>
-            </StepsList>
+            </StepsList>|
             <StepsList>
                 <ListText>
                   6. a) If you are NOT applying for a Mass Save loan, proceed to step 7.<br/>
@@ -72,7 +72,6 @@ export const HeatPumsPage = () => {
             </StepsList>
           </ListContainer>
         </StepsWrapper>
-        <Separator/>
         <RebatesWrapper>
           <PumpsContentTitle>Energy Rebates & Incentives</PumpsContentTitle>
           <RebatesContainer>
@@ -82,12 +81,18 @@ export const HeatPumsPage = () => {
                 To verify if your town is eligible please click the following link: <br/>
               </RebatesText>
                 <Link to='https://frontdoor.portal.poweredbyefi.org/initiative/marebates'><RebatesText>https://frontdoor.portal.poweredbyefi.org/initiative/marebates</RebatesText></Link>
-              <div>
                 <ul>
-                  <li><RebatesText>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)</RebatesText></li>
-                  <li><RebatesText>Partial-home rebates are offered based on equipment/outdoor unit  (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)</RebatesText></li>
+                  <ListText>
+                    <RebatesText>
+                      Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)
+                    </RebatesText>
+                  </ListText>
+                  <ListText>
+                    <RebatesText>
+                      Partial-home rebates are offered based on equipment/outdoor unit  (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)
+                    </RebatesText>
+                  </ListText>
                 </ul>
-              </div>
               <RebatesTitle>Federal incentives</RebatesTitle>
               <RebatesText>
                 30% of the cost of the heat pump installation up to $2,000
@@ -114,13 +119,24 @@ const StyledPage = styled.div`
   align-items: center;
   justify-content: center;
 `;
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/heatpump-title.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-bottom: 2rem;
+`;
 
 const PumpsContentTitle = styled.h3`
   font-size: 30px;
   font-weight: 600;
   color: grey;
   text-align: left;
-  margin: 0;
+  margin-bottom: 2rem;
 `;
 const Separator = styled.div`
   width: 90%;
@@ -134,12 +150,18 @@ const StepsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 80%;
+
 `;
 const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const StepsList = styled.ol`
   display: flex;
@@ -148,6 +170,9 @@ const StepsList = styled.ol`
   padding: 1rem;
   margin: 0;
   width: 100%;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 const ListText = styled.p`
   font-size: 15px;
@@ -181,10 +206,11 @@ const RebatesContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 `;
 const RebatesImage = styled.img`
-  width: 45%;
+  width: 40%;
   height: auto;
   border-radius: 10px;
   @media (max-width: 1024px) {
@@ -194,18 +220,19 @@ const RebatesImage = styled.img`
 const RebatesInfo = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  margin-left: 1rem;
 `;
 const RebatesTitle = styled.h5`
-  font-size: 15px;
+  font-size: 1.3rem;
   font-weight: 700;
   color: grey;
   text-align: left;
   margin: 0;
 `;
 const RebatesText = styled.p`
-  font-size: 15px;
+  font-size: 1.1rem;
   font-weight: 300;
   color: grey;
   text-align: left;

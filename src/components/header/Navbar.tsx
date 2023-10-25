@@ -68,13 +68,7 @@ export const Navbar = () => {
           )
         }
       </Wrapper>
-      {
-        sidebar &&
-        <div>
-          <SideBar showSidebar={showSidebar} sidebar={sidebar} />
-        </div>
-
-      }
+      <SideBar showSidebar={showSidebar} sidebar={sidebar} />
     </>
   )
 }
@@ -121,8 +115,8 @@ const Infotext = styled.p`
 `;
 const TelText = styled.p`
   font-size: 1.5rem;
-  font-weight: 400;
-  color: #4e9d40;
+  font-weight: 500;
+  color: #000;
   padding-left: 1.5rem;
   @media(max-width: 1280px){
     margin-right: 1.5rem;

@@ -25,7 +25,7 @@ const BrandsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 80%;
+  width: 90%;
   margin: 2rem auto;
 `;
 const Title = styled.h3`
@@ -39,7 +39,9 @@ const BrandsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
   width: 100%;
   margin: 2rem 0;
 `;
