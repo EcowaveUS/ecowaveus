@@ -1,8 +1,5 @@
-import { ReviewsComponents } from '../components/reviews/ReviewsComponents'
 import { Inovation } from '../components/homeComponents/Inovation'
-import { HomeReview } from '../components/reviews/HomeReview'
 import styled from 'styled-components'
-import { ReviewPage } from './ReviewsPage'
 import { Link, Outlet } from 'react-router-dom'
 
 export const AboutAsPage = () => {

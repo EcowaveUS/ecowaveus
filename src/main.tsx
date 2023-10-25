@@ -2,8 +2,6 @@ import { createRoot } from 'react-dom/client'
 import {
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements,
-  Route,
   Outlet,
 } from 'react-router-dom'
 import { HomePage } from './routes/HomePage.tsx'
