@@ -28,7 +28,7 @@ export const Navbar = () => {
       <Wrapper>
         <TopNavbar>
           <NavbarInfo>
-            <Infotext>Hour hours 8:00am top 5:00pm Mon to Sat</Infotext>
+            <Infotext>Our hours 8:00am to 5:00pm Mon to Fri</Infotext>
             <TelText>(978)-500-4081</TelText>
           </NavbarInfo>
           <StyledLinks>
@@ -37,9 +37,7 @@ export const Navbar = () => {
             <Link to='/ev-chargers'><li>EV CHARGERS</li></Link>
             <Link to='/energy-storage'><li>ENERGY STORAGE</li></Link>
             <Link to='/about-us'>
-              <li>
-                ABOUT US
-              </li>
+              <li>ABOUT US</li>
             </Link>
             <Link to='/contact-us'><li>CONTACT US</li></Link>
           </StyledLinks>
@@ -79,6 +77,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 95%;
+  height: 100%;
   @media(max-width: 1024px){
     justify-content: flex-start;
   }
@@ -89,6 +88,7 @@ const TopNavbar = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  height: 90%;
 `;
 const NavbarInfo = styled.div`
   display: flex;
@@ -105,18 +105,21 @@ const NavbarInfo = styled.div`
   }
 `;
 const Infotext = styled.p`
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-weight: 300;
-  color: #000;
+  font-weight: 400;
+  font-style: italic;
+  color: 595954;
   padding-left: 1rem;
   @media(max-width: 1280px){
     display: none;
   }
 `;
 const TelText = styled.p`
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #000;
+  color: 595954;
   padding-left: 1.5rem;
   @media(max-width: 1280px){
     margin-right: 1.5rem;
@@ -135,18 +138,17 @@ const StyledLinks = styled.div`
     display: none;
   }
   li {
+    font-family: 'Roboto', sans-serif;
     list-style: none;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 400;
     color: #1b5b8d;
     padding: 0 1rem 1rem 0;
-
     letter-spacing: 1px;
     text-align: center;
     cursor: pointer;
     position: relative;
     transition: color 0.3s ease-in-out;
-
     &::before {
       content: "";
       position: absolute;
@@ -157,7 +159,9 @@ const StyledLinks = styled.div`
       background-color: #1b5b8d;
       transition: width 0.3s ease-in-out;
     }
-
+    &.active::before {
+      width: 100%;
+    }
     &:hover {
       color: #4e9d40;
       &::before {

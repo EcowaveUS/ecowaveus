@@ -16,13 +16,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: auto;
-  background-image: url("/images/fondoWave.png");
+  height: 110px;
+  width: 100%;
+  background-image: url("/images/fondo-prueba.png");
   background-size: cover;
   background-position: center center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: #fff;
+  z-index: 99;
+  margin: 0 auto;
   @media(max-width: 800px){
     flex-direction: column;
     justify-content: center;

@@ -27,6 +27,7 @@ const BrandsWrapper = styled.div`
   justify-content: flex-start;
   width: 90%;
   margin: 2rem auto;
+  transition: all 0.3s ease-in-out;
 `;
 const Title = styled.h3`
   font-size: 30px;
@@ -49,4 +50,10 @@ const BrandsImage = styled.img`
   width: 25%;
   height: auto;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  &: hover {
+    cursor: pointer;
+    opacity: 0.8;
+    scale: 1.2;
+  }
 `;

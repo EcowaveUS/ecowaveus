@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 interface Props {
   title: string
-  subtitle: string
+  subtitle?: string
   listContent: {
     icon: string
     content: string
@@ -11,19 +11,17 @@ interface Props {
 
 export const CustormerFirst: React.FC<Props> = ({
   title,
-  subtitle,
   listContent
 }) => {
   return (
     <StyledWrapper>
       <Title>{title}</Title>
-      <h3>{subtitle}</h3>
       <ListWrapper>
         {
           listContent.map((item, index) => (
             <LiwWrapper key={index}>
               <StyledIcon src={item.icon}/>
-              <p>{item.content}</p>
+              <Text>{item.content}</Text>
             </LiwWrapper>
           ))
         }
@@ -31,22 +29,25 @@ export const CustormerFirst: React.FC<Props> = ({
     </StyledWrapper>
   )
 }
+const StyledWrapper = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+background-color: #07222B;
+align-items: center;
+margin-top: 2rem;
+`;
 const Title = styled.h1`
   font-size: 30px;
   font-weight: 600;
   color: #fff;
   text-align: center;
   margin: 0;
+  padding: 1rem;
+  font-style: italic;
 `;
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  background-color: #1b5b8d;
-  align-items: center;
-  margin-top: 2rem;
-  `;
   const ListWrapper = styled.div`
   margin: 1rem auto;
   display: grid;
@@ -55,6 +56,7 @@ const StyledWrapper = styled.div`
   width: 80%;
   height: 100%;
   list-style: none;
+  padding: 1.5rem;
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
     width: 70%;
@@ -69,9 +71,19 @@ const LiwWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
 `;
 const StyledIcon = styled.img`
   width: 100px;
   height: 33px;
   margin: 0 auto;
 `;
+const Text = styled.p`
+  margin-top: 1.5rem;
+  font-size: 18px;
+  font-weight: 500;
+  &: hover {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  `;

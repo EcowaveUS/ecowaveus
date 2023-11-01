@@ -2,13 +2,20 @@ import styled from 'styled-components'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
 import { MapContainer } from '../components/maps/MapContainer'
+import { motion } from 'framer-motion'
+import { ServiceTitle } from '../components/services/ServiceTitle'
+
 
 export const ContactPage = () => {
   return (
-      <StyledPage>
-        <TitleContainer>
-          <PageTitle>Contact Us</PageTitle>
-        </TitleContainer>
+      <StyledPage
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <ServiceTitle
+          title='Contact Us'
+        />
         <Separator />
         <WrapperComponents>
           <LocationInfo />
@@ -19,7 +26,7 @@ export const ContactPage = () => {
   )
 }
 
-const StyledPage = styled.div`
+const StyledPage = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;

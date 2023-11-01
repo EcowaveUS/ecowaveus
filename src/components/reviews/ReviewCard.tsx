@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { FaStar } from "react-icons/fa";
+import { motion } from 'framer-motion'
 
 interface ReviewCardProps {
   id: number
@@ -20,15 +21,36 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
   description,
   createdAt
 }: ReviewCardProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('reviews-page');
+      if (element && window.scrollY + window.innerHeight >= element.offsetTop) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <CardWrapper>
+    <CardWrapper
+      id="reviews-page"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0, transition: { duration: 2, type:'linear' } }}
+      exit={{ opacity: 0 }}
+    >
       <StarsWrapper>
         {
           Array(5).fill('').map((_, index) => {
             if (index < score) {
-              return <FaStar key={index} color='#CEE820'  />
+              return <FaStar key={index} color='#FFD80A' size={18}  />
             }
-            return <FaStar key={index} color='#BAD03F' />
+            return <FaStar key={index} color='#8A8632' size={18} />
           })
         }
       </StarsWrapper>
@@ -42,7 +64,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
   )
 }
 
-const CardWrapper = styled.div`
+const CardWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,9 +75,9 @@ const CardWrapper = styled.div`
   margin: 1rem;
   max-width: 280px;
   max-height: 400px;
-  background-color: #1b5b8d;
-  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+  background-color: #07222B;
   &:hover {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
   }

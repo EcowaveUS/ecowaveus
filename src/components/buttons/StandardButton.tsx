@@ -17,8 +17,8 @@ export const StandardButton: React.FC<ButtonProps> = ({
       <StyledButton
         onClick={onClick}
       >
-        {Icon && <Icon />}
         {title}
+        {Icon && <Icon />}
       </StyledButton>
     </>
   );
@@ -29,20 +29,19 @@ const StyledButton = styled.button`
   justify-content: center;
   align-items: space-between;
   gap: 0.5rem;
-  background-color: #1b5b8d;
+  background-color: #00768D;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  font-weight: 500;
-  border-radius: 5px;
+  font-weight: 300;
   cursor: pointer;
   width: 175px;
   margin-right: 1rem;
   transition: background-color 0.5s ease-in-out;
+  text-transform: uppercase;
   &:hover {
-    background-color: #4e9d40;
     color: #1b5b8d;
-    border: 1px solid #1b5b8d;
+    cursor: pointer;
   }
 `;

@@ -2,18 +2,23 @@ import styled from 'styled-components'
 import { LogoFooter } from './LogoFooter'
 import { NavigationFooter } from './NavigationFooter'
 import { FooterInfo } from './FooterInfo'
-import { MediaFooter } from './MediaFooter'
 import { BottomFooter } from './BottomFooter'
+import { TopFooter } from './TopFooter'
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <TopFooter>
-        <LogoFooter />
-        <NavigationFooter />
-        <FooterInfo />
-        <MediaFooter />
-      </TopFooter>
+      <TopFooter />
+      <Separator />
+      <MiddleFooter>
+        <LogoContainer>
+          <LogoFooter />
+        </LogoContainer>
+        <InfoContainer>
+          <NavigationFooter />
+          <FooterInfo />
+        </InfoContainer>
+      </MiddleFooter>
       <Separator />
       <BottomFooter />
     </StyledFooter>
@@ -22,21 +27,22 @@ export const Footer = () => {
 const StyledFooter = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  background-color: #1b5b8d;
+  background-color: #07222B;
 `;
-const TopFooter = styled.div`
+const MiddleFooter = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 80%;
   height: auto;
-  @media (max-width: 1024px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  @media (max-width: 1064px) {
+    flex-direction: column;
     align-items: center;
     justify-items: center;
   }
@@ -45,11 +51,40 @@ const TopFooter = styled.div`
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
+    width: 100%;
   }
-
+`;
+const InfoContainer = styled.div`
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  align-items: flex-start;
+  @media (max-width: 1064px) {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+  const LogoContainer = styled.div`
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media (max-width: 1064px) {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
 `;
 const Separator = styled.div`
-  width: 95%;
+  width: 85%;
   height: 1px;
   background-color: grey;
   margin: 0 auto;

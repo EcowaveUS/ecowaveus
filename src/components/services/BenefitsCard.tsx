@@ -34,6 +34,7 @@ const IconCard = styled.div`
   border-radius: 10px;
   width: 240px;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
   &:hover {
     scale: 1.2;
   }
@@ -43,10 +44,6 @@ const StyledImage = styled.img`
   height: 100%;
   border-radius: 10px 10px 0 0;
 `;
-// const StyledIcon = styled.div<{ color?: string }>`
-//   font-size: 100px;
-//   color: ${props => props.color || 'green'};
-// `;
 const TextWrapper = styled.div`
   display: flex;
   align-items: center;

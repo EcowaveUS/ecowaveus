@@ -3,13 +3,14 @@ import styled from 'styled-components'
 export const NavigationFooter = () => {
   return (
     <NavigationWrapper>
-      <Title>NAVIGATION</Title>
+      <Title>Navigation</Title>
       <NavigationList>
-        <li>HOME</li>
-        <li>HEAT PUMS</li>
-        <li>EV CHARGERS</li>
-        <li>ENERGY STORAGE</li>
-        <li>CONTACT US</li>
+        <li>Home</li>
+        <li>Heat Pumps</li>
+        <li>Ev Chargers</li>
+        <li>Energy Storage</li>
+        <li>Contact Us</li>
+        <li>About Us</li>
       </NavigationList>
     </NavigationWrapper>
   )
@@ -17,12 +18,17 @@ export const NavigationFooter = () => {
 const NavigationWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 2rem 0;
+  @media (max-width: 768px) {
+    align-items: center;
+    padding: 1rem;
+  }
 `;
 const Title = styled.h5`
-  font-size: 20px;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #fff;
   margin: 0;
 `;
@@ -31,13 +37,14 @@ const NavigationList = styled.ul`
   padding: 0;
   margin: 0;
   li {
-    font-size: 16px;
-    font-weight: 400;
-    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #B5B5B5;
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 6px 0;
     &:hover {
-      color: #4e9d40;
+      color: #fff;
       cursor: pointer;
     }
   }

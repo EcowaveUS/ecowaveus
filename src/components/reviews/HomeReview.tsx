@@ -46,13 +46,17 @@ const StyledImg = styled.img`
     width: 100%;
   }
 `;
-const ReviewsTitle = styled.h1`
-  width: 100%;
-  align-self: center;
-  font-size: 35px;
+const ReviewsTitle = styled.h3`
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
   font-weight: 400;
-  color: grey;
   text-align: center;
+  line-height: 1.5;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin: 1rem;
+  align-self: center;
+  color: #4F4F4F;
   @media (max-width: 1240px) {
     left: auto;
   }

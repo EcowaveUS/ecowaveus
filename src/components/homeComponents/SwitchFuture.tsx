@@ -1,11 +1,18 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
 
 export const SwitchFuture = () => {
   return (
     <Container>
       <Title>SWITCH TO THE FUTURE</Title>
-      <StyledImage src="/images/fondo.png"/>
+      <ImgWapper>
+        <StyledImage
+          initial={{ opacity: 0, y: -200 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 1.5, type:'linear' } }}
+          src="/images/fondo.png"
+        />
+      </ImgWapper>
       <ServiceInfo>
         <Subtitle>Great Service. <span>Fair Prices.</span></Subtitle>
         <SubtitleInfo>
@@ -28,25 +35,35 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   width: 100%;
-  border-color: #1b5b8d;
+  margin: 0;
 `;
-const StyledImage = styled.img`
+const ImgWapper = styled.div`
   width: 100%;
   height: 100%;
+  margin: 0;
+`;
+const StyledImage = styled(motion.img)`
+  width: 100%;
+  height: 100%;
+  margin: 0;
 `;
 const Title = styled.h1`
-  font-size: 50px;
-  font-weight: 400;
-  color: grey;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #21AB54, #2133AB);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-align: center;
   font-style: oblique;
-  letter-spacing: 3px;
+  letter-spacing: 0.5rem;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 4rem;
 `;
 const ServiceInfo = styled.div`
-  margin-top: 7rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,12 +80,14 @@ const ServiceInfo = styled.div`
   }
 `
 const Subtitle = styled.h2`
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: left;
   width: 100%;
   margin: 0;
-  text-align: left;
-  font-size: 35px;
-  font-weight: 500;
   color: #1b5b8d;
+  font-style: oblique;
   span {
     color: #4e9d40;
   }
@@ -77,21 +96,21 @@ const Subtitle = styled.h2`
   }
 `
 const SubtitleInfo = styled.h3`
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
   width: 100%;
   margin: 1rem;
-  font-size: 20px;
-  font-weight: 300;
-  color: grey;
-  margin: 1rem;
+  color: #595954;
   @media (max-width: 1024px) {
     text-align: center;
   }
 `
 const Text = styled.p`
-  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
   font-weight: 300;
-  color: grey;
-
+  color: ##595954;
   @media (max-width: 1024px) {
     text-align: center;
   }

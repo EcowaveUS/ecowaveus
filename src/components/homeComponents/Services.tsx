@@ -24,7 +24,7 @@ export const Services: React.FC<Props> = ({
   ]
   return (
     <ServiceContainer>
-      <ContentTitle>{title}</ContentTitle>
+        <ContentTitle>{title}</ContentTitle>
       <ServicesButtonsContainer>
         {
           buttonsContent.map((button, index) => (
@@ -59,10 +59,14 @@ const ServicesButtonsContainer = styled.div`
     width: 100%;
   }
 `
+
 const ContentTitle = styled.h3`
-  margin: 1rem;
-  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
   font-weight: 400;
-  color: grey;
-  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #4F4F4F;
+  margin: 1rem;
 `

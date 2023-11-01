@@ -16,7 +16,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 2rem;
+  padding-left: 2rem;
+  transition: all 0.3s ease-in-out;
+  &: hover {
+    cursor: pointer;
+    opacity: 0.8;
+
+  }
 `;
 const Logo = styled.img`
   width: 280px;

@@ -1,107 +1,164 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { OursBrands } from '../components/brands/OursBrands'
 import { ServiceTitle } from '../components/services/ServiceTitle'
-import { ServiceInfo } from '../components/services/ServiceInfo'
 import { ServiceBenefits } from '../components/services/ServiceBenefits'
+import { ProccesCard } from '../components/services/ProccesCard'
+import { motion } from 'framer-motion'
+import { Inovation } from '../components/homeComponents/Inovation'
+import { RebatesIncentives } from '../components/services/RebatesIncentives'
 
 export const HeatPumsPage = () => {
+
+  const stepByStepList = [
+    {
+      id: 1,
+      item: '01',
+      content: [
+        'If your house was built after the year 2000, you can skip this step.',
+        ' Before the installation, in order to qualify for Mass Save rebates, you must complete an energy assessment and obtain a Certificate of Completion (COC). This is necessary for being eligible for rebates from Mass Save.',
+        'To schedule an energy assessment with Mass Save, please click on the following link:'
+      ]
+    },
+    {
+      id: 2,
+      item: '02',
+      content: [
+        'Give us a call and tell us about the scope of your project.'
+      ]
+    },
+    {
+      id: 3,
+      item: '03',
+      content: [
+        'Schedule a visit; we will take measurements of your house and inspect some elements.'
+      ]
+    },
+    {
+      id: 4,
+      item: '04',
+      content: [
+        'Receive a free estimate from us, including information on rebates you may be eligible for.'
+      ]
+    },
+    {
+      id: 5,
+      item: '05',
+      content: [
+        'Sign a contract.'
+      ]
+    },
+    {
+      id: 6,
+      item: '06',
+      content:[
+        'a) If you are NOT applying for a Mass Save loan, proceed to step 7.',
+        'b) If you are applying for the Mass Save 0% HEAT loan'
+      ]
+    },
+    {
+      id: 7,
+      item: '07',
+      content: [
+        'We will order the equipment and schedule a start date for the job.'
+      ]
+    },
+    {
+      id: 8,
+      item: '08',
+      content: [
+        "We'll complete the installation. We'll commission the system."
+      ]
+    },
+    {
+      id: 9,
+      item: '09',
+      content: [
+        "We'll complete the installation. We'll commission the system."
+      ]
+    },
+    {
+      id: 10,
+      item: '10',
+      content: [
+        "We'll assist you in applying for your rebate."
+      ]
+    },
+    {
+      id: 11,
+      item: '11',
+      content: [
+        "We'll assist you in applying for your rebate."
+      ]
+    },
+    {
+      id: 12,
+      item: '12',
+      content:[
+        "Enjoy your new system!"
+      ]
+    }
+  ]
+
   return (
-      <StyledPage>
-        <TitleContainer>
-          <ServiceTitle title='Heat Pumps'/>
-        </TitleContainer>
-        <ServiceInfo
-          title='What is a heat pump?'
-          images={[
-            '/images/heat-pumps.jpg'
-          ]}
-          content=
-            'A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
+      <StyledPage
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <ServiceTitle
+          title='Heat Pumps'
         />
-        <Separator/>
+        <Inovation
+          title='What is a heat pump?'
+          content=
+          'A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
+          images= {[
+            {
+              img:'/images/heat-pumps-ppl.jpg',
+              title: 'Breakfast',
+              rows: 2,
+              cols: 2,
+            },
+            {
+              img: '/images/heat-pumps-05.jpg',
+              title:'ev-charger'
+            },
+            {
+              img: '/images/heat-pumps-06.jpg',
+              title:'heat-pumps'
+            },
+            {
+              img: '/images/heat-pumps-03.jpg',
+              title:'energy-storage',
+              cols: 2,
+              rows: 1,
+            },
+          ]}
+          logo='/images/logo-ecowave.png'
+        />
         <ServiceBenefits
           title='Benefits of heat pumps'
         />
         <StepsWrapper>
           <PumpsContentTitle>Instalation Procces Step-By-Step</PumpsContentTitle>
-          <ListContainer>
-            <StepsList>
-                <ListText>
-                  1. If your house was built after the year 2000, you can skip this step. Before the installation, in order to qualify for Mass Save rebates, you must complete an energy assessment and obtain a Certificate of Completion (COC). This is necessary for being eligible for rebates from Mass Save.
-                  <br/><br/>
-                  To schedule an energy assessment with Mass Save, please click on the following link:
-                  <Link to='https://www.masssave.com/en/saving/energy-assessments/' target='_blank'><LinkText>https://www.masssave.com/en/saving/energy-assessments/ </LinkText></Link>
-                </ListText>
-                <ListText>
-                  2.Give us a call and tell us about the scope of your project.
-                </ListText>
-                <ListText>
-                  3.Schedule a visit; we will take measurements of your house and inspect some elements.
-                </ListText>
-                <ListText>
-                  4. Receive a free estimate from us, including information on rebates you may be eligible for.
-                </ListText>
-                <ListText>
-                  5. Sign a contract.
-                </ListText>
-            </StepsList>|
-            <StepsList>
-                <ListText>
-                  6. a) If you are NOT applying for a Mass Save loan, proceed to step 7.<br/>
-                  b) If you are applying for the Mass Save 0% HEAT loan, apply through this<Link to='https://www.masssave.com/en/residential/rebates-and-incentives/'><LinkText>link:https://www.masssave.com/en/residential/rebates-and-incentives/heat-loan-program</LinkText></Link>(We will provide the information needed to complete the application. It may take 2 weeks for the application to be processed.
-                </ListText>
-                <ListText>
-                  7. We will order the equipment and schedule a start date for the job.
-                </ListText>
-                <ListText>
-                  8. We'll complete the installation. We'll commission the system.
-                </ListText>
-                <ListText>
-                  9. Submit the second payment when the job is finished.
-                </ListText>
-                <ListText>
-                  10. We'll assist you in applying for your rebate.
-                </ListText>
-                <ListText>
-                  11. Receive a check for the rebate amount from Mass Save.
-                </ListText>
-                <ListText>
-                  12.Enjoy your new system!
-                </ListText>
-            </StepsList>
-          </ListContainer>
+          <Separator/>
+          <div>
+              {
+                stepByStepList.map((step, index) => (
+                  <ListWrapper key={index} >
+                    <ProccesCard
+                      key={step.id}
+                      id={step.id}
+                      item={step.item}
+                      content={step.content}
+                    />
+                    {index !== stepByStepList.length - 1 && <Separator/>}
+                  </ListWrapper>
+                ))
+              }
+          </div>
         </StepsWrapper>
-        <RebatesWrapper>
-          <PumpsContentTitle>Energy Rebates & Incentives</PumpsContentTitle>
-          <RebatesContainer>
-            <RebatesInfo>
-              <RebatesTitle>Mass Save Rebates</RebatesTitle>
-              <RebatesText>
-                To verify if your town is eligible please click the following link: <br/>
-              </RebatesText>
-                <Link to='https://frontdoor.portal.poweredbyefi.org/initiative/marebates'><RebatesText>https://frontdoor.portal.poweredbyefi.org/initiative/marebates</RebatesText></Link>
-                <ul>
-                  <ListText>
-                    <RebatesText>
-                      Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)
-                    </RebatesText>
-                  </ListText>
-                  <ListText>
-                    <RebatesText>
-                      Partial-home rebates are offered based on equipment/outdoor unit  (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)
-                    </RebatesText>
-                  </ListText>
-                </ul>
-              <RebatesTitle>Federal incentives</RebatesTitle>
-              <RebatesText>
-                30% of the cost of the heat pump installation up to $2,000
-              </RebatesText>
-            </RebatesInfo>
-            <RebatesImage src='/images/green-money.jpg' alt='energy-star-logo' />
-          </RebatesContainer>
-        </RebatesWrapper>
-        <Separator/>
+        <RebatesIncentives/>
         <OursBrands
           images={[
               '/images/Mitsubishi_Electric_logo.png',
@@ -113,132 +170,47 @@ export const HeatPumsPage = () => {
   )
 }
 
-const StyledPage = styled.div`
+const StyledPage = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
-const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/images/heatpump-title.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  margin-bottom: 2rem;
-`;
+
 
 const PumpsContentTitle = styled.h3`
-  font-size: 30px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 600;
   color: grey;
   text-align: left;
-  margin-bottom: 2rem;
+  margin: 2rem 0 0 0;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 70%;
+  }
 `;
 const Separator = styled.div`
-  width: 90%;
-  height: 1px;
   background-color: grey;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  width: 70%;
+  height: 1px;
+  border-width: 1px;
+  border-style: dnone;
+  border-spacing: 15px;
 `;
 const StepsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
-
-`;
-const ListContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-const StepsList = styled.ol`
-  display: flex;
-  flex-direction: column;
-  grid-gap: 1rem;
-  padding: 1rem;
-  margin: 0;
   width: 100%;
-  @media (max-width: 1024px) {
-    width: 80%;
-  }
+  background-color: #26252B;
 `;
-const ListText = styled.p`
-  font-size: 15px;
-  font-weight: 300;
-  color: grey;
-  text-align: left;
-  margin: 0;
-`;
-const LinkText = styled.p`
-  font-size: 15px;
-  font-weight: 350;
-  color: green;
-  text-align: left;
-  margin: 0;
-  text-decoration: underline;
-`;
-const RebatesWrapper = styled.div`
+const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  width: 80%;
-`;
-const RebatesContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-  }
-`;
-const RebatesImage = styled.img`
-  width: 40%;
-  height: auto;
-  border-radius: 10px;
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
-const RebatesInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 1rem;
-  @media (max-width: 1024px) {
-    margin: 0;
-    width: 100%;
-  }
-`;
-const RebatesTitle = styled.h5`
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: grey;
-  text-align: left;
-  margin: 0;
-`;
-const RebatesText = styled.p`
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: grey;
-  text-align: left;
-  margin: 0;
 `;

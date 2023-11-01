@@ -8,11 +8,17 @@ import { HomeReview } from '../components/reviews/HomeReview'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
 import { MapContainer } from '../components/maps/MapContainer'
+import { motion } from 'framer-motion'
 
 
 export const HomePage = () => {
   return (
-      <StyledHome>
+      <StyledHome
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
         <SwitchFuture
         />
         <Inovation
@@ -43,44 +49,27 @@ export const HomePage = () => {
           logo='/images/logo-ecowave.png'
         />
         <Services
-          title= 'The Best Solution for Your Home or Business'
+          title= 'Here to help you with:'
         />
         <HomeReview />
         <CustormerFirst
-          title= 'A Customer-Prioritized Company'
-          subtitle= 'Why We’re The First Choice'
+          title= 'Our Priorities'
           listContent={[
             {
               icon: '/images/logo-ecowave.png',
-              content: 'Quality Technicians & Brands'
+              content: 'Customer satisfaction'
             },
             {
               icon: '/images/logo-ecowave.png',
-              content: 'Preventative Maintenance Plans'
+              content: 'Fair prices'
             },
             {
               icon: '/images/logo-ecowave.png',
-              content: 'Local & Community Involved'
+              content: 'Execellent craftsmanship'
             },
             {
               icon: '/images/logo-ecowave.png',
-              content: 'We’re On Time for Appointments'
-            },
-            {
-              icon: '/images/logo-ecowave.png',
-              content: '24 Hour Emergency Service'
-            },
-            {
-              icon: '/images/logo-ecowave.png',
-              content: 'BBB A+ Rated + 5 Star Reviews'
-            },
-            {
-              icon: '/images/logo-ecowave.png',
-              content: 'BBB A+ Rated + 5 Star Reviews'
-            },
-            {
-              icon: '/images/logo-ecowave.png',
-              content: 'BBB A+ Rated + 5 Star Reviews'
+              content: 'Qualiti of equipment and materials'
             },
           ]}
         />
@@ -104,7 +93,7 @@ export const HomePage = () => {
       </StyledHome>
   )
 }
-const StyledHome = styled.div`
+const StyledHome = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;

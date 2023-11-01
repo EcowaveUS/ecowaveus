@@ -214,7 +214,7 @@ const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 60%;
   border-left: 1px solid grey;
   padding-left: 1rem;
   @media (max-width: 1024px) {
@@ -234,8 +234,10 @@ const FormInputs = styled.div`
   }
 `;
 const FormTitle = styled.h3`
-  font-size: 40px;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-style: oblique;
+  font-size: 2rem;
+  font-weight: 500;
   color: grey;
   margin: 0;
 `;
@@ -250,7 +252,7 @@ const StyledButton = styled.button`
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   width: 175px;
   margin-right: 1rem;
