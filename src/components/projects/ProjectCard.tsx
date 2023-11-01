@@ -14,7 +14,6 @@ interface ProjectProps {
 }
 
 export const ProjectCard: React.FC<ProjectProps> = ({
-    id,
     category,
     image,
     name,

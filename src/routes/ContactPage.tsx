@@ -33,24 +33,6 @@ const StyledPage = styled(motion.div)`
   justify-content: center;
   margin-bottom: 2rem;
   `;
-  const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/images/contact-img.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-`;
-const PageTitle = styled.h1`
-  font-size: 50px;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 2px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
-`;
 const WrapperComponents = styled.div`
   display: flex;
   flex-direction: row;
