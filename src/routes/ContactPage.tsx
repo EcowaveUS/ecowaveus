@@ -7,6 +7,15 @@ import { ServiceTitle } from '../components/services/ServiceTitle'
 
 
 export const ContactPage = () => {
+  const markersPoint = [
+    {
+      name: "Office",
+      location: {
+        lat: 42.55009044837213,
+        lng: -70.88123363803287
+      },
+    },
+  ]
   return (
       <StyledPage
         initial={{ opacity: 0 }}
@@ -21,7 +30,9 @@ export const ContactPage = () => {
           <LocationInfo />
           <ContactForm />
         </WrapperComponents>
-        <MapContainer />
+        <MapContainer
+          markersPoints={markersPoint}
+        />
       </StyledPage>
   )
 }
