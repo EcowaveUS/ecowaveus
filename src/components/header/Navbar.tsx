@@ -27,44 +27,44 @@ export const Navbar = () => {
     <>
       <Wrapper>
         <TopNavbar>
-          <NavbarInfo>
-            <Infotext>Our hours 8:00am to 5:00pm Mon to Fri</Infotext>
-            <TelText>(978)-500-4081</TelText>
-          </NavbarInfo>
-          <StyledLinks>
-            <Link to='/'><li>HOME</li></Link>
-            <Link to='/heat-pumps'><li>HEAT PUMPS</li></Link>
-            <Link to='/ev-chargers'><li>EV CHARGERS</li></Link>
-            <Link to='/energy-storage'><li>ENERGY STORAGE</li></Link>
-            <Link to='/about-us'>
-              <li>ABOUT US</li>
-            </Link>
-            <Link to='/contact-us'><li>CONTACT US</li></Link>
-          </StyledLinks>
+            <NavbarInfo>
+              <Infotext>Our hours 8:00am to 5:00pm Mon to Fri (978)-500-4081</Infotext>
+            </NavbarInfo>
+                {
+                  windowWidth > 800 ?
+                    (
+                      <ButtonContainer>
+                        <StandardButton
+                          title='Free stimate'
+                        />
+                        <StandardButton
+                          title='Menu'
+                          Icon={AiOutlineMenu}
+                          onClick={showSidebar}
+                        />
+                    </ButtonContainer>
+                    )
+                    :
+                    (<HambuguerMenu>
+                      <AiOutlineMenu
+                        size={40}
+                        onClick={showSidebar}
+                      />
+                    </HambuguerMenu>
+                  )
+              }
         </TopNavbar>
-        {
-          windowWidth > 800 ?
-            (
-              <ButtonContainer>
-                <StandardButton
-                  title='Free stimate'
-                />
-                <StandardButton
-                  title='Menu'
-                  Icon={AiOutlineMenu}
-                  onClick={showSidebar}
-                />
-            </ButtonContainer>
-            )
-            :
-            (<HambuguerMenu>
-              <AiOutlineMenu
-                size={40}
-                onClick={showSidebar}
-              />
-            </HambuguerMenu>
-          )
-        }
+        <StyledLinks>
+          <Link to='/'><li>HOME</li></Link>
+          <Link to='/heat-pumps'><li>HEAT PUMPS</li></Link>
+          <Link to='/ev-chargers'><li>EV CHARGERS</li></Link>
+          <Link to='/energy-storage'><li>ENERGY STORAGE</li></Link>
+          <Link to='/about-us'>
+            <li>ABOUT US</li>
+          </Link>
+          <Link to='/contact-us'><li>CONTACT US</li></Link>
+        </StyledLinks>
+
       </Wrapper>
       <SideBar showSidebar={showSidebar} sidebar={sidebar} />
     </>
@@ -73,36 +73,23 @@ export const Navbar = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
-  width: 95%;
   height: 100%;
-  @media(max-width: 1024px){
-    justify-content: flex-start;
-  }
+  width: 75%;
 `;
 const TopNavbar = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
-  height: 90%;
 `;
 const NavbarInfo = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  gap: 2rem;
-  @media(max-width: 1280px){
-    justify-content: flex-end;
-  }
-  @media(max-width: 800px){
-    justify-content: center;
-    height: 3rem;
-  }
+
 `;
 const Infotext = styled.p`
   font-family: 'Roboto', sans-serif;
@@ -110,30 +97,29 @@ const Infotext = styled.p`
   font-weight: 400;
   font-style: italic;
   color: 595954;
-  padding-left: 1rem;
+  margin-left: 2rem;
   @media(max-width: 1280px){
     display: none;
   }
 `;
-const TelText = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: 595954;
-  padding-left: 1.5rem;
-  @media(max-width: 1280px){
-    margin-right: 1.5rem;
-  }
-  @media(max-width: 800px){
-    display: none;
-  }
-`;
+// const TelText = styled.p`
+//   font-family: 'Roboto', sans-serif;
+//   font-size: 1.5rem;
+//   font-weight: 500;
+//   color: 595954;
+//   padding-left: 1.5rem;
+//   @media(max-width: 1280px){
+//     margin-right: 1.5rem;
+//   }
+//   @media(max-width: 800px){
+//     display: none;
+//   }
+// `;
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
-  margin-left: 4.5rem;
+  width: 100%;
   @media(max-width: 1024px){
     display: none;
   }
@@ -143,7 +129,7 @@ const StyledLinks = styled.div`
     font-size: 0.9rem;
     font-weight: 400;
     color: #1b5b8d;
-    padding: 0 1rem 1rem 0;
+    padding: 0 0.5rem 1rem 0;
     letter-spacing: 1px;
     text-align: center;
     cursor: pointer;
@@ -171,9 +157,9 @@ const StyledLinks = styled.div`
 `;
 const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 0.5rem;
   gap: 1rem;
   @media(max-width: 800px){
     display: none;

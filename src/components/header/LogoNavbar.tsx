@@ -14,10 +14,11 @@ export const LogoNavbar = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding-left: 2rem;
   transition: all 0.3s ease-in-out;
+  width: 25%;
+  padding: 1rem 0 1rem 1rem;
   &: hover {
     cursor: pointer;
     opacity: 0.8;
@@ -25,9 +26,8 @@ const Wrapper = styled.div`
   }
 `;
 const Logo = styled.img`
-  width: 280px;
-  height: 65px;
-  margin-top: 15px;
+  width: 260px;
+  height: 50px;
 `;
 const TelText = styled.p`
   display: none;

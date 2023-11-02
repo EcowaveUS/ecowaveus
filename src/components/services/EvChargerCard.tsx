@@ -38,6 +38,10 @@ const CardWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+  &:hover {
+    background-color: #f2f2f2;
+    transition: all 2s ease-in-out;
+  }
 
 `
 const Image = styled.img`

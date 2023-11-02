@@ -23,7 +23,7 @@ export const SideBar: React.FC<MenuComponentProps> = ({
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
               <Link to="#" className="menu-bars">
-                <AiIcons.AiOutlineClose />
+                <AiIcons.AiOutlineClose color='#B5B5B5' />
               </Link>
             </li>
             {SidebarData.map((item, index) => {

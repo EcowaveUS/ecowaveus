@@ -40,7 +40,7 @@ export const EvChargersPage = () => {
         <ServiceTitle title='EV Chargers'/>
       </TitleContainer>
       <Inovation
-        title='EV Chargers'
+        title='Riding the wave of innovation'
         content='We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable.'
         images= {[
           {
@@ -93,7 +93,7 @@ export const EvChargersPage = () => {
       <OursBrands
         images={[
             '/images/tesla-logo.jpg',
-            '/images/encharge-logo.png',
+            '/images/charge-point-logo.png',
             '/images/juicebox-logo.png'
           ]}
       />

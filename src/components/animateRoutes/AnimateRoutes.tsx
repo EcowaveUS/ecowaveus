@@ -4,7 +4,6 @@ import { AboutAsPage } from '../../routes/AboutAsPage'
 import { ContactPage } from '../../routes/ContactPage'
 import { HeatPumsPage } from '../../routes/HeatPumsPage'
 import { EvChargersPage } from '../../routes/EvChargersPage'
-import { ServicesPage } from '../../routes/ServicesPage'
 import { EnergyStoragePage } from "../../routes/EnergyStoragePage"
 import { AnimatePresence } from 'framer-motion'
 
@@ -16,7 +15,6 @@ export const AnimateRoutes = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/about-us/*' element={<AboutAsPage />} />
         <Route path='/contact-us' element={<ContactPage />} />
-        <Route path='/services' element={<ServicesPage />} />
         <Route path='/heat-pumps' element={<HeatPumsPage />} />
         <Route path='/ev-chargers' element={<EvChargersPage />} />
         <Route path='/energy-storage' element={<EnergyStoragePage />} />

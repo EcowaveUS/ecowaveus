@@ -128,4 +128,8 @@ const Text = styled.p`
 const StyledList = styled.ul`
   width: 60%;
   margin-left: 1.5rem;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `;

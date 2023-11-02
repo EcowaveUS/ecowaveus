@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: 100px;
   width: 100%;
   background-image: url("/images/fondo-prueba.png");
   background-size: cover;
@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   background-color: #fff;
   z-index: 99;
   margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
   @media(max-width: 800px){
     flex-direction: column;
     justify-content: center;

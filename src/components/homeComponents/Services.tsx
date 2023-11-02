@@ -45,7 +45,7 @@ const ServiceContainer = styled.div`
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
-  width: 70%;
+  width: 100%;
 `;
 const ServicesButtonsContainer = styled.div`
   display: flex;

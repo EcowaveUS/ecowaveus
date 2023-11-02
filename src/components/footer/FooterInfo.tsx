@@ -4,7 +4,7 @@ export const FooterInfo = () => {
   return (
     <InfoWrapper>
         <Title>Hours</Title>
-        <InfoText>Monday-Friday 8:00pam to 5:00pm</InfoText>
+        <InfoText>Monday-Friday <br/> 8:00pam to 5:00pm</InfoText>
         <InfoText>Service Available</InfoText>
         <Title>Local Office</Title>
         <InfoText>22 Broadway Street</InfoText>
@@ -21,7 +21,8 @@ const InfoWrapper = styled.div`
   padding: 2rem 0;
   @media (max-width: 768px) {
     align-items: center;
-    margin: 0;
+    padding: 1rem;
+    gap: 0.2rem;
   }
 `;
 const Title = styled.h5`
@@ -35,12 +36,15 @@ const InfoText = styled.p`
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   color: #B5B5B5;
   margin: 0;
   padding: 6px 0;
   &:hover {
     color: #fff;
     cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    text-align: left;
   }
 `;

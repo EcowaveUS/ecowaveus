@@ -12,6 +12,16 @@ import { motion } from 'framer-motion'
 
 
 export const HomePage = () => {
+  const markersPoint = [
+    {
+      name: "Office",
+      location: {
+        lat: 42.55009044837213,
+        lng: -70.88123363803287
+      },
+    },
+  ]
+
   return (
       <StyledHome
         initial={{ opacity: 0 }}
@@ -77,7 +87,9 @@ export const HomePage = () => {
           <LocationInfo  />
           <ContactForm />
         </WrapperComponents>
-        <MapContainer />
+        <MapContainer
+          markersPoints={markersPoint}
+        />
         <OursBrands
           images={[
               '/images/Mitsubishi_Electric_logo.png',
@@ -86,7 +98,7 @@ export const HomePage = () => {
               '/images/daikin-logo.png',
               '/images/tesla-logo.jpg',
               '/images/emphase-logo.png',
-              '/images/encharge-logo.png',
+              'images/charge-point-logo.png',
               '/images/juicebox-logo.png'
             ]}
         />
