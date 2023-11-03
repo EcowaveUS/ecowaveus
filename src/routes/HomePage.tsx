@@ -7,21 +7,11 @@ import { SwitchFuture } from '../components/homeComponents/SwitchFuture'
 import { HomeReview } from '../components/reviews/HomeReview'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
-import { MapContainer } from '../components/maps/MapContainer'
 import { motion } from 'framer-motion'
 import { AreaServicePage } from './AreaServicePage'
 
 
 export const HomePage = () => {
-  const markersPoint = [
-    {
-      name: "Office",
-      location: {
-        lat: 42.55009044837213,
-        lng: -70.88123363803287
-      },
-    },
-  ]
 
   return (
       <StyledHome
