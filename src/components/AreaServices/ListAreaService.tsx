@@ -28,15 +28,18 @@ export const ListAreaService: React.FC<LocationProps> = ({
   )
 }
 const LocationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   height: auto;
-  gap: 10px;
   margin: 20px 0;
   padding-top: 20px;
+  @media (max-width: 724px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1rem;
+  }
 `;
 
 const LocationContainer = styled.div`

@@ -40,7 +40,7 @@ export const EvChargersPage = () => {
         <ServiceTitle title='EV Chargers'/>
       </TitleContainer>
       <Inovation
-        title='Riding the wave of innovation'
+        title='Charge Faster, Go Further'
         content='We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable.'
         images= {[
           {

@@ -9,6 +9,7 @@ import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
 import { MapContainer } from '../components/maps/MapContainer'
 import { motion } from 'framer-motion'
+import { AreaServicePage } from './AreaServicePage'
 
 
 export const HomePage = () => {
@@ -87,9 +88,7 @@ export const HomePage = () => {
           <LocationInfo  />
           <ContactForm />
         </WrapperComponents>
-        <MapContainer
-          markersPoints={markersPoint}
-        />
+        <AreaServicePage />
         <OursBrands
           images={[
               '/images/Mitsubishi_Electric_logo.png',

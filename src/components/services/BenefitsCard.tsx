@@ -33,13 +33,15 @@ const IconCard = styled.div`
   background-color: #F5F5F5;
   border-radius: 10px;
   width: 240px;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.5s ease-in-out;
   cursor: pointer;
   &:hover {
-    scale: 1.2;
+    scale: 1.15;
+    box-shadow: 3px 3px 5px #07222B;
   }
-`;
-const StyledImage = styled.img`
+  `;
+  const StyledImage = styled.img`
+  padding: 1rem;
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0 0;

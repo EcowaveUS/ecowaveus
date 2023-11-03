@@ -39,7 +39,6 @@ const StyledButton = styled.button`
   width: 175px;
   margin-right: 1rem;
   transition: background-color 0.5s ease-in-out;
-  text-transform: uppercase;
   &:hover {
     color: #1b5b8d;
     cursor: pointer;

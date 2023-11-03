@@ -35,9 +35,11 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 100%;
+height: auto;
 background-color: #07222B;
 align-items: center;
 margin-top: 2rem;
+padding: 2rem;
 `;
 const Title = styled.h1`
   font-size: 30px;

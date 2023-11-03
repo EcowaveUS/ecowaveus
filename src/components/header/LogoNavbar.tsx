@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   }
 `;
 const Logo = styled.img`
-  width: 260px;
+  width: 240px;
   height: 50px;
 `;
 const TelText = styled.p`

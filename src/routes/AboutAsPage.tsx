@@ -111,7 +111,7 @@ width: 100%;
 background-color: #fff;
 border-bottom: 1px solid #000;
 box-shadow: 0px 6px 6px -2px rgba(0, 0, 0, 0.5);
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   flex-direction: column;
   width: 100%;
   gap: 1rem;

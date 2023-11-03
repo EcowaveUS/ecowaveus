@@ -28,17 +28,17 @@ export const Navbar = () => {
       <Wrapper>
         <TopNavbar>
             <NavbarInfo>
-              <Infotext>Our hours 8:00am to 5:00pm Mon to Fri (978)-500-4081</Infotext>
+              <Infotext>Our hours 8:00am to 5:00pm Mon to Fri<span>(978)-500-4081</span></Infotext>
             </NavbarInfo>
                 {
                   windowWidth > 800 ?
                     (
                       <ButtonContainer>
                         <StandardButton
-                          title='Free stimate'
+                          title='FREE estimate'
                         />
                         <StandardButton
-                          title='Menu'
+                          title='MENU'
                           Icon={AiOutlineMenu}
                           onClick={showSidebar}
                         />
@@ -100,6 +100,11 @@ const Infotext = styled.p`
   margin-left: 2rem;
   @media(max-width: 1280px){
     display: none;
+  }
+  span {
+    margin-left: 2rem;
+    color: #000;
+    font-weight: 500;
   }
 `;
 // const TelText = styled.p`
