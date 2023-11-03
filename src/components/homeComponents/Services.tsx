@@ -54,7 +54,7 @@ const ServicesButtonsContainer = styled.div`
   gap: 1rem;
   margin-bottom: 3rem;
   width: 80%;
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
     width: 100%;
   }

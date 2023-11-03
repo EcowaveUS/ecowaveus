@@ -4,14 +4,17 @@ import { OursBrands } from '../components/brands/OursBrands'
 import { Inovation } from '../components/homeComponents/Inovation'
 import { Services } from '../components/homeComponents/Services'
 import { SwitchFuture } from '../components/homeComponents/SwitchFuture'
-import { HomeReview } from '../components/reviews/HomeReview'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
 import { motion } from 'framer-motion'
 import { AreaServicePage } from './AreaServicePage'
+import reviews from '../reviews.json'
+import { ReviewCard } from '../components/reviews/ReviewCard'
 
 
 export const HomePage = () => {
+
+  const firstReviews = reviews.slice(0, 4)
 
   return (
       <StyledHome
@@ -52,7 +55,6 @@ export const HomePage = () => {
         <Services
           title= 'Here to help you with:'
         />
-        <HomeReview />
         <CustormerFirst
           title= 'Our Priorities'
           listContent={[
@@ -74,6 +76,25 @@ export const HomePage = () => {
             },
           ]}
         />
+        <StyledReviews>
+          <ReviewstTitle>Look for ours reviews</ReviewstTitle>
+          <ReviewsWrapper>
+            {
+              firstReviews.map(review => (
+                <ReviewCard
+                  key={review.id}
+                  id={review.id}
+                  score={review.score}
+                  firstName={review.firstName}
+                  lastName={review.lastName}
+                  title={review.title}
+                  description={review.description}
+                  createdAt={review.createdAt}
+                />
+              ))
+            }
+          </ReviewsWrapper>
+        </StyledReviews>
         <WrapperComponents>
           <LocationInfo  />
           <ContactForm />
@@ -105,17 +126,47 @@ const WrapperComponents = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   margin: 2rem auto;
   padding:  2rem;
   background-color: #f5f5f5;
-  border-radius: 1rem;
+  box-shadow: 0px 8px 10px -4px rgba(0, 0, 0, 0.75);
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
   }
 `;
+const StyledReviews = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:auto;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+`;
+const ReviewsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+const ReviewstTitle = styled.h3`
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #4F4F4F;
+  margin-top: 1rem;
+`
 
 
