@@ -24,6 +24,7 @@ background-position: center;
 width: 100%;
 padding: 1rem;
 background-color: #07222B;
+box-shadow: 0px 6px 6px -2px rgba(0, 0, 0, 0.5);
 `;
 const Title = styled.h1`
   font-family: 'Roboto', sans-serif;

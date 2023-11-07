@@ -34,9 +34,11 @@ export const Navbar = () => {
                   windowWidth > 800 ?
                     (
                       <ButtonContainer>
-                        <StandardButton
-                          title='FREE estimate'
-                        />
+                        <Link to='/contact-us'>
+                          <StandardButton
+                            title='FREE estimate'
+                          />
+                        </Link>
                         <StandardButton
                           title='MENU'
                           Icon={AiOutlineMenu}

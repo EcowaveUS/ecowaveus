@@ -1,11 +1,13 @@
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 export const TopFooter = () => {
   return (
     <StyledTopFooter>
       <Title>Ready to get in touch?</Title>
       <div>
-        <StyledButton>Contact</StyledButton>
+        <Link to="/contact-us">
+          <StyledButton>Contact</StyledButton>
+        </Link>
       </div>
     </StyledTopFooter>
   )
