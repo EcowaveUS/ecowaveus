@@ -22,8 +22,8 @@ export const SwitchFuture = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur asperiores nulla excepturi hic voluptatibus qui repudiandae.
         </Text>
         <ButtonContainer>
-          <Link to='/contact'><StyledButton>Schedule Service</StyledButton></Link>
-          <Link to='/services'><StyledButton>View Our Services</StyledButton></Link>
+          <Link to='/contact-us'><StyledButton>Schedule Service</StyledButton></Link>
+          <Link to='/'><StyledButton>View Our Services</StyledButton></Link>
         </ButtonContainer>
       </ServiceInfo>
     </Container>
