@@ -19,7 +19,6 @@ export const ProjectDetailPage: React.FC <ProjectDetailProps> = ({
   category,
   image,
   name,
-  description,
   date,
   score
 }) => {
