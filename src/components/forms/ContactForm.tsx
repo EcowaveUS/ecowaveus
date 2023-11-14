@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import {
   Box,
   TextField,
@@ -14,6 +16,7 @@ import * as yup from 'yup';
 
 
 export const ContactForm = () => {
+  const form = useRef();
 
   const validationSchema = yup.object({
     firstName: yup
@@ -56,7 +59,20 @@ export const ContactForm = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // Enviar la solicitud a EmailJS
+      emailjs.send(
+        'service_rxhp9f2', // Reemplaza con tu Service ID de EmailJS
+        'template_rejz61o', // Reemplaza con tu Template ID de EmailJS
+        values,
+        '8tS6TT5TEINsGyxDa' // Reemplaza con tu User ID de EmailJS
+      )
+        .then((response) => {
+          alert('Email sent successfully!');
+          console.log('Email sent successfully:', response);
+        })
+        .catch((error) => {
+          console.error('Error sending email:', error);
+        });
     },
   });
 
@@ -76,6 +92,7 @@ export const ContactForm = () => {
         noValidate
         autoComplete="off"
         onSubmit={formik.handleSubmit}
+        ref={form}
       >
         <FormInputs>
           <TextField
@@ -266,3 +283,34 @@ const StyledButton = styled.button`
 const InputContainer = styled.div`
   margin-bottom: 1rem;
 `;
+
+
+{/* <p>Hello EcoWaveus,</p>
+<p>You got a new message from {{firstName}}:</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  first name: {{firstName}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  last name: {{lastName}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  Phone number: {{lastName}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  Email: {{email}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  Address: {{address}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  Address 2: {{address}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  customer: {{options}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  interest in: {{evChargers}} {{heatPumps}} {{energyStorage}}
+</p>
+<p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+  Messege: {{message}}
+</p> */}

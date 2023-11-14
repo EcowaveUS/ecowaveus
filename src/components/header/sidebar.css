@@ -1,6 +1,8 @@
 /* Navbar CSS */
 
 .menu-bars {
+  display: flex;
+  flex-direction: column;
   margin-left: 2rem;
   font-size: 2rem;
   background: none;
@@ -62,6 +64,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 span {

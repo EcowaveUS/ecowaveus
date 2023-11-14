@@ -34,6 +34,9 @@ export const MapContainer: React.FC<MapContainerProps> = ({
   const [mapContainer, setMapContainer] = useState<any>(null)
   const onLoad = useCallback((map: any) => addMarkers(map), [])
 
+  const google_key= import.meta.env.VITE_GOOGLE_API_KEY;
+  console.log(google_key,'google_key')
+
   const addMarkers = (map: any) => {
     const markers = markersPoints.map(({location : { lat , lng }}) => {
       const marker = new google.maps.Marker({ position: { lat, lng }})
@@ -43,7 +46,7 @@ export const MapContainer: React.FC<MapContainerProps> = ({
   }
   return (
     <GoogleMapsProvider
-      googleMapsAPIKey="AIzaSyAXA8rVi0MJ7foe-tTnjEUjNyxgZBDwbTA"
+      googleMapsAPIKey={google_key}
       mapOptions={mapOtions}
       mapContainer={mapContainer}
       onLoadMap={onLoad}

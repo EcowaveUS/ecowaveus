@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaArrowRight } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import { createPortal } from 'react-dom';
+import { ProjectDetailPage } from '../../routes/ProjectDetailPage';
+
+const mountElement = document.getElementById('detail-page')
 
 interface ProjectProps {
   id: number
@@ -21,27 +25,49 @@ export const ProjectCard: React.FC<ProjectProps> = ({
     date,
     score
   }) => {
+    const [showDetail, setShowDetail] = React.useState(false)
+
+    const handleShowDetail = () => {
+      setShowDetail(!showDetail)
+    }
+
   return (
-    <CardWrapper>
-        <StarsWrapper>
-        {
-            Array(5).fill('').map((_, index) => {
-              if (index < score) {
-                return <FaStar key={index} color='#FFD80A' size={16}  />
-              }
-              return <FaStar key={index} color='#8A8632' size={16} />
-            })
-          }
-        </StarsWrapper>
-      <Image src={ image && image[0]} alt={name} />
-      <InfoWrapper>
-        <CardName>{name}</CardName>
-        <Text>{description}</Text>
-        <Text>{category}</Text>
-        <Text>{date}</Text>
-      </InfoWrapper>
-      <Button>Project Detail <FaArrowRight/></Button>
-    </CardWrapper>
+    <>
+      <CardWrapper>
+          <StarsWrapper>
+            {
+              Array(5).fill('').map((_, index) => {
+                if (index < score) {
+                  return <FaStar key={index} color='#FFD80A' size={16}  />
+                }
+                return <FaStar key={index} color='#8A8632' size={16} />
+              })
+            }
+          </StarsWrapper>
+        <Image src={ image && image[0]} alt={name} />
+        <InfoWrapper>
+          <CardName>{name}</CardName>
+          <Text>{description}</Text>
+          <Text>{category}</Text>
+          <Text>{date}</Text>
+        </InfoWrapper>
+          <Button onClick={()=> setShowDetail(true)}>Project Detail <FaArrowRight/></Button>
+      </CardWrapper>
+      { showDetail &&
+        createPortal(
+          <ProjectDetailPage
+            handleShowDetail={handleShowDetail}
+            category={category}
+            image={image}
+            name={name}
+            description={description}
+            date={date}
+            score={score}
+          />,
+          mountElement as HTMLElement
+        )
+      }
+    </>
   )
 }
 const CardWrapper = styled.div`

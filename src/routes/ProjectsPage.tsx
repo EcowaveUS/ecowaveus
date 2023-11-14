@@ -1,83 +1,10 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { ProjectCard } from '../components/projects/ProjectCard'
+import projects from '../projects.json'
 
 export const ProjectsPage = () => {
-  const projects = [
-    {
-      id: 1,
-      category: 'EV-Chargers',
-      image: ['/images/ev-chargers-02.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 5,
-    },
-    {
-      id: 2,
-      category: 'Heat Pumps',
-      image: ['/images/energy-storage-01.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 4,
-    },
-    {
-      id: 3,
-      category: 'Energy Storage',
-      image: ['/images/energy-storage-01.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 5,
-    },
-    {
-      id: 4,
-      category: 'Heat Pumps',
-      image: ['/images/heat-pumps-ppl.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 4,
-    },
-    {
-      id: 5,
-      category: 'Energy Storage',
-      image: ['/images/heat-pumps-ppl.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 5,
-    },
-    {
-      id: 6,
-      category: 'EV-Chargers',
-      image: ['/images/heat-pumps-ppl.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 4,
-    },
-    {
-      id: 7,
-      category: 'Energy Storage',
-      image: ['/images/heat-pumps-ppl.jpg'],
-      name: 'Business Project',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 3,
-    },
-    {
-      id: 8,
-      category: 'EV-Chargers',
-      image: ['/images/heat-pumps-ppl.jpg'],
-      name: 'Business t',
-      description: 'This is a business project',
-      date: '2021-04-10',
-      score: 4,
-    },
 
-  ]
   return (
     <StyledPage
       initial={{ opacity: 0 }}

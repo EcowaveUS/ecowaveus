@@ -105,9 +105,11 @@ export const HeatPumsPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <ServiceTitle
-          title='Heat Pumps'
-        />
+        <HeaderWrapper>
+          <ServiceTitle
+            title='Heat Pumps'
+          />
+        </HeaderWrapper>
         <Inovation
           title='What is a heat pump?'
           content=
@@ -176,7 +178,16 @@ const StyledPage = styled(motion.div)`
   align-items: center;
   justify-content: center;
 `;
-
+const HeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+`;
 
 const PumpsContentTitle = styled.h3`
   font-size: 2rem;
