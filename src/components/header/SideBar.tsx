@@ -37,7 +37,6 @@ export const SideBar: React.FC<MenuComponentProps> = ({
               );
             })}
           </ul>
-          <button>asas</button>
         </nav>
       </IconContext.Provider>
     </>
