@@ -27,6 +27,7 @@ const BrandsWrapper = styled.div`
   justify-content: flex-start;
   width: 90%;
   margin: 2rem auto;
+  padding: 2rem 0;
   transition: all 0.3s ease-in-out;
 `;
 const Title = styled.h3`
@@ -42,7 +43,7 @@ const BrandsContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 5rem;
   width: 100%;
   margin: 2rem 0;
 `;
@@ -55,5 +56,11 @@ const BrandsImage = styled.img`
     cursor: pointer;
     opacity: 0.8;
     scale: 1.2;
+  }
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
+  @media (max-width: 768px) {
+    width: 50%;
   }
 `;

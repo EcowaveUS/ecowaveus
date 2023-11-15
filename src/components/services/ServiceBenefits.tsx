@@ -5,10 +5,12 @@ import { BenefitsCard } from './BenefitsCard'
 
 interface Props {
   title: string,
+  image?: string[],
 }
 
 export const ServiceBenefits: React.FC<Props> = ({
   title,
+  image,
 }) => {
 
   return (
@@ -18,19 +20,19 @@ export const ServiceBenefits: React.FC<Props> = ({
         <div>
           <BenefitsCard
             title= 'Increase home value'
-            image='/images/energy-icon.png'
+            image={image && image[0]}
           />
         </div>
         <div>
           <BenefitsCard
             title= 'Energy Efficient'
-            image='/images/Increase-icon.png'
+            image={image && image[1]}
           />
         </div>
         <div>
           <BenefitsCard
             title= 'Environmentally Friendly'
-            image='/images/envaromentally-icon.png'
+            image={image && image[2]}
           />
         </div>
       </IconsWrapper>

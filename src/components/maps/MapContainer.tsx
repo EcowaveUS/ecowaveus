@@ -26,8 +26,6 @@ interface MapContainerProps {
   }[]
 }
 
-
-
 export const MapContainer: React.FC<MapContainerProps> = ({
   markersPoints,
 }) => {
@@ -35,11 +33,20 @@ export const MapContainer: React.FC<MapContainerProps> = ({
   const onLoad = useCallback((map: any) => addMarkers(map), [])
 
   const google_key= import.meta.env.VITE_GOOGLE_API_KEY;
-  console.log(google_key,'google_key')
+
 
   const addMarkers = (map: any) => {
     const markers = markersPoints.map(({location : { lat , lng }}) => {
-      const marker = new google.maps.Marker({ position: { lat, lng }})
+      const marker = new google.maps.Marker({
+        position: { lat, lng },
+        map,
+        icon: {
+          url: './images/logo-ecowave.png',
+          scaledSize: new google.maps.Size(60, 20),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(25, 50),
+        },
+      })
       return marker
     })
     new MarkerClusterer({ markers, map})

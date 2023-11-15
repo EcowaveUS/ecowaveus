@@ -16,7 +16,9 @@ export const BenefitsCard: React.FC<Props> = ({
   return (
     <>
       <IconCard>
-        <StyledImage src={image} alt={title} />
+        <ImageWrapper>
+          <StyledImage src={image} alt={title} />
+        </ImageWrapper>
         <TextWrapper>
           <IconText>{title}</IconText>
         </TextWrapper>
@@ -32,13 +34,20 @@ const IconCard = styled.div`
   justify-content: space-between;
   background-color: #F5F5F5;
   border-radius: 10px;
-  width: 240px;
+  width: 280px;
   transition: all 1.5s ease-in-out;
   cursor: pointer;
   &:hover {
     scale: 1.15;
     box-shadow: 3px 3px 5px #07222B;
   }
+  `;
+  const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 250px;
   `;
   const StyledImage = styled.img`
   padding: 1rem;

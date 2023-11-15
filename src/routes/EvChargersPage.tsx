@@ -68,6 +68,11 @@ export const EvChargersPage = () => {
       />
       <ServiceBenefits
         title='Benefits of EV-Chargers'
+        image= {[
+          '/images/cost-saving-icon.png',
+          '/images/Increase-icon.png',
+          '/images/enviroment-evc-icon.png'
+        ]}
       />
       <StepsWrapper>
         <PumpsContentTitle>Types of EV chargers</PumpsContentTitle>
