@@ -52,14 +52,14 @@ const TopNavbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 75%;
-`;
-const StyledLinks = styled.div`
+  width: 100%;
+  `;
+  const StyledLinks = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  @media(max-width: 1024px){
+  justify-content: flex-end;
+  margin-right: 1rem;
+  @media(max-width: 824px){
     display: none;
   }
   li {
@@ -71,8 +71,8 @@ const StyledLinks = styled.div`
     font-weight: 500;
     line-height: 20px;
     cursor: pointer;
+    width: 120px;
     position: relative;
-    margin-right: 47px;
     transition: color 0.3s ease-in-out;
     &::before {
       content: "";

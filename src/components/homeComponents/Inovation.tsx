@@ -39,7 +39,9 @@ export const Inovation: React.FC<Props> = ({
       <ImageWrapper>
         {
           images.map((image) => (
-            <ImageList src={image.img} />
+            <ImageBox>
+              <ImageList src={image.img} />
+            </ImageBox>
           ))
         }
       </ImageWrapper>
@@ -54,7 +56,7 @@ const StyledContent = styled.div`
   grid-gap: 0;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   margin: 5rem auto;
 `;
 const ImageContainer = styled.div`
@@ -89,16 +91,22 @@ const Text = styled.p`
 `
 const ImageWrapper = styled.div`
   grid-column: span 2;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   border-radius: 0 0 8px 8px;
-  gap: 1rem;
+  gap: 0.5rem;
 `
-const ImageList = styled.img`
-  height: 210px;
+const ImageBox = styled.div`
   width: auto;
+  height: 180px;
+  object-fit: fill;
+  `
+const ImageList = styled.img`
+  max-height: 100%;
+  width: auto;
+  object-fit: fill;
 `
 
