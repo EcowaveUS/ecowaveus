@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import { StandardButton } from '../buttons/StandardButton';
 import { SideBar } from './SideBar';
 
 export const Navbar = () => {
