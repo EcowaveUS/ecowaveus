@@ -4,7 +4,8 @@ import { useState, useCallback } from 'react'
 
 const containerStyle = {
   width: '100%',
-  height: '600px',
+  height: '653px',
+  borderRadius: '0 20px 20px 0',
 };
 
 

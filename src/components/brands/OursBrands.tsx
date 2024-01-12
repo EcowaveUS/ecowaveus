@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from "react-slick";
 import styled from 'styled-components'
 
 interface Props {
@@ -8,59 +9,82 @@ interface Props {
 export const OursBrands: React.FC<Props> = ({
   images
 }) => {
-  return (
-    <BrandsWrapper>
-    <Title>Brands We Trust:</Title>
-    <BrandsContainer>
-      {images.map((image, index) => (
-        <BrandsImage src={image} key={index} />
-      ))}
-    </BrandsContainer>
-  </BrandsWrapper>
-  )
-}
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
-const BrandsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 90%;
-  margin: 2rem auto;
-  padding: 2rem 0;
-  transition: all 0.3s ease-in-out;
-`;
-const Title = styled.h3`
-  font-size: 30px;
-  font-weight: 600;
-  color: grey;
-  text-align: left;
-  margin: 0;
-`;
-const BrandsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5rem;
+  return (
+    <>
+      <StyledSlider {...settings}>
+        {images.map((image, index) => (
+          <ImageWrapper key={index}>
+            <Image src={image} alt={`brand-${index}`} />
+          </ImageWrapper>
+        ))}
+      </StyledSlider>
+    </>
+  );
+};
+
+const StyledSlider = styled(Slider)`
   width: 100%;
-  margin: 2rem 0;
-`;
-const BrandsImage = styled.img`
-  width: 25%;
-  height: auto;
-  object-fit: cover;
-  transition: all 0.3s ease-in-out;
-  &: hover {
-    cursor: pointer;
-    opacity: 0.8;
-    scale: 1.2;
+  margin: 2rem 1rem;
+  overflow-x: hidden;
+  .slick-track {
+    display: flex;
+    align-items: center;
   }
-  @media (max-width: 1024px) {
-    width: 30%;
-  }
-  @media (max-width: 768px) {
-    width: 50%;
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
+
+const ImageWrapper = styled.div`
+  width: auto;
+  height: 60px;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%) saturate(80%);
+`;
+

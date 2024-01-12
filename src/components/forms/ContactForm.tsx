@@ -4,11 +4,10 @@ import {
   Box,
   TextField,
   MenuItem,
-  Checkbox,
-  FormGroup,
-  FormControlLabel,
-  FormLabel,
-  Select
+  Select,
+  TextareaAutosize as Textarea,
+  InputLabel,
+  FormControl,
 } from '@mui/material';
 import styled from 'styled-components';
 import { useFormik } from 'formik';
@@ -50,26 +49,24 @@ export const ContactForm = () => {
       phone: '',
       email: '',
       address: '',
-      address2: '',
       option: '',
       message: '',
-      evChargers: false,
-      heatPumps: false,
-      energyStorage: false,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
       // Enviar la solicitud a EmailJS
       emailjs.send(
         'service_rxhp9f2', // Reemplaza con tu Service ID de EmailJS
-        'template_rejz61o', // Reemplaza con tu Template ID de EmailJS
+        'template_sexpm2s', // Reemplaza con tu Template ID de EmailJS
         values,
         '8tS6TT5TEINsGyxDa' // Reemplaza con tu User ID de EmailJS
       )
         .then((response) => {
           alert('Email sent successfully!');
           console.log('Email sent successfully:', response);
+          formik.resetForm();
         })
+        // Manejador de errores del envío de la solicitud
         .catch((error) => {
           console.error('Error sending email:', error);
         });
@@ -78,14 +75,14 @@ export const ContactForm = () => {
 
 
   const options = [
-    'Yes, I am a potential new client',
-    'No, I am an existing client',
-    'I m neither',
+    'Ev Chargers',
+    'Heat Pumps',
+    'Energy Storage',
   ];
 
   return (
     <FormWrapper>
-      <FormTitle>Contact Form</FormTitle>
+      <FormTitle>Get in touch with us</FormTitle>
       <Box
         component="form"
         sx={{ s: 1, width: '100%' }}
@@ -97,7 +94,7 @@ export const ContactForm = () => {
         <FormInputs>
           <TextField
             id="outlined-basic"
-            label="First Name"
+            label="First name*"
             variant="outlined"
             name='firstName'
             value={formik.values.firstName}
@@ -108,7 +105,7 @@ export const ContactForm = () => {
           />
           <TextField
             id="outlined-basic"
-            label="Last Name"
+            label="Last name*"
             variant="outlined"
             name='lastName'
             value={formik.values.lastName}
@@ -139,8 +136,6 @@ export const ContactForm = () => {
             helperText={formik.touched.email && formik.errors.email}
             onBlur={formik.handleBlur}
           />
-        </FormInputs>
-        <InputContainer>
           <TextField
             fullWidth
             id="fullWidth"
@@ -153,75 +148,48 @@ export const ContactForm = () => {
             helperText={formik.touched.address && formik.errors.address}
             onBlur={formik.handleBlur}
           />
-        </InputContainer>
+          <FormControl>
+            <InputLabel id="demo-simple-select-label">Select an option</InputLabel>
+            <Select
+              fullWidth
+              id="demo-simple-select"
+              labelId="demo-simple-select-label"
+              name='option'
+              label="Select an option"
+              value={formik.values.option}
+              onChange={formik.handleChange}
+              error={formik.touched.option && Boolean(formik.errors.option)}
+              onBlur={formik.handleBlur}
+            >
+              {options?.map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </FormInputs>
         <InputContainer>
-          <TextField
-            fullWidth
-            id="fullWidth"
-            label="Address 2"
-            variant="outlined"
-            name='address2'
-            value={formik.values.address2}
-            onChange={formik.handleChange}
-            error={formik.touched.address2 && Boolean(formik.errors.address2)}
-            helperText={formik.touched.address2 && formik.errors.address2}
-            onBlur={formik.handleBlur}
-          />
-        </InputContainer>
-        <InputContainer>
-          <FormLabel component="legend">Select an option</FormLabel>
-          <Select
-            fullWidth
-            name='option'
-            value={formik.values.option}
-            onChange={formik.handleChange}
-            error={formik.touched.option && Boolean(formik.errors.option)}
-            onBlur={formik.handleBlur}
-          >
-            {options?.map((option) => (
-              <MenuItem key={option} value={option}>
-                {option}
-              </MenuItem>
-            ))}
-          </Select>
-        </InputContainer>
-        <FormLabel component="legend">Select an option</FormLabel>
-        <FormGroup>
-          <FormControlLabel
-            control={
-              <Checkbox  name='heatPumps' value={formik.values.heatPumps} onChange={formik.handleChange} />
-            }
-            label={<span style={{ color: '#000' }}>Heat Pumps</span>}
-          />
-            <FormControlLabel
-            control={
-            <Checkbox name='evChargers' value={formik.values.evChargers} onChange={formik.handleChange} />
-          }
-            label={<span style={{ color: '#000' }}>EV Chargers</span>}
-          />
-            <FormControlLabel
-            control={
-              <Checkbox  name='energyStorage' value={formik.values.energyStorage} onChange={formik.handleChange} />
-            }
-            label={<span style={{ color: '#000' }}>Energy Storage</span>}
-          />
-        </FormGroup>
-        <InputContainer>
-          <TextField
-            id="outlined-multiline-flexible"
-            label="How con we help you?"
-            multiline
-            maxRows={4}
-            sx={{ width: '100%' }}
+          <Textarea
+            aria-label="minimum height"
+            minRows={3}
+            placeholder="How can we help?"
+            style={{
+              width: '100%',
+              height: '210px',
+              borderRadius: '11px',
+              padding: '16px',
+              border: '1px solid #D0D0D0',
+            }}
             name='message'
             value={formik.values.message}
             onChange={formik.handleChange}
-            error={formik.touched.message && Boolean(formik.errors.message)}
-            helperText={formik.touched.message && formik.errors.message}
             onBlur={formik.handleBlur}
           />
         </InputContainer>
-        <StyledButton type='submit'>Submit</StyledButton>
+        <ButtonContainer>
+          <StyledButton type='submit'>Schedule now!</StyledButton>
+        </ButtonContainer>
       </Box>
     </FormWrapper>
   )
@@ -230,15 +198,11 @@ export const ContactForm = () => {
 const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 60%;
-  border-left: 1px solid grey;
-  padding-left: 1rem;
-  @media (max-width: 1024px) {
-    border-left: none;
-    padding-left: 0;
-    width: 100%;
-  }
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  gap: 32px;
+  margin-top: 2rem;
 `;
 const FormInputs = styled.div`
   display: grid;
@@ -251,34 +215,30 @@ const FormInputs = styled.div`
   }
 `;
 const FormTitle = styled.h3`
-  font-family: 'Montserrat', sans-serif;
-  font-style: oblique;
-  font-size: 2rem;
-  font-weight: 500;
-  color: grey;
-  margin: 0;
+  color: #151B27;
+
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 59px; /* 147.5% */
+  letter-spacing: -2.501px;
+`;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 `;
 const StyledButton = styled.button`
   display: flex;
   justify-content: center;
-  align-items: space-between;
-  gap: 0.5rem;
-  background-color: #1b5b8d;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-radius: 2px;
-  cursor: pointer;
-  width: 175px;
-  margin-right: 1rem;
-  transition: background-color 0.5s ease-in-out;
-  &:hover {
-    background-color: #4e9d40;
-    color: #1b5b8d;
-    border: 1px solid #1b5b8d;
-  }
+  background: #003B76;
+  padding: 17px 24px 15px 24px;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 24px 15px 24px;
+  border-radius: 6px;
+
 `;
 const InputContainer = styled.div`
   margin-bottom: 1rem;

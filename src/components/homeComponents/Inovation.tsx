@@ -1,7 +1,5 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ } from 'react'
 import styled from 'styled-components'
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
@@ -30,100 +28,78 @@ export const Inovation: React.FC<Props> = ({
   title,
   content
 }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const updateWindowWidth = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', updateWindowWidth);
-
-    return () => {
-      window.removeEventListener('resize', updateWindowWidth);
-    };
-  }, []);
   return (
     <StyledContent>
-      <StyledLogo src={logo}/>
-      <ContentTitle>{title}</ContentTitle>
-      <TextWrapper>
+      <ContentWrapper>
+        <Title>{title}</Title>
         <Text>{content}</Text>
-      </TextWrapper>
-      {
-        windowWidth > 764 ?
-        (
-          <ImageList
-              sx={{ width: '90%', height: 'auto' }}
-              variant="quilted"
-              cols={4}
-              rowHeight={245}
-            >
-          {images.map((item) => (
-            <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-              <img
-                {...srcset(item.img, 121, item.rows, item.cols)}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-        )
-        :
-        (
-          <img src={images[0].img} alt={images[0].title} style={{width: '90%', height: 'auto'}}/>
-        )
-      }
+      </ContentWrapper>
+      <ImageContainer>
+        <Image src='/images/dreamstime.jpg' />
+      </ImageContainer>
+      <ImageWrapper>
+        {
+          images.map((image) => (
+            <ImageList src={image.img} />
+          ))
+        }
+      </ImageWrapper>
     </StyledContent>
   )
 }
 
 const StyledContent = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 1fr 1/4fr;
+  grid-gap: 0;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  width: 70%;
-  @media (max-width: 764px) {
-    width: 95%;
-  }
+  width: 100%;
+  margin: 5rem auto;
 `;
-const StyledLogo = styled.img`
-  width: 280px;
-  height: 65px;
-`;
-const ContentTitle = styled.h3`
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #595954;
-  font-style: italic;
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-`;
-const TextWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin: 0;
-  @media (max-width: 764px) {
-    width: 100%;
-  }
-`;
+const ImageContainer = styled.div`
+  grid-column: span 1;
+  height: auto;
+`
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 24px 0 0;
+`
+const ContentWrapper = styled.div`
+  grid-column: span 1;
+  height: auto;
+  padding: 80px;
+`
+const Title = styled.h3`
+  color: #151B27;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 32px;
+`
 const Text = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rm;
-  font-weight: 300;
-  color: #595954;
-  text-align: center;
-  margin: 0.5rem;
-  padding: 1rem;
-  @media (max-width: 1024px) {
-    font-size: 18px;
-  }
-`;
+  color: rgba(21, 27, 39, 0.87);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+`
+const ImageWrapper = styled.div`
+  grid-column: span 2;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0 0 8px 8px;
+  gap: 1rem;
+`
+const ImageList = styled.img`
+  height: 210px;
+  width: auto;
+`
+

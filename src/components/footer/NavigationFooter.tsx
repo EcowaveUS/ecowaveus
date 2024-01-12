@@ -20,34 +20,36 @@ const NavigationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2rem 0;
+  gap: 18px;
   @media (max-width: 768px) {
     align-items: center;
     padding: 1rem;
   }
 `;
 const Title = styled.h5`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0;
+  color: #343434;
+
+  font-family: Be Vietnam Pro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
 `;
 const NavigationList = styled.ul`
+display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
+  gap: 12px;
   li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #B5B5B5;
-    margin: 0;
-    padding: 6px 0;
-    &:hover {
-      color: #fff;
-      cursor: pointer;
-    }
+      color: #343434;
+      font-family: Be Vietnam Pro;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
+      opacity: 0.8;
   }
 `;
 

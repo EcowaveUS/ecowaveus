@@ -140,6 +140,11 @@ export const HeatPumsPage = () => {
         />
         <ServiceBenefits
           title='Benefits of heat pumps'
+          image = {[
+            '/images/energy-icon.png',
+            '/images/Increase-icon.png',
+            '/images/envaromentally-icon.png',
+          ]}
         />
         <StepsWrapper>
           <PumpsContentTitle>Instalation Procces Step-By-Step</PumpsContentTitle>

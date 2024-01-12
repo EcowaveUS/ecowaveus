@@ -3,8 +3,9 @@ import styled from 'styled-components'
 export const BottomFooter = () => {
   return (
     <BottomWrapper>
-      <Bottomtext>© 2021 Ecowave. All Rights Reserved.</Bottomtext>
-      <Bottomtext>Privacy Policy</Bottomtext>
+      <Bottomtext>
+        © 2021 Ecowave. All Rights Reserved.
+      </Bottomtext>
     </BottomWrapper>
   )
 }
@@ -13,13 +14,16 @@ const BottomWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem ;
+  padding: 0.5rem 3rem ;
 `;
 const Bottomtext = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
-  color: #B5B5B5;
+color: #343434;
+
+font-family: Be Vietnam Pro;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+opacity: 0.6;
 
 `;

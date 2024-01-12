@@ -14,7 +14,7 @@ export const CustormerFirst: React.FC<Props> = ({
   listContent
 }) => {
   return (
-    <StyledWrapper>
+    <>
       <Title>{title}</Title>
       <ListWrapper>
         {
@@ -26,21 +26,10 @@ export const CustormerFirst: React.FC<Props> = ({
           ))
         }
       </ListWrapper>
-    </StyledWrapper>
+    </>
   )
 }
-const StyledWrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: auto;
-background-color: #07222B;
-align-items: center;
-margin-top: 2rem;
-padding: 2rem;
-`;
+
 const Title = styled.h1`
   font-size: 30px;
   font-weight: 600;

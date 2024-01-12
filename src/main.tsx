@@ -90,11 +90,3 @@ createRoot(document.getElementById('root')!).render(
       <App />
     </React.StrictMode>
 )
-
-
-//contact us, cambiar la direccion a 22 brodway st
-//- en el main page me gustaria sacar las lines divisoras negras
-//-Main page , brand we trust, agregar, Daikin, tesla, enphase, encharge, juicebox
-
-// Heat pump page, centrat texto en imagen, sacra lineas divisoras, poner texto para frase después del titulo como la de ev chargers,juntar logos, cambiar step by step a " Installation process step by step, agregar Daikin a las marcas, agregar espacio entre el titulo incentives and..... y la imagen, agrandar la letra
-//horarios..... 978 500 4081  BOTON

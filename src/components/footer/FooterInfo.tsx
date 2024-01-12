@@ -4,13 +4,10 @@ export const FooterInfo = () => {
   return (
     <InfoWrapper>
         <Title>Hours</Title>
-        <InfoText>Monday-Friday <br/> 8:00pam to 5:00pm</InfoText>
-        <InfoText>Service Available</InfoText>
+        <InfoText>Monday-Friday 8:00pam <br/>  to 5:00pm</InfoText>
         <Title>Local Office</Title>
         <InfoText>22 Broadway Street</InfoText>
         <InfoText>Beverly, MA, 01915</InfoText>
-        <InfoText>info@ecowaveus.com</InfoText>
-        <InfoText>Map</InfoText>
     </InfoWrapper>
   )
 }
@@ -18,7 +15,7 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2rem 0;
+  gap: 18px;
   @media (max-width: 768px) {
     align-items: center;
     padding: 1rem;
@@ -26,25 +23,21 @@ const InfoWrapper = styled.div`
   }
 `;
 const Title = styled.h5`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0;
+  color: #343434;
+
+  font-family: Be Vietnam Pro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
 `;
 const InfoText = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: left;
-  color: #B5B5B5;
-  margin: 0;
-  padding: 6px 0;
-  &:hover {
-    color: #fff;
-    cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    text-align: left;
-  }
+  color: #343434;
+
+  font-family: Be Vietnam Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  opacity: 0.8;
 `;

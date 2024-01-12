@@ -6,7 +6,6 @@ export const LogoNavbar = () => {
     <Wrapper>
       <Link to="/">
         <Logo src="/images/logo-ecowave.png" alt="logo" />
-        <TelText>(978)-500-4081</TelText>
       </Link>
     </Wrapper>
   )
@@ -25,18 +24,8 @@ const Wrapper = styled.div`
 
   }
 `;
-const Logo = styled.img`
-  width: 240px;
-  height: 50px;
-`;
-const TelText = styled.p`
-  display: none;
-  font-size: 1.7rem;
-  font-weight: 500;
-  color: #000;
-  text-align: center;
-  @media(max-width: 800px){
-    display: block;
-    margin: 0;
-  }
+const Logo = styled.img`x
+  width: 127px;
+  height: 30px;
+  margin-left: 47px;
 `;

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaLocationDot } from "react-icons/fa6";
+import { SvgPositive } from '../svg/SvgPositive';
 
 interface LocationProps {
   location: string[];
@@ -11,16 +11,14 @@ export const ListAreaService: React.FC<LocationProps> = ({
 }) => {
   return (
     <LocationWrapper>
+      <Title>Area Services</Title>
       {
         location.map((loc, index) => (
           <LocationContainer key={index}>
             <LocationContent >
-                <FaLocationDot color='grey' />
-              <IconWrapper>
-              </IconWrapper>
+              <SvgPositive />
               <Text>{loc}</Text>
             </LocationContent>
-            {index !== loc.length  && <Separator/>}
           </LocationContainer>
         ))
       }
@@ -28,18 +26,24 @@ export const ListAreaService: React.FC<LocationProps> = ({
   )
 }
 const LocationWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 460px;
   height: auto;
-  margin: 20px 0;
-  padding-top: 20px;
-  @media (max-width: 724px) {
-    grid-template-columns: 1fr;
-    width: 100%;
-    gap: 1rem;
-  }
+  border-radius: 20px 0 0 20px;
+  background-color: #fff;
+  padding: 32px 24px;
+`;
+const Title = styled.h3`
+  color: rgba(0, 0, 0, 0.90);
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
 `;
 
 const LocationContainer = styled.div`
@@ -47,39 +51,23 @@ const LocationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  width: 100%;
+  margin-bottom: 24px;
 `;
 const LocationContent = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
   width: 300px;
-  &:hover {
-    cursor: pointer;
-    scale: 1.2;
-    transition: all 0.5s ease-in-out;
-  }
-`;
-const IconWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 30px;
 `;
 const Text = styled.p`
-  font-size: 20px;
-  font-weight: 300;
-  color: grey;
+  color: rgba(0, 0, 0, 0.90);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
-const Separator = styled.div`
-  background-color: grey;
-  margin: 1rem 0;
-  width: 70%;
-  height: 1px;
-  border-width: 1px;
-  border-style: dnone;
-  border-spacing: 15px;
-`;
+
 

@@ -25,103 +25,36 @@ export const Navbar = () => {
 
   return (
     <>
-      <Wrapper>
-        <TopNavbar>
-            <NavbarInfo>
-              <Infotext>Our hours 8:00am to 5:00pm Mon to Fri<span>(978)-500-4081</span></Infotext>
-            </NavbarInfo>
-                {
-                  windowWidth > 800 ?
-                    (
-                      <ButtonContainer>
-                        <Link to='/contact-us'>
-                          <StandardButton
-                            title='FREE estimate'
-                          />
-                        </Link>
-                        <StandardButton
-                          title='MENU'
-                          Icon={AiOutlineMenu}
-                          onClick={showSidebar}
-                        />
-                    </ButtonContainer>
-                    )
-                    :
-                    (<HambuguerMenu>
-                      <AiOutlineMenu
-                        size={40}
-                        onClick={showSidebar}
-                      />
-                    </HambuguerMenu>
-                  )
-              }
-        </TopNavbar>
-        <StyledLinks>
-          <Link to='/'><li>HOME</li></Link>
-          <Link to='/heat-pumps'><li>HEAT PUMPS</li></Link>
-          <Link to='/ev-chargers'><li>EV CHARGERS</li></Link>
-          <Link to='/energy-storage'><li>ENERGY STORAGE</li></Link>
-          <Link to='/about-us'>
-            <li>ABOUT US</li>
-          </Link>
-          <Link to='/contact-us'><li>CONTACT US</li></Link>
-        </StyledLinks>
-
-      </Wrapper>
+      <TopNavbar>
+        {
+          windowWidth < 800 &&
+            <HambuguerMenu>
+              <AiOutlineMenu
+                size={40}
+                onClick={showSidebar}
+              />
+            </HambuguerMenu>
+        }
+      </TopNavbar>
+      <StyledLinks>
+        <Link to='/'><li>Home</li></Link>
+        <Link to='/heat-pumps'><li>Heat pumps</li></Link>
+        <Link to='/ev-chargers'><li>EV chargers</li></Link>
+        <Link to='/energy-storage'><li>Energy Storage</li></Link>
+        <Link to='/about-us'><li>About us</li></Link>
+        <Link to='/contact-us'><li>Contact us</li></Link>
+      </StyledLinks>
       <SideBar showSidebar={showSidebar} sidebar={sidebar} />
     </>
   )
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 100%;
-  width: 75%;
-`;
 const TopNavbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 75%;
 `;
-const NavbarInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-`;
-const Infotext = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-style: italic;
-  color: 595954;
-  margin-left: 2rem;
-  @media(max-width: 1280px){
-    display: none;
-  }
-  span {
-    margin-left: 2rem;
-    color: #000;
-    font-weight: 500;
-  }
-`;
-// const TelText = styled.p`
-//   font-family: 'Roboto', sans-serif;
-//   font-size: 1.5rem;
-//   font-weight: 500;
-//   color: 595954;
-//   padding-left: 1.5rem;
-//   @media(max-width: 1280px){
-//     margin-right: 1.5rem;
-//   }
-//   @media(max-width: 800px){
-//     display: none;
-//   }
-// `;
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
@@ -131,21 +64,21 @@ const StyledLinks = styled.div`
     display: none;
   }
   li {
-    font-family: 'Roboto', sans-serif;
     list-style: none;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #1b5b8d;
-    padding: 0 0.5rem 1rem 0;
-    letter-spacing: 1px;
+    font-size: 15px;
+    color: #242424;
     text-align: center;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 20px;
     cursor: pointer;
     position: relative;
+    margin-right: 47px;
     transition: color 0.3s ease-in-out;
     &::before {
       content: "";
       position: absolute;
-      bottom: 0.5rem;
+      bottom: -0.5rem;
       left: 0;
       width: 0;
       height: 2px;
@@ -156,20 +89,9 @@ const StyledLinks = styled.div`
       width: 100%;
     }
     &:hover {
-      color: #4e9d40;
       &::before {
-        width: 85%;
+        width: 100%;
       }
-  }
-`;
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 0.5rem;
-  gap: 1rem;
-  @media(max-width: 800px){
-    display: none;
   }
 `;
 

@@ -16,9 +16,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 70px;
   width: 100%;
-  background-image: url("/images/fondo-prueba.png");
   background-size: cover;
   background-position: center center;
   background-color: #fff;

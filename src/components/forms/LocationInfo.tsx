@@ -1,82 +1,107 @@
 import styled from 'styled-components'
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock} from "react-icons/fa";
+import { SvgTriangles } from '../svg/SvgTriangles';
 
 export const LocationInfo = () => {
   return (
-    <StyledInfo>
-      <FormTitle>EcoWaveus Us</FormTitle>
-      <InfoContainer>
-        <InfoWrapper>
-          <InfoTitle> <FaMapMarkerAlt color='#298495' /> Adress</InfoTitle>
-          <Text>12 Broadway street</Text>
-          <Text>Beverly, MA 01915</Text>
-        </InfoWrapper>
-        <InfoWrapper>
-          <InfoTitle> <FaPhoneAlt color='#298495' /> Phone</InfoTitle>
-          <Text>(978) 500 - 4081</Text>
-        </InfoWrapper>
-        <InfoWrapper>
-          <InfoTitle> <FaEnvelope color='#298495' /> Email</InfoTitle>
-          <Text>info@ecowaveus.com</Text>
-        </InfoWrapper>
-        <InfoWrapper>
-          <InfoTitle> <FaClock color='#298495'/> Hours of Operation</InfoTitle>
-          <Text>Monday – Friday: 8:00 AM – 5:00 PM</Text>
-          <Text>Saturday – Sunday: Closed</Text>
-        </InfoWrapper>
-      </InfoContainer>
-    </StyledInfo>
+    <LocationWrapper>
+      <Triangles>
+        <SvgTriangles />
+      </Triangles>
+      <Title>EcoWaveus Us</Title>
+      <div>
+        <SubTitles>Adress</SubTitles>
+        <Text>12 Broadway street</Text>
+        <Text> Beverly, MA 01915</Text>
+        <Separator />
+      </div>
+      <div>
+        <SubTitles>Phone</SubTitles>
+        <Text>(978) 500 - 4081</Text>
+        <Separator />
+      </div>
+      <div>
+        <SubTitles>Email</SubTitles>
+        <Text>info@ecowaveus.com</Text>
+        <Separator />
+      </div>
+      <div>
+        <SubTitles>Adress</SubTitles>
+        <Text>Monday – Friday: 8:00 AM – 5:00 PM</Text>
+        <Text>Saturday – Sunday: Closed</Text>
+        <Separator />
+      </div>
+      <Dots>
+        <DotsImg src='/images/dots-background.png' alt='map' />
+      </Dots>
+    </LocationWrapper>
   )
 }
-const StyledInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3rem;
-  @media (max-width: 1024px) {
-    align-items: center;
+const LocationWrapper = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-  }
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 17.723px 47.261px 0px #DCDCEC;
+    width: 393px;
+    padding: 34px;
+    gap: 24px;
+    margin: 5rem;
+    z-index: 99;
 `;
-const FormTitle = styled.h3`
-  font-family: 'Montserrat', sans-serif;
-  font-style: oblique;
-  font-size: 2rem;
+const Triangles = styled.div`
+  position: absolute;
+  top: -4rem;
+  left: -1.9rem;
+  z-index: -1;
+`;
+const Dots = styled.div`
+  position: absolute;
+  bottom: -4rem;
+  right: -3rem;
+  z-index: -1;
+`;
+const DotsImg = styled.img`
+  width: 268.242px;
+  height: 148.034px;
+  flex-shrink: 0;
+  z-index: -1;
+`;
+const Title = styled.h3`
+  color: #343434;
+
+  font-family: Be Vietnam Pro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.045px;
+`;
+const SubTitles = styled.h4`
+  color: #343434;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 500;
-  color: grey;
-  margin: 0;
-`;
-const InfoContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: flex-start;
-gap: 1.5rem;
-margin-bottom: 2rem;
-`;
-const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    scale: 1.1;
-  }
-`;
-const InfoTitle = styled.p`
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #2133AB;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.04px;
 `;
 const Text = styled.p`
-font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: grey;
-  margin-left: 20px;
+  color: #969696;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.035px;
+`;
+const Separator = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #E4ECF6;
+  margin-top: 16px;
 `;

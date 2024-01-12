@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { HomeReview } from '../components/reviews/HomeReview'
-import { ReviewsComponents } from '../components/reviews/ReviewsComponents'
+
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
@@ -28,8 +27,6 @@ export const ReviewsPage = () => {
       animate={{ opacity: isVisible ? 1 : 0, transition: { duration: 1.5, type:'linear' } }}
       exit={{ opacity: 0 }}
     >
-      <HomeReview />
-      <ReviewsComponents />
     </StyledPage>
   )
 }
