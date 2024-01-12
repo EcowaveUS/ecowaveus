@@ -58,20 +58,22 @@ const TopNavbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  gap: 2rem;
   @media(max-width: 824px){
     display: none;
   }
   li {
+    white-space: nowrap;
+
     list-style: none;
     font-size: 15px;
     color: #242424;
-    text-align: center;
+    text-align: left;
     font-family: Inter;
     font-weight: 500;
     line-height: 20px;
     cursor: pointer;
-    width: 120px;
     position: relative;
     transition: color 0.3s ease-in-out;
     &::before {
