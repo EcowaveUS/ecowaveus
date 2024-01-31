@@ -2,12 +2,7 @@
   {
     "id": 1,
     "category": "EV-Chargers",
-    "image": [
-      "/images/ev-chargers-02.jpg",
-      "/images/ev-chargers-02.jpg",
-      "/images/ev-chargers-02.jpg",
-      "/images/ev-chargers-02.jpg"
-    ],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -16,7 +11,7 @@
   {
     "id": 2,
     "category": "Heat Pumps",
-    "image": ["/images/energy-storage-01.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -25,7 +20,7 @@
   {
     "id": 3,
     "category": "Energy Storage",
-    "image": ["/images/energy-storage-01.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -34,7 +29,7 @@
   {
     "id": 4,
     "category": "Heat Pumps",
-    "image": ["/images/heat-pumps-ppl.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -43,7 +38,7 @@
   {
     "id": 5,
     "category": "Energy Storage",
-    "image": ["/images/heat-pumps-ppl.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -52,7 +47,7 @@
   {
     "id": 6,
     "category": "EV-Chargers",
-    "image": ["/images/heat-pumps-ppl.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -61,7 +56,7 @@
   {
     "id": 7,
     "category": "Energy Storage",
-    "image": ["/images/heat-pumps-ppl.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business Project",
     "description": "This is a business project",
     "date": "2021-04-10",
@@ -70,7 +65,7 @@
   {
     "id": 8,
     "category": "EV-Chargers",
-    "image": ["/images/heat-pumps-ppl.jpg"],
+    "image": ["/images/ev-project01.png"],
     "name": "Business t",
     "description": "This is a business project",
     "date": "2021-04-10",

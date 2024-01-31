@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { ProjectCard } from '../components/projects/ProjectCard'
+import { ProjectCard } from '../components/cards/ProjectCard'
 import projects from '../projects.json'
 
 export const ProjectsPage = () => {
