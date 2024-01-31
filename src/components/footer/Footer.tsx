@@ -25,17 +25,16 @@ const StyledFooter = styled.div`
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: #F1F5F9;
-  padding: 2rem 0;
+  background-color: #FFF;
+  margin-top: 5rem;
 `;
 const MiddleFooter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 90%;
+  width: 75%;
   height: auto;
-  margin: 5rem auto;
   @media (max-width: 1064px) {
     flex-direction: column;
     align-items: center;

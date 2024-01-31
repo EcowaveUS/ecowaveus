@@ -1,30 +1,34 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import { SideBar } from './SideBar';
+import { useState } from 'react';
+//import { SideBar } from './SideBar';
 
 export const Navbar = () => {
-  const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
-  const [ sidebar, setsidebar ] = useState(false);
+  //const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
+  //const [ sidebar, setsidebar ] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
 
-  const showSidebar = () => setsidebar(!sidebar);
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+  };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+  // const showSidebar = () => setsidebar(!sidebar);
 
-    window.addEventListener('resize', handleResize);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   window.addEventListener('resize', handleResize);
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   return (
     <>
-      <TopNavbar>
+      {/* <TopNavbar>
         {
           windowWidth < 800 &&
             <HambuguerMenu>
@@ -34,58 +38,56 @@ export const Navbar = () => {
               />
             </HambuguerMenu>
         }
-      </TopNavbar>
-      <StyledLinks>
-        <Link to='/'><li>Home</li></Link>
-        <Link to='/heat-pumps'><li>Heat pumps</li></Link>
-        <Link to='/ev-chargers'><li>EV chargers</li></Link>
-        <Link to='/energy-storage'><li>Energy Storage</li></Link>
-        <Link to='/about-us'><li>About us</li></Link>
-        <Link to='/contact-us'><li>Contact us</li></Link>
-      </StyledLinks>
-      <SideBar showSidebar={showSidebar} sidebar={sidebar} />
+      </TopNavbar> */}
+    <StyledLinks>
+      <Link to='/'><li className={activeLink === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>Home</li></Link>
+      <Separator/>
+      <Link to='/heat-pumps'><li className={activeLink === '/heat-pumps' ? 'active' : ''} onClick={() => handleLinkClick('/heat-pumps')}>Heat pumps</li></Link>
+      <Separator/>
+      <Link to='/ev-chargers'><li className={activeLink === '/ev-chargers' ? 'active' : ''} onClick={() => handleLinkClick('/ev-chargers')}>EV chargers</li></Link>
+      <Separator/>
+      <Link to='/energy-storage'><li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Energy Storage</li></Link>
+      <Separator/>
+      <Link to='/about-us'><li className={activeLink === '/about-us' ? 'active' : ''} onClick={() => handleLinkClick('/about-us')}>About us</li></Link>
+      <Separator/>
+      <Link to='/contact-us'><li className={activeLink === '/contact-us' ? 'active' : ''} onClick={() => handleLinkClick('/contact-us')}>Contact us</li></Link>
+    </StyledLinks>
+      {/* <SideBar showSidebar={showSidebar} sidebar={sidebar} /> */}
     </>
   )
 }
 
-const TopNavbar = styled.div`
+const StyledLinks = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  `;
-  const StyledLinks = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 2rem;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 25px;
   @media(max-width: 824px){
     display: none;
   }
   li {
     white-space: nowrap;
-
     list-style: none;
-    font-size: 15px;
-    color: #242424;
+    font-size: 1rem;
+    color: #fff;
     text-align: left;
     font-family: Inter;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 135.023%;
     cursor: pointer;
     position: relative;
     transition: color 0.3s ease-in-out;
     &::before {
       content: "";
       position: absolute;
-      bottom: -0.5rem;
+      bottom: -8px;
       left: 0;
       width: 0;
       height: 2px;
-      background-color: #1b5b8d;
+      background-color: #FFFFFF;
       transition: width 0.3s ease-in-out;
     }
+
     &.active::before {
       width: 100%;
     }
@@ -96,14 +98,19 @@ const TopNavbar = styled.div`
   }
 `;
 
-const HambuguerMenu = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #1b5b8d;
-  border-radius: 55%;
-  padding: 0.5rem;
-  cursor: pointer;
-  align-items: center;
+// const HambuguerMenu = styled.div`
+//   position: absolute;
+//   top: 1rem;
+//   right: 1rem;
+//   background-color: #1b5b8d;
+//   border-radius: 55%;
+//   padding: 0.5rem;
+//   cursor: pointer;
+//   align-items: center;
+// `;
+
+const Separator = styled.div`
+  border-left: 1px solid rgba(255, 255, 255, 0.20);
+  height: 19px;
 `;
 

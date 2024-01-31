@@ -14,7 +14,7 @@ const BottomWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 3rem ;
+  margin: 5rem;
 `;
 const Bottomtext = styled.p`
 color: #343434;
@@ -25,5 +25,4 @@ font-style: normal;
 font-weight: 400;
 line-height: 28px; /* 175% */
 opacity: 0.6;
-
 `;

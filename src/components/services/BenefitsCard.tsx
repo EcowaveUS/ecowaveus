@@ -3,14 +3,13 @@ import styled from 'styled-components'
 
 interface Props {
     title: string,
+    content: string,
     image?: string,
-    benefitsTitle?: string,
-    benefitsContent?: string,
-    showEfficency?: boolean,
   }
 
 export const BenefitsCard: React.FC<Props> = ({
     title,
+    content,
     image
 }) => {
   return (
@@ -19,8 +18,10 @@ export const BenefitsCard: React.FC<Props> = ({
         <ImageWrapper>
           <StyledImage src={image} alt={title} />
         </ImageWrapper>
+        <Separator />
         <TextWrapper>
           <IconText>{title}</IconText>
+          <ContentText>{content}</ContentText>
         </TextWrapper>
       </IconCard>
     </>
@@ -29,47 +30,47 @@ export const BenefitsCard: React.FC<Props> = ({
 
 const IconCard = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #F5F5F5;
-  border-radius: 10px;
-  width: 280px;
-  transition: all 1.5s ease-in-out;
-  cursor: pointer;
-  &:hover {
-    scale: 1.15;
-    box-shadow: 3px 3px 5px #07222B;
-  }
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+  height: 105px;
+  width: 383px;
   `;
+const Separator = styled.div`
+  border-left: 1px solid #D8D8D8;
+  height: 90%;
+  background-color: #D8D8D8;
+`;
   const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 280px;
-  height: 250px;
+  width: 54px;
+  height: 52px;
   `;
   const StyledImage = styled.img`
-  padding: 1rem;
-  width: 100%;
+  width: auto;
   height: 100%;
-  border-radius: 10px 10px 0 0;
 `;
 const TextWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: grey;
-  width: 100%;
-  height: 40px;
-  border-radius: 0 0 10px 10px;
-  opacity: 0.5;
+  flex-direction: column;
 `;
 const IconText = styled.p`
-  font-size: 20px;
-  font-weight: 500;
-  color: #000;
-  text-align: center;
-  margin: 0;
+  color: #1C1F35;
+  font-family: Rubik;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   font-family: 'Roboto', sans-serif;
+`;
+const ContentText = styled.p`
+color: #666C89;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 151.523%; /* 24.244px */
 `;

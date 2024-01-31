@@ -62,7 +62,7 @@ export const OursBrands: React.FC<Props> = ({
 };
 
 const StyledSlider = styled(Slider)`
-  width: 100%;
+  width: 75%;
   margin: 2rem 1rem;
   overflow-x: hidden;
   .slick-track {
@@ -78,13 +78,17 @@ const StyledSlider = styled(Slider)`
 `;
 
 const ImageWrapper = styled.div`
-  width: auto;
-  height: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  aspect-ratio: 3/1;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
   filter: grayscale(100%) saturate(80%);
 `;
 

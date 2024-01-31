@@ -15,62 +15,59 @@ export const EvChargerCard: React.FC<Props> = ({
 }) => {
   return (
     <CardWrapper>
-      <Image src={image} alt="ev-chargers"/>
       <ContentContainer>
         <Title>{title}</Title>
         <TextContent>
           {content}
         </TextContent>
       </ContentContainer>
+      <Image src={image} alt="ev-chargers"/>
     </CardWrapper>
   )
 }
 const CardWrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: 908px;
   border-radius: 10px;
-  margin: 1rem;
-  width: 70%;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  &:hover {
-    background-color: #f2f2f2;
-    transition: all 2s ease-in-out;
-  }
+  border: 1px solid #003B76;
+  background: #003B76;
 
+  /* Shadow/Light/XXL */
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07), 0px 25px 50px -12px rgba(255, 255, 255, 0.25);
 `
 const Image = styled.img`
-  width: 125px;
-  height: 240px;
+  height: 670px;
+  align-self: stretch;
   border-radius: 10px;
 `
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 70%;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  padding: 12px;
+  gap: 12px;
 `
 const Title = styled.h5`
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-  color: grey;
-  text-align: center;
-  margin: 2rem 0 0 0;
+  color: var(--White, var(--fore-allways---white, #FFF));
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 26.4px */
 `
 const TextContent = styled.p`
-  font-size: 1rem;
-  line-height: 1.5rem;
-  padding: 0 2rem;
-  text-align: center;
-  margin-top: 1rem;
+  color: var(--White, var(--fore-allways---white, #FFF));
+
+  /* Body/L */
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
 `

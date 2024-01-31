@@ -1,102 +1,49 @@
+import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-import { OursBrands } from '../components/brands/OursBrands'
-import { ServiceTitle } from '../components/services/ServiceTitle'
-import { ServiceBenefits } from '../components/services/ServiceBenefits'
-import { ProccesCard } from '../components/services/ProccesCard'
 import { motion } from 'framer-motion'
-import { Inovation } from '../components/homeComponents/Inovation'
+import { ServiceBenefits } from '../components/services/ServiceBenefits'
+import { OursBrands } from '../components/brands/OursBrands'
+import { ProccesCard } from '../components/services/ProccesCard'
 import { RebatesIncentives } from '../components/services/RebatesIncentives'
+import { SvgFeedBackPositive } from '../components/svg/SvgFeedBackPositive'
+import { Link } from 'react-router-dom'
+import { MainPageComponent } from '../components/pagesComponents/MainPageComponent'
 
 export const HeatPumsPage = () => {
+  const location = useLocation();
+  const pathLocation = location.pathname;
 
   const stepByStepList = [
     {
       id: 1,
       item: '01',
-      content: [
-        'If your house was built after the year 2000, you can skip this step.',
-        ' Before the installation, in order to qualify for Mass Save rebates, you must complete an energy assessment and obtain a Certificate of Completion (COC). This is necessary for being eligible for rebates from Mass Save.',
-        'To schedule an energy assessment with Mass Save, please click on the following link:'
-      ]
+      title: 'Energy Assessment (Skip if built after 2000)',
+      content: 'Complete an energy assessment and obtain a Certificate of Completion from Mass Save for rebate eligibility.'
     },
     {
       id: 2,
       item: '02',
-      content: [
-        'Give us a call and tell us about the scope of your project.'
-      ]
+      title: 'Initial Consultation',
+      content: 'Contact us to discuss your project"s scope.'
     },
     {
       id: 3,
       item: '03',
-      content: [
-        'Schedule a visit; we will take measurements of your house and inspect some elements.'
-      ]
+      title: 'Site Visit and Estimate',
+      content: 'Schedule a visit for house measurements and inspection, followed by a free estimate including potential rebates.'
     },
     {
       id: 4,
       item: '04',
-      content: [
-        'Receive a free estimate from us, including information on rebates you may be eligible for.'
-      ]
+      title: 'Contract and',
+      content: 'Sign a contract and, if applying, proceed with Mass Save"s 0% HEAT loan process.'
     },
     {
       id: 5,
       item: '05',
-      content: [
-        'Sign a contract.'
-      ]
+      title: 'Installation and Rebate Assistance',
+      content: "We'll order equipment, install and commission the system, and help with rebate applications. Enjoy your new system!"
     },
-    {
-      id: 6,
-      item: '06',
-      content:[
-        'a) If you are NOT applying for a Mass Save loan, proceed to step 7.',
-        'b) If you are applying for the Mass Save 0% HEAT loan'
-      ]
-    },
-    {
-      id: 7,
-      item: '07',
-      content: [
-        'We will order the equipment and schedule a start date for the job.'
-      ]
-    },
-    {
-      id: 8,
-      item: '08',
-      content: [
-        "We'll complete the installation. We'll commission the system."
-      ]
-    },
-    {
-      id: 9,
-      item: '09',
-      content: [
-        "We'll complete the installation. We'll commission the system."
-      ]
-    },
-    {
-      id: 10,
-      item: '10',
-      content: [
-        "We'll assist you in applying for your rebate."
-      ]
-    },
-    {
-      id: 11,
-      item: '11',
-      content: [
-        "We'll assist you in applying for your rebate."
-      ]
-    },
-    {
-      id: 12,
-      item: '12',
-      content:[
-        "Enjoy your new system!"
-      ]
-    }
   ]
 
   return (
@@ -105,74 +52,83 @@ export const HeatPumsPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <HeaderWrapper>
-          <ServiceTitle
-            title='Heat Pumps'
-          />
-        </HeaderWrapper>
-        <Inovation
-          title='What is a heat pump?'
-          content=
-          'A heat pump is a highly efficient device that transfers heat from one location to another, rather than generating heat or cooling itself. Powered by electricity, the heat pump simply moves heat, taking advantage of the abundant energy provided by the sun. Unlike traditional heat sources such as oil, natural gas, or propane, heat pumps boast an impressive efficiency of 300%. This means that for every unit of energy input, they deliver three units of heat. While it may seem like magic, heat pumps work by harnessing the vast amount of solar energy available, making them an eco-friendly and cost-effective alternative to conventional heating methods.'
-          images= {[
-            {
-              img:'/images/heat-pumps-ppl.jpg',
-              title: 'Breakfast',
-              rows: 2,
-              cols: 2,
-            },
-            {
-              img: '/images/heat-pumps-05.jpg',
-              title:'ev-charger'
-            },
-            {
-              img: '/images/heat-pumps-06.jpg',
-              title:'heat-pumps'
-            },
-            {
-              img: '/images/heat-pumps-03.jpg',
-              title:'energy-storage',
-              cols: 2,
-              rows: 1,
-            },
-          ]}
-          logo='/images/logo-ecowave.png'
+        <MainPageComponent
+          title='The Advantages of Heat Pumps'
+          subtitle='Efficient and Eco-Friendly:'
+          content='A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas.'
+          pathLocation={pathLocation}
+          backgroundImage='/images/heat-pumps.png'
         />
         <ServiceBenefits
           title='Benefits of heat pumps'
-          image = {[
+          subTitle= 'Maximizing Comfort and Efficiency'
+          image= {[
             '/images/energy-icon.png',
-            '/images/Increase-icon.png',
-            '/images/envaromentally-icon.png',
+            '/images/increase-icon.png',
+            '/images/enviromentally-icon.png'
           ]}
         />
-        <StepsWrapper>
-          <PumpsContentTitle>Instalation Procces Step-By-Step</PumpsContentTitle>
-          <Separator/>
-          <div>
+        <ImageBrackground >
+          <StyledImage src="/images/heat-pumps-list-background.png" alt="heatpumps-background" />
+        </ImageBrackground>
+        <ProccesComponent>
+          <SubTitle>Installation Guide</SubTitle>
+          <TitleProcces>Instalation Procces Step-By-Step</TitleProcces>
+          <TextProcces>To make your experience seamless, we've distilled the process into five easy-to-follow steps</TextProcces>
+          <ProccesGridContainer>
+            <ProccesCardWrapper>
               {
-                stepByStepList.map((step, index) => (
-                  <ListWrapper key={index} >
-                    <ProccesCard
-                      key={step.id}
-                      id={step.id}
-                      item={step.item}
-                      content={step.content}
-                    />
-                    {index !== stepByStepList.length - 1 && <Separator/>}
-                  </ListWrapper>
+                stepByStepList.map((item) => (
+                  <ProccesCard
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    content={item.content}
+                    item={item.item}
+                  />
                 ))
               }
-          </div>
-        </StepsWrapper>
-        <RebatesIncentives/>
-        <OursBrands
-          images={[
-              '/images/Mitsubishi_Electric_logo.png',
-              '/images/LG-Air-Conditioning-Logo.png',
-              '/images/Fujitsu-Logo.png'
-            ]}
-        />
+            </ProccesCardWrapper>
+            <ImageWrapper>
+              <Image src="/images/heat-pumps-list.png" alt="heat pumpp" />
+            </ImageWrapper>
+          </ProccesGridContainer>
+        </ProccesComponent>
+        <RebatesIncentives>
+          <LinkWrapper>
+            <Text>
+              Check if your city is eligible:
+            </Text>
+            <Link to='https://frontdoor.portal.poweredbyefi.org/initiative/marebates'>
+              <LinkText>
+                https://frontdoor.portal.poweredbyefi.org/initiative/marebates
+              </LinkText>
+            </Link>
+          </LinkWrapper>
+          <ListWrapper>
+            <ListCard>
+              <SvgFeedBackPositive />
+              <Text>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)</Text>
+            </ListCard>
+            <ListCard>
+              <SvgFeedBackPositive />
+              <Text>Partial-home rebates are offered based on equipment/outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)</Text>
+            </ListCard>
+          </ListWrapper>
+        </RebatesIncentives>
+        <BrandsWrapper>
+          <OursBrands
+            images={[
+                '/images/brands/mitsubishi-logo.png',
+                '/images/brands/lg-logo.png',
+                '/images/brands/fujitsu-logo.png',
+                '/images/brands/daikin-logo.png',
+                '/images/brands/tesla-logo.png',
+                '/images/brands/fujitsu-logo.png',
+                '/images/brands/daikin-logo.png',
+              ]}
+          />
+        </BrandsWrapper>
       </StyledPage>
   )
 }
@@ -182,51 +138,140 @@ const StyledPage = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-const HeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 9;
+  min-height: 100vh;
 `;
 
-const PumpsContentTitle = styled.h3`
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: 600;
-  color: grey;
-  text-align: left;
-  margin: 2rem 0 0 0;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-align: center;
-    width: 70%;
-  }
+const Text = styled.p`
+  color: var(--fore-allways---white, #FFF);
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 151.523%;
 `;
-const Separator = styled.div`
-  background-color: grey;
-  margin: 1rem 0;
-  width: 70%;
-  height: 1px;
-  border-width: 1px;
-  border-style: dnone;
-  border-spacing: 15px;
+
+const ImageBrackground = styled.div`
+  width: 100%;
+  height: 100%;
 `;
-const StepsWrapper = styled.div`
+const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const ProccesComponent = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 75%;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 3rem;
+  margin-top: -7rem;
+  margin-bottom: 8rem;
+`;
+const ProccesCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%
+`;
+const ProccesGridContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+`;
+const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: auto;
+`;
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+`;
+const SubTitle = styled.p`
+color: #1C1F35;
+
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-left: 4px solid #68BE54 ;
+background: rgba(232, 232, 232, 0.50);
+padding: 3px 9px 3px 8px;
+`
+const TitleProcces = styled.h3`
+color: #1C1F35;
+width: 472px;
+font-family: Inter;
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+`
+const TextProcces = styled.p`
+color: #666C89;
+width: 472px;
+
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 151.523%; /* 24.244px */
+`
+
+const BrandsWrapper = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+background-color: #F5F5F5;
+`;
+const LinkText = styled.p`
+  color: var(--fore-allways---white, #FFF);
+
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  text-decoration: underline;
+`;
+const ListCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+`;
+const LinkWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 24px 0;
+`;
+const ListWrapper = styled.div`
+ display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   width: 100%;
-  background-color: #26252B;
-`;
-const ListWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;

@@ -78,28 +78,36 @@ export const AreaServiceComponent = () => {
 ];
   return (
     <StyledAreaService>
-      <ListAreaService location={location}/>
-      <MapWrapper>
-        <MapContainer
-          markersPoints={markersPoint}
-        />
-      </MapWrapper>
+      <ComponentWrapper>
+        <ListAreaService location={location}/>
+        <MapWrapper>
+          <MapContainer
+            markersPoints={markersPoint}
+          />
+        </MapWrapper>
+      </ComponentWrapper>
     </StyledAreaService>
   )
 }
 
 const StyledAreaService = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  border-radius: 20px;
+  width: 100%;
   background-color: #F1F5F9;
-  padding: 60px;
+  padding: 60px auto;
   margin-bottom: 72px;
+`;
+const ComponentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 75%;
+  margin: 5rem auto;
 `;
 const MapWrapper = styled.div`
   height: auto;
-  width: 60%;
+  width: 75%;
 `;

@@ -30,7 +30,7 @@ const TitleContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
 `;
 const TitleText = styled.h3`
 color: var(--fore-allways---white, #FFF);
@@ -43,18 +43,22 @@ letter-spacing: 0.2px;
 text-align: left;
 `;
 const LeftButton = styled.button`
+  border: none;
   background: none;
   width: 64px;
   height: 64px;
+  cursor: pointer;
 `;
 const ArrowLeft = styled.img`
   width: 64px;
   height: 64px;
 `;
 const RigthButton = styled.button`
+  border: none;
   background: none;
   width: 64px;
   height: 64px;
+  cursor: pointer;
 `;
 const ArrowRight = styled.img`
   width: 64px;

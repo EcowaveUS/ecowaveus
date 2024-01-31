@@ -180,6 +180,7 @@ export const ContactForm = () => {
               borderRadius: '11px',
               padding: '16px',
               border: '1px solid #D0D0D0',
+              resize: 'none',
             }}
             name='message'
             value={formik.values.message}
@@ -238,6 +239,7 @@ const StyledButton = styled.button`
   gap: 10px;
   padding: 17px 24px 15px 24px;
   border-radius: 6px;
+  color: var(--fore-allways---white, #FFF);
 
 `;
 const InputContainer = styled.div`

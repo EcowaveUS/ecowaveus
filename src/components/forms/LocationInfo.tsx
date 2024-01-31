@@ -8,30 +8,29 @@ export const LocationInfo = () => {
         <SvgTriangles />
       </Triangles>
       <Title>EcoWaveus Us</Title>
-      <div>
+      <CardContainer>
         <SubTitles>Adress</SubTitles>
         <Text>12 Broadway street</Text>
         <Text> Beverly, MA 01915</Text>
         <Separator />
-      </div>
-      <div>
+      </CardContainer>
+      <CardContainer>
         <SubTitles>Phone</SubTitles>
         <Text>(978) 500 - 4081</Text>
         <Separator />
-      </div>
-      <div>
+      </CardContainer>
+      <CardContainer>
         <SubTitles>Email</SubTitles>
         <Text>info@ecowaveus.com</Text>
         <Separator />
-      </div>
-      <div>
+      </CardContainer>
+      <CardContainer>
         <SubTitles>Adress</SubTitles>
         <Text>Monday – Friday: 8:00 AM – 5:00 PM</Text>
         <Text>Saturday – Sunday: Closed</Text>
-        <Separator />
-      </div>
+      </CardContainer>
       <Dots>
-        <DotsImg src='/images/dots-background.png' alt='map' />
+        <DotsImg src='/images/dots-form.png' alt='map' />
       </Dots>
     </LocationWrapper>
   )
@@ -49,7 +48,6 @@ const LocationWrapper = styled.div`
     padding: 34px;
     gap: 24px;
     margin: 5rem;
-    z-index: 99;
 `;
 const Triangles = styled.div`
   position: absolute;
@@ -64,10 +62,9 @@ const Dots = styled.div`
   z-index: -1;
 `;
 const DotsImg = styled.img`
-  width: 268.242px;
-  height: 148.034px;
+  width: 268px;
+  height: 148px;
   flex-shrink: 0;
-  z-index: -1;
 `;
 const Title = styled.h3`
   color: #343434;
@@ -104,4 +101,11 @@ const Separator = styled.div`
   height: 1px;
   background-color: #E4ECF6;
   margin-top: 16px;
+`;
+const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
 `;

@@ -1,31 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaAngleRight } from "react-icons/fa6";
 
 interface Props {
   id: number,
   item: string,
-  content: string[],
+  title: string,
+  content: string,
 }
 
 export const ProccesCard: React.FC<Props> = ({
   item,
   content,
+  title
 }) => {
   return (
     <CardWarpper>
-      <NumberWrapper>
-        <p>STEP</p>
-        <TextNumber>{item}</TextNumber>
-      </NumberWrapper>
-      <FaAngleRight size={16} color="#B5B5B5" />
-      <TextWrapper>
-        {content.map((item, index) => (
-          <StyledList>
-            <li key={index}><Text>{item}</Text></li>
-          </StyledList>
-        ))}
-      </TextWrapper>
+      <ItemWrapper>
+        <ItemNumber>{item}</ItemNumber>
+      </ItemWrapper>
+      <ContentWrapper>
+        <Title>{title}</Title>
+        <TextContent>{content}</TextContent>
+      </ContentWrapper>
     </CardWarpper>
   )
 }
@@ -34,58 +30,46 @@ const CardWarpper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 70%;
-  height: auto;
-  padding: 4px 8px;
-  margin: 0.5rem auto;
-  &:hover {
-    cursor: pointer;
-    scale: 1.1;
-    transition: all 0.5s ease-in-out;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  gap: 15px;
+  margin: 22px 0 22px 0;
 `;
-const NumberWrapper = styled.div`
+const ItemWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background-image: url('/images/green-ellipse.png');
 `;
-const TextNumber = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 2rem;
-  color: #fff;
-  text-align: left;
+const ItemNumber = styled.p`
+color: var(--fore-allways---white, #FFF);
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 100% */
 `;
-const TextWrapper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 464px;
 `;
-const StyledList = styled.ul`
-  margin-left: 1.5rem;
-  padding: 0;
+const Title = styled.h3`
+color: #1C1F35;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 `;
-const Text = styled.p`
-font-family: 'Roboto', sans-serif;
-font-size: 1rem;
-font-weight: 500;
-line-height: 1.5rem;
-color: #B5B5B5;
-text-align: left;
-padding: 2px;
-&:hover {
-  color: #fff;
-}
-@media (max-width: 768px) {
-  text-align: center;
-}
+const TextContent = styled.p`
+color: #666C89;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 151.523%; /* 24.244px */
 `;

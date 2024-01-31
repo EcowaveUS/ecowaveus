@@ -16,7 +16,7 @@ export const ServicesCard: React.FC<CardProps> = ({
   return (
     <CardContainer>
       <IconWrapper>
-        <Icon src="/images/logo-card.png" alt="ev-charger" />
+        <Icon src="/images/solution-icon.png" alt="Protecte cloud" />
       </IconWrapper>
       <div>
         <Title>{title}</Title>
@@ -88,4 +88,5 @@ const LinkText = styled.button`
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.408px;
+  cursor: pointer;
 `;

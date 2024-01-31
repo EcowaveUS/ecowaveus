@@ -16,6 +16,6 @@ const WrapperComponent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: 75%;
   margin: 5rem auto;
   `;

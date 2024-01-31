@@ -89,7 +89,7 @@ const WrapperReviews = styled.div`
 `;
 const TitleWrapper = styled.div`
   align-items: center;
-  width: 90%;
+  width: 75%;
 `;
 
 const CardWrapper = styled.div`
@@ -97,7 +97,7 @@ const CardWrapper = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
+  width: 75%;
   gap: 32px;
   margin: 0 auto;'
 `;

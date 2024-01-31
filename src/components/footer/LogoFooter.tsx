@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const LogoFooter = () => {
   return (
     <FooterWrapper>
-      <Logo src='/images/logo-ecowave.png'/>
+      <Logo src='/images/logo-footer.png'/>
       <ContactText>
         Specializing in heat pumps, EV chargers, and energy storage installations, our company ensures efficient and sustainable energy solutions.
       </ContactText>

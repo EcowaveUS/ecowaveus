@@ -9,7 +9,6 @@ interface ButtonProps {
 
 export const StandardButton: React.FC<ButtonProps> = ({
   title,
-  Icon,
   onClick
 }) => {
   return (
@@ -18,7 +17,6 @@ export const StandardButton: React.FC<ButtonProps> = ({
         onClick={onClick}
       >
         {title}
-        {Icon && <Icon />}
       </StyledButton>
     </>
   );
@@ -26,13 +24,17 @@ export const StandardButton: React.FC<ButtonProps> = ({
 
 
 const StyledButton = styled.button`
-  background-color: #FFF;
-  border-radius: 6px;
-  color: #033E78;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px; /* 100% */
-  padding: 17px 24px;
+  background-color: var(--fore-allways---white, trasparent);
+  display: flex;
+  height: var(--padding, 48px);
+
+  padding: 17px 24px 15px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: var(--medium, 6px);
+  border: 2px solid var(--fore-allways---white, #FFF);
+  color: var(--fore-allways---white, #FFF);
+  cursor: pointer;
 `;
