@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { ProjectCard } from '../cards/ProjectCard';
 import projects from '../../projects.json'
-import { StandardButton } from '../buttons/StandardButton';
 
 export const ProjectCards = () => {
   const cards = projects.slice(0, 4)

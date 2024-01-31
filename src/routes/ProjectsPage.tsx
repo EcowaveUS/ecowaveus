@@ -16,13 +16,9 @@ export const ProjectsPage = () => {
       {
         projects.map((project) => (
           <ProjectCard key={project.id}
-            id={project.id}
             category={project.category}
             image={project.image}
             name={project.name}
-            description={project.description}
-            date={project.date}
-            score={project.score}
           />
         ))
       }
