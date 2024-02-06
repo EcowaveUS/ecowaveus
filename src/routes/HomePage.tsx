@@ -31,8 +31,8 @@ export const HomePage = () => {
         />
         <InovationWrapper>
           <Inovation
-            title= 'Riding the wave of innovation'
-            content='At ecoWAVEus, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.'
+            title= 'Riding the Wave of Eco-Innovation'
+            content='At ecoWAVEus, we specialize in providing sustainable energy solutions, including Heat Pumps, EV chargers, Energy Storage and Solar, all designed to maximize energy efficiency and savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.'
             images= {[
               {
                 img: '/images/innovation-02.png',

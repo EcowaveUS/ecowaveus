@@ -24,7 +24,7 @@ export const ServiceBenefits: React.FC<Props> = ({
       <IconsWrapper>
         <div>
           <BenefitsCard
-            title= 'Increase home value'
+            title= 'Increase Home Value'
             image={image && image[0]}
           />
         </div>
@@ -58,7 +58,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  width: 30%;
+  width: 25%;
 `;
 const IconsWrapper = styled.div`
   display: flex;
@@ -89,4 +89,5 @@ const SubTitle = styled.h4`
   border-left: 4px solid #68BE54 ;
   background: rgba(232, 232, 232, 0.50);
   padding: 3px 9px 3px 8px;
+  width: fit-content;
 `

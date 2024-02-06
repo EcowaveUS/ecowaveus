@@ -39,15 +39,15 @@ export const EvChargersPage = () => {
       exit={{ opacity: 0 }}
     >
       <MainPageComponent
-        title='Storing Power, Empowering Lives'
-        content='Maximize sustainable living with ecoWAVEus"s home-specific energy storage systems. Affordable and reliable, they guard against power outages and optimize solar energy use for anytime access, fostering a greener future.'
+        title='Charge Faster, Go Further'
+        content='We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable.'
         pathLocation={pathLocation}
         backgroundImage='/images/ev-chargers.png'
 
       />
       <ServiceBenefits
         title='Benefits of EV-Chargers'
-        subTitle= 'Maximizing Comfort and Efficiency'
+        subTitle= 'Maximize Time and Comfort'
         image= {[
           '/images/energy-icon.png',
           '/images/increase-icon.png',

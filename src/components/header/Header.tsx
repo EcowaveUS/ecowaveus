@@ -65,6 +65,7 @@ const Wrapper = styled.div`
   margin-bottom: 0 auto;
   background-color: rgba(9, 18, 66, 0.30);
   position: absolute;
+  z-index: 99;
 `;
 const ContactWrapper = styled.div`
   display: flex;

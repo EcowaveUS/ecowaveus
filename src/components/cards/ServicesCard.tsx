@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 interface CardProps {
@@ -12,7 +12,6 @@ interface CardProps {
 export const ServicesCard: React.FC<CardProps> = ({
   title,
   content,
-  url,
   icon,
 }) => {
   return (
@@ -24,7 +23,7 @@ export const ServicesCard: React.FC<CardProps> = ({
         <Title>{title}</Title>
         <Text>{content}</Text>
       </div>
-      <Link to={url}><LinkText>Learn more</LinkText></Link>
+      {/* <Link to={url}><LinkText>Learn more</LinkText></Link> */}
     </CardContainer>
   )
 }
@@ -81,15 +80,15 @@ const Text = styled.p`
   letter-spacing: -0.408px;
 `;
 
-const LinkText = styled.button`
-  background: none;
-  border: none;
-  color: #348CE4;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.408px;
-  cursor: pointer;
-`;
+// const LinkText = styled.button`
+//   background: none;
+//   border: none;
+//   color: #348CE4;
+//   font-family: Roboto;
+//   font-size: 16px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: normal;
+//   letter-spacing: -0.408px;
+//   cursor: pointer;
+// `;

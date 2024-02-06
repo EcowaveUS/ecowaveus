@@ -241,6 +241,7 @@ const StyledButton = styled.button`
   align-items: center;
   gap: 10px;
   padding: 17px 24px 15px 24px;
+  border: none;
   border-radius: 6px;
   color: var(--fore-allways---white, #FFF);
 

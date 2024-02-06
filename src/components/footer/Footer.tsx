@@ -28,7 +28,7 @@ const StyledFooter = styled.div`
   align-items: center;
   width: 100%;
   height: auto;
-  background-color:'#F1F5F9';
+  background-color: #F1F5F9;
   padding: 3rem 0 0 0;
 `;
 const MiddleFooter = styled.div`

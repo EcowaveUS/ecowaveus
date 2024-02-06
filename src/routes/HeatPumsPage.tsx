@@ -59,7 +59,7 @@ export const HeatPumsPage = () => {
           backgroundImage='/images/heat-pumps.png'
         />
         <ServiceBenefits
-          title='Benefits of heat pumps'
+          title='Benefits of Heat Pumps'
           subTitle= 'Maximizing Comfort and Efficiency'
           image= {[
             '/images/energy-icon.png',

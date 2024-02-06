@@ -17,7 +17,7 @@ const WrapperComponent = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 75%;
-  margin: 5rem auto;
+  margin: 10rem auto;
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;

@@ -42,7 +42,7 @@ const Container = styled.div<Props>`
 
 const HeaderContainer = styled.div<Props>`
   height: auto;
-  width: ${props => props.pathLocation === '/ev-chargers' ? '60%' : '75%'};
+  width: ${props => props.pathLocation === '/ev-chargers' ? '50%' : '75%'};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,8 +51,9 @@ const HeaderContainer = styled.div<Props>`
       ? 'flex-start'
       : props.pathLocation === '/ev-chargers'
       ? 'flex-end'
-      :
-      'flex-start'
+      : props.pathLocation === '/energy-storage'
+      ? 'flex-start'
+      : 'center'
   };
 `;
 const HeaderContent = styled.div`
@@ -60,8 +61,8 @@ const HeaderContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 60%;
-  gap: 2rem;
+  width: 50%;
+  gap: 1rem;
 `;
 
 const Title = styled.h1<Props>`
@@ -74,6 +75,7 @@ const Title = styled.h1<Props>`
   line-height: normal;
   text-transform: capitalize;
   text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
+
 `;
 
 const Text = styled.p<Props>`
@@ -83,7 +85,7 @@ const Text = styled.p<Props>`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 151.523%;
+  line-height: 1.8rem;
   text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 `;
 

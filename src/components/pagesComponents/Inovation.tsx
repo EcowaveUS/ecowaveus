@@ -43,7 +43,7 @@ export const Inovation: React.FC<Props> = ({
 const StyledContent = styled.div`
   display: grid;
   grid-template-columns: 43% 57%;
-  grid-template-rows: 1fr 1/4fr;
+  grid-template-rows: 75% 25%;
   align-items: center;
   justify-content: center;
   width: 75%;
@@ -60,7 +60,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 0 24px 0 0;
 `
 const ContentWrapper = styled.div`
@@ -90,7 +90,7 @@ const Text = styled.p`
 `
 const ImageWrapper = styled.div`
   grid-column: span 2;
-  grid-row: span 1;
+  grid-row: 2;
   width: 100%;
   height: 100%;
   display: flex;
@@ -101,7 +101,8 @@ const ImageWrapper = styled.div`
 `
 const ImageBox = styled.div`
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   `
 const ImageList = styled.img`
   height: 100%;

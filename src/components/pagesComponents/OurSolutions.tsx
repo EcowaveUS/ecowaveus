@@ -11,7 +11,7 @@ export const OurSolutions = () => {
   return (
     <SolutionWrapper>
       <ContentWrapper>
-        <Title>Our Solution</Title>
+        <Title>How Can We Help You?</Title>
         <Text>We make it easy for users to use our platform, that's why we provide this benefit.</Text>
       </ContentWrapper>
       <CardWrapper>
