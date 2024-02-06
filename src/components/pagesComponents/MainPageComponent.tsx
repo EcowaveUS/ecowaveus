@@ -21,8 +21,8 @@ export const MainPageComponent: React.FC<Props> = ({
       <HeaderContainer pathLocation={pathLocation}>
         <HeaderContent>
           {subtitle && <AuxiliarText>{subtitle}</AuxiliarText>}
-          <Title>{title}</Title>
-          <Text>{content}</Text>
+          <Title pathLocation={pathLocation}>{title}</Title>
+          <Text pathLocation={pathLocation}>{content}</Text>
         </HeaderContent>
       </HeaderContainer>
     </Container>
@@ -31,17 +31,18 @@ export const MainPageComponent: React.FC<Props> = ({
 
 const Container = styled.div<Props>`
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh; /* 100% of the viewport height */
   background-image: url(${props => props.backgroundImage});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:0 7rem;
 `;
 
 const HeaderContainer = styled.div<Props>`
   height: auto;
-  width: 100%;
+  width: ${props => props.pathLocation === '/ev-chargers' ? '60%' : '75%'};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,22 +52,19 @@ const HeaderContainer = styled.div<Props>`
       : props.pathLocation === '/ev-chargers'
       ? 'flex-end'
       :
-      'center'
+      'flex-start'
   };
-  margin-top: 5rem;
 `;
 const HeaderContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 40%;
-  margin-left: 6rem;
-  margin-right: 12rem;
-  gap: 1rem;
+  width: 60%;
+  gap: 2rem;
 `;
 
-const Title = styled.h1`
+const Title = styled.h1<Props>`
   color: var(--fore-allways---white, #FFF);
 
   font-family: Inter;
@@ -75,10 +73,10 @@ const Title = styled.h1`
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
-  text-align: left;
+  text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 `;
 
-const Text = styled.p`
+const Text = styled.p<Props>`
   color: var(--fore-allways---white, #FFF);
 
   font-family: Roboto;
@@ -86,7 +84,9 @@ const Text = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 151.523%;
+  text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 `;
+
 const AuxiliarText = styled.p`
   color: var(--fore-allways---white, #FFF);
 

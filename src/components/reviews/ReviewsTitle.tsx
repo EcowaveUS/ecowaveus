@@ -1,26 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface Props {
-  handleNext: () => void;
-  handlePrev: () => void;
-}
 
-export const ReviewsTitle: React.FC<Props> = ({
-  handleNext,
-  handlePrev,
-}) => {
+export const ReviewsTitle = () => {
   return (
     <TitleContainer>
       <TitleText>Look for ours reviews</TitleText>
-      <div>
-        <LeftButton onClick={handlePrev}>
-          <ArrowLeft src="/images/arrow-left-circle.png" alt="" />
-        </LeftButton>
-        <RigthButton onClick={handleNext}>
-          <ArrowRight src="/images/arrow-right-circle.png" alt="" />
-        </RigthButton>
-      </div>
+      <MoreButton>See more</MoreButton>
     </TitleContainer>
   )
 }
@@ -42,27 +28,20 @@ line-height: 40px; /* 100% */
 letter-spacing: 0.2px;
 text-align: left;
 `;
-const LeftButton = styled.button`
-  border: none;
+const MoreButton = styled.button`
+  color: #1FA500;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.04px;
+  text-align: center;
   background: none;
-  width: 64px;
-  height: 64px;
-  cursor: pointer;
-`;
-const ArrowLeft = styled.img`
-  width: 64px;
-  height: 64px;
-`;
-const RigthButton = styled.button`
   border: none;
-  background: none;
-  width: 64px;
-  height: 64px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-`;
-const ArrowRight = styled.img`
-  width: 64px;
-  height: 64px;
+
 `;
 
 

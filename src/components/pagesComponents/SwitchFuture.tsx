@@ -5,9 +5,9 @@ export const SwitchFuture = () => {
   return (
     <Container>
       <HeaderContainer>
-        <Title>HVAC & Plumbing Excellence for Homes & Businesses</Title>
+        <Title>Excellent Service. Reasonable Prices.</Title>
         <Text>
-          EAt EcoWave, we offer efficient HVAC and plumbing solutions for both homes and businesses. Our skilled team ensures top-notch installations, repairs, and maintenance at competitive prices, focusing on reliable and tailored services for every client.
+          At ecoWAVEus, we will help you find the suitable solution to make your house or your business more energy-efficient and environmentally friendly according to your priorities and preferences, at an affordable price.
         </Text>
         <StandardButton
           title='Schedule now!'
@@ -23,22 +23,23 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh; /* 100% of the viewport height */
+  min-height: 935px; /* 100% of the viewport height */
   background-image: url('/images/energy-solar-station.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:0 7rem;
 `;
 
 const HeaderContainer = styled.div`
-  width: 80%;
+  width: 65%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 8rem;
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
@@ -51,6 +52,7 @@ const Title = styled.h1`
   line-height: 81px;
   letter-spacing: 0.32px;
   text-transform: capitalize;
+  width: 75%;
 `;
 
 const Text = styled.p`

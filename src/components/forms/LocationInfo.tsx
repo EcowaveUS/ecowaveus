@@ -44,10 +44,13 @@ const LocationWrapper = styled.div`
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0px 17.723px 47.261px 0px #DCDCEC;
-    width: 393px;
+    width: 40%;
     padding: 34px;
     gap: 24px;
     margin: 5rem;
+    @media (max-width: 1024px) {
+      width: 70%;
+    }
 `;
 const Triangles = styled.div`
   position: absolute;

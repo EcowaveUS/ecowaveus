@@ -10,7 +10,6 @@ import { AreaServiceComponent } from '../components/AreaServices/AreaServiceComp
 
 
 export const HomePage = () => {
-
   return (
       <StyledHome
         initial={{ opacity: 0 }}
@@ -40,11 +39,11 @@ export const HomePage = () => {
                 title:'ev-charger'
               },
               {
-                img: '/images/innovation-03.png',
+                img: '/images/innovation-05.png',
                 title:'heat-pumps'
               },
               {
-                img: '/images/innovation-04.png',
+                img: '/images/innovation-06.png',
                 title:'energy-storage',
               },
             ]}
@@ -65,6 +64,7 @@ const StyledHome = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
 `;
 const SolutionsContainer = styled.div`
   width: 100%;

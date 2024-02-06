@@ -201,9 +201,12 @@ const FormWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   gap: 32px;
   margin-top: 2rem;
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
 `;
 const FormInputs = styled.div`
   display: grid;

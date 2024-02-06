@@ -1,72 +1,84 @@
-import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ReviewsTitle } from './ReviewsTitle'
 import { ReviewCard } from '../cards/ReviewCard'
 import { SvgCurvas } from '../svg/SvgCurvas'
-import reviews from '../../reviews.json'
+import Slider from "react-slick";
+import reviews from '../../reviews.json';
+import { LeftArrow } from '../cards/LeftArrow';
+import { useRef } from 'react';
+import { RightArrow } from '../cards/RightArrow';
 
 export const ReviewsComponent = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardsPerScreen, setCardsPerScreen] = useState(1);
   const data = reviews;
+  const sliderRef = useRef<Slider>(null);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+  const handlePrevClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
+  const handleNextClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
   };
-  useEffect(() => {
-    const calculateCardsPerScreen = () => {
-      const cardWidth = 388; // Ancho estimado de cada tarjeta en píxeles, ajusta según tus necesidades
-      const screenWidth = window.innerWidth;
-      const newCardsPerScreen = Math.floor(screenWidth / cardWidth);
-      setCardsPerScreen(newCardsPerScreen);
-    };
 
-    calculateCardsPerScreen();
-    window.addEventListener('resize', calculateCardsPerScreen);
-
-    return () => {
-      window.removeEventListener('resize', calculateCardsPerScreen);
+  var settings = {
+      dots: false,
+      infinite: true,
+      arrows: true,
+      nextArrow: <RightArrow onClick={handleNextClick} />,
+      prevArrow: <LeftArrow onClick={handlePrevClick}/>,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      initialSlide: 0,
+      centerMode: true,
+      centerPadding: '0',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+      ]
     };
-  }, []);
   return (
     <WrapperReviews>
       <Curvas>
         <SvgCurvas />
       </Curvas>
       <TitleWrapper>
-        <ReviewsTitle
-          handleNext={handleNext}
-          handlePrev={handlePrev}
-        />
+        <ReviewsTitle />
       </TitleWrapper>
-      <CardWrapper>
-        {
-          data.map((review, index) => {
-            return (
-            <div
-              key={review.id}
-              style={{
-                display: index >= currentIndex && index < currentIndex + cardsPerScreen ? 'block' : 'none',
-              }}
-            >
+        <StyledSlider ref={sliderRef} {...settings}>
+          {data.map((review, index) => (
+            <CardWarpper>
               <ReviewCard
                 key={index}
                 firstName={review.firstName}
-                lastname={review.lastName}
+                lastName={review.lastName}
                 title={review.title}
                 description={review.description}
                 score={review.score}
                 createdAt={review.createdAt}
               />
-            </div>
-            )
-          })
-        }
-      </CardWrapper>
+            </CardWarpper>
+          ))}
+        </StyledSlider>
     </WrapperReviews>
   )
 }
@@ -84,21 +96,43 @@ const WrapperReviews = styled.div`
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  padding: 100px 0;
+  padding: 7rem 0;
   background-color: #003B76;
 `;
 const TitleWrapper = styled.div`
   align-items: center;
   width: 75%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
-const CardWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+const StyledSlider = styled(Slider)`
   width: 75%;
-  gap: 32px;
-  margin: 0 auto;'
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  z-index: 1;
+  .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+  .slick-slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 `;
-
+const CardWarpper = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+`;

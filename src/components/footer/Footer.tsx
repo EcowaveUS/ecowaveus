@@ -4,6 +4,9 @@ import { NavigationFooter } from './NavigationFooter'
 import { FooterInfo } from './FooterInfo'
 import { BottomFooter } from './BottomFooter'
 
+
+
+
 export const Footer = () => {
   return (
     <StyledFooter>
@@ -25,8 +28,8 @@ const StyledFooter = styled.div`
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: #FFF;
-  margin-top: 5rem;
+  background-color:'#F1F5F9';
+  padding: 3rem 0 0 0;
 `;
 const MiddleFooter = styled.div`
   display: flex;
@@ -35,18 +38,6 @@ const MiddleFooter = styled.div`
   align-items: flex-start;
   width: 75%;
   height: auto;
-  @media (max-width: 1064px) {
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-  }
-  @media (max-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-  }
 `;
 const InfoContainer = styled.div`
   width: 45%;

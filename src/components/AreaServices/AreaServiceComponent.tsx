@@ -97,7 +97,7 @@ const StyledAreaService = styled.div`
   width: 100%;
   background-color: #F1F5F9;
   padding: 60px auto;
-  margin-bottom: 72px;
+  border-radius: 64px 64px 0 0;
 `;
 const ComponentWrapper = styled.div`
   display: flex;
@@ -106,6 +106,9 @@ const ComponentWrapper = styled.div`
   align-items: flex-start;
   width: 75%;
   margin: 5rem auto;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 const MapWrapper = styled.div`
   height: auto;

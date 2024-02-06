@@ -28,33 +28,40 @@ export const EvChargerCard: React.FC<Props> = ({
 const CardWrapper = styled.div`
   display: flex;
   padding: 12px;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
-  height: 908px;
+  width: 520px;
+  height: 476px;
   border-radius: 10px;
-  border: 1px solid #003B76;
-  background: #003B76;
+  background: #DDDDDD;
+  border-radius: 20px;
 
   /* Shadow/Light/XXL */
   box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07), 0px 25px 50px -12px rgba(255, 255, 255, 0.25);
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 `
 const Image = styled.img`
-  height: 670px;
+  height: 412px;
+  width: 228px;
   align-self: stretch;
-  border-radius: 10px;
 `
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 3rem;
   gap: 12px;
+  background-color: #fff;
+  width: 268px;
+  height: 412px;
+  border-radius: 10px;
+  z-index: 1;
 `
 const Title = styled.h5`
-  color: var(--White, var(--fore-allways---white, #FFF));
+  color: var(--White, var(--fore-allways---white, #1C1F35));
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
@@ -62,7 +69,7 @@ const Title = styled.h5`
   line-height: 110%; /* 26.4px */
 `
 const TextContent = styled.p`
-  color: var(--White, var(--fore-allways---white, #FFF));
+  color: var(--White, var(--fore-allways---white, #1C1F35));
 
   /* Body/L */
   font-family: Roboto;

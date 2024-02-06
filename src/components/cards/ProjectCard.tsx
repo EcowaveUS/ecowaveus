@@ -56,6 +56,7 @@ const CardWrapper = styled.div<ProjectProps>`
   background-size: cover;
   background-position: center;
   padding: 0 0 20px 25px;
+  border-radius: 10px;
 `;
 const Title = styled.p`
   color: var(--fore-allways---white, #FFF);
@@ -66,7 +67,7 @@ const Title = styled.p`
   line-height: normal;
 `;
 const CategoryText = styled.p`
-  color: #FFB629;
+  color: #1FA500;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;

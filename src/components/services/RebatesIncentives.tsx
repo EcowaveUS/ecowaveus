@@ -4,9 +4,10 @@ import { motion } from 'framer-motion'
 
 interface Props {
   children: ReactNode;
+  route?: string;
 }
 
-export const RebatesIncentives: React.FC<Props> = ({ children }) => {
+export const RebatesIncentives: React.FC<Props> = ({ children, route }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ export const RebatesIncentives: React.FC<Props> = ({ children }) => {
     };
   }, []);
   return (
-    <RebatesWrapper>
+    <RebatesWrapper route={route}>
       <InfoContainer
         id='componente'
         initial={{ opacity: 0, y: -50 }}
@@ -38,7 +39,7 @@ export const RebatesIncentives: React.FC<Props> = ({ children }) => {
   )
 }
 
-const RebatesWrapper = styled.div`
+const RebatesWrapper = styled.div<Props>`
   width: 100%;
   min-height: 580px;
   display: flex;
@@ -46,10 +47,12 @@ const RebatesWrapper = styled.div`
   align-items: center;
   justify-content: center;
   word-break: break-all;
-  background-image: url('/images/savings-background.png');
+  background-image: ${props => props.route === '/energy-storage' ? 'url(images/savings.background01.png)' : 'url(/images/savings-background.png)'};
   background-repeat: no-repeat;
+  border-radius: ${props => props.route === '/energy-storage' ? '0 8rem' : '0'};
+  background-position: 0;
   background-size: cover;
-  background-position: right;
+  padding: 4rem 0;
 `;
 const Title = styled.h3`
   color: var(--fore-allways---white, #FFF);

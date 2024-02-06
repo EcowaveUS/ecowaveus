@@ -62,7 +62,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 0 auto;
   background-color: rgba(9, 18, 66, 0.30);
   position: absolute;
 `;
@@ -78,8 +78,11 @@ const ContactHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 75%;
-
   height: 120px;
+  @media (max-width: 1024px) {
+    width: 90%;
+    justify-content: space-around;
+  }
 `;
 const CardContainer = styled.div`
   display: flex;
@@ -94,7 +97,10 @@ const StyledNavbar = styled.div`
   width: 75%;
   height: 78px;
   padding: 15px 0;
-
+  @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: space-evenly;
+  }
 `;
 const StyledButton = styled.button`
   background-color: #003B76;;

@@ -1,33 +1,21 @@
 import styled from 'styled-components'
 import { ContactForm } from '../components/forms/ContactForm'
 import { LocationInfo } from '../components/forms/LocationInfo'
-import { MapContainer } from '../components/maps/MapContainer'
 import { motion } from 'framer-motion'
 
 
 export const ContactPage = () => {
-  const markersPoint = [
-    {
-      name: "Office",
-      location: {
-        lat: 42.55009044837213,
-        lng: -70.88123363803287
-      },
-    },
-  ]
   return (
       <StyledPage
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
+        <BackgroundComponent />
         <WrapperComponents>
           <LocationInfo />
           <ContactForm />
         </WrapperComponents>
-        <MapContainer
-          markersPoints={markersPoint}
-        />
       </StyledPage>
   )
 }
@@ -37,16 +25,26 @@ const StyledPage = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-  min-height: 100vh;
-
+  background-color: #F1F5F9;
+  padding-top: 100px;
+  `;
+const BackgroundComponent = styled.div`
+    width: 100%;
+    min-height: 904px; /* 100% of the viewport height */
+    background-image: url('/images/energy-solar-station.png');
+    background-repeat: no-repeat;
+    background-size: contain;
   `;
 const WrapperComponents = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
-  margin-top: 15rem;
+  width: 75%;
   margin-bottom: 5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: -50rem;
+  z-index: 1;
 `;

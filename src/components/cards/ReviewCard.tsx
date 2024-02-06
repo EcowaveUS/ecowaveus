@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 interface ReviewProps {
   firstName: string;
-  lastname: string;
+  lastName: string;
   title: string;
   description: string;
   score: number;
@@ -13,7 +13,7 @@ interface ReviewProps {
 
 export const ReviewCard: React.FC<ReviewProps> = ({
   firstName,
-  lastname,
+  lastName,
   title,
   description,
   score,
@@ -22,7 +22,7 @@ export const ReviewCard: React.FC<ReviewProps> = ({
   return (
     <CardWrapper>
       <div>
-        <Nametext>{`${firstName} ${lastname}`}</Nametext>
+        <Nametext>{`${firstName} ${lastName}`}</Nametext>
         <DateText>{createdAt}</DateText>
       </div>
       <ContentWrapper>
@@ -50,7 +50,7 @@ const CardWrapper = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   width: 384px;
-  max-width: 384px;
+  max-width: 340px;
   height: 388px;
   padding: 40px 32px;
   border-radius: 20px;

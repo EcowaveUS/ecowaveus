@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 export const OurSolutions = () => {
   const solutions = [
-    {title: 'Heat Pumps', content: 'Transfers heat between indoors and outdoors for heating and cooling.', url: '/heat-pumps'},
-    {title: 'EV Chargers', content: 'Provide electricity to recharge electric vehicles.', url: '/ev-chargers'},
-    {title: 'Energy Storage', content: 'Systems save and release energy for later use.', url: '/energy-storage'},
+    {title: 'Heat Pumps', content: 'Efficient Heating and Cooling for Your Home.', url: '/heat-pumps', icon: '/images/solution-icon-heat-pumps.png'},
+    {title: 'EV Chargers', content: 'Charge Your EV Faster at Home.', url: '/ev-chargers', icon: '/images/solution-icon-ev-chargers.png'},
+    {title: 'Energy Storage', content: 'Save your energy, save money.', url: '/energy-storage', icon: '/images/solution-icon-energy-storage.png'},
   ]
 
   return (
@@ -22,6 +22,7 @@ export const OurSolutions = () => {
               title={solution.title}
               content={solution.content}
               url={solution.url}
+              icon={solution.icon}
             />
           ))
         }

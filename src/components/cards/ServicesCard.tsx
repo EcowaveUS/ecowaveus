@@ -6,17 +6,19 @@ interface CardProps {
   title: string;
   content: string;
   url: string;
+  icon?: string;
 }
 
 export const ServicesCard: React.FC<CardProps> = ({
   title,
   content,
-  url
+  url,
+  icon,
 }) => {
   return (
     <CardContainer>
       <IconWrapper>
-        <Icon src="/images/solution-icon.png" alt="Protecte cloud" />
+        <Icon src={icon} alt="Protecte cloud" />
       </IconWrapper>
       <div>
         <Title>{title}</Title>
@@ -30,6 +32,7 @@ export const ServicesCard: React.FC<CardProps> = ({
 const CardContainer = styled.div`
   display: flex;
   width: 276px;
+  height: 246px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;

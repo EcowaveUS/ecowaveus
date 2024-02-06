@@ -23,13 +23,13 @@ export const EvChargersPage = () => {
       id: 2,
       title: 'Level 2 (240V) Charger',
       image: '/images/ev-charger-leve2.png',
-      content: 'Offer a faster charge than Level 1 chargers, taking 4-8 hours to fully charge an EV battery. It is a practical option for frequent or daily charging needs.'
+      content: 'Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery.'
     },
     {
       id: 3,
       title: 'Level 3 (480V) Charger',
       image: '/images/ev-charger-level3.png',
-      content: 'Offer the fastest charge time, delivering a full charge in just 30 minutes to an hour. These chargers are typically found at public charging stations and are ideal for long-distance travel.'
+      content: 'Provide rapid charging in 30-60 minutes, ideal for long trips and commonly available at public stations.'
     },
   ]
   return (
@@ -58,8 +58,8 @@ export const EvChargersPage = () => {
         <StyledImage src="/images/ev-chargers-types-background.png" alt="heatpumps-background" />
       </ImageBrackground>
       <ProccesComponent>
-        <TitleProcces>Instalation Procces Step-By-Step</TitleProcces>
-        <TextProcces>To make your experience seamless, we've distilled the process into five easy-to-follow steps</TextProcces>
+        <TitleProcces>Types of EV chargers</TitleProcces>
+        <TextProcces>There are primarily three types of EV chargers used for homes and businesses.</TextProcces>
           <ProccesCardWrapper>
             {
               evChargers.map((item) => (
@@ -105,6 +105,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+padding-top: 100px;
 `;
 
 const Text = styled.p`
@@ -132,7 +133,7 @@ const ProccesComponent = styled.div`
   align-items: center;
   width: 80%;
   border-radius: 16px;
-  background-color: #fff;
+  background-color: #E4ECF6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 3rem;
   margin-top: -7rem;
@@ -141,14 +142,13 @@ const ProccesComponent = styled.div`
 const ProccesCardWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  width: 90%
-  background-color: red;
+  justify-content: center;
+  width: 100%
 `;
 const TitleProcces = styled.h3`
 color: #1C1F35;
-width: 472px;
 font-family: Inter;
 font-size: 35px;
 font-style: normal;
@@ -158,7 +158,6 @@ margin-bottom: 16px;
 `
 const TextProcces = styled.p`
 color: #666C89;
-width: 472px;
 
 font-family: Roboto;
 font-size: 16px;
@@ -183,5 +182,5 @@ const Subtitle = styled.h5`
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
-  margin-top: 8px;
+  margin-top: 3rem;
 `;

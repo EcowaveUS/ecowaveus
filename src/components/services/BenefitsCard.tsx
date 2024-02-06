@@ -3,13 +3,12 @@ import styled from 'styled-components'
 
 interface Props {
     title: string,
-    content: string,
+    content?: string,
     image?: string,
   }
 
 export const BenefitsCard: React.FC<Props> = ({
     title,
-    content,
     image
 }) => {
   return (
@@ -21,7 +20,6 @@ export const BenefitsCard: React.FC<Props> = ({
         <Separator />
         <TextWrapper>
           <IconText>{title}</IconText>
-          <ContentText>{content}</ContentText>
         </TextWrapper>
       </IconCard>
     </>
@@ -31,8 +29,8 @@ export const BenefitsCard: React.FC<Props> = ({
 const IconCard = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   gap: 28px;
   height: 105px;
   width: 383px;
@@ -56,6 +54,9 @@ const Separator = styled.div`
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 `;
 const IconText = styled.p`
   color: #1C1F35;
@@ -65,12 +66,4 @@ const IconText = styled.p`
   font-weight: 400;
   line-height: normal;
   font-family: 'Roboto', sans-serif;
-`;
-const ContentText = styled.p`
-color: #666C89;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 151.523%; /* 24.244px */
 `;

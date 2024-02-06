@@ -3,34 +3,15 @@ import styled from 'styled-components'
 import { ServiceBenefits } from '../components/services/ServiceBenefits'
 import { OursBrands } from '../components/brands/OursBrands'
 import { motion } from 'framer-motion'
-import { EvChargerCard } from '../components/services/EvChargerCard'
 import { RebatesIncentives } from '../components/services/RebatesIncentives'
 import { MainPageComponent } from '../components/pagesComponents/MainPageComponent'
+import { StorageAdvantages } from '../components/pagesComponents/StorageAdvantages'
 
 
 export const EnergyStoragePage = () => {
   const location = useLocation();
   const pathLocation = location.pathname;
-  const evChargers = [
-    {
-      id: 1,
-      title: 'Level 1 (120V) Charger',
-      image: '/images/ev-charger-level1.png',
-      content: 'Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery.'
-    },
-    {
-      id: 2,
-      title: 'Level 2 (240V) Charger',
-      image: '/images/ev-charger-leve2.png',
-      content: 'Offer a faster charge than Level 1 chargers, taking 4-8 hours to fully charge an EV battery. It is a practical option for frequent or daily charging needs.'
-    },
-    {
-      id: 3,
-      title: 'Level 3 (480V) Charger',
-      image: '/images/ev-charger-level3.png',
-      content: 'Offer the fastest charge time, delivering a full charge in just 30 minutes to an hour. These chargers are typically found at public charging stations and are ideal for long-distance travel.'
-    },
-  ]
+
   return (
     <StyledPage
     initial={{ opacity: 0 }}
@@ -52,28 +33,20 @@ export const EnergyStoragePage = () => {
           '/images/enviromentally-icon.png'
         ]}
       />
-      <ImageBrackground >
-        <StyledImage src="/images/energy-storage-types.png" alt="heatpumps-background" />
-      </ImageBrackground>
-      <ProccesComponent>
-        <TitleProcces>Instalation Procces Step-By-Step</TitleProcces>
-        <TextProcces>To make your experience seamless, we've distilled the process into five easy-to-follow steps</TextProcces>
-          <ProccesCardWrapper>
-            {
-              evChargers.map((item) => (
-                <EvChargerCard
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  image={item.image}
-                  content={item.content}
-                />
-              ))
-            }
-          </ProccesCardWrapper>
-      </ProccesComponent>
-      <RebatesIncentives>
-        <Text>25D provides households an uncapped 30 percent tax credit for a battery storage installation.</Text>
+      <StorageAdvantages />
+      <RebatesIncentives route={pathLocation} >
+        <Text>Connect with a battery storage partner.Energy-sharing events through our ConnectedSolutions program call on your battery system to automatically discharge during peak demand days, which occur as follows:</Text>
+        <CardWrapper>
+          <Text>From June 1 – September 30 </Text>
+          <Text>Between 3pm - 8pm</Text>
+          <Text>No more than 60 times each summer</Text>
+          <Text>A maximum of 3 hours per event</Text>
+          <Text>You can opt out at any time</Text>
+        </CardWrapper>
+        <Subtitle>Incentives</Subtitle>
+        <Text>Participating customers will receive an incentive every year based on the performance of their battery system at a rate of $275 per kW performed between June 1 and September 30. On average, customers have received $1,500 per year.</Text>
+        <Subtitle>Federal Incentives</Subtitle>
+        <Text>25D provides households an uncapped 30 percent tax credit of the installation cost for a battery storage</Text>
       </RebatesIncentives>
       <BrandsWrapper>
           <OursBrands
@@ -97,6 +70,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+padding-top: 100px;
 `;
 
 const Text = styled.p`
@@ -107,58 +81,7 @@ const Text = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 151.523%;
-`;
-const ProccesComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  border-radius: 16px;
-  background-color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 3rem;
-  margin-top: -7rem;
-  margin-bottom: 8rem;
-`;
-const ProccesCardWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 90%
-  background-color: red;
-`;
-const TitleProcces = styled.h3`
-color: #1C1F35;
-width: 472px;
-font-family: Inter;
-font-size: 35px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 16px;
-`
-const TextProcces = styled.p`
-color: #666C89;
-width: 472px;
-
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 151.523%; /* 24.244px */
-margin-bottom: 32px;
-
-`
-const ImageBrackground = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-const StyledImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  text-align: center;
 `;
 const BrandsWrapper = styled.div`
   display: flex;
@@ -166,4 +89,26 @@ const BrandsWrapper = styled.div`
   justify-content: center;
   width: 100%;
   background-color: #F5F5F5;
+`;
+const Subtitle = styled.h5`
+  color: var(--White, var(--fore-allways---white, #FFF));
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  margin-top: 3rem;
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 2rem 4rem;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
 `;

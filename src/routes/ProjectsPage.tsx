@@ -27,7 +27,7 @@ export const ProjectsPage = () => {
 )
 }
 
-const StyledPage = styled(motion.div)`
+const StyledPage = styled(motion.div)` 
   display: flex;
   flex-direction: column;
   align-items: center;

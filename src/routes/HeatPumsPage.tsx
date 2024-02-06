@@ -6,7 +6,6 @@ import { OursBrands } from '../components/brands/OursBrands'
 import { ProccesCard } from '../components/services/ProccesCard'
 import { RebatesIncentives } from '../components/services/RebatesIncentives'
 import { SvgFeedBackPositive } from '../components/svg/SvgFeedBackPositive'
-import { Link } from 'react-router-dom'
 import { MainPageComponent } from '../components/pagesComponents/MainPageComponent'
 
 export const HeatPumsPage = () => {
@@ -53,7 +52,7 @@ export const HeatPumsPage = () => {
         exit={{ opacity: 0 }}
       >
         <MainPageComponent
-          title='The Advantages of Heat Pumps'
+          title='Efficient Heating and Cooling for your Home'
           subtitle='Efficient and Eco-Friendly:'
           content='A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas.'
           pathLocation={pathLocation}
@@ -95,7 +94,7 @@ export const HeatPumsPage = () => {
           </ProccesGridContainer>
         </ProccesComponent>
         <RebatesIncentives>
-          <LinkWrapper>
+          {/* <LinkWrapper>
             <Text>
               Check if your city is eligible:
             </Text>
@@ -104,7 +103,7 @@ export const HeatPumsPage = () => {
                 https://frontdoor.portal.poweredbyefi.org/initiative/marebates
               </LinkText>
             </Link>
-          </LinkWrapper>
+          </LinkWrapper> */}
           <ListWrapper>
             <ListCard>
               <SvgFeedBackPositive />
@@ -115,6 +114,8 @@ export const HeatPumsPage = () => {
               <Text>Partial-home rebates are offered based on equipment/outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)</Text>
             </ListCard>
           </ListWrapper>
+          <IncentivesTitle>Federal Incentives</IncentivesTitle>
+          <Text>Federal tax credit 30% of the cost of the installation up to $2'000</Text>
         </RebatesIncentives>
         <BrandsWrapper>
           <OursBrands
@@ -139,6 +140,7 @@ const StyledPage = styled(motion.div)`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding-top: 100px;
 `;
 
 const Text = styled.p`
@@ -274,4 +276,14 @@ const ListWrapper = styled.div`
   justify-content: center;
   gap: 1rem;
   width: 100%;
+`;
+const IncentivesTitle = styled.h5`
+  color: var(--White, var(--fore-allways---white, #FFF));
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  margin-top: 3rem;
 `;

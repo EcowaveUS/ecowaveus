@@ -47,22 +47,26 @@ const StyledContent = styled.div`
   align-items: center;
   justify-content: center;
   width: 75%;
+  min-height: 935px;
   margin: 5rem auto;
   gap: 8px;
 `;
 const ImageContainer = styled.div`
   grid-column: span 1;
+  width: 100%;
   height: 100%;
 
 `
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0 24px 0 0;
 `
 const ContentWrapper = styled.div`
   grid-column: span 1;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   padding: 80px;
   background-color: #fff;
@@ -86,7 +90,9 @@ const Text = styled.p`
 `
 const ImageWrapper = styled.div`
   grid-column: span 2;
+  grid-row: span 1;
   width: 100%;
+  height: 100%;
   display: flex;
   gap: 8px;
   flex-direction: row;
@@ -95,11 +101,10 @@ const ImageWrapper = styled.div`
 `
 const ImageBox = styled.div`
   width: 100%;
-  height: 210px;
+  object-fit: contain;
   `
 const ImageList = styled.img`
   height: 100%;
   width: 100%;
-  object-fit: fill;
 `
 
