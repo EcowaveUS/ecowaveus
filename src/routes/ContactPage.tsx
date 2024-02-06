@@ -12,12 +12,12 @@ export const ContactPage = () => {
         exit={{ opacity: 0 }}
       >
         <BackgroundComponent>
-          <Title>Contact Us</Title>
+            <Title>Contact Us</Title>
+            <WrapperComponents>
+              <LocationInfo />
+              <ContactForm />
+            </WrapperComponents>
         </BackgroundComponent>
-        <WrapperComponents>
-          <LocationInfo />
-          <ContactForm />
-        </WrapperComponents>
       </StyledPage>
   )
 }
@@ -27,16 +27,20 @@ const StyledPage = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 7rem;
   background-color: #F1F5F9;
   `;
 const BackgroundComponent = styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 904px; /* 100% of the viewport height */
     background-image: url('/images/energy-solar-station.png');
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 16rem;
   `;
 const WrapperComponents = styled.div`
   display: flex;
@@ -44,17 +48,12 @@ const WrapperComponents = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 75%;
-  margin-bottom: 5rem;
   background-color: #fff;
   border-radius: 16px;
   padding: 2rem;
-  margin-top: -40rem;
-  z-index: 1;
+  margin-bottom: -7rem;
 `;
 const Title = styled.h1`
-  position: absolute;
-  top: 18%;
-  left: 12%;
   color: var(--fore-allways---white, #FFF);
 
   font-family: Inter;
@@ -63,5 +62,7 @@ const Title = styled.h1`
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
-  text-align: center;
+  text-align: left;
+  width: 75%;
+  margin: 18rem 0 2rem 0;
 `;
