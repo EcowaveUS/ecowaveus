@@ -1,4 +1,3 @@
-import React from 'react'
 import { StorageCard } from '../cards/StorageCard'
 import styled from 'styled-components'
 

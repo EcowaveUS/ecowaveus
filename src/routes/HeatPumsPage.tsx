@@ -243,16 +243,16 @@ justify-content: center;
 width: 100%;
 background-color: #F5F5F5;
 `;
-const LinkText = styled.p`
-  color: var(--fore-allways---white, #FFF);
+// const LinkText = styled.p`
+//   color: var(--fore-allways---white, #FFF);
 
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 133.333% */
-  text-decoration: underline;
-`;
+//   font-family: Roboto;
+//   font-size: 18px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 24px; /* 133.333% */
+//   text-decoration: underline;
+// `;
 const ListCard = styled.div`
   display: flex;
   flex-direction: row;
@@ -261,14 +261,14 @@ const ListCard = styled.div`
   gap: 1rem;
   width: 100%;
 `;
-const LinkWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 24px 0;
-`;
+// const LinkWrapper = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 1rem;
+//   margin: 24px 0;
+// `;
 const ListWrapper = styled.div`
  display: flex;
   flex-direction: column;
