@@ -1,12 +1,12 @@
-import styled from 'styled-components'
 import { ReviewsTitle } from './ReviewsTitle'
 import { ReviewCard } from '../cards/ReviewCard'
 import { SvgCurvas } from '../svg/SvgCurvas'
-import Slider from "react-slick";
-import reviews from '../../reviews.json';
 import { LeftArrow } from '../cards/LeftArrow';
 import { useRef } from 'react';
 import { RightArrow } from '../cards/RightArrow';
+import Slider from "react-slick";
+import reviews from '../../reviews.json';
+import styled from 'styled-components'
 
 export const ReviewsComponent = () => {
   const data = reviews;
@@ -32,13 +32,13 @@ export const ReviewsComponent = () => {
       prevArrow: <LeftArrow onClick={handlePrevClick}/>,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
       initialSlide: 0,
       centerMode: true,
       centerPadding: '0',
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1279,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -47,7 +47,15 @@ export const ReviewsComponent = () => {
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 960,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -66,15 +74,13 @@ export const ReviewsComponent = () => {
       </TitleWrapper>
         <StyledSlider ref={sliderRef} {...settings}>
           {data.map((review, index) => (
-            <CardWarpper>
+            <CardWarpper key={index}>
               <ReviewCard
-                key={index}
                 firstName={review.firstName}
                 lastName={review.lastName}
                 title={review.title}
                 description={review.description}
                 score={review.score}
-                createdAt={review.createdAt}
               />
             </CardWarpper>
           ))}
@@ -84,9 +90,15 @@ export const ReviewsComponent = () => {
 }
 const Curvas = styled.div`
   position: absolute;
-  top: -20px;
+  top: -1rem;
   left: 0;
   width: 100%;
+  @media (max-width: 1024px) {
+    top: -1.5rem;
+  }
+  @media (max-width: 768px) {
+    top: -2.5rem;
+  }
 `;
 const WrapperReviews = styled.div`
   position: relative;
@@ -101,20 +113,20 @@ const WrapperReviews = styled.div`
 `;
 const TitleWrapper = styled.div`
   align-items: center;
-  width: 75%;
+  width: 80%;
   @media (max-width: 1024px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 
 const StyledSlider = styled(Slider)`
-  width: 75%;
+  width: 80%;
   overflow-x: hidden;
   align-items: center;
   justify-content: center;
   align-self: center;
-  z-index: 1;
   .slick-track {
+    z-index: -1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -125,9 +137,6 @@ const StyledSlider = styled(Slider)`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  }
-  @media (max-width: 1024px) {
-    width: 90%;
   }
 `;
 const CardWarpper = styled.div`

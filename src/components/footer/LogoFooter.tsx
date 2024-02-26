@@ -5,7 +5,7 @@ export const LogoFooter = () => {
     <FooterWrapper>
       <Logo src='/images/logo-footer.png'/>
       <ContactText>
-        Specializing in heat pumps, EV chargers, and energy storage installations, our company ensures efficient and sustainable energy solutions.
+        Riding The Wave of Eco-Innovation
       </ContactText>
     </FooterWrapper>
   )
@@ -15,9 +15,12 @@ const FooterWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 30%;
+  width: auto;
   height: auto;
   gap: 1rem;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 const Logo = styled.img`
   width: 237px;
@@ -32,9 +35,13 @@ const ContactText = styled.p`
   color: #343434;
 
   font-family: Be Vietnam Pro;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px; /* 200% */
   text-align: left;
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 100%;
+  }
 `;

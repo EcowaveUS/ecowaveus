@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 interface CardProps {
@@ -13,18 +13,20 @@ export const ServicesCard: React.FC<CardProps> = ({
   title,
   content,
   icon,
+  url,
 }) => {
   return (
-    <CardContainer>
-      <IconWrapper>
-        <Icon src={icon} alt="Protecte cloud" />
-      </IconWrapper>
-      <div>
-        <Title>{title}</Title>
-        <Text>{content}</Text>
-      </div>
-      {/* <Link to={url}><LinkText>Learn more</LinkText></Link> */}
-    </CardContainer>
+    <Link to={url}>
+      <CardContainer>
+        <IconWrapper>
+          <Icon src={icon} alt="Protecte cloud" />
+        </IconWrapper>
+        <div>
+          <Title>{title}</Title>
+          <Text>{content}</Text>
+        </div>
+      </CardContainer>
+    </Link>
   )
 }
 
@@ -46,26 +48,26 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   flex-shrink: 0;
   border-radius: 15px;
   background-color: rgba(31, 165, 0, 0.10);
 `;
 
 const Icon = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin: 0 10px;
 `;
 
 const Title = styled.h3`
   color: #343434;
   font-family: Inter;
-  font-size: 22px;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 30px; /* 93.75% */
   letter-spacing: -0.408px;
   margin-bottom: 16px;
 `;
@@ -73,22 +75,9 @@ const Title = styled.h3`
 const Text = styled.p`
   color: rgba(21, 27, 39, 0.70);
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 170%;
+  line-height: 170%; /* 34px */
   letter-spacing: -0.408px;
 `;
-
-// const LinkText = styled.button`
-//   background: none;
-//   border: none;
-//   color: #348CE4;
-//   font-family: Roboto;
-//   font-size: 16px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: normal;
-//   letter-spacing: -0.408px;
-//   cursor: pointer;
-// `;

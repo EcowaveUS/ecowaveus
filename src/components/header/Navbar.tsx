@@ -1,58 +1,46 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-//import { SideBar } from './SideBar';
+import {  useState } from 'react';
 
 export const Navbar = () => {
-  //const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
-  //const [ sidebar, setsidebar ] = useState(false);
+
   const [activeLink, setActiveLink] = useState('');
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  // const showSidebar = () => setsidebar(!sidebar);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWindowWidth(window.innerWidth);
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
 
   return (
     <>
-      {/* <TopNavbar>
-        {
-          windowWidth < 800 &&
-            <HambuguerMenu>
-              <AiOutlineMenu
-                size={40}
-                onClick={showSidebar}
-              />
-            </HambuguerMenu>
-        }
-      </TopNavbar> */}
     <StyledLinks>
-      <Link to='/'><li className={activeLink === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>Home</li></Link>
+      <Link to='/'>
+        <li className={activeLink === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>Home</li>
+      </Link>
       <Separator/>
-      <Link to='/heat-pumps'><li className={activeLink === '/heat-pumps' ? 'active' : ''} onClick={() => handleLinkClick('/heat-pumps')}>Heat pumps</li></Link>
+      <Link to='/heat-pumps'>
+        <li className={activeLink === '/heat-pumps' ? 'active' : ''} onClick={() => handleLinkClick('/heat-pumps')}>Heat pumps</li>
+      </Link>
       <Separator/>
-      <Link to='/ev-chargers'><li className={activeLink === '/ev-chargers' ? 'active' : ''} onClick={() => handleLinkClick('/ev-chargers')}>EV chargers</li></Link>
+      <Link to='/ev-chargers'>
+        <li className={activeLink === '/ev-chargers' ? 'active' : ''} onClick={() => handleLinkClick('/ev-chargers')}>EV chargers</li>
+      </Link>
       <Separator/>
-      <Link to='/energy-storage'><li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Energy Storage</li></Link>
+      <Link to='/energy-storage'>
+        <li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Energy Storage</li>
+      </Link>
       <Separator/>
-      <Link to='/about-us'><li className={activeLink === '/about-us' ? 'active' : ''} onClick={() => handleLinkClick('/about-us')}>About us</li></Link>
+      <Link to='/about-us'>
+        <li className={activeLink === '/about-us' ? 'active' : ''} onClick={() => handleLinkClick('/about-us')}>About us</li>
+      </Link>
       <Separator/>
-      <Link to='/contact-us'><li className={activeLink === '/contact-us' ? 'active' : ''} onClick={() => handleLinkClick('/contact-us')}>Contact us</li></Link>
+      <Link to='/contact-us'>
+        <li className={activeLink === '/contact-us' ? 'active' : ''} onClick={() => handleLinkClick('/contact-us')}>Contact us</li>
+      </Link>
     </StyledLinks>
-      {/* <SideBar showSidebar={showSidebar} sidebar={sidebar} /> */}
     </>
   )
 }
@@ -62,9 +50,6 @@ const StyledLinks = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 25px;
-  @media(max-width: 824px){
-    display: none;
-  }
   li {
     white-space: nowrap;
     list-style: none;
@@ -97,17 +82,6 @@ const StyledLinks = styled.div`
       }
   }
 `;
-
-// const HambuguerMenu = styled.div`
-//   position: absolute;
-//   top: 1rem;
-//   right: 1rem;
-//   background-color: #1b5b8d;
-//   border-radius: 55%;
-//   padding: 0.5rem;
-//   cursor: pointer;
-//   align-items: center;
-// `;
 
 const Separator = styled.div`
   border-left: 1px solid rgba(255, 255, 255, 0.20);

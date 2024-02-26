@@ -207,6 +207,9 @@ const FormWrapper = styled.div`
   @media (max-width: 1024px) {
     width: 70%;
   }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 const FormInputs = styled.div`
   display: grid;
@@ -220,9 +223,8 @@ const FormInputs = styled.div`
 `;
 const FormTitle = styled.h3`
   color: #151B27;
-
   font-family: Inter;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 600;
   line-height: 59px; /* 147.5% */
@@ -234,16 +236,21 @@ const ButtonContainer = styled.div`
   width: 100%;
 `;
 const StyledButton = styled.button`
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  align-items: flex-start;
   background: #003B76;
   padding: 17px 24px 15px 24px;
   align-items: center;
-  gap: 10px;
-  padding: 17px 24px 15px 24px;
   border: none;
   border-radius: 6px;
-  color: var(--fore-allways---white, #FFF);
+
+  color: var(--Text-andes-text-color-inverted, var(--fore-allways---white, #FFF));
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 66.667% */
 
 `;
 const InputContainer = styled.div`

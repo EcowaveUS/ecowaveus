@@ -3,6 +3,7 @@ import { LogoFooter } from './LogoFooter'
 import { NavigationFooter } from './NavigationFooter'
 import { FooterInfo } from './FooterInfo'
 import { BottomFooter } from './BottomFooter'
+import { MediaFooter } from './MediaFooter'
 
 
 
@@ -15,12 +16,14 @@ export const Footer = () => {
         <InfoContainer>
           <NavigationFooter />
           <FooterInfo />
+          <MediaFooter />
         </InfoContainer>
       </MiddleFooter>
       <BottomFooter />
     </StyledFooter>
   )
 }
+
 const StyledFooter = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,11 +41,28 @@ const MiddleFooter = styled.div`
   align-items: flex-start;
   width: 75%;
   height: auto;
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
 `;
 const InfoContainer = styled.div`
-  width: 45%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 3rem;
+  padding: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
 `;
 

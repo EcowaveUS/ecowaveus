@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface ButtonProps {
   title: string;
@@ -16,7 +17,9 @@ export const StandardButton: React.FC<ButtonProps> = ({
       <StyledButton
         onClick={onClick}
       >
-        {title}
+        <TextButton>
+          <Link to='/contact-us'>{title}</Link>
+        </TextButton>
       </StyledButton>
     </>
   );
@@ -38,3 +41,12 @@ const StyledButton = styled.button`
   color: var(--fore-allways---white, #FFF);
   cursor: pointer;
 `;
+const TextButton = styled.p`
+color: var(--fore-allways---white, #FFF);
+text-align: center;
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 50% */
+`

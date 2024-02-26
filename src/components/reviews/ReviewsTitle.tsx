@@ -5,7 +5,6 @@ export const ReviewsTitle = () => {
   return (
     <TitleContainer>
       <TitleText>Look for ours reviews</TitleText>
-      <MoreButton>See more</MoreButton>
     </TitleContainer>
   )
 }
@@ -27,20 +26,20 @@ line-height: 40px; /* 100% */
 letter-spacing: 0.2px;
 text-align: left;
 `;
-const MoreButton = styled.button`
-  color: #1FA500;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.04px;
-  text-align: center;
-  background: none;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+// const MoreButton = styled.button`
+//   color: #1FA500;
+//   font-family: Inter;
+//   font-size: 16px;
+//   font-style: normal;
+//   font-weight: 500;
+//   line-height: 24px;
+//   letter-spacing: -0.04px;
+//   text-align: center;
+//   background: none;
+//   border: none;
+//   padding: 0.5rem 1rem;
+//   cursor: pointer;
 
-`;
+// `;
 
 

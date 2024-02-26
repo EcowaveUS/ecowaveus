@@ -8,7 +8,7 @@ interface ReviewProps {
   title: string;
   description: string;
   score: number;
-  createdAt: string;
+  createdAt?: string;
 }
 
 export const ReviewCard: React.FC<ReviewProps> = ({
@@ -21,14 +21,11 @@ export const ReviewCard: React.FC<ReviewProps> = ({
 }) => {
   return (
     <CardWrapper>
-      <div>
-        <Nametext>{`${firstName} ${lastName}`}</Nametext>
-        <DateText>{createdAt}</DateText>
-      </div>
-      <ContentWrapper>
-        <ReviewTitle>{title}</ReviewTitle>
-        <TextContainer>
-          <Reviewtext>{description}</Reviewtext>
+      <Nametext>{`${firstName} ${lastName}`}</Nametext>
+      <DateText>{createdAt}</DateText>
+      <ReviewTitle>{title}</ReviewTitle>
+      <TextContainer>
+        <Reviewtext>{description}</Reviewtext>
         <StarsWrapper>
           {
             Array(5).fill('').map((_, index) => {
@@ -39,8 +36,7 @@ export const ReviewCard: React.FC<ReviewProps> = ({
             })
           }
         </StarsWrapper>
-        </TextContainer>
-      </ContentWrapper>
+      </TextContainer>
     </CardWrapper>
   )
 }
@@ -49,32 +45,28 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 384px;
-  max-width: 340px;
-  height: 388px;
+  width: 350px;
+  height: 696px;
   padding: 40px 32px;
   border-radius: 20px;
   background-color: #FFF;
-  gap: 1rem;
-`;
-const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 const TextContainer = styled.div`
-  height: 200px;
-  overflow: auto;
+  height: auto;
 `;
 const Nametext = styled.h3`
   color: #343434;
-
-  font-family: Inter;
-  font-size: 16px;
+  font-family: "Be Vietnam Pro";
+  font-size: 20px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.04px;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.05px;
+  margin-bottom: 1rem;
+
 `;
 const DateText = styled.p`
   color: #969696;
@@ -86,24 +78,25 @@ const DateText = styled.p`
   letter-spacing: -0.035px;
 `;
 const ReviewTitle = styled.p`
-color: #343434;
-
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-letter-spacing: -0.04px;
-overflow: hidden;
+  color: #343434;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.045px;
 `;
 const Reviewtext = styled.p`
-  color: #969696;
-  font-family: Inter;
-  font-size: 14px;
+  color: #343434;
+  font-family: Roboto;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: -0.035px;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.05px;
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 const StarsWrapper = styled.div`
   display: flex;

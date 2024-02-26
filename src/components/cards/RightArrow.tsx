@@ -16,12 +16,12 @@ export const RightArrow: React.FC<Props> = ({ onClick }) => {
 const StyldedWrapper = styled.div`
   position: absolute;
   top: 50%;
-  right: 8%;
+  right: 1rem;
   cursor: pointer;
   align-items: center;
   width: 64px;
   height: 64px;
-  z-index: 99;
+  z-index: 1;
   `;
   const ArrowImage = styled.img`
   width: 100%;

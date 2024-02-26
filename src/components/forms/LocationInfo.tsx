@@ -50,6 +50,10 @@ const LocationWrapper = styled.div`
     margin: 5rem;
     @media (max-width: 1024px) {
       width: 70%;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      width: 90%;
     }
 `;
 const Triangles = styled.div`
@@ -72,32 +76,31 @@ const DotsImg = styled.img`
 const Title = styled.h3`
   color: #343434;
 
-  font-family: Be Vietnam Pro;
-  font-size: 18px;
+  font-family: "Be Vietnam Pro";
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 28px; /* 155.556% */
-  letter-spacing: -0.045px;
+  line-height: 28px; /* 87.5% */
+  letter-spacing: -0.08px;
 `;
 const SubTitles = styled.h4`
   color: #343434;
-
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: -0.04px;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.05px;
 `;
 const Text = styled.p`
-  color: #969696;
+  color: #343434;
 
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: -0.035px;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.05px;
 `;
 const Separator = styled.div`
   width: 100%;

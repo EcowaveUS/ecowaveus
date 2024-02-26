@@ -13,7 +13,7 @@ export const OursBrands: React.FC<Props> = ({
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: images.length > 5 ? 5 : images.length,
     slidesToScroll: 2,
     initialSlide: 0,
     arrows: false,

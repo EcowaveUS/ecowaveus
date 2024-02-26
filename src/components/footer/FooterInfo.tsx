@@ -4,9 +4,9 @@ export const FooterInfo = () => {
   return (
     <InfoWrapper>
         <Title>Hours</Title>
-        <InfoText>Monday-Friday 8:00pam <br/>  to 5:00pm</InfoText>
+        <InfoText>Mon - Fri 8:00 AM - 5:00 PM <br/> Sat - Sun Closed</InfoText>
         <Title>Local Office</Title>
-        <InfoText>22 Broadway Street</InfoText>
+        <InfoText>22 Broadway,</InfoText>
         <InfoText>Beverly, MA, 01915</InfoText>
     </InfoWrapper>
   )
@@ -18,8 +18,6 @@ const InfoWrapper = styled.div`
   gap: 18px;
   @media (max-width: 768px) {
     align-items: center;
-    padding: 1rem;
-    gap: 0.2rem;
   }
 `;
 const Title = styled.h5`

@@ -1,74 +1,47 @@
 [
   {
     "id": 1,
-    "category": "EV-Chargers",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
+    "category": "Heat Pump",
+    "image": ["/images/projects/danversport-hp.png"],
+    "name": "Danversport, Danvers, MA",
     "description": "This is a business project",
     "date": "2021-04-10",
     "score": 5
   },
   {
     "id": 2,
-    "category": "Heat Pumps",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
+    "category": "Heat Pump",
+    "image": ["/images/projects/brackenbury-hp.png"],
+    "name": "Brackenbury Lane, Beverly, MA",
     "description": "This is a business project",
     "date": "2021-04-10",
     "score": 4
   },
   {
     "id": 3,
-    "category": "Energy Storage",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
+    "category": "EV-Charger",
+    "image": ["/images/projects/brackenbury-ev-charger.png"],
+    "name": "Brackenbury Lane, Beverly, MA",
     "description": "This is a business project",
     "date": "2021-04-10",
     "score": 5
   },
   {
     "id": 4,
-    "category": "Heat Pumps",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
+    "category": "Heat Pump",
+    "image": ["/images/projects/bitterssweet-hp.png"],
+    "name": "Bittersweet Road, Gloucester, MA",
     "description": "This is a business project",
     "date": "2021-04-10",
     "score": 4
   },
   {
     "id": 5,
-    "category": "Energy Storage",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
+    "category": "Solar Panels",
+    "image": ["/images/projects/dugout-e-storage.png"],
+    "name": "Dugout Road, Benton, NH",
     "description": "This is a business project",
     "date": "2021-04-10",
     "score": 5
-  },
-  {
-    "id": 6,
-    "category": "EV-Chargers",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
-    "description": "This is a business project",
-    "date": "2021-04-10",
-    "score": 4
-  },
-  {
-    "id": 7,
-    "category": "Energy Storage",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business Project",
-    "description": "This is a business project",
-    "date": "2021-04-10",
-    "score": 3
-  },
-  {
-    "id": 8,
-    "category": "EV-Chargers",
-    "image": ["/images/ev-project01.png"],
-    "name": "Business t",
-    "description": "This is a business project",
-    "date": "2021-04-10",
-    "score": 4
   }
 ]

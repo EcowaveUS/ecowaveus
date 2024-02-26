@@ -12,12 +12,12 @@ export const ContactPage = () => {
         exit={{ opacity: 0 }}
       >
         <BackgroundComponent>
-            <Title>Contact Us</Title>
+          <Title>Contact Us</Title>
+        </BackgroundComponent>
             <WrapperComponents>
               <LocationInfo />
               <ContactForm />
             </WrapperComponents>
-        </BackgroundComponent>
       </StyledPage>
   )
 }
@@ -40,7 +40,12 @@ const BackgroundComponent = styled.div`
     background-image: url('/images/energy-solar-station.png');
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 16rem;
+    margin-bottom: -16rem;
+    @media (max-width: 1024px) {
+      background-position: 50% 50%;
+      background-size: cover;
+      margin-bottom: -12rem;
+    }
   `;
 const WrapperComponents = styled.div`
   display: flex;
@@ -51,7 +56,10 @@ const WrapperComponents = styled.div`
   background-color: #fff;
   border-radius: 16px;
   padding: 2rem;
-  margin-bottom: -7rem;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 90%;
+  }
 `;
 const Title = styled.h1`
   color: var(--fore-allways---white, #FFF);

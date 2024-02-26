@@ -29,8 +29,8 @@ export const Inovation: React.FC<Props> = ({
       </ImageContainer>
       <ImageWrapper>
         {
-          images.map((image) => (
-            <ImageBox>
+          images.map((image, index) => (
+            <ImageBox key={index}>
               <ImageList src={image.img} />
             </ImageBox>
           ))
@@ -42,19 +42,29 @@ export const Inovation: React.FC<Props> = ({
 
 const StyledContent = styled.div`
   display: grid;
-  grid-template-columns: 43% 57%;
-  grid-template-rows: 75% 25%;
+  grid-template-columns: 47% 53%;
+  grid-template-rows: 555px 253px;
   align-items: center;
   justify-content: center;
   width: 75%;
-  min-height: 935px;
-  margin: 5rem auto;
+  min-height: auto;
   gap: 8px;
+  margin-bottom: 5rem;
+  @media (max-width: 1024px) {
+    min-height: auto;
+    width: 90%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
 `;
 const ImageContainer = styled.div`
   grid-column: span 1;
   width: 100%;
   height: 100%;
+  @media (max-width: 1024px) {
+    border-radius: 0 0 24px 0;
+  }
 
 `
 const Image = styled.img`
@@ -62,20 +72,28 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 0 24px 0 0;
+  @media (max-width: 1024px) {
+    border-radius: 0 0 24px 0;
+  }
 `
 const ContentWrapper = styled.div`
   grid-column: span 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   padding: 80px;
   background-color: #fff;
   border-radius: 24px 0px 0px 0px;
+  @media (max-width: 768px) {
+    padding: 32px;
+  }
 `
 const Title = styled.h3`
   color: #151B27;
   font-family: Inter;
-  font-size: 40px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
@@ -98,6 +116,9 @@ const ImageWrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   border-radius: 0 0 8px 8px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 const ImageBox = styled.div`
   width: 100%;

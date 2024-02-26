@@ -52,13 +52,20 @@ const BenefitsWrapper = styled.div`
   width:80%;
   gap: 2rem;
   margin: 8rem 0;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  width: 25%;
+  width: 30%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const IconsWrapper = styled.div`
   display: flex;
@@ -67,26 +74,27 @@ const IconsWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 70%;
-  gap: 3rem;
+  gap: 1rem;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const Title = styled.h3`
-  color: #1C1F35;
-
+  color: #262626;
   font-family: Inter;
-  font-size: 35px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 `;
 const SubTitle = styled.h4`
   color: #1C1F35;
-
   font-family: Inter;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
-  border-left: 4px solid #68BE54 ;
+  border-left: 4px solid #68BE54;
   background: rgba(232, 232, 232, 0.50);
   padding: 3px 9px 3px 8px;
   width: fit-content;

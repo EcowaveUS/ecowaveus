@@ -56,14 +56,13 @@ const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  width: 50%;
 `;
 const IconText = styled.p`
   color: #1C1F35;
-  font-family: Rubik;
-  font-size: 25px;
+  font-family: Inter;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  font-family: 'Roboto', sans-serif;
 `;

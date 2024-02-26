@@ -16,7 +16,7 @@ export const LeftArrow: React.FC<Props> = ({ onClick }) => {
 const StyldedWrapper = styled.div`
   position: absolute;
   top: 50%;
-  left: 8%;
+  left: 1rem;
   cursor: pointer;
   align-items: center;
   width: 64px;
@@ -24,6 +24,7 @@ const StyldedWrapper = styled.div`
   z-index: 1;
   background-color: #fff;
   border-radius: 50%;
+
 `;
 const ArrowImage = styled.img`
   width: 100%;

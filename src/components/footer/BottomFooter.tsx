@@ -11,14 +11,13 @@ export const BottomFooter = () => {
 }
 const BottomWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 5rem;
 `;
 const Bottomtext = styled.p`
 color: #343434;
-
+text-align: center;
 font-family: Be Vietnam Pro;
 font-size: 16px;
 font-style: normal;

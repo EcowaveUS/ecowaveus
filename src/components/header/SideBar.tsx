@@ -30,7 +30,6 @@ export const SideBar: React.FC<MenuComponentProps> = ({
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
-                    {item.icon}
                     <span>{item.title}</span>
                   </Link>
                 </li>

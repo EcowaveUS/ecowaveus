@@ -1,13 +1,52 @@
 import styled from 'styled-components'
 import { ProjectCard } from '../cards/ProjectCard';
 import projects from '../../projects.json'
+import Slider from "react-slick";
 
 export const ProjectCards = () => {
-  const cards = projects.slice(0, 3)
+  const cards = projects.slice(0, 4)
+  var settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    centerMode: true,
+    centerPadding: '0',
+    responsive: [
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+    ]
+  };
   return (
     <Wrapper>
       <Title>Our Projects</Title>
-      <CardWrapper>
+      <CardWrapper {...settings} >
         {cards.map((card) => (
           <ProjectCard
             key={card.id}
@@ -25,12 +64,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
   width: 100%;
-  background-image: url('/images/background-projects.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 648px;
+  margin-top: 5rem;
+  background: linear-gradient(90deg, #003B76 -1.19%, #4579AD 57.78%, #7CB6F1 115.08%), no-repeat, top, top, fixed;
+  z-index: -1;
+  border-radius: 3rem 3rem 0 0;
 `;
 const Title = styled.h1`
   color: #fff;
@@ -40,14 +78,26 @@ const Title = styled.h1`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 2rem;
-`
-const CardWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  margin: 2rem;
+  `
+const CardWrapper = styled(Slider)`
+  width: 80%;
+  overflow-x: hidden;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 70%;
+  justify-content: center;
+  align-self: center;
+  z-index: 1;
+  margin-bottom: 5rem;
+  .slick-track {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+  .slick-slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 

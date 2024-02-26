@@ -11,6 +11,7 @@ import { AreaServiceComponent } from '../components/AreaServices/AreaServiceComp
 
 export const HomePage = () => {
   return (
+    <>
       <StyledHome
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -25,14 +26,17 @@ export const HomePage = () => {
               '/images/brands/fujitsu-logo.png',
               '/images/brands/daikin-logo.png',
               '/images/brands/tesla-logo.png',
-              '/images/brands/fujitsu-logo.png',
-              '/images/brands/daikin-logo.png',
+              '/images/brands/chargepoint-logo.png',
+              '/images/brands/bosch-logo.png',
+              '/images/brands/enphase-logo.png',
+              '/images/brands/legrand-logo.png',
+              '/images/brands/siemens-logo.png',
             ]}
         />
         <InovationWrapper>
           <Inovation
-            title= 'Riding the Wave of Eco-Innovation'
-            content='At ecoWAVEus, we specialize in providing sustainable energy solutions, including Heat Pumps, EV chargers, Energy Storage and Solar, all designed to maximize energy efficiency and savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.'
+            title= 'Expertise at Great Prices'
+            content='At EcowaveUS, we specialize in providing sustainable energy solutions, including heat pumps, EV chargers, energy storage and solar panels - all designed to maximize energy efficiency and savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.'
             images= {[
               {
                 img: '/images/innovation-02.png',
@@ -57,6 +61,7 @@ export const HomePage = () => {
         <ContactComponent />
         <AreaServiceComponent />
       </StyledHome>
+    </>
   )
 }
 const StyledHome = styled(motion.div)`
@@ -72,12 +77,14 @@ const SolutionsContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color:#F1F5F9;
+
 `
 const InovationWrapper = styled.div`
 width: 100%;
 display: flex;
 justify-content: center;
 background-color:#F1F5F9;
+padding-top: 8rem;
 `
 
 

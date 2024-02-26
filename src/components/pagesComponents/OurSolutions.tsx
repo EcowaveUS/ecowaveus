@@ -3,16 +3,31 @@ import styled from 'styled-components'
 
 export const OurSolutions = () => {
   const solutions = [
-    {title: 'Heat Pumps', content: 'Efficient Heating and Cooling for Your Home.', url: '/heat-pumps', icon: '/images/solution-icon-heat-pumps.png'},
-    {title: 'EV Chargers', content: 'Charge Your EV Faster at Home.', url: '/ev-chargers', icon: '/images/solution-icon-ev-chargers.png'},
-    {title: 'Energy Storage', content: 'Save your energy, save money.', url: '/energy-storage', icon: '/images/solution-icon-energy-storage.png'},
+    {
+      title: 'Heat Pumps',
+      content: 'Efficient Heating and Cooling for Your Home',
+      url: '/heat-pumps',
+      icon: '/images/solution-icon-heat-pumps.png'
+    },
+    {
+      title: 'EV Chargers',
+      content: 'Charge Your EV Faster at Home.',
+      url: '/ev-chargers',
+      icon: '/images/solution-icon-ev-chargers.png'
+    },
+    {
+      title: 'Energy Storage',
+      content: 'Save your energy, save money.',
+      url: '/energy-storage',
+      icon: '/images/solution-icon-energy-storage.png'
+    },
   ]
 
   return (
     <SolutionWrapper>
       <ContentWrapper>
         <Title>How Can We Help You?</Title>
-        <Text>We make it easy for users to use our platform, that's why we provide this benefit.</Text>
+        <Text>We make it easy for you!</Text>
       </ContentWrapper>
       <CardWrapper>
         {
@@ -35,7 +50,10 @@ const SolutionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 80px 0;
+  margin-bottom: 5rem;
+  @media (max-width: 1024px) {
+    margin-top: 1rem;
+  }
 `;
 const ContentWrapper = styled.div`
   display: flex;
@@ -55,12 +73,12 @@ const Title = styled.h3`
   text-transform: capitalize;
 `;
 const Text = styled.p`
-  color: rgba(21, 27, 39, 0.70);
+  color: #151B27;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 170%; /* 23.8px */
+  line-height: normal;
   letter-spacing: -0.408px;
 `;
 const CardWrapper = styled.div`
@@ -70,4 +88,9 @@ const CardWrapper = styled.div`
   justify-content: space-around;
   gap: 24px;
   margin: 32px 0;
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
 `;

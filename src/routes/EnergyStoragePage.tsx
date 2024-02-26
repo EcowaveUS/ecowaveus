@@ -1,6 +1,5 @@
 import { useLocation } from 'react-router'
 import styled from 'styled-components'
-import { ServiceBenefits } from '../components/services/ServiceBenefits'
 import { OursBrands } from '../components/brands/OursBrands'
 import { motion } from 'framer-motion'
 import { RebatesIncentives } from '../components/services/RebatesIncentives'
@@ -20,44 +19,24 @@ export const EnergyStoragePage = () => {
     >
       <MainPageComponent
         title='Storing Power, Empowering Lives'
-        content='Unlock the full potential of sustainable living with our energy storage systems, designed specifically for your home. At ecoWAVEus, we believe that every homeowner deserves access to affordable and reliable energy storage solutions. Our energy storage systems not only provide a safety net against power outages but also allow you to make the most of your solar installations, storing excess energy for use any time. Because a greener future starts at home.'
+        content='Unlock the full potential of sustainable living with our energy storage systems, designed specifically for your home. At EcowaveUS, we believe that every homeowner deserves access to affordable and reliable energy storage solutions. Our energy storage systems not only provide a safety net against power outages, but also allow you to make the most of your solar installations, storing excess energy for use any time.'
         pathLocation={pathLocation}
-        backgroundImage='/images/energy-storage.png'
-      />
-      <ServiceBenefits
-        title='Benefits of Energy storage'
-        subTitle= 'Maximizing Comfort and Efficiency'
-        image= {[
-          '/images/energy-icon.png',
-          '/images/increase-icon.png',
-          '/images/enviromentally-icon.png'
-        ]}
+        backgroundImage='/images/energy-storage01.png'
       />
       <StorageAdvantages />
       <RebatesIncentives route={pathLocation} >
-        <Text>Connect with a battery storage partner.Energy-sharing events through our ConnectedSolutions program call on your battery system to automatically discharge during peak demand days, which occur as follows:</Text>
-        <CardWrapper>
-          <Text>From June 1 – September 30 </Text>
-          <Text>Between 3pm - 8pm</Text>
-          <Text>No more than 60 times each summer</Text>
-          <Text>A maximum of 3 hours per event</Text>
-          <Text>You can opt out at any time</Text>
-        </CardWrapper>
-        <Subtitle>Incentives</Subtitle>
-        <Text>Participating customers will receive an incentive every year based on the performance of their battery system at a rate of $275 per kW performed between June 1 and September 30. On average, customers have received $1,500 per year.</Text>
+        <Text>
+          From the Mass Save website:  “Through ConnectedSolutions, residents receive incentives for lowering and/or shifting electricity usage during times of peak demand (like hotter days during the summer). Residents will receive $275 per kilowatt (kW) for a battery’s average contribution during summer events.<br/>
+          By enrolling your home battery system, you will earn incentives for allowing your Mass Save Sponsor to draw energy stored in your battery during times of peak electricity demand. Your Mass Save Sponsor will automatically send a signal to your system no more than 60 times per summer, with each event lasting a maximum of three hours. Summer events will occur on non-holidays between June 1 and September 30, between the hours of 3:00 p.m. and 8:00 p.m.”
+        </Text>
         <Subtitle>Federal Incentives</Subtitle>
-        <Text>25D provides households an uncapped 30 percent tax credit of the installation cost for a battery storage</Text>
+        <Text>25D provides households an uncapped 30 percent tax credit of the installation cost for a battery storage.</Text>
       </RebatesIncentives>
       <BrandsWrapper>
           <OursBrands
             images={[
-                '/images/brands/mitsubishi-logo.png',
-                '/images/brands/lg-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
                 '/images/brands/tesla-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
+                '/images/brands/enphase-logo.png',
               ]}
           />
         </BrandsWrapper>
@@ -74,21 +53,20 @@ padding-top: 100px;
 `;
 
 const Text = styled.p`
-  color: var(--fore-allways---white, #FFF);
-
+  color: var(--White, var(--fore-allways---white, #FFF));
+  text-align: center;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 151.523%;
-  text-align: center;
+  line-height: 160%; /* 38.4px */
 `;
 const BrandsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #FFF;
 `;
 const Subtitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #FFF));

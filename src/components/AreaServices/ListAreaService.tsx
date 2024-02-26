@@ -10,8 +10,10 @@ export const ListAreaService: React.FC<LocationProps> = ({
   location
 }) => {
   return (
+    <>
     <LocationWrapper>
-      <Title>Area Services</Title>
+    <Title>Area Services</Title>
+    <AreaWrapper>
       {
         location.map((loc, index) => (
           <LocationContainer key={index}>
@@ -22,7 +24,9 @@ export const ListAreaService: React.FC<LocationProps> = ({
           </LocationContainer>
         ))
       }
+    </AreaWrapper>
     </LocationWrapper>
+    </>
   )
 }
 const LocationWrapper = styled.div`
@@ -35,6 +39,24 @@ const LocationWrapper = styled.div`
   border-radius: 20px 0 0 20px;
   background-color: #fff;
   padding: 32px 24px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+`;
+const AreaWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 460px;
+  height: auto;
+  background-color: #fff;
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 const Title = styled.h3`
   color: rgba(0, 0, 0, 0.90);

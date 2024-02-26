@@ -23,12 +23,20 @@ export const ProjectCard: React.FC<ProjectProps> = ({
     // const handleShowDetail = () => {
     //   setShowDetail(!showDetail)
     // }
+    const formatedName = name?.split(',')
+    const firstName = formatedName && formatedName[0]
+    const secondName = formatedName && formatedName[1]
 
   return (
     <>
       <CardWrapper image={image && image}>
-        <Title>{name}</Title>
-        <CategoryText>{category}</CategoryText>
+        <ImageWrapper>
+          <img src={image && image[0]} alt={name} />
+        </ImageWrapper>
+        <ContentWrapper>
+          <Title>{firstName}<br/>{secondName}</Title>
+          <CategoryText>{category}</CategoryText>
+        </ContentWrapper>
       </CardWrapper>
       {/* { showDetail &&
         createPortal(
@@ -45,18 +53,41 @@ export const ProjectCard: React.FC<ProjectProps> = ({
   )
 }
 const CardWrapper = styled.div<ProjectProps>`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
   width: 320px;
-  height: 407px;
-  background-image: url(${props => props.image});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0 0 20px 25px;
+  height: 448px;
   border-radius: 10px;
+`;
+const ImageWrapper = styled.div`
+position: absolute;
+top: 0;
+width: 320px;
+height: 100%;
+width: 100%;
+padding: 0;
+border-radius: 10px;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+`;
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  background-color: rgba(9, 18, 66, 0.3);
+  padding: 0.5rem;
+  border-radius: 0 0 10px 10px;
+  z-index: 1;
 `;
 const Title = styled.p`
   color: var(--fore-allways---white, #FFF);
@@ -65,12 +96,16 @@ const Title = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  padding-left: 0.5rem;
+  z-index: 1;
 `;
 const CategoryText = styled.p`
+  padding-left: 0.5rem;
   color: #1FA500;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 151.523%; /* 24.244px */
+  z-index: 1;
 `;

@@ -1,31 +1,37 @@
+import { Fragment } from 'react'
 import { StorageCard } from '../cards/StorageCard'
 import styled from 'styled-components'
 
 export const StorageAdvantages = () => {
   const energyCards = [
     {
+      id: 1,
       title: 'Emergency Backup',
-      content: 'Provides power during outages, ensuring continuity for critical appliances.',
+      content: 'Provides electricity during power outages, ensuring stability for critical appliances',
       image: '/images/storage-icon01.png'
     },
     {
-      title: 'Enhanced Solar Utilization',
-      content: 'Stores excess solar energy for use during non-sunny periods, maximizing renewable energy use.',
+      id: 2,
+      title: 'Enhanced Solar Usage',
+      content: 'Stores excess solar energy for use during  periods without sunlight, maximizing renewable energy use',
       image: '/images/storage-icon02.png'
     },
     {
+      id: 3,
       title: 'Lower Energy Costs',
-      content: 'Saves money by storing electricity when rates are low and using it during peak times.',
+      content: 'Saves money by storing electricity when rates are low and using it during peak times',
       image: '/images/storage-icon03.png'
     },
     {
+      id: 4,
       title: 'Reduced Carbon Footprint',
-      content: 'Supports a greener lifestyle by facilitating the use of renewable energy sources.',
+      content: 'Supports a greener lifestyle by facilitating the use of renewable energy sources',
       image: '/images/storage-icon04.png'
     },
     {
+      id: 5,
       title: 'Increased Property Value',
-      content: 'Homes with energy storage systems are often more appealing in the real estate market.',
+      content: 'Makes homes more appealing in the real estate market with energy storage systems',
       image: '/images/storage-icon05.png'
     }
   ]
@@ -33,19 +39,19 @@ export const StorageAdvantages = () => {
     <StyledComponent>
       <LeftBackground src="images/storage-background-left.png" alt="Energy Storage" />
       <ContentWrapper>
-        <Title>Advantages of having energy storage at home</Title>
+        <Title>Advantages of Having Energy Storage</Title>
         <CardWrapper>
           {
             energyCards.map((card, index) => (
-              <>
+
+              <Fragment key={card.id}>
                 <StorageCard
-                  key={index}
                   title={card.title}
                   content={card.content}
                   image={card.image}
                 />
                   {index === 0 || index === 1 || index === 3 ? <Separator /> : null}
-              </>
+              </Fragment>
             ))
           }
         </CardWrapper>
@@ -95,7 +101,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: space-between;
   justify-content: flex-start;
-  width: 85%;
+  width: 80%;
   margin: 3rem 0;
 `;
 const CardWrapper = styled.div`
@@ -109,5 +115,8 @@ const Separator = styled.div`
   border-left: 2px solid #CBCBCB;
   height: 127px;
   background-color: #CBCBCB;
-  margin-right:0.8rem;
+  margin-right:1rem;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;

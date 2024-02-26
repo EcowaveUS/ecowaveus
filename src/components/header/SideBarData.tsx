@@ -39,10 +39,4 @@ export const SidebarData = [
     icon: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
   },
-  {
-    title: "FREE estimate",
-    path: "/contact-us",
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: "nav-text",
-  },
 ];

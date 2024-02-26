@@ -2,91 +2,41 @@
   {
       "id": 1,
       "score": 5,
-      "firstName": "John",
-      "lastName": "Doe",
-      "title": "Excellent product! I am very satisfied.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-01"
+      "firstName": "Jennifer F.",
+      "lastName": "",
+      "title": "EcowaveUS over Delivered",
+      "description":"EcowaveUS over delivered! From day one interaction to the final product refinement, our experience with EcowaveUS was top notch. They are the gold standard for business. Kind, responsive, proactive, informative, collaborative and delivers high quality service and product.  They supported us not only converting our entire home heating system, they listened to us and held our hand through the Mass Save Rebate/ Loan process. That was invaluable.  Working with them is a NO BRAINER!"
   },
   {
       "id": 2,
-      "score": 4,
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "title": "Good product, but could improve in some aspects.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi",
-      "createdAt": "2023-10-02"
+      "score": 5,
+      "firstName": "Joe L.",
+      "lastName": "",
+      "title": "Highly recommended",
+      "description":"Ecowave provides top-notch service. We had a heat-pump system installed, and Alejo and his team worked closely with us through the entire process, including helping us wade through the byzantine MassSave bureacracy.  They really and truly care about the mission of their service and are dedicated to delivering the highest quality results.  We actually ran into a problem with our equipment, and Alejo and his team relentlessly pursued a solution, and now everything's running perfectly.  Highly recommended!"
   },
   {
       "id": 3,
-      "score": 3,
-      "firstName": "Chris",
-      "lastName": "Johnson",
-      "title": "Average, meets expectations.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-03"
-  },
-  {
-      "id": 4,
-      "score": 2,
-      "firstName": "Mary",
-      "lastName": "Williams",
-      "title": "Not very good, needs improvement.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-04"
-  },
-  {
-      "id": 5,
-      "score": 1,
-      "firstName": "Patricia",
-      "lastName": "Brown",
-      "title": "Bad, I would not recommend it.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nisi",
-      "createdAt": "2023-10-05"
-  },
-  {
-      "id": 7,
       "score": 5,
-      "firstName": "Michael",
-      "lastName": "Jones",
-      "title": "Excellent product! I am very satisfied.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-06"
+      "firstName": "Scott F. ",
+      "lastName": "",
+      "title": "I`d recommend EcowaveUS in a heartbeat",
+      "description":"I can't say enough good things about our experience with EcowaveUS. When our gas burner left us in the cold literally in the middle of winter, Alejo and his amazing team were our knights in shining armor. They sped up our project so we could get our house warm again, and every step of the way, they were absolute stars. I'd recommend EcowaveUS in a heartbeat to anyone looking to make their home more energy-efficient. Alejo and his crew are not just experts in what they do; they're also incredibly committed to making sure their customers are happy and well taken care of. Big thanks to the EcowaveUS team for going above and beyond for us!"
   },
   {
-      "id": 8,
-      "score": 4,
-      "firstName": "Linda",
-      "lastName": "Garcia",
-      "title": "Good product, but could improve in some aspects.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-07"
+    "id": 4,
+    "score": 5,
+    "firstName": "Paul D. ",
+    "lastName": "",
+    "title": "I`d recommend EcowaveUS in a heartbeat",
+    "description":"Our installation went beautifully.  The five-unit system works nicely, and I am happy with its efficiency."
   },
   {
-      "id": 9,
-      "score": 3,
-      "firstName": "William",
-      "lastName": "Miller",
-      "title": "Average, meets expectations.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-08"
-  },
-  {
-      "id": 10,
-      "score": 2,
-      "firstName": "Elizabeth",
-      "lastName": "Davis",
-      "title": "Not very good, needs improvement.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-09"
-  },
-  {
-      "id": 11,
-      "score": 1,
-      "firstName": "David",
-      "lastName": "Rodriguez",
-      "title": "Bad, I would not recommend it.",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam nis",
-      "createdAt": "2023-10-10"
+    "id": 5,
+    "score": 5,
+    "firstName": "Joe D. ",
+    "lastName": "",
+    "title": "I`d recommend EcowaveUS in a heartbeat",
+    "description":"Had an awesome experience with Ecowave! Our split system is working great."
   }
 ]

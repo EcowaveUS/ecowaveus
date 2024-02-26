@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { OursBrands } from '../components/brands/OursBrands';
 import { ProjectCards } from '../components/pagesComponents/ProjectCards';
 
 export const AboutAsPage = () => {
@@ -10,31 +9,18 @@ export const AboutAsPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <Container />
-
-        <TransportWrapper>
+        <Container>
           <ImageWrapper>
-            <StyledImage src="/images/grey-photo.png" alt="Our Story" />
+            <Logo src="/images/logo-header.png" alt="solar panels" />
           </ImageWrapper>
-            <TransportTitle>Sea Transport Services</TransportTitle>
-            <Text>
-              At ecoWAVEus, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.
-            </Text>
+        </Container>
+        <TransportWrapper>
+          <TransportTitle>RIDING THE WAVE OF ECO-INNOVATION</TransportTitle>
+          <Text>
+            At ecoWAVEus, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.
+          </Text>
         </TransportWrapper>
         <ProjectCards />
-        <BrandsWrapper>
-          <OursBrands
-            images={[
-                '/images/brands/mitsubishi-logo.png',
-                '/images/brands/lg-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
-                '/images/brands/tesla-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
-              ]}
-          />
-        </BrandsWrapper>
       </Wrapper>
   )
 }
@@ -45,61 +31,58 @@ const Wrapper = styled(motion.div)`
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 60px;
 `;
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  background-image: url('/images/about-us.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 706px;
-  flex-shrink: 0;
-`;
-const BrandsWrapper = styled.div`
-  display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #F5F5F5;
+  background-image: url('/images/solar-panels.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+`;
+const ImageWrapper = styled.div`
+  align-self: center;
+  width: 70%;
+  height: auto;
+`;
+const Logo = styled.img`
+  width: 100%;
+  height: auto;
 `;
 
 const TransportWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 75%;
-  margin: 5rem 0;
-  gap: 0.5rem;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+
 `
-const ImageWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: #F5F5F5;
-`;
-const StyledImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
 const TransportTitle = styled.h1`
-  color: #1C1F35;
-  text-align: left;
-  font-family: Inter;
-  font-size: 35px;
+  color: #343434;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 2.5rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 151.523%; /* 72.731px */
 `;
 const Text = styled.p`
-  color: #666C89;
+  color: rgba(0, 0, 0, 0.75);
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 151.523%; /* 24.244px */
+  line-height: 151.523%; /* 48.487px */
+  word-spacing: 0.1rem;
+  text-align: center;
 `;
 
 

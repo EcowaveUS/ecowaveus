@@ -16,32 +16,33 @@ export const HeatPumsPage = () => {
     {
       id: 1,
       item: '01',
-      title: 'Energy Assessment (Skip if built after 2000)',
-      content: 'Complete an energy assessment and obtain a Certificate of Completion from Mass Save for rebate eligibility.'
+      title: 'Contact Us ',
+      content: 'Contact us to discuss your project and schedule an assessment',
     },
     {
       id: 2,
       item: '02',
-      title: 'Initial Consultation',
-      content: 'Contact us to discuss your project"s scope.'
+      title: 'Get a FREE Estimate',
+      content: 'Receive a free estimate and information on rebates and financing (including Mass Save 0% HEAT loan if applicable) - We will inform you and help you through the process',
     },
     {
       id: 3,
       item: '03',
-      title: 'Site Visit and Estimate',
-      content: 'Schedule a visit for house measurements and inspection, followed by a free estimate including potential rebates.'
+      title: 'Contract and Schedule',
+      content: 'Sign the contract and schedule the installation',
     },
     {
       id: 4,
       item: '04',
-      title: 'Contract and',
-      content: 'Sign a contract and, if applying, proceed with Mass Save"s 0% HEAT loan process.'
+      title: 'Complete Installation',
+      content: 'Proceed with the heat pump installation ',
     },
     {
       id: 5,
       item: '05',
-      title: 'Installation and Rebate Assistance',
-      content: "We'll order equipment, install and commission the system, and help with rebate applications. Enjoy your new system!"
+      title: 'Rebates and Incentives Forms',
+      content: "We will help you to apply for rebates - ",
+      span: 'Enjoy your new system!'
     },
   ]
 
@@ -52,7 +53,7 @@ export const HeatPumsPage = () => {
         exit={{ opacity: 0 }}
       >
         <MainPageComponent
-          title='Efficient Heating and Cooling for your Home'
+          title='Efficient Heating and Cooling for Your Home'
           subtitle='Efficient and Eco-Friendly:'
           content='A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas.'
           pathLocation={pathLocation}
@@ -72,8 +73,8 @@ export const HeatPumsPage = () => {
         </ImageBrackground>
         <ProccesComponent>
           <SubTitle>Installation Guide</SubTitle>
-          <TitleProcces>Instalation Procces Step-By-Step</TitleProcces>
-          <TextProcces>To make your experience seamless, we've distilled the process into five easy-to-follow steps</TextProcces>
+          <TitleProcces>Installation Process</TitleProcces>
+          <TextProcces>We make it easy for you!</TextProcces>
           <ProccesGridContainer>
             <ProccesCardWrapper>
               {
@@ -84,12 +85,13 @@ export const HeatPumsPage = () => {
                     title={item.title}
                     content={item.content}
                     item={item.item}
+                    span={item.span}
                   />
                 ))
               }
             </ProccesCardWrapper>
             <ImageWrapper>
-              <Image src="/images/heat-pumps-list.png" alt="heat pumpp" />
+              <Image src="/images/heat-pumps-list01.png" alt="heat pumpp" />
             </ImageWrapper>
           </ProccesGridContainer>
         </ProccesComponent>
@@ -106,27 +108,30 @@ export const HeatPumsPage = () => {
           </LinkWrapper> */}
           <ListWrapper>
             <ListCard>
-              <SvgFeedBackPositive />
-              <Text>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling. (up to $10,000)</Text>
+              <SvgFeedBackPositive
+                width='44px'
+                height='44px'
+              />
+              <Text>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling (up to $10,000).</Text>
             </ListCard>
             <ListCard>
-              <SvgFeedBackPositive />
-              <Text>Partial-home rebates are offered based on equipment/outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system. ($1250 per ton, up to $10,000)</Text>
+              <SvgFeedBackPositive
+                width='74px'
+                height='74px'
+              />
+              <Text>Partial-home rebates are offered based on equipment or outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system ($1,250 per ton, up to $10,000).</Text>
             </ListCard>
           </ListWrapper>
           <IncentivesTitle>Federal Incentives</IncentivesTitle>
-          <Text>Federal tax credit 30% of the cost of the installation up to $2'000</Text>
+          <Text>Federal tax credit 30% of the cost of the installation up to $2,000</Text>
         </RebatesIncentives>
         <BrandsWrapper>
           <OursBrands
             images={[
                 '/images/brands/mitsubishi-logo.png',
-                '/images/brands/lg-logo.png',
                 '/images/brands/fujitsu-logo.png',
                 '/images/brands/daikin-logo.png',
-                '/images/brands/tesla-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
+                '/images/brands/bosch-logo.png',
               ]}
           />
         </BrandsWrapper>
@@ -144,13 +149,15 @@ const StyledPage = styled(motion.div)`
 `;
 
 const Text = styled.p`
+  align-self: center;
   color: var(--fore-allways---white, #FFF);
 
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 151.523%;
+  line-height: 24px; /* 100% */
+  margin-bottom: 1rem;
 `;
 
 const ImageBrackground = styled.div`
@@ -175,13 +182,20 @@ const ProccesComponent = styled.div`
   padding: 3rem;
   margin-top: -7rem;
   margin-bottom: 8rem;
+  @media (max-width: 1024px) {
+    width: 90%;
+    align-items: center;
+    margin-top: -3rem;
+  }
 `;
 const ProccesCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 50%
+  width: 60%
+  @media (max-width: 1024px) {
+  }
 `;
 const ProccesGridContainer = styled.div`
   display: flex;
@@ -196,7 +210,9 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: auto;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 const Image = styled.img`
   width: 100%;
@@ -215,25 +231,25 @@ line-height: normal;
 border-left: 4px solid #68BE54 ;
 background: rgba(232, 232, 232, 0.50);
 padding: 3px 9px 3px 8px;
+  margin-bottom: 0.5rem;
+
 `
 const TitleProcces = styled.h3`
-color: #1C1F35;
-width: 472px;
-font-family: Inter;
-font-size: 35px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  color: #1C1F35;
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.5rem;
 `
 const TextProcces = styled.p`
-color: #666C89;
-width: 472px;
-
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 151.523%; /* 24.244px */
+  color: #666C89;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 151.523%; /* 36.365px */
 `
 
 const BrandsWrapper = styled.div`
@@ -241,7 +257,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
-background-color: #F5F5F5;
+background-color: #FFF;
 `;
 // const LinkText = styled.p`
 //   color: var(--fore-allways---white, #FFF);
@@ -270,7 +286,7 @@ const ListCard = styled.div`
 //   margin: 24px 0;
 // `;
 const ListWrapper = styled.div`
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;

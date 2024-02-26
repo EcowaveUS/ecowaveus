@@ -49,32 +49,39 @@ const RebatesWrapper = styled.div<Props>`
   word-break: break-all;
   background-image: ${props => props.route === '/energy-storage' ? 'url(images/savings.background01.png)' : 'url(/images/savings-background.png)'};
   background-repeat: no-repeat;
+  background-position: center center;
   border-radius: ${props => props.route === '/energy-storage' ? '0 8rem' : '0'};
   background-position: 0;
   background-size: cover;
-  padding: 4rem 0;
+  padding: 8rem 0;
+  @media (max-width: 1024px) {
+    height: auto;
+  }
 `;
 const Title = styled.h3`
+  aling-self: stretch;
   color: var(--fore-allways---white, #FFF);
+
   text-align: center;
   font-family: Inter;
-  font-size: 72px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 79.2px */
+  line-height: 110%; /* 66px */
 `;
 const Subtitle = styled.h5`
+  align-self: stretch;
   color: var(--White, var(--fore-allways---white, #FFF));
   text-align: center;
   font-family: Inter;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
-  line-height: 110%;
+  line-height: 110%; /* 35.2px */
   margin-top: 8px;
 `;
 const InfoContainer = styled(motion.div)`
-  width: 75%;
+  width: 70%;
   height: auto;
   border-radius: 10px;
   display: flex;
@@ -82,4 +89,7 @@ const InfoContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   gap: 12px;
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 `;

@@ -17,19 +17,19 @@ export const EvChargersPage = () => {
       id: 1,
       title: 'Level 1 (120V) Charger',
       image: '/images/ev-charger-level1.png',
-      content: 'Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery.'
+      content: 'Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery'
     },
     {
       id: 2,
       title: 'Level 2 (240V) Charger',
       image: '/images/ev-charger-leve2.png',
-      content: 'Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery.'
+      content: 'Use a special 240V outlet and deliver a fast charge, typically taking 3-8 hours to fully charge an EV battery'
     },
     {
       id: 3,
       title: 'Level 3 (480V) Charger',
       image: '/images/ev-charger-level3.png',
-      content: 'Provide rapid charging in 30-60 minutes, ideal for long trips and commonly available at public stations.'
+      content: 'Provide a rapid charge, typically in 30-60 minutes, ideal for long trips and normally for public stations and commercial buildings'
     },
   ]
   return (
@@ -76,9 +76,9 @@ export const EvChargersPage = () => {
       </ProccesComponent>
       <RebatesIncentives>
         <Text>
-          The Residential EV Charging Infrastructure Program supports residential electric customers by providing rebates for upgrading home-wiring in their garage or parking area (up to $700 for single family homes, with additional rebates for 2-4 units) and ongoing savings once enrolled in a managed charging program, for example approximately $100 annually through the off peak charging program. Customers living in an environmental justice community or enrolled in the low-income discount rate (R-2) are eligible for additional wiring and charger rebates.
+          From the National Grid website: “The Residential EV Charging Infrastructure Program supports residential electric customers by providing rebates for upgrading home-wiring in their garage or parking area (up to $700 for single family homes, with additional rebates for 2-4 units). Customers living in an environmental justice community or enrolled in the low-income discount rate (R-2) are eligible for additional wiring and charger rebates.”
         </Text>
-        <Subtitle>Federal incentives</Subtitle>
+        <Subtitle>Federal Incentives</Subtitle>
           <Text>
             A recently expired federal tax break for electric vehicle (EV) chargers got new life under the recently passed Inflation Reduction Act—a move that will give taxpayers up to $1,000 in a tax credit.
           </Text>
@@ -86,13 +86,10 @@ export const EvChargersPage = () => {
       <BrandsWrapper>
           <OursBrands
             images={[
-                '/images/brands/mitsubishi-logo.png',
-                '/images/brands/lg-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
                 '/images/brands/tesla-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
+                '/images/brands/chargepoint-logo.png',
+                '/images/brands/legrand-logo.png',
+                '/images/brands/siemens-logo.png',
               ]}
           />
         </BrandsWrapper>
@@ -101,11 +98,11 @@ export const EvChargersPage = () => {
 }
 
 const StyledPage = styled(motion.div)`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
 `;
 
 const Text = styled.p`
@@ -138,14 +135,19 @@ const ProccesComponent = styled.div`
   padding: 3rem;
   margin-top: -7rem;
   margin-bottom: 8rem;
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-top: -3rem;
+  }
 `;
 const ProccesCardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%
+  gap: 2rem;
 `;
 const TitleProcces = styled.h3`
 color: #1C1F35;
@@ -172,7 +174,7 @@ const BrandsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #FFF;
 `;
 const Subtitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #FFF));

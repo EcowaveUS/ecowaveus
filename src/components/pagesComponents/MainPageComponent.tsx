@@ -19,7 +19,7 @@ export const MainPageComponent: React.FC<Props> = ({
   return (
     <Container backgroundImage={backgroundImage}>
       <HeaderContainer pathLocation={pathLocation}>
-        <HeaderContent>
+        <HeaderContent pathLocation={pathLocation}>
           {subtitle && <AuxiliarText>{subtitle}</AuxiliarText>}
           <Title pathLocation={pathLocation}>{title}</Title>
           <Text pathLocation={pathLocation}>{content}</Text>
@@ -29,15 +29,18 @@ export const MainPageComponent: React.FC<Props> = ({
   )
 }
 
+
 const Container = styled.div<Props>`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
   height: 100vh; /* 100% of the viewport height */
-  background-image: url(${props => props.backgroundImage});
-  background-repeat: no-repeat;
+  background: url(${props => props.backgroundImage}) no-repeat center; /* ver de agregar fixed */
   background-size: cover;
+  @media (max-width: 1024px) {
+    background-position: right;
+  }
 `;
 
 const HeaderContainer = styled.div<Props>`
@@ -45,7 +48,8 @@ const HeaderContainer = styled.div<Props>`
   width: ${props => props.pathLocation === '/ev-chargers' ? '50%' : '75%'};
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 5rem;
   align-items: ${props =>
     props.pathLocation === '/heat-pumps'
       ? 'flex-start'
@@ -55,37 +59,50 @@ const HeaderContainer = styled.div<Props>`
       ? 'flex-start'
       : 'center'
   };
+  @media (max-width: 1024px) {
+    width: 95%;
+    align-items: center;
+  }
 `;
-const HeaderContent = styled.div`
+const HeaderContent = styled.div<Props>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  width: 50%;
+  align-items: ${props => props.pathLocation === '/ev-chargers' ? 'flex-end' : 'flex-start'};
+  width: 70%;
   gap: 1rem;
+  @media (max-width: 1024px) {
+    width: 90%;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1<Props>`
-  color: var(--fore-allways---white, #FFF);
-
-  font-family: Inter;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-  text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
+width: 90%;
+align-self: right;
+color: var(--White, var(--fore-allways---white, #FFF));
+text-align: right;
+font-family: Inter;
+font-size: 4rem;
+font-style: normal;
+font-weight: 800;
+line-height: 110%; /* 66px */
+text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
+@media (max-width: 1024px) {
+  font-size: 3rem;
+  width: 100%;
+}
 
 `;
 
 const Text = styled.p<Props>`
-  color: var(--fore-allways---white, #FFF);
-
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.8rem;
+width: 90%;
+color: var(--White, var(--fore-allways---white, #FFF));
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 38.4px */
   text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 `;
 
