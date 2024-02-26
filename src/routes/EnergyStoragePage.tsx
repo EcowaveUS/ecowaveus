@@ -27,7 +27,7 @@ export const EnergyStoragePage = () => {
       <RebatesIncentives route={pathLocation} >
         <Text>
           From the Mass Save website:  “Through ConnectedSolutions, residents receive incentives for lowering and/or shifting electricity usage during times of peak demand (like hotter days during the summer). Residents will receive $275 per kilowatt (kW) for a battery’s average contribution during summer events.<br/>
-          By enrolling your home battery system, you will earn incentives for allowing your Mass Save Sponsor to draw energy stored in your battery during times of peak electricity demand. Your Mass Save Sponsor will automatically send a signal to your system no more than 60 times per summer, with each event lasting a maximum of three hours. Summer events will occur on non-holidays between June 1 and September 30, between the hours of 3:00 p.m. and 8:00 p.m.”
+          By enrolling your home battery system, you will earn incentives for allowing your Mass Save Sponsor to draw energy stored in your battery during times of peak electricity demand.Your Mass Save Sponsor will automatically send a signal to your system no more than 60 times per summer, with each event lasting a maximum of three hours. Summer events will occur on non-holidays between June 1 and September 30, between the hours of 3:00 p.m. and 8:00 p.m.”
         </Text>
         <Subtitle>Federal Incentives</Subtitle>
         <Text>25D provides households an uncapped 30 percent tax credit of the installation cost for a battery storage.</Text>
@@ -77,16 +77,4 @@ const Subtitle = styled.h5`
   font-weight: 500;
   line-height: 110%;
   margin-top: 3rem;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
-  padding: 2rem 4rem;
-  gap: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
 `;
