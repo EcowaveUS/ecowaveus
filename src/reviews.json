@@ -2,40 +2,40 @@
   {
       "id": 1,
       "score": 5,
-      "firstName": "Jennifer F.",
-      "lastName": "",
+      "firstName": "Jennifer ",
+      "lastName": "F.",
       "title": "EcowaveUS over Delivered",
-      "description":"EcowaveUS over delivered! From day one interaction to the final product refinement, our experience with EcowaveUS was top notch. They are the gold standard for business. Kind, responsive, proactive, informative, collaborative and delivers high quality service and product.  They supported us not only converting our entire home heating system, they listened to us and held our hand through the Mass Save Rebate/ Loan process. That was invaluable.  Working with them is a NO BRAINER!"
+      "description":"EcowaveUS over delivered! From day one interaction to the final product refinement, our experience with EcowaveUS was top notch. They are the gold standard for business. Kind, responsive, proactive, informative, collaborative and delivers high quality service and product.They supported us not only converting our entire home heating system, they listened to us and held our hand through the Mass Save Rebate/ Loan process. That was invaluable.Working with them is a NO BRAINER!"
   },
   {
       "id": 2,
       "score": 5,
-      "firstName": "Joe L.",
-      "lastName": "",
+      "firstName": "Joe ",
+      "lastName": "L.",
       "title": "Highly recommended",
-      "description":"Ecowave provides top-notch service. We had a heat-pump system installed, and Alejo and his team worked closely with us through the entire process, including helping us wade through the byzantine MassSave bureacracy.  They really and truly care about the mission of their service and are dedicated to delivering the highest quality results.  We actually ran into a problem with our equipment, and Alejo and his team relentlessly pursued a solution, and now everything's running perfectly.  Highly recommended!"
+      "description":"Ecowave provides top-notch service. We had a heat-pump system installed, and Alejo and his team worked closely with us through the entire process, including helping us wade through the byzantine MassSave bureacracy.They really and truly care about the mission of their service and are dedicated to delivering the highest quality results.We actually ran into a problem with our equipment, and Alejo and his team relentlessly pursued a solution, and now everything's running perfectly.Highly recommended!"
   },
   {
       "id": 3,
       "score": 5,
-      "firstName": "Scott F. ",
-      "lastName": "",
+      "firstName": "Scott  ",
+      "lastName": "F.",
       "title": "I`d recommend EcowaveUS in a heartbeat",
       "description":"I can't say enough good things about our experience with EcowaveUS. When our gas burner left us in the cold literally in the middle of winter, Alejo and his amazing team were our knights in shining armor. They sped up our project so we could get our house warm again, and every step of the way, they were absolute stars. I'd recommend EcowaveUS in a heartbeat to anyone looking to make their home more energy-efficient. Alejo and his crew are not just experts in what they do; they're also incredibly committed to making sure their customers are happy and well taken care of. Big thanks to the EcowaveUS team for going above and beyond for us!"
   },
   {
     "id": 4,
     "score": 5,
-    "firstName": "Paul D. ",
-    "lastName": "",
+    "firstName": "Paul  ",
+    "lastName": "D.",
     "title": "I`d recommend EcowaveUS in a heartbeat",
     "description":"Our installation went beautifully.  The five-unit system works nicely, and I am happy with its efficiency."
   },
   {
     "id": 5,
     "score": 5,
-    "firstName": "Joe D. ",
-    "lastName": "",
+    "firstName": "Joe  ",
+    "lastName": "D.",
     "title": "I`d recommend EcowaveUS in a heartbeat",
     "description":"Had an awesome experience with Ecowave! Our split system is working great."
   }
