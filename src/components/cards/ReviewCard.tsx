@@ -51,7 +51,7 @@ const CardWrapper = styled.div`
   border-radius: 20px;
   background-color: #FFF;
   @media (max-width: 480px) {
-    width: 100%;
+    width: 95%;
   }
 `;
 const TextContainer = styled.div`

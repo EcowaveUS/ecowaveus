@@ -26,7 +26,7 @@ export const Navbar = () => {
       </Link>
       <Separator/>
       <Link to='/ev-chargers'>
-        <li className={activeLink === '/ev-chargers' ? 'active' : ''} onClick={() => handleLinkClick('/ev-chargers')}>EV chargers</li>
+        <li className={activeLink === '/ev-chargers' ? 'active' : ''} onClick={() => handleLinkClick('/ev-chargers')}>EV Chargers</li>
       </Link>
       <Separator/>
       <Link to='/energy-storage'>
@@ -34,11 +34,11 @@ export const Navbar = () => {
       </Link>
       <Separator/>
       <Link to='/about-us'>
-        <li className={activeLink === '/about-us' ? 'active' : ''} onClick={() => handleLinkClick('/about-us')}>About us</li>
+        <li className={activeLink === '/about-us' ? 'active' : ''} onClick={() => handleLinkClick('/about-us')}>About Us</li>
       </Link>
       <Separator/>
       <Link to='/contact-us'>
-        <li className={activeLink === '/contact-us' ? 'active' : ''} onClick={() => handleLinkClick('/contact-us')}>Contact us</li>
+        <li className={activeLink === '/contact-us' ? 'active' : ''} onClick={() => handleLinkClick('/contact-us')}>Contact Us</li>
       </Link>
     </StyledLinks>
     </>

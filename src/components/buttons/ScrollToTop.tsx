@@ -55,4 +55,5 @@ const ScrollToTopButton = styled.button`
   cursor: pointer;
   width: 50px;
   height: 50px;
+  z-index: 1000;
 `;

@@ -21,6 +21,6 @@ const WrapperComponent = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
   }
   `;

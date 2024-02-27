@@ -7,10 +7,10 @@ export const LocationInfo = () => {
       <Triangles>
         <SvgTriangles />
       </Triangles>
-      <Title>EcoWaveus Us</Title>
+      <Title>EcoWaveusUs</Title>
       <CardContainer>
         <SubTitles>Adress</SubTitles>
-        <Text>12 Broadway street</Text>
+        <Text>12 Broadway</Text>
         <Text> Beverly, MA 01915</Text>
         <Separator />
       </CardContainer>
@@ -53,7 +53,7 @@ const LocationWrapper = styled.div`
       padding: 1rem;
     }
     @media (max-width: 768px) {
-      width: 90%;
+      width: 100%;
     }
 `;
 const Triangles = styled.div`
@@ -67,6 +67,9 @@ const Dots = styled.div`
   bottom: -4rem;
   right: -3rem;
   z-index: -1;
+  @media (max-width: 768px) {
+    right: -1rem;
+  }
 `;
 const DotsImg = styled.img`
   width: 268px;

@@ -56,6 +56,7 @@ const WrapperComponents = styled.div`
   background-color: #fff;
   border-radius: 16px;
   padding: 2rem;
+  z-index: 1;
   @media (max-width: 1024px) {
     flex-direction: column;
     width: 90%;
@@ -65,7 +66,7 @@ const Title = styled.h1`
   color: var(--fore-allways---white, #FFF);
 
   font-family: Inter;
-  font-size: 60px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -73,4 +74,7 @@ const Title = styled.h1`
   text-align: left;
   width: 75%;
   margin: 18rem 0 2rem 0;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;

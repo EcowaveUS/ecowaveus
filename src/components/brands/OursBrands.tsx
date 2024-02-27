@@ -14,7 +14,7 @@ export const OursBrands: React.FC<Props> = ({
     infinite: true,
     speed: 500,
     slidesToShow: images.length > 5 ? 5 : images.length,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
     autoplay: true,
@@ -22,10 +22,10 @@ export const OursBrands: React.FC<Props> = ({
     cssEase: "linear",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: false
         }
@@ -34,7 +34,7 @@ export const OursBrands: React.FC<Props> = ({
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2
         }
       },

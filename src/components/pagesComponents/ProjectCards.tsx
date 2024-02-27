@@ -67,7 +67,6 @@ const Wrapper = styled.div`
   width: 100%;
   margin-top: 5rem;
   background: linear-gradient(90deg, #003B76 -1.19%, #4579AD 57.78%, #7CB6F1 115.08%), no-repeat, top, top, fixed;
-  z-index: -1;
   border-radius: 3rem 3rem 0 0;
 `;
 const Title = styled.h1`
@@ -86,7 +85,6 @@ const CardWrapper = styled(Slider)`
   align-items: center;
   justify-content: center;
   align-self: center;
-  z-index: 1;
   margin-bottom: 5rem;
   .slick-track {
     display: flex;
@@ -98,6 +96,9 @@ const CardWrapper = styled(Slider)`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+  }
+  @media (max-width: 960px) {
+    width: 100%;
   }
 `;
 

@@ -64,7 +64,7 @@ const HeaderContainer = styled.div`
   gap: 8px;
   width: 30%;
   @media (max-width: 1024px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 const IconsWrapper = styled.div`
@@ -82,10 +82,13 @@ const IconsWrapper = styled.div`
 const Title = styled.h3`
   color: #262626;
   font-family: Inter;
-  font-size: 48px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  @media (max-width: 1024px) {
+    font-size: 2rem;
+  }
 `;
 const SubTitle = styled.h4`
   color: #1C1F35;

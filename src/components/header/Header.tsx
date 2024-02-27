@@ -161,7 +161,7 @@ const StyledNavbar = styled.div<StyledProps>`
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  height: 78px;
+  height: 64px;
   padding: 15px 0;
   background-color: ${props => props.isfixed ? 'rgba(9, 18, 66, 0.30)' : 'transparent'};
   border-bottom: ${props => props.isfixed ? '1px solid rgba(9, 18, 66, 0.30)' : 'none'};

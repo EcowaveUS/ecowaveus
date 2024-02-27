@@ -193,8 +193,10 @@ const ProccesCardWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 60%
+  width: 60%;
   @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: center;
   }
 `;
 const ProccesGridContainer = styled.div`
@@ -231,7 +233,8 @@ line-height: normal;
 border-left: 4px solid #68BE54 ;
 background: rgba(232, 232, 232, 0.50);
 padding: 3px 9px 3px 8px;
-  margin-bottom: 0.5rem;
+margin-bottom: 0.5rem;
+align-self: flex-start;
 
 `
 const TitleProcces = styled.h3`

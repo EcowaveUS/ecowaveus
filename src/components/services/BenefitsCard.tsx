@@ -34,6 +34,10 @@ const IconCard = styled.div`
   gap: 28px;
   height: 105px;
   width: 383px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
   `;
 const Separator = styled.div`
   border-left: 1px solid #D8D8D8;
@@ -65,4 +69,7 @@ const IconText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;

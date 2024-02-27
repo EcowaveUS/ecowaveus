@@ -208,7 +208,7 @@ const FormWrapper = styled.div`
     width: 70%;
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 const FormInputs = styled.div`

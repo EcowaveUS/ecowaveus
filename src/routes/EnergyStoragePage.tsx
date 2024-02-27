@@ -56,7 +56,7 @@ const Text = styled.p`
   color: var(--White, var(--fore-allways---white, #FFF));
   text-align: center;
   font-family: Roboto;
-  font-size: 24px;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 160%; /* 38.4px */

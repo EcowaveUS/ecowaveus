@@ -1,13 +1,18 @@
-import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import styled from 'styled-components'
 
 export const MediaFooter = () => {
   return (
     <MediaWrapper>
       <Title>Follow Us</Title>
       <NavigationList>
-        <li><FaFacebook /> Facebook</li>
-        <li><FaInstagram /> Instagram</li>
+        <Link to='https://www.facebook.com/profile.php?id=61556131161296' target="_blank">
+          <li><FaFacebook /> Facebook</li>
+        </Link>
+        <Link to='https://www.instagram.com/ecowaveusa/' target="_blank">
+          <li><FaInstagram /> Instagram</li>
+        </Link>
       </NavigationList>
     </MediaWrapper>
   )

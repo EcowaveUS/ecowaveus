@@ -50,7 +50,7 @@ const RebatesWrapper = styled.div<Props>`
   background-image: ${props => props.route === '/energy-storage' ? 'url(images/savings.background01.png)' : 'url(/images/savings-background.png)'};
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: ${props => props.route === '/energy-storage' ? '0 8rem' : '0'};
+  border-radius: ${props => props.route === '/energy-storage' ? '0 0 0 8rem' : '0'};
   background-position: 0;
   background-size: cover;
   padding: 8rem 0;
@@ -64,7 +64,7 @@ const Title = styled.h3`
 
   text-align: center;
   font-family: Inter;
-  font-size: 60px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 700;
   line-height: 110%; /* 66px */
@@ -74,7 +74,7 @@ const Subtitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #FFF));
   text-align: center;
   font-family: Inter;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 500;
   line-height: 110%; /* 35.2px */

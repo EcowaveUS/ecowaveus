@@ -40,6 +40,13 @@ const Container = styled.div<Props>`
   background-size: cover;
   @media (max-width: 1024px) {
     background-position: right;
+    background-size: cover;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    background-position: center;
+    padding: 1rem;
+    height: 140vh;
   }
 `;
 
@@ -62,6 +69,9 @@ const HeaderContainer = styled.div<Props>`
   @media (max-width: 1024px) {
     width: 95%;
     align-items: center;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 1rem;
   }
 `;
 const HeaderContent = styled.div<Props>`
@@ -99,12 +109,13 @@ const Text = styled.p<Props>`
 width: 90%;
 color: var(--White, var(--fore-allways---white, #FFF));
 font-family: Roboto;
-font-size: 24px;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: 160%; /* 38.4px */
   text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 `;
+
 
 const AuxiliarText = styled.p`
   color: var(--fore-allways---white, #FFF);
@@ -117,4 +128,5 @@ const AuxiliarText = styled.p`
   border-left: 4px solid #68BE54 ;
   background: rgba(4, 28, 55, 0.50);
   padding: 3px 9px 3px 8px;
+  align-self: flex-start;
 `;

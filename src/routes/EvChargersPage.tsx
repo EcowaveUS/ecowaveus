@@ -136,7 +136,7 @@ const ProccesComponent = styled.div`
   margin-top: -7rem;
   margin-bottom: 8rem;
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
     margin-top: -3rem;
   }
 `;

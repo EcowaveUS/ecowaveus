@@ -15,9 +15,15 @@ export const ServicesCard: React.FC<CardProps> = ({
   icon,
   url,
 }) => {
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
   return (
     <Link to={url}>
-      <CardContainer>
+      <CardContainer onClick={handleClick}>
         <IconWrapper>
           <Icon src={icon} alt="Protecte cloud" />
         </IconWrapper>
@@ -33,7 +39,7 @@ export const ServicesCard: React.FC<CardProps> = ({
 const CardContainer = styled.div`
   display: flex;
   width: 276px;
-  height: 246px;
+  height: auto;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;

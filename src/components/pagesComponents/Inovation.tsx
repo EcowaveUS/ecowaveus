@@ -1,4 +1,4 @@
-import React,{ } from 'react'
+import React,{ Suspense } from 'react'
 import styled from 'styled-components'
 
 interface Props {
@@ -98,6 +98,7 @@ const Title = styled.h3`
   font-weight: 700;
   line-height: 110%;
   margin-bottom: 32px;
+  align-self: flex-start;
 `
 const Text = styled.p`
   color: rgba(21, 27, 39, 0.87);

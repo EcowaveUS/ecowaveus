@@ -63,6 +63,9 @@ const TransportWrapper = styled.div`
   width: 75%;
   gap: 1.5rem;
   margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 
 `
 const TransportTitle = styled.h1`
@@ -73,6 +76,9 @@ const TransportTitle = styled.h1`
   font-style: normal;
   font-weight: 500;
   line-height: 151.523%; /* 72.731px */
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 const Text = styled.p`
   color: rgba(0, 0, 0, 0.75);
@@ -83,6 +89,9 @@ const Text = styled.p`
   line-height: 151.523%; /* 48.487px */
   word-spacing: 0.1rem;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 
