@@ -1,4 +1,3 @@
-import React,{ Suspense } from 'react'
 import styled from 'styled-components'
 
 interface Props {
