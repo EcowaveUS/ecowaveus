@@ -109,7 +109,6 @@ const CardWrapper = styled(Slider)`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 2rem;
   }
   .slick-slide {
     width: 100%;

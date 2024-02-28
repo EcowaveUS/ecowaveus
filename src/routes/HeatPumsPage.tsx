@@ -144,15 +144,14 @@ const StyledPage = styled(motion.div)`
 `;
 
 const Text = styled.p`
-  align-self: center;
-  color: var(--fore-allways---white, #FFF);
+  color:#fff;
 
   font-family: Roboto;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 100% */
+  line-height: 1.8rem;
   margin-bottom: 1rem;
+  text-align: center;
 `;
 
 const ImageBrackground = styled.div`
@@ -273,7 +272,12 @@ const ListCard = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-  width: 100%;
+  width: 95%;
+  @media (max-width: 764px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 // const LinkWrapper = styled.div`
 //   display: flex;

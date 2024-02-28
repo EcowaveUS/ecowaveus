@@ -16,12 +16,12 @@ export const ServiceBenefits: React.FC<Props> = ({
     {
       id: 1,
       title: 'Increase Home Value',
-      image: '/images/increase-icon.png'
+      image: '/images/energy-icon.png'
     },
     {
       id: 2,
       title: 'Energy Efficient',
-      image: '/images/energy-icon.png'
+      image: '/images/increase-icon.png'
     },
     {
       id: 3,

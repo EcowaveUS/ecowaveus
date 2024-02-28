@@ -53,13 +53,14 @@ padding-top: 100px;
 `;
 
 const Text = styled.p`
-  color: var(--White, var(--fore-allways---white, #FFF));
-  text-align: center;
-  font-family: Roboto;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%; /* 38.4px */
+color:#fff;
+
+font-family: Roboto;
+font-size: 1.5rem;
+font-style: normal;
+line-height: 1.8rem;
+margin-bottom: 1rem;
+text-align: center;
 `;
 const BrandsWrapper = styled.div`
   display: flex;

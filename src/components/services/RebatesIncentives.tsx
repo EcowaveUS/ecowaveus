@@ -46,7 +46,6 @@ const RebatesWrapper = styled.div<Props>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  word-break: break-all;
   background-image: ${props => props.route === '/energy-storage' ? 'url(images/savings.background01.png)' : 'url(/images/savings-background.png)'};
   background-repeat: no-repeat;
   background-position: center center;

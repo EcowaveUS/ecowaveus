@@ -101,13 +101,14 @@ const StyledPage = styled(motion.div)`
 `;
 
 const Text = styled.p`
-  color: var(--fore-allways---white, #FFF);
+  color:#fff;
 
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 151.523%;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 `;
 const ImageBrackground = styled.div`
   width: 100%;
@@ -122,16 +123,17 @@ const ProccesComponent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 80%;
+  align-items: flex-start;
+  width: 75%;
   border-radius: 16px;
-  background-color: #E4ECF6;
+  background-color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 3rem;
   margin-top: -7rem;
   margin-bottom: 8rem;
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 1024px) {
+    width: 90%;
+    align-items: center;
     margin-top: -3rem;
   }
 `;

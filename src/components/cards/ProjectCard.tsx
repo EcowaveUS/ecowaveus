@@ -67,9 +67,9 @@ position: absolute;
 top: 0;
 width: 320px;
 height: 100%;
-width: 100%;
 padding: 0;
 border-radius: 10px;
+overflow: hidden;
 img {
     width: 100%;
     height: 100%;

@@ -45,7 +45,7 @@ const Container = styled.div<Props>`
   @media (max-width: 768px) {
     background-position: center;
     padding: 1rem;
-    height: 140vh;
+    height: 1264px;
   }
 `;
 
@@ -94,7 +94,7 @@ text-align: right;
 font-family: Inter;
 font-size: 4rem;
 font-style: normal;
-font-weight: 800;
+font-weight: 700;
 line-height: 110%; /* 66px */
 text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 @media (max-width: 1024px) {

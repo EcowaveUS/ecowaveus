@@ -37,7 +37,7 @@ const BackgroundComponent = styled.div`
     justify-content: center;
     width: 100%;
     min-height: 904px; /* 100% of the viewport height */
-    background-image: url('/images/energy-solar-station.png');
+    background-image: url('/images/contact-us-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -16rem;
