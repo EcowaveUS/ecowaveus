@@ -6,15 +6,30 @@ import { BenefitsCard } from './BenefitsCard'
 interface Props {
   title: string,
   subTitle?: string,
-  image?: string[],
 }
 
 export const ServiceBenefits: React.FC<Props> = ({
   title,
-  image,
   subTitle
 }) => {
+  const cardInfo = [
+    {
+      id: 1,
+      title: 'Increase Home Value',
+      image: '/images/increase-icon.png'
+    },
+    {
+      id: 2,
+      title: 'Energy Efficient',
+      image: '/images/energy-icon.png'
+    },
+    {
+      id: 3,
+      title: 'Environmentally Friendly',
+      image: '/images/enviromentally-icon.png'
 
+    },
+  ]
   return (
     <BenefitsWrapper>
       <HeaderContainer>
@@ -22,24 +37,16 @@ export const ServiceBenefits: React.FC<Props> = ({
         <Title>{title}</Title>
       </HeaderContainer>
       <IconsWrapper>
-        <div>
-          <BenefitsCard
-            title= 'Increase Home Value'
-            image={image && image[0]}
-          />
-        </div>
-        <div>
-          <BenefitsCard
-            title= 'Energy Efficient'
-            image={image && image[1]}
-          />
-        </div>
-        <div>
-          <BenefitsCard
-            title= 'Environmentally Friendly'
-            image={image && image[2]}
-          />
-        </div>
+        {
+          cardInfo.map((item) => (
+            <BenefitsCard
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              image={item.image}
+            />
+          ))
+        }
       </IconsWrapper>
     </BenefitsWrapper>
   )

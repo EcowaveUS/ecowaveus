@@ -48,11 +48,6 @@ export const EvChargersPage = () => {
       <ServiceBenefits
         title='Benefits of EV-Chargers'
         subTitle= 'Maximize Time and Comfort'
-        image= {[
-          '/images/energy-icon.png',
-          '/images/increase-icon.png',
-          '/images/enviromentally-icon.png'
-        ]}
       />
       <ImageBrackground >
         <StyledImage src="/images/ev-chargers-types-background.png" alt="heatpumps-background" />
