@@ -48,7 +48,7 @@ export const HeatPumsPage = () => {
 
   return (
       <StyledPage
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >

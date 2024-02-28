@@ -37,6 +37,7 @@ const Container = styled.div<Props>`
   height: 100vh; /* 100% of the viewport height */
   background: url(${props => props.backgroundImage}) no-repeat center; /* ver de agregar fixed */
   background-size: cover;
+  background-color: rgba(9, 18, 66, 0.3);
   @media (max-width: 1024px) {
     background-position: right;
     background-size: cover;

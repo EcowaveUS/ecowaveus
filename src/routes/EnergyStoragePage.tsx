@@ -13,7 +13,7 @@ export const EnergyStoragePage = () => {
 
   return (
     <StyledPage
-    initial={{ opacity: 0 }}
+    initial={{ opacity: 0.8 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     >
@@ -33,13 +33,13 @@ export const EnergyStoragePage = () => {
         <Text>25D provides households an uncapped 30 percent tax credit of the installation cost for a battery storage.</Text>
       </RebatesIncentives>
       <BrandsWrapper>
-          <OursBrands
-            images={[
-                '/images/brands/tesla-logo.png',
-                '/images/brands/enphase-logo.png',
-              ]}
-          />
-        </BrandsWrapper>
+        <OursBrands
+          images={[
+              '/images/brands/tesla-logo.png',
+              '/images/brands/enphase-logo.png',
+            ]}
+        />
+      </BrandsWrapper>
   </StyledPage>
 )
 }

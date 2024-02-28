@@ -5,7 +5,7 @@ import { ProjectCards } from '../components/pagesComponents/ProjectCards';
 export const AboutAsPage = () => {
   return (
       <Wrapper
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
@@ -44,6 +44,7 @@ const Container = styled.div`
   background-position: center;
   min-height: 100vh;
   margin-bottom: 5rem;
+  background-color: red;
 `;
 const ImageWrapper = styled.div`
   align-self: center;

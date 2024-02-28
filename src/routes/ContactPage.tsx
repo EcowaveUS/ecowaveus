@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 export const ContactPage = () => {
   return (
       <StyledPage
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
@@ -52,7 +52,7 @@ const WrapperComponents = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 75%;
+  width: 80%;
   background-color: #fff;
   border-radius: 16px;
   padding: 2rem;
