@@ -10,7 +10,7 @@ export const OurSolutions = () => {
       icon: '/images/solution-icon-heat-pumps.png'
     },
     {
-      title: 'EV Chargers',
+      title: 'EV-Chargers',
       content: 'Charge Your EV Faster at Home.',
       url: '/ev-chargers',
       icon: '/images/solution-icon-ev-chargers.png'

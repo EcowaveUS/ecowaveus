@@ -8,7 +8,7 @@ export const NavigationFooter = () => {
       <NavigationList>
         <Link to='/'><li>Home</li></Link>
         <Link to='/heat-pumps'><li>Heat Pumps</li></Link>
-        <Link to='/ev-chargers'><li>Ev Chargers</li></Link>
+        <Link to='/ev-chargers'><li>EV chargers</li></Link>
         <Link to='energy-storage'><li>Energy Storage</li></Link>
         {/* <Link to='contact-us'><li>Contact Us</li></Link> */}
         <Link to='/about-us'><li>About Us</li></Link>

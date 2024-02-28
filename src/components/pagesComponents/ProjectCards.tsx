@@ -1,14 +1,32 @@
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { ProjectCard } from '../cards/ProjectCard';
 import projects from '../../projects.json'
 import Slider from "react-slick";
+import { RightArrow } from '../cards/RightArrow';
+import { LeftArrow } from '../cards/LeftArrow';
 
 export const ProjectCards = () => {
-  const cards = projects.slice(0, 4)
+
+  const sliderRef = useRef<Slider>(null);
+
+  const handlePrevClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
+  const handleNextClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
   var settings = {
     dots: false,
     infinite: true,
-    arrows: false,
+    arrows: true,
+    nextArrow: <RightArrow onClick={handleNextClick} />,
+    prevArrow: <LeftArrow onClick={handlePrevClick}/>,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -22,7 +40,6 @@ export const ProjectCards = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: false
         }
       },
       {
@@ -46,8 +63,8 @@ export const ProjectCards = () => {
   return (
     <Wrapper>
       <Title>Our Projects</Title>
-      <CardWrapper {...settings} >
-        {cards.map((card) => (
+      <CardWrapper ref={sliderRef} {...settings} >
+        {projects.map((card) => (
           <ProjectCard
             key={card.id}
             category={card.category}
@@ -60,6 +77,7 @@ export const ProjectCards = () => {
   )
 }
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,8 +105,10 @@ const CardWrapper = styled(Slider)`
   align-self: center;
   margin-bottom: 5rem;
   .slick-track {
+    z-index: -1;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 2rem;
   }
   .slick-slide {

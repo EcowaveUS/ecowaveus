@@ -12,7 +12,7 @@ export const ListAreaService: React.FC<LocationProps> = ({
   return (
     <>
     <LocationWrapper>
-    <Title>Area Services</Title>
+    <Title>Service Area</Title>
     <AreaWrapper>
       {
         location.map((loc, index) => (

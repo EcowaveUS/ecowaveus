@@ -17,7 +17,7 @@ export const HeatPumsPage = () => {
       id: 1,
       item: '01',
       title: 'Contact Us ',
-      content: 'Contact us to discuss your project and schedule an assessment',
+      content: 'Contact us to discuss your project and schedule an appointment',
     },
     {
       id: 2,

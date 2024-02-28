@@ -7,9 +7,9 @@ export const LocationInfo = () => {
       <Triangles>
         <SvgTriangles />
       </Triangles>
-      <Title>EcoWaveusUs</Title>
+      <Title>EcowaveUS, address</Title>
       <CardContainer>
-        <SubTitles>Adress</SubTitles>
+        <SubTitles>Address</SubTitles>
         <Text>12 Broadway</Text>
         <Text> Beverly, MA 01915</Text>
         <Separator />
@@ -25,7 +25,7 @@ export const LocationInfo = () => {
         <Separator />
       </CardContainer>
       <CardContainer>
-        <SubTitles>Adress</SubTitles>
+        <SubTitles>Address</SubTitles>
         <Text>Monday – Friday: 8:00 AM – 5:00 PM</Text>
         <Text>Saturday – Sunday: Closed</Text>
       </CardContainer>

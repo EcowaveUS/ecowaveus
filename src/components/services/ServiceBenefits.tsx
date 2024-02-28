@@ -62,7 +62,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  width: 30%;
+  width: 28%;
   @media (max-width: 1024px) {
     width: 90%;
   }
@@ -86,6 +86,7 @@ const Title = styled.h3`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  overflow-wrap: normal;
   @media (max-width: 1024px) {
     font-size: 2rem;
   }

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const ReviewsTitle = () => {
   return (
     <TitleContainer>
-      <TitleText>Look for ours reviews</TitleText>
+      <TitleText>Look for our reviews</TitleText>
     </TitleContainer>
   )
 }
