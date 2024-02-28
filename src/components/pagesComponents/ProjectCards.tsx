@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import styled from 'styled-components'
 import { ProjectCard } from '../cards/ProjectCard';
 import projects from '../../projects.json'
