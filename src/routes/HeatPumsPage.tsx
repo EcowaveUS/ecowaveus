@@ -6,7 +6,6 @@ import { OursBrands } from '../components/brands/OursBrands'
 import { ProccesCard } from '../components/services/ProccesCard'
 import { RebatesIncentives } from '../components/services/RebatesIncentives'
 import { MainPageComponent } from '../components/pagesComponents/MainPageComponent'
-import { FaCheck } from "react-icons/fa";
 
 export const HeatPumsPage = () => {
   const location = useLocation();
@@ -240,51 +239,13 @@ const TextProcces = styled.p`
 `
 
 const BrandsWrapper = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-background-color: #FFF;
-`;
-// const LinkText = styled.p`
-//   color: var(--fore-allways---white, #FFF);
-
-//   font-family: Roboto;
-//   font-size: 18px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 24px; /* 133.333% */
-//   text-decoration: underline;
-// `;
-const ListCard = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  width: 95%;
-  @media (max-width: 764px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-// const LinkWrapper = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 1rem;
-//   margin: 24px 0;
-// `;
-const ListWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   width: 100%;
+  background-color: #FFF;
 `;
+
 const IncentivesTitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #FFF));
   text-align: center;
