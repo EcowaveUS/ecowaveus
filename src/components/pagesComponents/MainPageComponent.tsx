@@ -30,6 +30,7 @@ export const MainPageComponent: React.FC<Props> = ({
 
 
 const Container = styled.div<Props>`
+position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +45,9 @@ const Container = styled.div<Props>`
     align-items: ${props => props.pathLocation === '/ev-chargers' ? 'flex-start' : 'center'};
   }
   @media (max-width: 768px) {
+    padding-top: 12rem;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-position: center center;
     height: 1164px;
   }

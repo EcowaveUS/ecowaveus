@@ -42,7 +42,7 @@ export const EvChargersPage = () => {
         title='Charge Faster, Go Further'
         content='We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable.'
         pathLocation={pathLocation}
-        backgroundImage='/images/ev-chargers.png'
+        backgroundImage='/images/ev-charger-background.jpg'
 
       />
       <ServiceBenefits
