@@ -31,31 +31,29 @@ export const MainPageComponent: React.FC<Props> = ({
 
 const Container = styled.div<Props>`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh; /* 100% of the viewport height */
   background: url(${props => props.backgroundImage}) no-repeat center; /* ver de agregar fixed */
   background-size: cover;
-  background-color: rgba(9, 18, 66, 0.3);
+  background-color: #E4ECF6;
+  padding-top: 8rem;
   @media (max-width: 1024px) {
-    background-position: right;
-    background-size: cover;
-    align-items: center;
+    background-position: center center;
+    align-items: ${props => props.pathLocation === '/ev-chargers' ? 'flex-start' : 'center'};
   }
   @media (max-width: 768px) {
-    background-position: center;
-    padding: 1rem;
-    height: 1264px;
+    background-position: center center;
+    height: 1164px;
   }
 `;
 
 const HeaderContainer = styled.div<Props>`
   height: auto;
-  width: ${props => props.pathLocation === '/ev-chargers' ? '50%' : '75%'};
+  width: ${props => props.pathLocation === '/ev-chargers' ? '75%' : '75%'};
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding-bottom: 5rem;
   align-items: ${props =>
     props.pathLocation === '/heat-pumps'
@@ -106,13 +104,13 @@ text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'}
 `;
 
 const Text = styled.p<Props>`
-width: 90%;
-color: var(--White, var(--fore-allways---white, #FFF));
-font-family: Roboto;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: 160%; /* 38.4px */
+  width: 90%;
+  color: var(--White, var(--fore-allways---white, #FFF));
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 38.4px */
   text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'};
 `;
 

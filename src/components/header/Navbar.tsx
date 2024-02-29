@@ -22,7 +22,7 @@ export const Navbar = () => {
       </Link>
       <Separator/>
       <Link to='/heat-pumps'>
-        <li className={activeLink === '/heat-pumps' ? 'active' : ''} onClick={() => handleLinkClick('/heat-pumps')}>Heat pumps</li>
+        <li className={activeLink === '/heat-pumps' ? 'active' : ''} onClick={() => handleLinkClick('/heat-pumps')}>Heat Pumps</li>
       </Link>
       <Separator/>
       <Link to='/ev-chargers'>

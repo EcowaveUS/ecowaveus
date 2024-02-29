@@ -26,6 +26,8 @@ export const EvChargerCard: React.FC<Props> = ({
   )
 }
 const CardWrapper = styled.div`
+  z-index: -1;
+
   display: flex;
   padding: 12px;
   flex-direction: row;

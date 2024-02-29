@@ -21,7 +21,7 @@ export const ServiceBenefits: React.FC<Props> = ({
     {
       id: 2,
       title: 'Energy Efficient',
-      image: '/images/increase-icon.png'
+      image: '/images/increase-icon-jpg.jpg'
     },
     {
       id: 3,

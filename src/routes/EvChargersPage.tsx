@@ -113,6 +113,7 @@ const Text = styled.p`
 const ImageBrackground = styled.div`
   width: 100%;
   height: 100%;
+  z-index: -1;
 `;
 const StyledImage = styled.img`
   width: 100%;
@@ -131,6 +132,7 @@ const ProccesComponent = styled.div`
   padding: 3rem;
   margin-top: -7rem;
   margin-bottom: 8rem;
+  z-index: -1;
   @media (max-width: 1024px) {
     width: 90%;
     align-items: center;

@@ -30,7 +30,7 @@ export const Header = () => {
     },
     {
       title: 'Call Us',
-      content: '(978) 500 - 4081',
+      content: '(978) 500  4081',
       icon: <SvgPhoneIcon />
     }
   ]

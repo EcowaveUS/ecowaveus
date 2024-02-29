@@ -44,7 +44,7 @@ const Container = styled.div`
   background-position: center;
   min-height: 100vh;
   margin-bottom: 5rem;
-  background-color: red;
+  background-color: #E4ECF6;
 `;
 const ImageWrapper = styled.div`
   align-self: center;

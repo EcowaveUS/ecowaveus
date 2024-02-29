@@ -12,12 +12,12 @@ export const ContactPage = () => {
         exit={{ opacity: 0 }}
       >
         <BackgroundComponent>
-          <Title>Contact Us</Title>
         </BackgroundComponent>
-            <WrapperComponents>
-              <LocationInfo />
-              <ContactForm />
-            </WrapperComponents>
+        <Title>Contact Us</Title>
+        <WrapperComponents>
+          <LocationInfo />
+          <ContactForm />
+        </WrapperComponents>
       </StyledPage>
   )
 }
@@ -27,8 +27,8 @@ const StyledPage = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 7rem;
-  background-color: #F1F5F9;
+  margin-bottom: 8rem;
+  padding-top: 9rem;
   `;
 const BackgroundComponent = styled.div`
     display: flex;
@@ -40,11 +40,11 @@ const BackgroundComponent = styled.div`
     background-image: url('/images/contact-us-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: -16rem;
+    margin-bottom: -58rem;
+    z-index: -1;
     @media (max-width: 1024px) {
       background-position: 50% 50%;
       background-size: cover;
-      margin-bottom: -12rem;
     }
   `;
 const WrapperComponents = styled.div`
@@ -54,9 +54,10 @@ const WrapperComponents = styled.div`
   justify-content: space-around;
   width: 80%;
   background-color: #fff;
+  box-shadow: 0px 4px 24px 0px rgba(39, 39, 42, 0.08);
   border-radius: 16px;
   padding: 2rem;
-  z-index: 1;
+  z-index: -1;
   @media (max-width: 1024px) {
     flex-direction: column;
     width: 90%;
@@ -72,7 +73,7 @@ const Title = styled.h1`
   line-height: normal;
   text-transform: capitalize;
   text-align: left;
-  width: 75%;
+  width: 80%;
   margin: 18rem 0 2rem 0;
   @media (max-width: 768px) {
     width: 90%;

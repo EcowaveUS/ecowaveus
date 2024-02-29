@@ -26,6 +26,7 @@ export const ReviewCard: React.FC<ReviewProps> = ({
       <ReviewTitle>{title}</ReviewTitle>
       <TextContainer>
         <Reviewtext>{description}</Reviewtext>
+      </TextContainer>
         <StarsWrapper>
           {
             Array(5).fill('').map((_, index) => {
@@ -36,18 +37,18 @@ export const ReviewCard: React.FC<ReviewProps> = ({
             })
           }
         </StarsWrapper>
-      </TextContainer>
     </CardWrapper>
   )
 }
 const CardWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 350px;
-  min-height: 760px;
-  padding: 40px 32px;
+  max-width: 280px;
+  height: 420px;
+  padding: 1.5rem;
   border-radius: 20px;
   background-color: #FFF;
   @media (max-width: 480px) {
@@ -55,7 +56,11 @@ const CardWrapper = styled.div`
   }
 `;
 const TextContainer = styled.div`
-  height: auto;
+  height: 80%;
+  width: 100%;
+  overflow-y: auto;
+  margin: 1rem 0;
+  padding: 1rem 0;
 `;
 const Nametext = styled.h3`
   color: #343434;
@@ -66,6 +71,8 @@ const Nametext = styled.h3`
   line-height: 28px; /* 140% */
   letter-spacing: -0.05px;
   margin-bottom: 1rem;
+  border-bottom: 2px solid #E5E5E5;
+  width: 100%;
 
 `;
 const DateText = styled.p`
@@ -85,6 +92,7 @@ const ReviewTitle = styled.p`
   font-weight: 500;
   line-height: 24px; /* 133.333% */
   letter-spacing: -0.045px;
+
 `;
 const Reviewtext = styled.p`
   color: #343434;
@@ -99,6 +107,8 @@ const Reviewtext = styled.p`
   }
 `;
 const StarsWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

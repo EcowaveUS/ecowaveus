@@ -22,7 +22,7 @@ export const OursBrands: React.FC<Props> = ({
     cssEase: "linear",
     responsive: [
       {
-        breakpoint: 1025,
+        breakpoint: 1026,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -82,6 +82,7 @@ const ImageWrapper = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 const Image = styled.img`

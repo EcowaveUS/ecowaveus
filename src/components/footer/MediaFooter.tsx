@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { SiGooglemybusiness } from "react-icons/si";
 import styled from 'styled-components'
 
 export const MediaFooter = () => {
@@ -12,6 +13,9 @@ export const MediaFooter = () => {
         </Link>
         <Link to='https://www.instagram.com/ecowaveusa/' target="_blank">
           <li><FaInstagram /> Instagram</li>
+        </Link>
+        <Link to='https://www.google.com/maps/place/EcowaveUS/@42.5475613,-70.8816505,17z/data=!3m1!4b1!4m6!3m5!1s0xa1b4c068ba47d44d:0x5eb7465ffb257e3f!8m2!3d42.5475613!4d-70.8790702!16s%2Fg%2F11vs7t7rjj?entry=ttu' target="_blank">
+          <li><SiGooglemybusiness /> Google Businnes</li>
         </Link>
       </NavigationList>
     </MediaWrapper>

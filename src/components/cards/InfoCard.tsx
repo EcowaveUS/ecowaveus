@@ -42,9 +42,9 @@ const Title = styled.p`
 const Text = styled.p<StyledProps>`
   color: #1C1F35;
   font-family: Inter;
-  font-size: ${({ content }) => content === '(978) 500 - 4081' ? '18px' : '14px'};
+  font-size: ${({ content }) => content === '(978) 500  4081' ? '18px' : '14px'};
   font-style: normal;
-  font-weight: ${({ content }) => content === '(978) 500 - 4081' ? '700' : '500'};
+  font-weight: ${({ content }) => content === '(978) 500  4081' ? '700' : '500'};
   line-height: 135.023%; /* 18.903px */
   text-decoration: ${({ content }) => content === 'info@ecowaveus.com' ? 'underline' : 'none'};
 `

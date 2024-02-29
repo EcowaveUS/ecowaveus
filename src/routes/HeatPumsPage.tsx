@@ -5,8 +5,8 @@ import { ServiceBenefits } from '../components/services/ServiceBenefits'
 import { OursBrands } from '../components/brands/OursBrands'
 import { ProccesCard } from '../components/services/ProccesCard'
 import { RebatesIncentives } from '../components/services/RebatesIncentives'
-import { SvgFeedBackPositive } from '../components/svg/SvgFeedBackPositive'
 import { MainPageComponent } from '../components/pagesComponents/MainPageComponent'
+import { FaCheck } from "react-icons/fa";
 
 export const HeatPumsPage = () => {
   const location = useLocation();
@@ -101,22 +101,12 @@ export const HeatPumsPage = () => {
               </LinkText>
             </Link>
           </LinkWrapper> */}
-          <ListWrapper>
-            <ListCard>
-              <SvgFeedBackPositive
-                width='44px'
-                height='44px'
-              />
-              <Text>Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling (up to $10,000).</Text>
-            </ListCard>
-            <ListCard>
-              <SvgFeedBackPositive
-                width='74px'
-                height='74px'
-              />
-              <Text>Partial-home rebates are offered based on equipment or outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to supplement a new heat pump system ($1,250 per ton, up to $10,000).</Text>
-            </ListCard>
-          </ListWrapper>
+            <Text>
+              Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling (up to $10,000).
+            </Text>
+            <Text>
+              Partial-home rebates are offered based on equipment or outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to        supplement a new heat pump system ($1,250 per ton, up to $10,000).
+            </Text>
           <IncentivesTitle>Federal Incentives</IncentivesTitle>
           <Text>Federal tax credit 30% of the cost of the installation up to $2,000</Text>
         </RebatesIncentives>
