@@ -5,7 +5,7 @@
       "firstName": "Jennifer ",
       "lastName": "F.",
       "title": "EcowaveUS over Delivered",
-      "description":"EcowaveUS over delivered! From day one interaction to the final product refinement, our experience with EcowaveUS was top notch. They are the gold standard for business. Kind, responsive, proactive, informative, collaborative and delivers high quality service and product.They supported us not only converting our entire home heating system, they listened to us and held our hand through the Mass Save Rebate/ Loan process. That was invaluable.Working with them is a NO BRAINER!"
+      "description":"EcoWave over delivered! From day one interaction to the final product refinement, our experience with EcoWave was top notch. They are the gold standard for business. Kind, responsive, proactive, informative, collaborative and delivers high quality service and product.\n\nThey supported us not only converting our entire home heating system, they listened to us and held our hand through the Mass Save Rebate/ Loan process. That was invaluable.\n\nWorking with them is a NO BRAINER!"
   },
   {
       "id": 2,
@@ -13,30 +13,86 @@
       "firstName": "Joe ",
       "lastName": "L.",
       "title": "Highly recommended",
-      "description":"Ecowave provides top-notch service. We had a heat-pump system installed, and Alejo and his team worked closely with us through the entire process, including helping us wade through the byzantine MassSave bureacracy.They really and truly care about the mission of their service and are dedicated to delivering the highest quality results.We actually ran into a problem with our equipment, and Alejo and his team relentlessly pursued a solution, and now everything's running perfectly.Highly recommended!"
+      "description":"Ecowave provides top-notch service. We had a heat-pump system installed, and Alejo and his team worked closely with us through the entire process, including helping us wade through the byzantine MassSave bureaucracy.\n\nThey really and truly care about the mission of their service and are dedicated to delivering the highest quality results.\n\nWe actually ran into a problem with our equipment, and Alejo and his team relentlessly pursued a solution, and now everything's running perfectly.\n\nHighly recommended!"
   },
   {
       "id": 3,
       "score": 5,
       "firstName": "Scott  ",
       "lastName": "F.",
-      "title": "I`d recommend EcowaveUS in a heartbeat",
-      "description":"I can't say enough good things about our experience with EcowaveUS. When our gas burner left us in the cold literally in the middle of winter, Alejo and his amazing team were our knights in shining armor. They sped up our project so we could get our house warm again, and every step of the way, they were absolute stars. I'd recommend EcowaveUS in a heartbeat to anyone looking to make their home more energy-efficient. Alejo and his crew are not just experts in what they do; they're also incredibly committed to making sure their customers are happy and well taken care of. Big thanks to the EcowaveUS team for going above and beyond for us!"
+      "title": "",
+      "description":"I can't say enough good things about our experience with ecoWAVE. When our gas burner left us in the cold literally in the middle of winter, Alejo and his amazing team were our knights in shining armor. They sped up our project so we could get our house warm again, and every step of the way, they were absolute stars.\n\nThe way they communicated with us was top-notch. Our install wasn't the most straightforward, but Alejo and his team went over all the possible options with us, making everything super clear. They were patient, knowledgeable, and made sure we felt comfortable and in the loop at all times.\n\nBut they didn't stop at the heat pump. They also installed an EV charger for us and lent their expertise to a bunch of other electrical projects we had around the house. Their versatility and attention to detail were impressive.\n\nI'd recommend ecoWAVE in a heartbeat to anyone looking to make their home more energy-efficient. Alejo and his crew are not just experts in what they do; they're also incredibly committed to making sure their customers are happy and well taken care of. Big thanks to the ecoWAVE team for going above and beyond for us!"
   },
   {
     "id": 4,
     "score": 5,
     "firstName": "Paul  ",
     "lastName": "D.",
-    "title": "I`d recommend EcowaveUS in a heartbeat",
-    "description":"Our installation went beautifully.  The five-unit system works nicely, and I am happy with its efficiency."
+    "title": "",
+    "description":"Our installation went beautifully. The five-unit system works nicely, and I am happy with its efficiency."
   },
   {
     "id": 5,
     "score": 5,
     "firstName": "Joe  ",
     "lastName": "D.",
-    "title": "I`d recommend EcowaveUS in a heartbeat",
+    "title": "",
     "description":"Had an awesome experience with Ecowave! Our split system is working great."
+  },
+  {
+    "id": 6,
+    "score": 5,
+    "firstName": "Norman  ",
+    "lastName": "S.",
+    "title": "",
+    "description":"Great experience. They showed up on time, worked quickly, did a neat job, and were very helpful thru the whole process. Very carefull and worked hard to make the installation as neat as possible."
+  },
+  {
+    "id": 7,
+    "score": 5,
+    "firstName": "Kathleen  ",
+    "lastName": "E.",
+    "title": "",
+    "description":"I recently contacted Alejo of Ecowave to service, or replace, my non- functioning heat pump. He was knowledgeable, competent, prompt and honest...a true professional! Highly recommended!!!"
+  },
+  {
+    "id": 8,
+    "score": 5,
+    "firstName": "Tom  ",
+    "lastName": "K.",
+    "title": "",
+    "description":"We have used EcoWave in our commercial real estate business for the following services:\n\n- 6 whole home air source heat pumps installations\n\n- 4 solar installations\n\n- 2 EV charging stations\n\n- 200amp new electrical service\n\n- The workmanship is excellent. Installing heat pumps attractively as a retrofit is an art form. EcoWave's team minimizes the exterior line feeds that are prominently unattractive in some installations.\n\n- Installations are done on time\n\n- Installations are neatly finished\n- Proposals are transparent and comprehensive\n\n- Invoicing is timely and compliant with Massave rebate requirements\n\n- Service and maintenance of installations are thorough, reliable and timely"
+  },
+  {
+    "id": 9,
+    "score": 5,
+    "firstName": "Matt  ",
+    "lastName": "F.",
+    "title": "",
+    "description":"We had some questions about what system would be best for our new home and Alejo was able to help us choose the best option. Pricing was slightly below some of the other quotes we received. We were able to have a quick turnaround from quote approval to installation. The installation itself looks fantastic and Alejo worked us through the entire system once it was complete."
+  },
+  {
+    "id": 10,
+    "score": 5,
+    "firstName": "Beau  ",
+    "lastName": "B.",
+    "title": "",
+    "description":"We had Ecowave install a heat pump and an EV charger. Couldn't recommend them more! Alejo is thorough and professional. I appreciated that he took the time to talk through options up front, explained the pros and cons of each, and that he was happy to answer all of the questions we had along the way. I felt complete trust in their work and the systems have worked like a charm since they were installed!"
+  },
+  {
+    "id": 11,
+    "score": 5,
+    "firstName": "Will ",
+    "lastName": "B.",
+    "title": "",
+    "description":"Our experience working with Ecowave and Alejo for our heat pump installation was incredible, and we'd recommend him enthusiastically. Great communication, thoughtful attention to all project details, including installation -- and extremely helpful in terms of thinking through all the considerations that go into a project like this. Everything worked out so well!"
+  },
+  {
+    "id": 12,
+    "score": 5,
+    "firstName": "Roger",
+    "lastName": "T.",
+    "title": "",
+    "description":"I'm pleased with the installation of my mini split.  It was expertly installed last fall and is easy and very efficient to operate.  In fact, it replaced the much more expensive propane heater that has heated the house for the past 10 years.\n\nRoger Tyler\n\nEssex, MA"
   }
 ]

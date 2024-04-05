@@ -24,7 +24,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 935px; /* 100% of the viewport height */
-  background-image: url('/images/wind-farm.png');
+  background-image: url('/images/wind-farm.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 `;

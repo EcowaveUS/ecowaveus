@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 import styled from 'styled-components'
+import './ReviewCard.css'
 
 interface ReviewProps {
   firstName: string;
@@ -20,10 +21,12 @@ export const ReviewCard: React.FC<ReviewProps> = ({
   createdAt
 }) => {
   return (
-    <CardWrapper>
+    <CardWrapper className='scrollable-cards'>
       <Nametext>{`${firstName} ${lastName}`}</Nametext>
       <DateText>{createdAt}</DateText>
-      <ReviewTitle>{title}</ReviewTitle>
+      {
+        title.length > 0 && <ReviewTitle>{title}</ReviewTitle>
+      }
       <TextContainer>
         <Reviewtext>{description}</Reviewtext>
       </TextContainer>
@@ -40,6 +43,7 @@ export const ReviewCard: React.FC<ReviewProps> = ({
     </CardWrapper>
   )
 }
+
 const CardWrapper = styled.div`
   position: relative;
   display: flex;
@@ -51,16 +55,20 @@ const CardWrapper = styled.div`
   padding: 1.5rem;
   border-radius: 20px;
   background-color: #FFF;
+  whiteSpace: pre-line;
   @media (max-width: 480px) {
     width: 95%;
   }
 `;
+
 const TextContainer = styled.div`
   height: 80%;
   width: 100%;
   overflow-y: auto;
   margin: 1rem 0;
   padding: 1rem 0;
+  whiteSpace: pre-line;
+
 `;
 const Nametext = styled.h3`
   color: #343434;
@@ -102,6 +110,9 @@ const Reviewtext = styled.p`
   font-weight: 400;
   line-height: 24px; /* 120% */
   letter-spacing: -0.05px;
+
+  white-space: pre-wrap;
+  
   @media (max-width: 480px) {
     font-size: 16px;
   }

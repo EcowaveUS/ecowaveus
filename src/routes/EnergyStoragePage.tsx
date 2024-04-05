@@ -21,7 +21,7 @@ export const EnergyStoragePage = () => {
         title='Storing Power, Empowering Lives'
         content='Unlock the full potential of sustainable living with our energy storage systems, designed specifically for your home. At EcowaveUS, we believe that every homeowner deserves access to affordable and reliable energy storage solutions. Our energy storage systems not only provide a safety net against power outages, but also allow you to make the most of your solar installations, storing excess energy for use any time.'
         pathLocation={pathLocation}
-        backgroundImage='/images/energy-storage01.png'
+        backgroundImage='/images/energy-storage01.jpg'
       />
       <StorageAdvantages />
       <RebatesIncentives route={pathLocation} >

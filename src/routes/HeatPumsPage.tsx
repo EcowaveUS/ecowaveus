@@ -56,7 +56,7 @@ export const HeatPumsPage = () => {
           subtitle='Efficient and Eco-Friendly:'
           content='A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas.'
           pathLocation={pathLocation}
-          backgroundImage='/images/heat-pumps.png'
+          backgroundImage='/images/heat-pumps.jpg'
         />
         <ServiceBenefits
           title='Benefits of Heat Pumps'
