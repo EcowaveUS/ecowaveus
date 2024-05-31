@@ -1,29 +1,47 @@
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { ProjectCards } from '../components/pagesComponents/ProjectCards';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { ProjectCards } from "../components/pagesComponents/ProjectCards";
+import { Helmet } from "react-helmet";
 
 export const AboutAsPage = () => {
   return (
-      <Wrapper
-        initial={{ opacity: 0.8 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <Container>
-          <ImageWrapper>
-            <Logo src="/images/logo-header.png" alt="solar panels" />
-          </ImageWrapper>
-        </Container>
-        <TransportWrapper>
-          <TransportTitle>RIDING THE WAVE OF ECO-INNOVATION</TransportTitle>
-          <Text>
-            At EcowaveUS, we specialize in providing sustainable energy solutions such as heat pumps, EV chargers, solar power systems, and energy storage, all designed to maximize energy efficiency and savings. Our experienced team is dedicated to delivering personalized, eco-friendly solutions for homes and businesses that not only reduce their environmental impact but also offer significant cost savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come.
-          </Text>
-        </TransportWrapper>
-        <ProjectCards />
-      </Wrapper>
-  )
-}
+    <Wrapper
+      initial={{ opacity: 0.8 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Helmet>
+        <title>
+          About Us | Renewable Energy and Solar Power in Beverly, MA
+        </title>
+        <meta
+          name="description"
+          content="Learn how we provide clean energy solutions for homes and businesses throughout the North Shore! We can help you maximize energy efficiency and savings."
+        />
+      </Helmet>
+      <Container>
+        <ImageWrapper>
+          <Logo src="/images/logo-header.png" alt="solar panels" />
+        </ImageWrapper>
+      </Container>
+      <TransportWrapper>
+        <TransportTitle>RIDING THE WAVE OF ECO-INNOVATION</TransportTitle>
+        <Text>
+          At EcowaveUS, we specialize in providing sustainable energy solutions
+          such as heat pumps, EV chargers, solar power systems, and energy
+          storage, all designed to maximize energy efficiency and savings. Our
+          experienced team is dedicated to delivering personalized, eco-friendly
+          solutions for homes and businesses that not only reduce their
+          environmental impact but also offer significant cost savings. We are
+          passionate about leading the clean energy transition and empowering
+          our clients with the tools and knowledge to create a cleaner, greener,
+          and more cost-effective future for generations to come.
+        </Text>
+      </TransportWrapper>
+      <ProjectCards />
+    </Wrapper>
+  );
+};
 const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -38,13 +56,13 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url('/images/solar-panels.jpg');
+  background-image: url("/images/solar-panels.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   margin-bottom: 5rem;
-  background-color: #E4ECF6;
+  background-color: #e4ecf6;
 `;
 const ImageWrapper = styled.div`
   align-self: center;
@@ -67,8 +85,7 @@ const TransportWrapper = styled.div`
   @media (max-width: 768px) {
     width: 80%;
   }
-
-`
+`;
 const TransportTitle = styled.h1`
   color: #343434;
   text-align: center;
@@ -94,6 +111,3 @@ const Text = styled.p`
     font-size: 1.5rem;
   }
 `;
-
-
-

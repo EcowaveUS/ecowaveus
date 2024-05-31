@@ -5,6 +5,7 @@ import { Footer } from "./components/footer/Footer"
 import { ScrollToTop } from "./components/buttons/ScrollToTop"
 
 import './App.css'
+import Roadmap from "./components/Roadmap"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Header/>
           <AnimateRoutes />
           <ScrollToTop  />
+          <Roadmap />
         <Footer/>
       </Router>
   )
