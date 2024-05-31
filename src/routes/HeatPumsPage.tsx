@@ -1,11 +1,12 @@
-import { useLocation } from 'react-router-dom'
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { ServiceBenefits } from '../components/services/ServiceBenefits'
-import { OursBrands } from '../components/brands/OursBrands'
-import { ProccesCard } from '../components/services/ProccesCard'
-import { RebatesIncentives } from '../components/services/RebatesIncentives'
-import { MainPageComponent } from '../components/pagesComponents/MainPageComponent'
+import { useLocation } from "react-router-dom";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { ServiceBenefits } from "../components/services/ServiceBenefits";
+import { OursBrands } from "../components/brands/OursBrands";
+import { ProccesCard } from "../components/services/ProccesCard";
+import { RebatesIncentives } from "../components/services/RebatesIncentives";
+import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
+import { Helmet } from "react-helmet";
 
 export const HeatPumsPage = () => {
   const location = useLocation();
@@ -14,83 +15,92 @@ export const HeatPumsPage = () => {
   const stepByStepList = [
     {
       id: 1,
-      item: '01',
-      title: 'Contact Us ',
-      content: 'Contact us to discuss your project and schedule an appointment',
+      item: "01",
+      title: "Contact Us ",
+      content: "Contact us to discuss your project and schedule an appointment",
     },
     {
       id: 2,
-      item: '02',
-      title: 'Get a FREE Estimate',
-      content: 'Receive a free estimate and information on rebates and financing (including Mass Save 0% HEAT loan if applicable) - We will inform you and help you through the process',
+      item: "02",
+      title: "Get a FREE Estimate",
+      content:
+        "Receive a free estimate and information on rebates and financing (including Mass Save 0% HEAT loan if applicable) - We will inform you and help you through the process",
     },
     {
       id: 3,
-      item: '03',
-      title: 'Contract and Schedule',
-      content: 'Sign the contract and schedule the installation',
+      item: "03",
+      title: "Contract and Schedule",
+      content: "Sign the contract and schedule the installation",
     },
     {
       id: 4,
-      item: '04',
-      title: 'Complete Installation',
-      content: 'Proceed with the heat pump installation ',
+      item: "04",
+      title: "Complete Installation",
+      content: "Proceed with the heat pump installation ",
     },
     {
       id: 5,
-      item: '05',
-      title: 'Rebates and Incentives Forms',
+      item: "05",
+      title: "Rebates and Incentives Forms",
       content: "We will help you to apply for rebates - ",
-      span: 'Enjoy your new system!'
+      span: "Enjoy your new system!",
     },
-  ]
+  ];
 
   return (
-      <StyledPage
-        initial={{ opacity: 0.8 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <MainPageComponent
-          title='Efficient Heating and Cooling for Your Home'
-          subtitle='Efficient and Eco-Friendly:'
-          content='A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas.'
-          pathLocation={pathLocation}
-          backgroundImage='/images/heat-pumps.jpg'
+    <StyledPage
+      initial={{ opacity: 0.8 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Helmet>
+        <title>Electric Heat Pumps near Peabody, MA | Heat Pump Services</title>
+        <meta
+          name="description"
+          content="Searching for an electric heat pump installation nearby? We provide renewable energy and heat pumps for sale. Call EcoWave at 978-500-4081 and request a quote."
         />
-        <ServiceBenefits
-          title='Benefits of Heat Pumps'
-          subTitle= 'Maximizing Comfort and Efficiency'
+      </Helmet>
+      <MainPageComponent
+        title="Efficient Heating and Cooling for Your Home"
+        subtitle="Efficient and Eco-Friendly:"
+        content="A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas."
+        pathLocation={pathLocation}
+        backgroundImage="/images/heat-pumps.jpg"
+      />
+      <ServiceBenefits
+        title="Benefits of Heat Pumps"
+        subTitle="Maximizing Comfort and Efficiency"
+      />
+      <ImageBrackground>
+        <StyledImage
+          src="/images/heat-pumps-list-background.png"
+          alt="heatpumps-background"
         />
-        <ImageBrackground >
-          <StyledImage src="/images/heat-pumps-list-background.png" alt="heatpumps-background" />
-        </ImageBrackground>
-        <ProccesComponent>
-          <SubTitle>Installation Guide</SubTitle>
-          <TitleProcces>Installation Process</TitleProcces>
-          <TextProcces>We make it easy for you!</TextProcces>
-          <ProccesGridContainer>
-            <ProccesCardWrapper>
-              {
-                stepByStepList.map((item) => (
-                  <ProccesCard
-                    key={item.id}
-                    id={item.id}
-                    title={item.title}
-                    content={item.content}
-                    item={item.item}
-                    span={item.span}
-                  />
-                ))
-              }
-            </ProccesCardWrapper>
-            <ImageWrapper>
-              <Image src="/images/heat-pumps-list01.png" alt="heat pumpp" />
-            </ImageWrapper>
-          </ProccesGridContainer>
-        </ProccesComponent>
-        <RebatesIncentives>
-          {/* <LinkWrapper>
+      </ImageBrackground>
+      <ProccesComponent>
+        <SubTitle>Installation Guide</SubTitle>
+        <TitleProcces>Installation Process</TitleProcces>
+        <TextProcces>We make it easy for you!</TextProcces>
+        <ProccesGridContainer>
+          <ProccesCardWrapper>
+            {stepByStepList.map((item) => (
+              <ProccesCard
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                content={item.content}
+                item={item.item}
+                span={item.span}
+              />
+            ))}
+          </ProccesCardWrapper>
+          <ImageWrapper>
+            <Image src="/images/heat-pumps-list01.png" alt="heat pumpp" />
+          </ImageWrapper>
+        </ProccesGridContainer>
+      </ProccesComponent>
+      <RebatesIncentives>
+        {/* <LinkWrapper>
             <Text>
               Check if your city is eligible:
             </Text>
@@ -100,28 +110,34 @@ export const HeatPumsPage = () => {
               </LinkText>
             </Link>
           </LinkWrapper> */}
-            <Text>
-              Whole-home rebates are available to customers who install heat pumps as the sole source of heating and cooling (up to $10,000).
-            </Text>
-            <Text>
-              Partial-home rebates are offered based on equipment or outdoor unit (tonnage) to customers who plan to keep an existing boiler or furnace in place to        supplement a new heat pump system ($1,250 per ton, up to $10,000).
-            </Text>
-          <IncentivesTitle>Federal Incentives</IncentivesTitle>
-          <Text>Federal tax credit 30% of the cost of the installation up to $2,000</Text>
-        </RebatesIncentives>
-        <BrandsWrapper>
-          <OursBrands
-            images={[
-                '/images/brands/mitsubishi-logo.png',
-                '/images/brands/fujitsu-logo.png',
-                '/images/brands/daikin-logo.png',
-                '/images/brands/bosch-logo.png',
-              ]}
-          />
-        </BrandsWrapper>
-      </StyledPage>
-  )
-}
+        <Text>
+          Whole-home rebates are available to customers who install heat pumps
+          as the sole source of heating and cooling (up to $10,000).
+        </Text>
+        <Text>
+          Partial-home rebates are offered based on equipment or outdoor unit
+          (tonnage) to customers who plan to keep an existing boiler or furnace
+          in place to supplement a new heat pump system ($1,250 per ton, up to
+          $10,000).
+        </Text>
+        <IncentivesTitle>Federal Incentives</IncentivesTitle>
+        <Text>
+          Federal tax credit 30% of the cost of the installation up to $2,000
+        </Text>
+      </RebatesIncentives>
+      <BrandsWrapper>
+        <OursBrands
+          images={[
+            "/images/brands/mitsubishi-logo.png",
+            "/images/brands/fujitsu-logo.png",
+            "/images/brands/daikin-logo.png",
+            "/images/brands/bosch-logo.png",
+          ]}
+        />
+      </BrandsWrapper>
+    </StyledPage>
+  );
+};
 
 const StyledPage = styled(motion.div)`
   display: flex;
@@ -133,7 +149,7 @@ const StyledPage = styled(motion.div)`
 `;
 
 const Text = styled.p`
-  color:#fff;
+  color: #fff;
 
   font-family: Roboto;
   font-size: 1.5rem;
@@ -206,48 +222,47 @@ const Image = styled.img`
   border-radius: 16px;
 `;
 const SubTitle = styled.p`
-color: #1C1F35;
+  color: #1c1f35;
 
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-border-left: 4px solid #68BE54 ;
-background: rgba(232, 232, 232, 0.50);
-padding: 3px 9px 3px 8px;
-margin-bottom: 0.5rem;
-align-self: flex-start;
-
-`
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-left: 4px solid #68be54;
+  background: rgba(232, 232, 232, 0.5);
+  padding: 3px 9px 3px 8px;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+`;
 const TitleProcces = styled.h3`
-  color: #1C1F35;
+  color: #1c1f35;
   font-family: Inter;
   font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 0.5rem;
-`
+`;
 const TextProcces = styled.p`
-  color: #666C89;
+  color: #666c89;
   font-family: Roboto;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 151.523%; /* 36.365px */
-`
+`;
 
 const BrandsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
 `;
 
 const IncentivesTitle = styled.h5`
-  color: var(--White, var(--fore-allways---white, #FFF));
+  color: var(--White, var(--fore-allways---white, #fff));
   text-align: center;
   font-family: Inter;
   font-size: 32px;
