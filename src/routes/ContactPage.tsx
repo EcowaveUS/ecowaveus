@@ -1,26 +1,34 @@
-import styled from 'styled-components'
-import { ContactForm } from '../components/forms/ContactForm'
-import { LocationInfo } from '../components/forms/LocationInfo'
-import { motion } from 'framer-motion'
-
+import styled from "styled-components";
+import { ContactForm } from "../components/forms/ContactForm";
+import { LocationInfo } from "../components/forms/LocationInfo";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 export const ContactPage = () => {
   return (
-      <StyledPage
-        initial={{ opacity: 0.8 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <BackgroundComponent>
-        </BackgroundComponent>
-        <Title>Contact Us</Title>
-        <WrapperComponents>
-          <LocationInfo />
-          <ContactForm />
-        </WrapperComponents>
-      </StyledPage>
-  )
-}
+    <StyledPage
+      initial={{ opacity: 0.8 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Helmet>
+        <title>
+          Contact ecoWave | Solar Power and Renewable Energy Services
+        </title>
+        <meta
+          name="description"
+          content="Our solar installation company in Beverly specializes in energy storage, solar panels, EV charging station installations, and more. Find out how you can save!"
+        />
+      </Helmet>
+      <BackgroundComponent></BackgroundComponent>
+      <Title>Contact Us</Title>
+      <WrapperComponents>
+        <LocationInfo />
+        <ContactForm />
+      </WrapperComponents>
+    </StyledPage>
+  );
+};
 
 const StyledPage = styled(motion.div)`
   display: flex;
@@ -29,24 +37,24 @@ const StyledPage = styled(motion.div)`
   justify-content: center;
   margin-bottom: 8rem;
   padding-top: 9rem;
-  `;
+`;
 const BackgroundComponent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 904px; /* 100% of the viewport height */
-    background-image: url('/images/contact-us-background.jpg');
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 904px; /* 100% of the viewport height */
+  background-image: url("/images/contact-us-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -58rem;
+  z-index: -1;
+  @media (max-width: 1024px) {
+    background-position: 50% 50%;
     background-size: cover;
-    margin-bottom: -58rem;
-    z-index: -1;
-    @media (max-width: 1024px) {
-      background-position: 50% 50%;
-      background-size: cover;
-    }
-  `;
+  }
+`;
 const WrapperComponents = styled.div`
   display: flex;
   flex-direction: row;
@@ -63,7 +71,7 @@ const WrapperComponents = styled.div`
   }
 `;
 const Title = styled.h1`
-  color: var(--fore-allways---white, #FFF);
+  color: var(--fore-allways---white, #fff);
 
   font-family: Inter;
   font-size: 3rem;
