@@ -176,7 +176,8 @@ export const ContactForm = () => {
             placeholder="How can we help?"
             style={{
               width: '100%',
-              height: '210px',
+              minHeight:'210px',
+              maxHeight: '210px',
               borderRadius: '11px',
               padding: '16px',
               border: '1px solid #D0D0D0',
