@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Navigate, Route, Routes, useLocation } from "react-router-dom"
 import { HomePage } from '../../routes/HomePage'
 import { AboutAsPage } from '../../routes/AboutAsPage'
 import { ContactPage } from '../../routes/ContactPage'
@@ -18,6 +18,7 @@ export const AnimateRoutes = () => {
         <Route path='/heat-pumps' element={<HeatPumsPage />} />
         <Route path='/ev-chargers' element={<EvChargersPage />} />
         <Route path='/energy-storage' element={<EnergyStoragePage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>
   )
