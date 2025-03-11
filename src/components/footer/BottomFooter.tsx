@@ -6,11 +6,15 @@ export const BottomFooter = () => {
   return (
     <Box sx={{
       display: 'flex',
+      flexDirection: {
+        xs: 'column',
+        sm: 'row',
+      },
       justifyContent: 'center',
       alignItems: 'center',
       margin: '5rem',
     }}>
-      <Typography fontFamily={'InterMedium'}>
+      <Typography fontFamily={'InterMedium'} textAlign={'center'}>
         © 2021 Ecowave. All Rights Reserved.
       </Typography>
       <Button
