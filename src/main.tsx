@@ -1,11 +1,15 @@
-import { createRoot } from 'react-dom/client'
-import React from 'react'
-import App from './App.tsx'
-import './index.css'
+import App from "./App.tsx";
+import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./theme/themeConfig.ts";
+import "./fonts.css";
+import "./index.css";
 
-
-createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <ThemeProvider theme={theme}>
       <App />
-    </React.StrictMode>
-)
+    </ThemeProvider>
+  </StrictMode>
+);
