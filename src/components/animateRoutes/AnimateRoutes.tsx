@@ -5,6 +5,8 @@ import { ContactPage } from '../../routes/ContactPage'
 import { HeatPumsPage } from '../../routes/HeatPumsPage'
 import { EvChargersPage } from '../../routes/EvChargersPage'
 import { EnergyStoragePage } from "../../routes/EnergyStoragePage"
+import { PrivacyPolicyPage } from "../../routes/PrivacyPolicyPage"
+import { TermsAndConditionsPage } from "../../routes/TermsAndConditionsPage"
 import { AnimatePresence } from 'framer-motion'
 
 export const AnimateRoutes = () => {
@@ -18,6 +20,8 @@ export const AnimateRoutes = () => {
         <Route path='/heat-pumps' element={<HeatPumsPage />} />
         <Route path='/ev-chargers' element={<EvChargersPage />} />
         <Route path='/energy-storage' element={<EnergyStoragePage />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+        <Route path='/terms-and-conditions' element={<TermsAndConditionsPage/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>

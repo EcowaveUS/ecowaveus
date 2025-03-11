@@ -1,27 +1,54 @@
-import styled from 'styled-components'
+import { Box, Button, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 export const BottomFooter = () => {
+  const navigate = useNavigate()
   return (
-    <BottomWrapper>
-      <Bottomtext>
+    <Box sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      margin: '5rem',
+    }}>
+      <Typography fontFamily={'InterMedium'}>
         © 2021 Ecowave. All Rights Reserved.
-      </Bottomtext>
-    </BottomWrapper>
+      </Typography>
+      <Button
+        onClick={() => navigate('/privacy-policy')}
+        variant={'text'}
+        sx={{
+          textTransform: 'none',
+          fontFamily: 'InterMedium',
+          fontSize: '0.8rem',
+          textDecoration: 'underline',
+          '&:hover': {
+            textDecoration: 'underline',
+            backgroundColor: 'transparent',
+            color: '#ababab',
+          },
+        }}
+      >
+        Privacy Policy
+      </Button>
+      <Button
+        onClick={() => navigate('/terms-and-conditions')}
+        variant={'text'}
+        sx={{
+          textTransform: 'none',
+          fontFamily: 'InterMedium',
+          fontSize: '0.8rem',
+          textDecoration: 'underline',
+          '&:hover': {
+            textDecoration: 'underline',
+            backgroundColor: 'transparent',
+            color: '#ababab',
+          },
+        }}
+      >
+        Terms and Conditions
+      </Button>
+    </Box>
   )
 }
-const BottomWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5rem;
-`;
-const Bottomtext = styled.p`
-color: #343434;
-text-align: center;
-font-family: Be Vietnam Pro;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-opacity: 0.6;
-`;
+
+

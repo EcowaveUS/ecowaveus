@@ -6,10 +6,13 @@ import { ScrollToTop } from "./components/buttons/ScrollToTop"
 
 import './App.css'
 import Roadmap from "./components/Roadmap"
+import { ThemeProvider } from "styled-components"
+import { theme } from "./theme/themeConfig"
 
 function App() {
 
   return (
+    <ThemeProvider theme={theme}>
       <Router>
         <Header/>
           <AnimateRoutes />
@@ -17,6 +20,7 @@ function App() {
           <Roadmap />
         <Footer/>
       </Router>
+    </ThemeProvider>
   )
 }
 
