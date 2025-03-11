@@ -19,7 +19,10 @@ export const PrivacyPolicyPage = () => {
           justifyContent: "flex-start",
           alignItems: "flex-start",
           backgroundColor: "#003B76",
-          margin: "0 8rem",
+          margin: {
+            xs: "0 2rem",
+            md: "0 8rem",
+          },
           borderRadius: "10px",
         }}
       >
@@ -52,7 +55,7 @@ export const PrivacyPolicyPage = () => {
             padding: "1.5rem",
           }}
         >
-          <Typography variant="h6">Information We Collect</Typography>
+          <Typography variant="h6" >Information We Collect</Typography>
           <Typography variant="body1" color="#ababab">
             <span style={{ fontWeight: "bold", margin: 0 }}>
               Personal Information:{" "}
@@ -83,7 +86,7 @@ export const PrivacyPolicyPage = () => {
             padding: "1.5rem",
           }}
         >
-          <Typography variant="h6">How We Use Your Information</Typography>
+          <Typography variant="h6" >How We Use Your Information</Typography>
           <Typography variant="body1" color="#ababab">
             We use your personal information to deliver our services, respond to
             inquiries, and provide customer support.
