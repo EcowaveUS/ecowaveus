@@ -19,7 +19,10 @@ export const TermsAndConditionsPage = () => {
           justifyContent: "flex-start",
           alignItems: "flex-start",
           backgroundColor: "#003B76",
-          margin: "0 8rem",
+          margin: {
+            xs: "0 2rem",
+            md: "0 8rem",
+          },
           borderRadius: "10px",
         }}
       >
