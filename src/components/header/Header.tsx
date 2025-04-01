@@ -4,7 +4,7 @@ import { LogoNavbar } from "./LogoNavbar";
 import { Navbar } from "./Navbar";
 import { SideBar } from "./SideBar";
 import { Box } from "@mui/material";
-import { CommonButton } from "../shared/common/CommonButton";
+import { CommonButton } from "../common/CommonButton";
 import { CardInfo } from "../../constants/data";
 
 export const Header = () => {
@@ -82,7 +82,7 @@ export const Header = () => {
                 "@media (max-width:1024px)": {
                   display: "none",
                 },
-                
+
               }}
             >
               {CardInfo.map((card, index) => {
