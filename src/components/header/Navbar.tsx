@@ -30,7 +30,7 @@ export const Navbar = () => {
       </Link>
       <Separator/>
       <Link to='/energy-storage'>
-        <li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Energy Storage</li>
+        <li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Home Batteries</li>
       </Link>
       <Separator/>
       <Link to='/about-us'>
