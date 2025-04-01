@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import { Box, Typography } from "@mui/material";
+import styled from "styled-components";
 
 interface Props {
   title: string;
@@ -8,43 +9,45 @@ interface Props {
 interface StyledProps {
   content?: string;
 }
-export const InfoCard: React.FC<Props> = ({
-  title,
-  content,
-  icon
-}) => {
+export const InfoCard: React.FC<Props> = ({ title, content, icon }) => {
   return (
-    <CardWrapper>
-      {icon}
-      <div>
-        <Title>{title}</Title>
-        <Text content={content}>{content}</Text>
-      </div>
-    </CardWrapper>
-  )
-}
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "14px",
 
-const CardWrapper = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 14px;
-`
-const Title = styled.p`
-  color: #1C1F35;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 135.023%; /* 18.903px */
-`
+      }}
+    >
+      {icon}
+      <Box>
+        <Typography
+          variant="body2"
+          component={"p"}
+          sx={{
+            color: "#1c1f35",
+            fontFamily: "Inter",
+            fontSize: "14px",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "135.023%", /* 18.903px */
+          }}
+        >
+          {title}
+        </Typography>
+        <Text content={content}>{content}</Text>
+      </Box>
+    </Box>
+  );
+};
+
 
 const Text = styled.p<StyledProps>`
-  color: #1C1F35;
+  color: #1c1f35;
   font-family: Inter;
-  font-size: ${({ content }) => content === '(978) 500  4081' ? '18px' : '14px'};
+  font-size: 12px;
   font-style: normal;
-  font-weight: ${({ content }) => content === '(978) 500  4081' ? '700' : '500'};
+  font-weight: 400;
   line-height: 135.023%; /* 18.903px */
-  text-decoration: ${({ content }) => content === 'info@ecowaveus.com' ? 'underline' : 'none'};
-`
+`;

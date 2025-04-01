@@ -53,7 +53,7 @@ const StyledLinks = styled.div`
   li {
     white-space: nowrap;
     list-style: none;
-    font-size: 1rem;
+    font-size: 16px;
     color: #fff;
     text-align: left;
     font-family: Inter;
