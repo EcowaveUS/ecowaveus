@@ -30,7 +30,7 @@ export const Navbar = () => {
       </Link>
       <Separator/>
       <Link to='/energy-storage'>
-        <li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Energy Storage</li>
+        <li className={activeLink === '/energy-storage' ? 'active' : ''} onClick={() => handleLinkClick('/energy-storage')}>Home Batteries</li>
       </Link>
       <Separator/>
       <Link to='/about-us'>
@@ -53,7 +53,7 @@ const StyledLinks = styled.div`
   li {
     white-space: nowrap;
     list-style: none;
-    font-size: 1rem;
+    font-size: 16px;
     color: #fff;
     text-align: left;
     font-family: Inter;

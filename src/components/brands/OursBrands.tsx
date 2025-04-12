@@ -9,7 +9,7 @@ interface Props {
 export const OursBrands: React.FC<Props> = ({
   images
 }) => {
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -62,8 +62,8 @@ export const OursBrands: React.FC<Props> = ({
 };
 
 const StyledSlider = styled(Slider)`
-  width: 75%;
-  margin: 2rem 1rem;
+  width: 100%;
+  margin: 2rem 0;
   overflow-x: hidden;
   .slick-track {
     display: flex;
@@ -86,8 +86,8 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 80%;
-  aspect-ratio: 3/1;
+  width: 70%;
+  aspect-ratio: 4/1;
   object-fit: contain;
   mix-blend-mode: color-burn;
   filter: grayscale(100%) saturate(80%);

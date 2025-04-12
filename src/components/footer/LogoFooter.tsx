@@ -1,47 +1,24 @@
-import styled from 'styled-components'
+import { Box, Typography } from "@mui/material";
+import logoFooter from "../../assets/images/logo-footer.png";
 
 export const LogoFooter = () => {
   return (
-    <FooterWrapper>
-      <Logo src='/images/logo-footer.png'/>
-      <ContactText>
-        Riding The Wave of Eco-Innovation
-      </ContactText>
-    </FooterWrapper>
-  )
-}
-const FooterWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  gap: 1rem;
-  @media (max-width: 768px) {
-    align-items: center;
-  }
-`;
-const Logo = styled.img`
-  width: 237px;
-  height: 56px;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
-`;
-const ContactText = styled.p`
-  color: #343434;
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        justifyContent: "center",
+        gap: 3,
+        padding: '2rem 0 0 0',
+        height: "auto",
+      }}
+    >
+      <img src={logoFooter} style={{ width: "183px", height: "43" }} />
+      <Typography variant="body2" color="#79C966">
+        Riding the wave of Eco-Innovation
+      </Typography>
+    </Box>
+  );
+};
 
-  font-family: Be Vietnam Pro;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px; /* 200% */
-  text-align: left;
-  @media (max-width: 768px) {
-    text-align: center;
-    width: 100%;
-  }
-`;

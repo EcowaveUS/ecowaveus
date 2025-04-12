@@ -10,18 +10,47 @@ export const theme = createTheme({
     },
   },
   typography: {
+    h1: {
+      fontFamily: 'InterExtraBold',
+      fontSize: '76px',
+      lineHeight: 1.3,
+      letterSpacing: '0.02em',
+    },
+    h3: {
+      fontFamily: 'InterExtraBold',
+      fontSize: '48px',
+      lineHeight: '58px',
+      color:'#252529'
+    },
+    h4: {
+      fontFamily: 'InterMedium',
+      fontSize: '24px',
+      lineHeight: '40px',
+      color:'#252529'
+    },
+    h5: {
+      fontFamily: 'InterExtraBold',
+      fontSize: '20px',
+      lineHeight: '28px',
+      color:'#252529'
+    },
     h6:{
       fontFamily: 'InterMedium',
     },
     body1:{
-      fontFamily: 'InterMedium',
-      fontSize: '0.95rem',
+      fontFamily: 'InterLight',
+      fontSize: '20px',
+    },
+    body2:{
+      fontFamily: 'InterLight',
+      fontSize: '16px',
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
+          textTransform: "none",
         },
       },
     },
