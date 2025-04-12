@@ -1,16 +1,21 @@
-import styled from 'styled-components'
+import { Typography } from "@mui/material";
+import styled from "styled-components";
 
 export const FooterInfo = () => {
   return (
     <InfoWrapper>
-        <Title>Hours</Title>
-        <InfoText>Mon - Fri 8:00 AM - 5:00 PM <br/> Sat - Sun Closed</InfoText>
-        <Title>Local Office</Title>
-        <InfoText>22 Broadway,</InfoText>
-        <InfoText>Beverly, MA, 01915</InfoText>
+      <Typography variant="body2" color="#ffffff" fontWeight={700}>
+        Hours
+      </Typography>
+      <InfoText>
+        Mon - Fri 8:00 AM - 5:00 PM <br /> Sat - Sun Closed
+      </InfoText>
+      <Title>Local Office</Title>
+      <InfoText>22 Broadway,</InfoText>
+      <InfoText>Beverly, MA, 01915</InfoText>
     </InfoWrapper>
-  )
-}
+  );
+};
 const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,7 +26,7 @@ const InfoWrapper = styled.div`
   }
 `;
 const Title = styled.h5`
-  color: #343434;
+  color: #fff;
 
   font-family: Be Vietnam Pro;
   font-size: 18px;
@@ -30,9 +35,9 @@ const Title = styled.h5`
   line-height: 20px;
 `;
 const InfoText = styled.p`
-  color: #343434;
+  color: #fff;
 
-  font-family: Be Vietnam Pro;
+  font-family: InterLight;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

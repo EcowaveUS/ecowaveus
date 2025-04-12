@@ -26,7 +26,12 @@ export const CommonButton: React.FC<CommonButtonProps> = ({
       size={size}
       disabled={disable}
       onClick={onClick}
-      sx={sx}
+      sx={{
+        ...sx,
+        '&:hover': {
+          background: 'inherit',
+      }
+    }}
     >
       {children}
     </Button>

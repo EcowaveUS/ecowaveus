@@ -1,21 +1,39 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
-export const NavigationFooter = () => {
+interface NavProps {
+  title: string;
+  links: {
+    text: string;
+    url: string;
+  }[];
+}
+
+export const NavigationFooter: React.FC<NavProps> = ({ title, links }) => {
   return (
     <NavigationWrapper>
-      <Title>Navigation</Title>
+      <Typography
+        variant="body2"
+        color="#ffffff"
+        fontWeight={700}
+      >
+          {title}</Typography>
       <NavigationList>
-        <Link to='/'><li>Home</li></Link>
-        <Link to='/heat-pumps'><li>Heat Pumps</li></Link>
-        <Link to='/ev-chargers'><li>EV chargers</li></Link>
-        <Link to='energy-storage'><li>Energy Storage</li></Link>
-        {/* <Link to='contact-us'><li>Contact Us</li></Link> */}
-        <Link to='/about-us'><li>About Us</li></Link>
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link
+              to={link.url}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              {link.text}
+            </Link>
+          </li>
+        ))}
       </NavigationList>
     </NavigationWrapper>
-  )
-}
+  );
+};
 const NavigationWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -26,15 +44,7 @@ const NavigationWrapper = styled.div`
     align-items: center;
   }
 `;
-const Title = styled.h5`
-  color: #343434;
 
-  font-family: Be Vietnam Pro;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-`;
 const NavigationList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -43,16 +53,15 @@ const NavigationList = styled.ul`
   margin: 0;
   gap: 12px;
   li {
-      color: #343434;
-      font-family: Be Vietnam Pro;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px; /* 125% */
-      opacity: 0.8;
+    color: #ffffff;
+    font-family: InterLight;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    opacity: 0.8;
   }
   @media (max-width: 768px) {
     align-items: center;
   }
 `;
-

@@ -1,26 +1,21 @@
 import { LocationInfo } from './LocationInfo'
-import styled from 'styled-components'
 import { ContactForm } from './ContactForm'
+import { Grid } from '@mui/material'
 
 export const ContactComponent = () => {
   return (
-    <WrapperComponent>
+    <Grid item xs={12} md={10} lg={8} xl={6}
+      sx={{
+        display:'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap: '3rem',
+        margin: '5rem 0',
+      }}
+    >
       <LocationInfo />
       <ContactForm />
-    </WrapperComponent>
+    </Grid>
   )
 }
 
-const WrapperComponent = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  width: 75%;
-  margin: 10rem auto;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-  }
-  `;

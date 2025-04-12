@@ -1,69 +1,68 @@
-import { StandardButton } from '../buttons/StandardButton';
-import styled from 'styled-components'
+import { Box, Typography } from "@mui/material";
+import { CommonButton } from "../common/CommonButton";
+import { useNavigate } from "react-router";
 
 export const SwitchFuture = () => {
+  const navigate = useNavigate();
   return (
-    <Container>
-      <HeaderContainer>
-        <Title>Riding the wave of eco-innovation</Title>
-        <Text>
-          Our priority is to help you find the most cost-effective and eco-friendly solutions for your home or business
-        </Text>
-        <StandardButton
-          title='Schedule now!'
-        />
-      </HeaderContainer>
-    </Container>
-  )
-}
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 935px; /* 100% of the viewport height */
-  background-image: url('/images/wind-farm.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-const HeaderContainer = styled.div`
-  width:90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 150px;
-`;
-
-const Title = styled.h1`
-  color: #FFF;
-  text-align: center;
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 81px;
-  letter-spacing: 0.32px;
-  text-transform: capitalize;
-  width: 100%;
-`;
-
-const Text = styled.p`
-  width: 45%;
-  color: #FFF;
-  text-align: center;
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: -0.408px;
-  margin-bottom: 24px;
-  @media (max-width: 1024px) {
-    width: 80%;
-  }
-`;
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        backgroundImage: `url("/images/wind-farm.jpg")`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        aspectRatio: "16/7",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          gap: "1rem",
+        }}
+      >
+        <Typography sx={{ textAlign: "center" }} variant="h1">
+          Riding the wave off eco- <br />
+          innovation
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            width: "45%",
+            textAlign: "center",
+            marginBottom: "24px",
+            color: "#fff",
+          }}
+        >
+          Affordable solutions tailored for savings and efficiency.
+        </Typography>
+        <CommonButton
+          onClick={() => navigate("/contact-us")}
+          sx={{
+            backgroundColor: "#198400",
+            padding: "12px 20px",
+            color: "#fff",
+            fontFamily: "Inter",
+            fontSize: "14px",
+            fontWeight: 600,
+            lineHeight: "20px",
+            letterSpacing: "1%",
+            borderRadius: "50px",
+          }}
+        >
+          Schedule now
+        </CommonButton>
+      </Box>
+    </Box>
+  );
+};
