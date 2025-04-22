@@ -84,7 +84,7 @@ export const Header = () => {
             flexDirection: "column",
             alignItems: "center",
             width: "100%",
-            backgroundColor: "rgba(9, 18, 66, 0.30)",
+            backgroundColor: "#E4ECF6",
           }}
         >
           <Box

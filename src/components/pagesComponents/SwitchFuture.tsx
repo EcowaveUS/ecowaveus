@@ -26,6 +26,7 @@ export const SwitchFuture = () => {
           padding: "2rem 1.5rem",
           justifyContent: "flex-start",
           alignItems: "flex-start",
+          marginTop: "64px",
         },
       }}
     >

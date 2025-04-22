@@ -10,6 +10,11 @@ import { ContactForm } from "../components/forms/ContactForm";
 import { Expertise } from "../components/pagesComponents/Expertise";
 import { Reviews } from "../components/reviews/Reviews";
 
+import email from "../assets/icons/Email.png";
+import phone from "../assets/icons/Phone.png";
+import mark from "../assets/icons/Mark.png";
+import waveVector from "../assets/images/wave-vector.png";
+
 export const HomePage = () => {
   const Grid = motion(MuiGrid);
   return (
@@ -43,9 +48,9 @@ export const HomePage = () => {
             width: "100%",
             padding: "5rem 0",
             zIndex: 2,
-            '@media (max-width: 768px)': {
-              flexDirection: 'column',
-              padding: '2rem 0',
+            "@media (max-width: 768px)": {
+              flexDirection: "column",
+              padding: "2rem 0",
             },
           }}
         >
@@ -67,8 +72,12 @@ export const HomePage = () => {
                 flexDirection: "column",
                 alignItems: "flex-start",
                 justifyContent: "center",
-                width: "100%",
-                padding: '0 2.5rem'
+                width: "60%",
+                padding: "0 2.5rem",
+                '@media (max-width: 768px)': {
+                  width: "100%",
+                  padding: "0 2rem",
+                },
               }}
             >
               <Typography variant="body2" fontWeight="bold" mb={0.5}>
@@ -77,81 +86,81 @@ export const HomePage = () => {
               <Typography variant="h3" fontWeight="bold" mb={0.5}>
                 Get in touch <br /> today
               </Typography>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "2rem",
-                margin: "2rem 0",
-              }}
-            >
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  gap: "2rem",
+                  margin: "2rem 0",
                 }}
               >
-                <img
-                  src="src/assets/icons/Email.png"
-                  alt="phone"
-                  style={{ width: "24px", height: "auto" }}
-                />
-                <Typography variant="body2" fontWeight="bold">
-                  Info@ecowaveus.com
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
-                }}
-              >
-                <img
-                  src="src/assets/icons/Phone.png"
-                  alt="phone"
-                  style={{ width: "24px", height: "auto" }}
-                />
-                <Typography variant="body2" fontWeight="bold">
-                  (978) 500 4081
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
-                }}
-              >
-                <img
-                  src="src/assets/icons/Mark.png"
-                  alt="phone"
-                  style={{ width: "24px", height: "auto" }}
-                />
-                <Typography variant="body2" fontWeight="bold">
-                  Monday -Friday 8:00 AM - 5:00 PM
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  gap: "1rem",
-                }}
-              >
-                <img
-                  src="src/assets/icons/Mark.png"
-                  alt="phone"
-                  style={{ width: "24px", height: "auto" }}
-                />
-                <Typography variant="body2" fontWeight="bold">
-                  22 Broadway <br />
-                  Beverly, MA 01915
-                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                  }}
+                >
+                  <img
+                    src={email}
+                    alt="phone"
+                    style={{ width: "24px", height: "auto" }}
+                  />
+                  <Typography variant="body2" fontWeight="bold">
+                    Info@ecowaveus.com
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                  }}
+                >
+                  <img
+                    src={phone}
+                    alt="phone"
+                    style={{ width: "24px", height: "auto" }}
+                  />
+                  <Typography variant="body2" fontWeight="bold">
+                    (978) 500 4081
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                  }}
+                >
+                  <img
+                    src={mark}
+                    alt="phone"
+                    style={{ width: "24px", height: "auto" }}
+                  />
+                  <Typography variant="body2" fontWeight="bold">
+                    Monday -Friday 8:00 AM - 5:00 PM
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    gap: "1rem",
+                  }}
+                >
+                  <img
+                    src={mark}
+                    alt="phone"
+                    style={{ width: "24px", height: "auto" }}
+                  />
+                  <Typography variant="body2" fontWeight="bold">
+                    22 Broadway <br />
+                    Beverly, MA 01915
+                  </Typography>
+                </Box>
               </Box>
             </Box>
           </Grid>
@@ -177,7 +186,7 @@ export const HomePage = () => {
                 padding: "0 5rem",
                 gap: "1rem",
                 width: "100%",
-                '@media (max-width: 768px)': {
+                "@media (max-width: 768px)": {
                   padding: "0 1rem",
                 },
               }}
@@ -186,7 +195,7 @@ export const HomePage = () => {
             </Box>
           </Grid>
           <img
-            src="src/assets/images/wave-vector.png"
+            src={waveVector}
             alt="ecoWave Logo"
             style={{
               width: "100%",

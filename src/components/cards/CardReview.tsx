@@ -1,4 +1,6 @@
 import { Box, Typography } from "@mui/material";
+import markIcon from "../../assets/icons/marksicon.png";
+import profileImg from "../../assets/images/profile-img.png";
 
 interface CardReviewProps {
   firstName: string;
@@ -35,7 +37,7 @@ const CardReview: React.FC<CardReviewProps> = ({
       >
         <img
           style={{ width: "100%", height: "100%" }}
-          src="src/assets/icons/marksicon.png"
+          src={markIcon}
           alt="Review"
         />
       </Box>
@@ -61,7 +63,7 @@ const CardReview: React.FC<CardReviewProps> = ({
         }}
       >
         <Box>
-          <img src="src/assets/images/profile-img.png" alt="User" />
+          <img src={profileImg} alt="User" />
         </Box>
         <Box>
           <Typography variant="body1" fontWeight="700" color="#2C2C2C">

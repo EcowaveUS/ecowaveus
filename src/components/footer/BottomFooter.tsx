@@ -1,6 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router";
 
+import iconFacebook from "../../assets/icons/Icon-facebook.png";
+import iconInstagram from "../../assets/icons/Icon-ig.png";
+
 export const BottomFooter = () => {
   const navigate = useNavigate();
   return (
@@ -80,6 +83,7 @@ export const BottomFooter = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: "1rem",
+          marginRight: "3rem",
         }}
       >
         <Box
@@ -89,7 +93,7 @@ export const BottomFooter = () => {
           }}
         >
           <img
-            src="/src/assets/icons/Icon-ig.png"
+            src={iconInstagram}
             alt="logo"
             style={{ width: "100%", height: "auto" }}
           />
@@ -101,7 +105,7 @@ export const BottomFooter = () => {
           }}
         >
           <img
-            src="/src/assets/icons/Icon-facebook.png"
+            src={iconFacebook}
             alt="logo"
             style={{ width: "100%", height: "auto" }}
           />
@@ -113,7 +117,7 @@ export const BottomFooter = () => {
           }}
         >
           <img
-            src="/src/assets/icons/Icon-facebook.png"
+            src={iconInstagram}
             alt="logo"
             style={{ width: "100%", height: "auto" }}
           />

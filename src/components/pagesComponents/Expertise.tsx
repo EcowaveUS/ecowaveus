@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import useWindowWidth from "../../custom-hooks/useWindowWidth";
+import gridColImg  from '../../assets/images/grid-col-img.png'
 
 export const Expertise = () => {
   const windowWidth = useWindowWidth();
@@ -53,7 +54,7 @@ export const Expertise = () => {
         >
           <Box
             component="img"
-            src="/src/assets/images/grid-col-img.png"
+            src={gridColImg}
             alt="Descriptive alt"
             sx={{
               width: "100%",
