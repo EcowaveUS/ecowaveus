@@ -5,6 +5,7 @@ import useWindowWidth from "../../custom-hooks/useWindowWidth";
 import Slider from "react-slick";
 import styled from "styled-components";
 
+import blackVector  from "/src/assets/images/wave-vector-black.png";
 
 export const OurSolutions = () => {
   const windowWidth = useWindowWidth();
@@ -125,7 +126,7 @@ export const OurSolutions = () => {
         >
           <img
             style={{ width: "100%", height: "auto" }}
-            src="src/assets/images/wave-vector-black.png"
+            src={blackVector}
             alt="Group"
           />
         </Box>
