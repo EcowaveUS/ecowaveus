@@ -2,11 +2,25 @@ import { LogoFooter } from "./LogoFooter";
 import { NavigationFooter } from "./NavigationFooter";
 import { FooterInfo } from "./FooterInfo";
 import { BottomFooter } from "./BottomFooter";
-import { Box, Divider } from "@mui/material";
+import { Box, Theme, useMediaQuery } from "@mui/material";
 
 export const Footer = () => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box component="footer" sx={{ backgroundColor: "#022241" }}>
+      <Box
+        component="div"
+        className="container"
+        paddingTop={isDesktop ? "64px" : "48px"}
+        paddingBottom={"64px"}
+        display={"flex"}
+        alignItems={"start"}
+        justifyContent={"space-between"}
+        gap={"64px"}
+        flexDirection={isDesktop ? "row" : "column"}
+      >
+        <LogoFooter />
+      </Box>
       <BottomFooter />
     </Box>
     // <Box

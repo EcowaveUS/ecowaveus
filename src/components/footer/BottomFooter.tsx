@@ -16,12 +16,11 @@ export const BottomFooter = () => {
         component="div"
         height="1px"
         bgcolor={isDesktop ? "#FFFFFF0D" : "#D8D8DE"}
-        width="100%"
         marginX={isDesktop ? "0" : "20px"}
       ></Box>
       <Box
         component="div"
-        className="container1"
+        className="container"
         paddingTop={isDesktop ? "32px" : "24px"}
         paddingBottom={isDesktop ? "32px" : "48px"}
         display="flex"
