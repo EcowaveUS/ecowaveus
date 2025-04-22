@@ -8,6 +8,10 @@ import useWindowWidth from "../../custom-hooks/useWindowWidth";
 import { SideBar } from "./SideBar";
 import { useState } from "react";
 
+import actionsClose from "/src/assets/icons/Actions-close.png";
+import actionsPhone from "/src/assets/icons/Actions-phone.png";
+import actions from "/src/assets/icons/Actions.png";
+
 export const Header = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -39,7 +43,7 @@ export const Header = () => {
               }}
             >
               <img
-                src="/src/assets//icons/Actions.png"
+                src={actions}
                 alt="logo"
                 style={{ width: "100%", height: "100%" }}
               />
@@ -54,7 +58,7 @@ export const Header = () => {
               }}
             >
               <img
-                src="/src/assets/icons/Actions-phone.png"
+                src={actionsPhone}
                 alt="logo"
                 style={{ width: "100%", height: "100%" }}
               />
@@ -69,7 +73,7 @@ export const Header = () => {
               }}
             >
               <img
-                src="/src/assets/icons/Actions-close.png"
+                src={actionsClose}
                 alt="logo"
                 style={{ width: "100%", height: "100%" }}
               />
