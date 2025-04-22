@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import markIcon from "../../assets/icons/marksicon.png";
+import markIcon from "../../assets/icons/marksIcon.png";
 import profileImg from "../../assets/images/profile-img.png";
 
 interface CardReviewProps {
