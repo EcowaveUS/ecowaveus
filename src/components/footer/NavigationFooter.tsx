@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { Box, Collapse, Theme, Typography, useMediaQuery } from "@mui/material";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography } from "@mui/material";
 
 interface NavProps {
   title: string;
@@ -8,60 +8,50 @@ interface NavProps {
     text: string;
     url: string;
   }[];
+  clickable?: boolean;
 }
 
-export const NavigationFooter: React.FC<NavProps> = ({ title, links }) => {
+export const NavigationFooter: React.FC<NavProps> = ({
+  title,
+  links,
+  clickable = false,
+}) => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  const [open, setOpen] = useState(true);
   return (
-    <NavigationWrapper>
+    <Box
+      component={"div"}
+      display={"flex"}
+      flexDirection={"column"}
+      gap={isDesktop ? "24px" : "16px"}
+    >
       <Typography
-        variant="body2"
+        fontSize={"14px"}
         color="#ffffff"
         fontWeight={700}
+        sx={{ cursor: isDesktop ? "default" : "pointer" }}
+        onClick={() => setOpen(!open)}
       >
-          {title}</Typography>
-      <NavigationList>
-        {links.map((link, index) => (
-          <li key={index}>
-            <Link
-              to={link.url}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              {link.text}
-            </Link>
-          </li>
-        ))}
-      </NavigationList>
-    </NavigationWrapper>
+        {title}
+      </Typography>
+      <Collapse in={isDesktop || open} timeout="auto" unmountOnExit>
+        <Box
+          component={"div"}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={"16px"}
+        >
+          {links.map((link, index) => (
+            <Box key={index} fontSize={"14px"} color="#ffffff" fontWeight={400}>
+              {clickable ? (
+                <Link to={link.url}>{link.text}</Link>
+              ) : (
+                <div dangerouslySetInnerHTML={{ __html: link.text }} />
+              )}
+            </Box>
+          ))}
+        </Box>
+      </Collapse>
+    </Box>
   );
 };
-const NavigationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 18px;
-  @media (max-width: 768px) {
-    align-items: center;
-  }
-`;
-
-const NavigationList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 12px;
-  li {
-    color: #ffffff;
-    font-family: InterLight;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 125% */
-    opacity: 0.8;
-  }
-  @media (max-width: 768px) {
-    align-items: center;
-  }
-`;
