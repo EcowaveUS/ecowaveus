@@ -32,7 +32,7 @@ export const HomePage = () => {
         exit={{ opacity: 0 }}
         transition={{ ease: "easeOut", duration: 1 }}
       >
-        <SwitchFuture />
+        {/* <SwitchFuture />
         <OursBrands images={brandImages} />
         <Inovation
           title="Expertise at Great Prices"
@@ -55,7 +55,7 @@ export const HomePage = () => {
         />
         <OurSolutions />
         <ReviewsComponent />
-        <ContactComponent />
+        <ContactComponent /> */}
         <Areas />
       </Grid>
     </>
