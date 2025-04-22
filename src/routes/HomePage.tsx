@@ -1,17 +1,17 @@
 import { OursBrands } from "../components/brands/OursBrands";
-import { Inovation } from "../components/pagesComponents/Inovation";
 import { SwitchFuture } from "../components/pagesComponents/SwitchFuture";
 import { motion } from "framer-motion";
 import { OurSolutions } from "../components/pagesComponents/OurSolutions";
-import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
-import { ContactComponent } from "../components/forms/ContactComponent";
 import { Helmet } from "react-helmet";
 import { brandImages } from "../constants/data";
 import Areas from "../components/AreaServices/Areas";
-import { Grid as MuiGrid } from "@mui/material";
+import { Box, Grid as MuiGrid, Typography } from "@mui/material";
+import { ContactForm } from "../components/forms/ContactForm";
+import { Expertise } from "../components/pagesComponents/Expertise";
+import { Reviews } from "../components/reviews/Reviews";
 
 export const HomePage = () => {
-  const Grid = motion((MuiGrid));
+  const Grid = motion(MuiGrid);
   return (
     <>
       <Helmet>
@@ -23,10 +23,6 @@ export const HomePage = () => {
       </Helmet>
       <Grid
         container
-        spacing={0}
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
         initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -34,28 +30,175 @@ export const HomePage = () => {
       >
         <SwitchFuture />
         <OursBrands images={brandImages} />
-        <Inovation
-          title="Expertise at Great Prices"
-          content="At EcowaveUS, we specialize in providing sustainable energy solutions, including heat pumps, EV chargers, energy storage and solar panels - all designed to maximize energy efficiency and savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come."
-          images={[
-            {
-              img: "/images/innovation-02.png",
-              title: "ev-charger",
-            },
-            {
-              img: "/images/innovation-05.png",
-              title: "heat-pumps",
-            },
-            {
-              img: "/images/innovation-06.png",
-              title: "energy-storage",
-            },
-          ]}
-          logo="/images/logo-ecowave.png"
-        />
+        <Expertise />
         <OurSolutions />
-        <ReviewsComponent />
-        <ContactComponent />
+        <Reviews />
+        <Grid
+          sx={{
+            position: "relative",
+            backgroundColor: "#F5F5F5",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            width: "100%",
+            padding: "5rem 0",
+            zIndex: 2,
+            '@media (max-width: 768px)': {
+              flexDirection: 'column',
+              padding: '2rem 0',
+            },
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            xl={6}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "center",
+                width: "100%",
+                padding: '0 2.5rem'
+              }}
+            >
+              <Typography variant="body2" fontWeight="bold" mb={0.5}>
+                Our Services
+              </Typography>
+              <Typography variant="h3" fontWeight="bold" mb={0.5}>
+                Get in touch <br /> today
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                gap: "2rem",
+                margin: "2rem 0",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <img
+                  src="src/assets/icons/Email.png"
+                  alt="phone"
+                  style={{ width: "24px", height: "auto" }}
+                />
+                <Typography variant="body2" fontWeight="bold">
+                  Info@ecowaveus.com
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <img
+                  src="src/assets/icons/Phone.png"
+                  alt="phone"
+                  style={{ width: "24px", height: "auto" }}
+                />
+                <Typography variant="body2" fontWeight="bold">
+                  (978) 500 4081
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <img
+                  src="src/assets/icons/Mark.png"
+                  alt="phone"
+                  style={{ width: "24px", height: "auto" }}
+                />
+                <Typography variant="body2" fontWeight="bold">
+                  Monday -Friday 8:00 AM - 5:00 PM
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <img
+                  src="src/assets/icons/Mark.png"
+                  alt="phone"
+                  style={{ width: "24px", height: "auto" }}
+                />
+                <Typography variant="body2" fontWeight="bold">
+                  22 Broadway <br />
+                  Beverly, MA 01915
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            lg={6}
+            xl={6}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              width: "100%",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "0 5rem",
+                gap: "1rem",
+                width: "100%",
+                '@media (max-width: 768px)': {
+                  padding: "0 1rem",
+                },
+              }}
+            >
+              <ContactForm />
+            </Box>
+          </Grid>
+          <img
+            src="src/assets/images/wave-vector.png"
+            alt="ecoWave Logo"
+            style={{
+              width: "100%",
+              aspectRatio: "19 / 5",
+              objectFit: "cover",
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              zIndex: -1,
+            }}
+          />
+        </Grid>
         <Areas />
       </Grid>
     </>

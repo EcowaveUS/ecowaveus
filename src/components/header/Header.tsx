@@ -1,75 +1,99 @@
-import { useEffect, useState } from "react";
 import { InfoCard } from "../cards/InfoCard";
 import { LogoNavbar } from "./LogoNavbar";
 import { Navbar } from "./Navbar";
-import { SideBar } from "./SideBar";
 import { Box } from "@mui/material";
-import { CommonButton } from "../common/CommonButton";
 import { CardInfo } from "../../constants/data";
+import useScrollPosition from "../../custom-hooks/UseScrollPosition";
+import useWindowWidth from "../../custom-hooks/useWindowWidth";
+import { SideBar } from "./SideBar";
+import { useState } from "react";
 
 export const Header = () => {
-  const [sidebar, setsidebar] = useState(false);
-  const showSidebar = () => setsidebar(!sidebar);
-
-  const [isfixed, setIsfixed] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 180) {
-        setIsfixed(true);
-      } else {
-        setIsfixed(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
+  const isFixed = useScrollPosition(180);
+  const windowWidth = useWindowWidth();
 
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          marginBottom: 0,
-          backgroundColor: "rgba(9, 18, 66, 0.30)",
-          position: "absolute",
-          zIndex: 1,
-        }}
-      >
+      {windowWidth <= 1024 ? (
         <Box
           sx={{
+            position: "fixed",
+            width: "100%",
+            height: "64px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-between",
+            padding: "0 20px",
+            backgroundColor: "#fff",
+            zIndex: 100,
+          }}
+        >
+          {!sidebar && (
+            <Box
+              onClick={showSidebar}
+              sx={{
+                width: "32px",
+                height: "32px",
+              }}
+            >
+              <img
+                src="/src/assets//icons/Actions.png"
+                alt="logo"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </Box>
+          )}
+          <LogoNavbar />
+          {!sidebar && (
+            <Box
+              sx={{
+                width: "32px",
+                height: "32px",
+              }}
+            >
+              <img
+                src="/src/assets/icons/Actions-phone.png"
+                alt="logo"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </Box>
+          )}
+          {sidebar && (
+            <Box
+              onClick={showSidebar}
+              sx={{
+                width: "32px",
+                height: "32px",
+              }}
+            >
+              <img
+                src="/src/assets/icons/Actions-close.png"
+                alt="logo"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </Box>
+          )}
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             width: "100%",
-            backgroundColor: "#E4ECF6",
+            backgroundColor: "rgba(9, 18, 66, 0.30)",
           }}
         >
           <Box
             sx={{
               display: "flex",
-              alignItems: "center",
               justifyContent: "space-between",
-              width: "90%",
+              width: "100%",
               height: "56px",
-              "@media (max-width:1024px)": {
-                width: "95%",
-                justifyContent: "space-between",
-              },
-              "@media (max-width:768px)": {
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: "1rem",
-                height: "auto",
-              },
+              padding: "0 20px",
             }}
           >
             <LogoNavbar />
@@ -79,10 +103,6 @@ export const Header = () => {
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: "25px",
-                "@media (max-width:1024px)": {
-                  display: "none",
-                },
-
               }}
             >
               {CardInfo.map((card, index) => {
@@ -96,76 +116,11 @@ export const Header = () => {
                 );
               })}
             </Box>
-            {/* <Box
-              sx={{
-                display: "none",
-                "@media (max-width:1024px)": {
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: "25px",
-                },
-              }}
-            >
-              <InfoCard
-                title="Call Us"
-                content="(978) 500 - 4081"
-                icon={<SvgPhoneIcon />}
-              />
-              <HambuguerMenu>
-                <AiOutlineMenu size={40} onClick={showSidebar} />
-              </HambuguerMenu>
-            </Box> */}
           </Box>
+          <Navbar isFixed={isFixed} />
         </Box>
-        <Box
-          sx={(theme) => ({
-            position: isfixed ? "fixed" : "relative",
-            top: isfixed ? 0 : "auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            width: "100%",
-            height: "68px",
-            padding: "15px 0",
-            backgroundColor: "#022241",
-            borderBottom: isfixed ? "1px solid rgba(9, 18, 66, 0.30)" : "none",
-            transition: "all 0.3s ease",
-            zIndex: 99,
-            [theme.breakpoints.down(1024)]: {
-              display: "none",
-            },
-          })}
-          className="navbar"
-        >
-          <Navbar />
-          <CommonButton
-            sx={{
-              backgroundColor: "#FFFFFF",
-              padding: "12px 20px",
-              color:'#252529',
-              fontFamily: "Inter",
-              fontSize: "14px",
-              fontWeight: 600,
-              lineHeight: "20px",
-              letterSpacing: "1%",
-              borderRadius: "50px",
-            }}
-          >
-            Book Appt
-          </CommonButton>
-        </Box>
-      </Box>
+      )}
       <SideBar showSidebar={showSidebar} sidebar={sidebar} />
     </>
   );
 };
-
-
-// const HambuguerMenu = styled.div`
-//   background-color: #003b76;
-//   border-radius: 55%;
-//   padding: 0.5rem;
-//   cursor: pointer;
-//   align-items: center;
-// `;

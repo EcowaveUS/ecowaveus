@@ -10,10 +10,6 @@ export const LogoNavbar = () => {
         alignItems: "flex-start",
         justifyContent: "center",
         transition: "all 0.3s ease-in-out",
-        "&:hover": {
-          cursor: "pointer",
-          opacity: 0.8,
-        },
       }}
     >
       <Link to="/">

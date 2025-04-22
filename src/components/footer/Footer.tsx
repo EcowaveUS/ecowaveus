@@ -14,9 +14,8 @@ export const Footer = () => {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        height: "auto",
         backgroundColor: "#022241",
-        padding: "0 3.5rem",
+        padding: "0 2rem",
       }}
     >
       <Box
@@ -28,7 +27,11 @@ export const Footer = () => {
           width: "100%",
           height: "auto",
           backgroundColor: "#022241",
-          padding: "4rem 0 4rem 0",
+          padding: "4rem 0",
+          '@media (max-width: 768px)': {
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+          },
         }}
       >
         <LogoFooter />
@@ -40,6 +43,12 @@ export const Footer = () => {
             alignItems: "flex-start",
             gap: "7rem",
             paddingRight: "5rem",
+            '@media (max-width: 768px)': {
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              padding: '2rem 0',
+              gap: '2.5rem',
+            },
           }}
         >
           <NavigationFooter

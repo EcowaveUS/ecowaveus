@@ -1,38 +1,63 @@
-import { TextField, Typography, Box } from '@mui/material';
+import { TextField, Typography, Box } from "@mui/material";
 
-export const TextInput = () => {
+interface Props {
+  name: string;
+  label: string;
+  type: string;
+  value: string;
+  error: boolean;
+  helperText?: string;
+  multiline?: boolean;
+  rows?: number;
+  maxRows?: number;
+  fullWidth?: boolean;
+  sx?: object;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleBlur: (event: React.FocusEvent<HTMLInputElement>) => void;
+}
+
+export const TextInput: React.FC<Props> = ({
+  name,
+  label,
+  type,
+  value,
+  error,
+  helperText,
+  multiline,
+  rows,
+  maxRows,
+  fullWidth,
+  sx,
+  onChange,
+  handleBlur,
+}) => {
   return (
-    <Box>
-      <Typography
-        variant="body1"
-        fontWeight="bold"
-        mb={0.5}
-      >
-        First name
+    <Box
+      sx={{
+        width: "100%",
+      }}
+    >
+      <Typography variant="body2" fontWeight="bold" color='#252529' mb={2}>
+        {label}
       </Typography>
-
       <TextField
-        placeholder="Enter your first name"
         variant="outlined"
-        fullWidth
-        InputProps={{
-          sx: {
-            '& .MuiOutlinedInput-notchedOutline': {
-              borderRadius: '16px', // bordes redondeados
-            },
-            paddingY: 0, // quitamos paddings extra
-          },
-        }}
+        name={name}
+        type={type}
+        fullWidth={fullWidth}
+        value={value}
+        error={error}
+        helperText={helperText}
+        multiline={multiline}
+        rows={rows}
+        maxRows={maxRows}
+        onChange={onChange}
+        onBlur={handleBlur}
         sx={{
-          '& .MuiOutlinedInput-root': {
-            borderRadius: '16px',
-            paddingY: 1.2, // este sí funciona aquí
-            paddingX: 2,
-            backgroundColor: '#fff',
-          }
+          ...sx,
+          width: "100%",
         }}
-        InputLabelProps={{ shrink: false }}
       />
     </Box>
   );
-}
+};

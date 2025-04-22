@@ -8,7 +8,7 @@ interface Props {
 export const RightArrow: React.FC<Props> = ({ onClick }) => {
   return (
     <StyldedWrapper onClick={onClick}>
-      <ArrowImage src="/images/arrow-right-circle.png" alt="arrow-left" />
+      <ArrowImage src="/src/assets/icons/arrow-right.png" alt="arrow-left" />
     </StyldedWrapper>
   )
 }
@@ -16,7 +16,7 @@ export const RightArrow: React.FC<Props> = ({ onClick }) => {
 const StyldedWrapper = styled.div`
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: -2rem;
   cursor: pointer;
   align-items: center;
   width: 64px;
