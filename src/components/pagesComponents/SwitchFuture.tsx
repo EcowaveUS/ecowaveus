@@ -69,6 +69,9 @@ export const SwitchFuture = () => {
           lineHeight: "20px",
           letterSpacing: "1%",
           borderRadius: "50px",
+          '&:hover': {
+            backgroundColor: '#198400',
+          },
         }}
       >
         Schedule now

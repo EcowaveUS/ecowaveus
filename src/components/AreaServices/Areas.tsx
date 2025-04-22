@@ -131,6 +131,9 @@ const Areas = () => {
                 color: "#fff",
                 fontSize: "14px",
                 fontWeight: 600,
+                '&:hover': {
+                  backgroundColor: "#35AE1A",
+                },
               }}
             >
               View more

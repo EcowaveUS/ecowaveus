@@ -106,6 +106,10 @@ export const Navbar: React.FC<NavbarProps> = ({ isFixed }) => {
           lineHeight: "20px",
           letterSpacing: "1%",
           borderRadius: "50px",
+          '&:hover': {
+            backgroundColor: "#FFFFFF",
+            color: "#252529",
+          },
         }}
       >
         Book Appt
