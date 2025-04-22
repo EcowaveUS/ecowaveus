@@ -7,6 +7,10 @@ import iconHeatPumps from "../assets/icons/Icon-heat-pumps.png";
 import iconEvCharger from "../assets/icons/Icon-ev-charger.png";
 import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
+import * as IoIcons from "react-icons/io";
+
 export const CardInfo = [
   {
     title: "Mon - Fri  8:00 AM - 5:00 PM",
@@ -149,4 +153,45 @@ export const location = [
   "Ipswich",
   "Rockport",
   "Lynnfield",
+];
+
+
+
+export const sidebarData = [
+  {
+    title: "Home",
+    path: "/",
+    icon: React.createElement(AiIcons.AiFillHome),
+    cName: "nav-text",
+  },
+  {
+    title: "Heat Pumps",
+    path: "/heat-pumps",
+    icon: React.createElement(IoIcons.IoIosPaper),
+    cName: "nav-text",
+  },
+  {
+    title: "EV Chargers",
+    path: "/ev-chargers",
+    icon: React.createElement(FaIcons.FaCartPlus),
+    cName: "nav-text",
+  },
+  {
+    title: "Energy Storage",
+    path: "/energy-storage",
+    icon: React.createElement(IoIcons.IoMdPeople),
+    cName: "nav-text",
+  },
+  {
+    title: "About Us",
+    path: "/about-us",
+    icon: React.createElement(FaIcons.FaEnvelopeOpenText),
+    cName: "nav-text",
+  },
+  {
+    title: "Contact Us",
+    path: "/contact-us",
+    icon: React.createElement(IoIcons.IoMdHelpCircle),
+    cName: "nav-text",
+  },
 ];

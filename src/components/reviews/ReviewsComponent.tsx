@@ -24,7 +24,7 @@ export const ReviewsComponent = () => {
     }
   };
 
-  var settings = {
+  const settings = {
       dots: false,
       infinite: true,
       arrows: true,

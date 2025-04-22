@@ -8,8 +8,7 @@ export const PrivacyPolicyPage = () => {
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#f1f5f9",
-        paddingTop: "230px",
-        minHeight: "100vh",
+        padding: "30px",
       }}
     >
       <Box

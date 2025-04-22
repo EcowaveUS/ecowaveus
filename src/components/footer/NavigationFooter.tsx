@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 interface NavProps {
   title: string;
@@ -12,14 +11,44 @@ interface NavProps {
 
 export const NavigationFooter: React.FC<NavProps> = ({ title, links }) => {
   return (
-    <NavigationWrapper>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+        gap: "1.5rem",
+
+      }}
+    >
       <Typography
         variant="body2"
         color="#ffffff"
         fontWeight={700}
       >
-          {title}</Typography>
-      <NavigationList>
+          {title}
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          justifyContent: "flex-start",
+          gap: "0.5rem",
+          paddingRight: "5rem",
+          '& > li': {
+            listStyle: "none",
+            color: "#ffffff",
+            fontFamily: "InterLight",
+            fontSize: "16px",
+            fontStyle: "normal",
+            fontWeight: 400,
+            lineHeight: "20px", /* 125% */
+            opacity: 0.8,
+            textDecoration: "none",
+          },
+        }}
+      >
         {links.map((link, index) => (
           <li key={index}>
             <Link
@@ -30,38 +59,7 @@ export const NavigationFooter: React.FC<NavProps> = ({ title, links }) => {
             </Link>
           </li>
         ))}
-      </NavigationList>
-    </NavigationWrapper>
+      </Box>
+    </Box>
   );
 };
-const NavigationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 18px;
-  @media (max-width: 768px) {
-    align-items: center;
-  }
-`;
-
-const NavigationList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 12px;
-  li {
-    color: #ffffff;
-    font-family: InterLight;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 125% */
-    opacity: 0.8;
-  }
-  @media (max-width: 768px) {
-    align-items: center;
-  }
-`;

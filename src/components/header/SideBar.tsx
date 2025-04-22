@@ -1,8 +1,7 @@
 import React from 'react';
-import { SidebarData } from './SideBarData';
 import { IconContext } from "react-icons";
 import { Link } from 'react-router-dom';
-import * as AiIcons from "react-icons/ai";
+import { sidebarData } from '../../constants/data';
 import './sidebar.css'
 
 
@@ -21,12 +20,7 @@ export const SideBar: React.FC<MenuComponentProps> = ({
       <IconContext.Provider value={{ color: "undefined" }}>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
-            <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
-                <AiIcons.AiOutlineClose color='#B5B5B5' />
-              </Link>
-            </li>
-            {SidebarData.map((item, index) => {
+            {sidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>

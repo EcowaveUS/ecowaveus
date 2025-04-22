@@ -37,13 +37,6 @@ export const OursBrands: React.FC<Props> = ({
           slidesToScroll: 1,
           initialSlide: 2
         }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
       }
     ]
   };
@@ -87,7 +80,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
   width: 70%;
-  aspect-ratio: 4/1;
+  aspect-ratio: 3/1;
   object-fit: contain;
   mix-blend-mode: color-burn;
   filter: grayscale(100%) saturate(80%);
