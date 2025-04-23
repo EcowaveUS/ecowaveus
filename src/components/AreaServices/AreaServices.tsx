@@ -1,4 +1,4 @@
-import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery, Button } from "@mui/material";
 
 export const AreaServices = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
@@ -30,20 +30,24 @@ export const AreaServices = () => {
         Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester |
         Marblehead | Wenham | Ipswich | Rockport | Lynnfield
       </Typography>
-      <button
-        style={{
+      <Button
+        sx={{
           marginTop: "32px",
           backgroundColor: "#35AE1A",
           color: "white",
           borderRadius: "999px",
-          padding: isDesktop ? "14px 20px" : "14px 16px",
+          padding: isDesktop ? "10px 20px" : "10px 16px",
           width: isDesktop ? "auto" : "100%",
           fontSize: "14px",
           fontWeight: "600",
+          cursor: "pointer",
+          transition: "background 0.3s ease",
+          border: "none",
+          "&:hover": { backgroundColor: "#35911A" },
         }}
       >
         View more
-      </button>
+      </Button>
     </Box>
   );
 };
