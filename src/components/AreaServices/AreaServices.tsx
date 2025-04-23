@@ -1,4 +1,4 @@
-import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 
 export const AreaServices = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));

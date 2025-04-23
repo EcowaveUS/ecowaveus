@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Header/>
+        {/* <Header/> */}
           <AnimateRoutes />
           <ScrollToTop  />
           <Roadmap />

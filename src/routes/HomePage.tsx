@@ -11,7 +11,7 @@ import Areas from "../components/AreaServices/Areas";
 import { Grid as MuiGrid } from "@mui/material";
 
 export const HomePage = () => {
-  const Grid = motion((MuiGrid));
+  const Grid = motion(MuiGrid);
   return (
     <>
       <Helmet>
@@ -21,18 +21,8 @@ export const HomePage = () => {
           content="Our solar installation company in Beverly offers solar battery storage, EV charger installations, electric heat pumps and more. Call 978-500-4081 to get started!"
         />
       </Helmet>
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        initial={{ opacity: 0.8 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ ease: "easeOut", duration: 1 }}
-      >
-        {/* <SwitchFuture />
+
+      {/* <SwitchFuture />
         <OursBrands images={brandImages} />
         <Inovation
           title="Expertise at Great Prices"
@@ -54,10 +44,9 @@ export const HomePage = () => {
           logo="/images/logo-ecowave.png"
         />
         <OurSolutions />
-        <ReviewsComponent />
-        <ContactComponent /> */}
-        <Areas />
-      </Grid>
+        <ReviewsComponent /> */}
+      <ContactComponent />
+      <Areas />
     </>
   );
 };

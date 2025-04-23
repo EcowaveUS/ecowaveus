@@ -1,21 +1,28 @@
-import { LocationInfo } from './LocationInfo'
-import { ContactForm } from './ContactForm'
-import { Grid } from '@mui/material'
+import { LocationInfo } from "./LocationInfo";
+import { ContactForm } from "./ContactForm";
+import { Box, Theme, useMediaQuery } from "@mui/material";
 
 export const ContactComponent = () => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Grid item xs={12} md={10} lg={8} xl={6}
-      sx={{
-        display:'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        gap: '3rem',
-        margin: '5rem 0',
-      }}
-    >
-      <LocationInfo />
-      <ContactForm />
-    </Grid>
-  )
-}
-
+    <Box component={"div"} bgcolor={"#F5F5F5"}>
+      <Box
+        component={"div"}
+        className="container"
+        paddingTop={isDesktop ? "92px" : "44px"}
+        paddingBottom={isDesktop ? "92px" : "0"}
+        display={"flex"}
+        flexDirection={isDesktop ? "row" : "column"}
+        gap={"24px"}
+        justifyContent={"space-between"}
+      >
+        <Box component={"div"} width={isDesktop ? "50%" : "100%"}>
+          <LocationInfo />
+        </Box>
+        <Box component={"div"} width={isDesktop ? "50%" : "100%"}>
+          <ContactForm />
+        </Box>
+      </Box>
+    </Box>
+  );
+};
