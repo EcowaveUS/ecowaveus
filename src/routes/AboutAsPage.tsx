@@ -49,7 +49,6 @@ const Wrapper = styled(motion.div)`
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-top: 60px;
 `;
 const Container = styled.div`
   display: flex;

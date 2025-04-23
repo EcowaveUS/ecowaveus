@@ -145,7 +145,6 @@ const StyledPage = styled(motion.div)`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 100px;
 `;
 
 const Text = styled.p`

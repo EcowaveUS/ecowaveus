@@ -36,7 +36,6 @@ const StyledPage = styled(motion.div)`
   align-items: center;
   justify-content: center;
   margin-bottom: 8rem;
-  padding-top: 9rem;
 `;
 const BackgroundComponent = styled.div`
   display: flex;

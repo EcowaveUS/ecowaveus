@@ -120,7 +120,6 @@ const StyledPage = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
 `;
 
 const Text = styled.p`
