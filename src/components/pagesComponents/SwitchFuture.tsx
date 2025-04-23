@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 export const SwitchFuture = () => {
   const navigate = useNavigate();
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <Box
       height={isDesktop ? "800px" : "640px"}
@@ -37,7 +37,7 @@ export const SwitchFuture = () => {
       >
         <Box
           component={"div"}
-          maxWidth={"763px"}
+          maxWidth={isDesktop ? "763px" : "100%"}
           position={"absolute"}
           zIndex={2}
           left={0}
