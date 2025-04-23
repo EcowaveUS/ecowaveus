@@ -1,67 +1,89 @@
-import { Box, Typography } from "@mui/material";
-import { CommonButton } from "../common/CommonButton";
+import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router";
 
 export const SwitchFuture = () => {
   const navigate = useNavigate();
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
+      height={isDesktop ? "800px" : "640px"}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        backgroundImage: `url("/images/wind-farm.jpg")`,
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `url(/images/wind-farm.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        aspectRatio: "16/7",
+        backgroundRepeat: "no-repeat",
       }}
+      position={"relative"}
     >
       <Box
+        component={"div"}
+        position={"absolute"}
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        width={"100%"}
+        height={"100%"}
+        zIndex={1}
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-          gap: "1rem",
+          background: "#00000066",
         }}
+      ></Box>
+      <Box
+        component={"div"}
+        height={"100%"}
+        className="container"
+        position={"relative"}
       >
-        <Typography sx={{ textAlign: "center" }} variant="h1">
-          Riding the wave off eco- <br />
-          innovation
-        </Typography>
-        <Typography
-          variant="body1"
+        <Box
+          component={"div"}
+          maxWidth={"763px"}
+          position={"absolute"}
+          zIndex={2}
+          left={0}
+          top={"50%"}
           sx={{
-            width: "45%",
-            textAlign: "center",
-            marginBottom: "24px",
-            color: "#fff",
+            transform: "translateY(-50%)",
           }}
         >
-          Affordable solutions tailored for savings and efficiency.
-        </Typography>
-        <CommonButton
-          onClick={() => navigate("/contact-us")}
-          sx={{
-            backgroundColor: "#198400",
-            padding: "12px 20px",
-            color: "#fff",
-            fontFamily: "Inter",
-            fontSize: "14px",
-            fontWeight: 600,
-            lineHeight: "20px",
-            letterSpacing: "1%",
-            borderRadius: "50px",
-          }}
-        >
-          Schedule now
-        </CommonButton>
+          <Typography
+            fontWeight={600}
+            fontSize={isDesktop ? "80px" : "48px"}
+            color={"white"}
+            lineHeight={"100%"}
+          >
+            Riding the wave off eco-innovation
+          </Typography>
+          <Typography
+            fontWeight={400}
+            fontSize={isDesktop ? "18px" : "20px"}
+            color={"white"}
+            lineHeight={"100%"}
+            marginTop={isDesktop ? "24px" : "20px"}
+          >
+            Affordable solutions tailored for savings and efficiency.
+          </Typography>
+          <Button
+            sx={{
+              marginTop: isDesktop ? "40px" : "32px",
+              backgroundColor: "#35AE1A",
+              color: "white",
+              borderRadius: "999px",
+              padding: isDesktop ? "12px 20px" : "12px 16px",
+              width: isDesktop ? "auto" : "100%",
+              fontSize: "14px",
+              fontWeight: "600",
+              lineHeight: "20px",
+              cursor: "pointer",
+              transition: "background 0.3s ease",
+              border: "none",
+              "&:hover": { backgroundColor: "#35911A" },
+            }}
+            onClick={() => navigate("/contact-us")}
+          >
+            Schedule now
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

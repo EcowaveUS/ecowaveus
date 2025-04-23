@@ -1,18 +1,18 @@
 import { OursBrands } from "../components/brands/OursBrands";
-import { Inovation } from "../components/pagesComponents/Inovation";
+// import { Inovation } from "../components/pagesComponents/Inovation";
 import { SwitchFuture } from "../components/pagesComponents/SwitchFuture";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { OurSolutions } from "../components/pagesComponents/OurSolutions";
 import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 import { ContactComponent } from "../components/forms/ContactComponent";
 import { Helmet } from "react-helmet";
 import { brandImages } from "../constants/data";
 import Areas from "../components/AreaServices/Areas";
-import { Grid as MuiGrid } from "@mui/material";
+// import { Grid as MuiGrid } from "@mui/material";
 import { ExpertiseComponent } from "../components/pagesComponents/ExpertiseComponent";
 
 export const HomePage = () => {
-  const Grid = motion(MuiGrid);
+  // const Grid = motion(MuiGrid);
   return (
     <>
       <Helmet>
@@ -22,8 +22,7 @@ export const HomePage = () => {
           content="Our solar installation company in Beverly offers solar battery storage, EV charger installations, electric heat pumps and more. Call 978-500-4081 to get started!"
         />
       </Helmet>
-
-      {/* <SwitchFuture /> */}
+      <SwitchFuture />
       <OursBrands images={brandImages} />
       {/* <Inovation
           title="Expertise at Great Prices"
