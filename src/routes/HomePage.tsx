@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet";
 import { brandImages } from "../constants/data";
 import Areas from "../components/AreaServices/Areas";
 import { Grid as MuiGrid } from "@mui/material";
+import { ExpertiseComponent } from "../components/pagesComponents/ExpertiseComponent";
 
 export const HomePage = () => {
   const Grid = motion(MuiGrid);
@@ -43,6 +44,7 @@ export const HomePage = () => {
           ]}
           logo="/images/logo-ecowave.png"
         /> */}
+      <ExpertiseComponent />
       <OurSolutions />
       <ReviewsComponent />
       <ContactComponent />
