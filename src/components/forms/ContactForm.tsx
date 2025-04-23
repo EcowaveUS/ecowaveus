@@ -9,6 +9,7 @@ import {
   useMediaQuery,
   Theme,
   Typography,
+  Button,
 } from "@mui/material";
 import styled from "styled-components";
 import { useFormik } from "formik";
@@ -191,7 +192,25 @@ export const ContactForm = () => {
             {formik.values.message.length}/80
           </Typography>
         </InputFormContainer>
-        <StyledButton type="submit">Submit</StyledButton>
+        <Button
+          sx={{
+            backgroundColor: "#252529",
+            color: "white",
+            borderRadius: "999px",
+            padding: "12px 20px",
+            width: isDesktop ? "auto" : "100%",
+            fontSize: "14px",
+            fontWeight: "700",
+            lineHeight: "20px",
+            border: "none",
+            cursor: "pointer",
+            transition: "background 0.3s ease",
+            "&:hover": { backgroundColor: "#1a1a1d" },
+          }}
+          type="submit"
+        >
+          Submit
+        </Button>
       </Box>
     </FormWrapper>
   );
@@ -241,27 +260,3 @@ const SelectField = styled(Select)({
     lineHeight: "20px",
   },
 });
-const StyledButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #252529;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 999px;
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  &:hover {
-    background: #1a1a1d;
-  }
-  width: 100%;
-  @media (min-width: 900px) {
-    width: auto;
-  }
-`;

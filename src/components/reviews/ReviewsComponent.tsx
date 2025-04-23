@@ -1,147 +1,147 @@
-import { ReviewsTitle } from './ReviewsTitle'
-import { ReviewCard } from '../cards/ReviewCard'
-import { SvgCurvas } from '../svg/SvgCurvas'
-import { LeftArrow } from '../cards/LeftArrow';
-import { useRef } from 'react';
-import { RightArrow } from '../cards/RightArrow';
-import Slider from "react-slick";
-import reviews from '../../reviews.json';
-import styled from 'styled-components'
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
+import reviews from "../../reviews.json";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
+import { ReviewCard2 } from "../cards/ReviewCard2";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { useRef } from "react";
 
 export const ReviewsComponent = () => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  const swiperRef = useRef<SwiperRef>(null);
   const data = reviews;
-  const sliderRef = useRef<Slider>(null);
 
-  const handlePrevClick = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  };
-
-  const handleNextClick = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
-
-  var settings = {
-      dots: false,
-      infinite: true,
-      arrows: true,
-      nextArrow: <RightArrow onClick={handleNextClick} />,
-      prevArrow: <LeftArrow onClick={handlePrevClick}/>,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      initialSlide: 0,
-      centerMode: true,
-      centerPadding: '0',
-      responsive: [
-        {
-          breakpoint: 1279,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 960,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        },
-      ]
-    };
   return (
-    <WrapperReviews>
-      <Curvas>
-        <SvgCurvas />
-      </Curvas>
-      <TitleWrapper>
-        <ReviewsTitle />
-      </TitleWrapper>
-        <StyledSlider ref={sliderRef} {...settings}>
-          {data.map((review, index) => (
-            <CardWarpper key={index}>
-              <ReviewCard
-                firstName={review.firstName}
-                lastName={review.lastName}
-                title={review.title}
-                description={review.description}
-                score={review.score}
-              />
-            </CardWarpper>
-          ))}
-        </StyledSlider>
-    </WrapperReviews>
-  )
-}
-const Curvas = styled.div`
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  width: 100%;
-  @media (max-width: 1024px) {
-    top: -1.5rem;
-  }
-  @media (max-width: 768px) {
-    top: -2.5rem;
-  }
-`;
-const WrapperReviews = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  padding: 7rem 0;
-  background-color: #003B76;
-`;
-const TitleWrapper = styled.div`
-  align-items: center;
-  width: 80%;
-  @media (max-width: 1024px) {
-    width: 90%;
-  }
-`;
-
-const StyledSlider = styled(Slider)`
-  width: 80%;
-  overflow-x: hidden;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  .slick-track {
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-  }
-  .slick-slide {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-`;
-const CardWarpper = styled.div`
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-`;
+    <Box bgcolor={"#0C4200"}>
+      <Box
+        component={"div"}
+        className="container"
+        paddingTop={"80px"}
+        paddingBottom={isDesktop ? "80px" : "48px"}
+        display={"flex"}
+        flexDirection={isDesktop ? "row" : "column"}
+        gap={"48px"}
+        justifyContent={"space-between"}
+      >
+        <Box
+          component={"div"}
+          minWidth={isDesktop ? "400px" : "100%"}
+          maxWidth={isDesktop ? "400px" : "100%"}
+        >
+          <Typography
+            fontWeight={600}
+            fontSize={isDesktop ? "48px" : "24px"}
+            color={"#fff"}
+          >
+            What our client say about us
+          </Typography>
+          <Typography
+            fontSize={isDesktop ? "16px" : "14px"}
+            color={"#fff"}
+            marginTop={"16px"}
+          >
+            Explore the personal stories of our customers and see how Ecowave's
+            sustainable solutions have enriched their lives.
+          </Typography>
+        </Box>
+        <Box
+          flex={1}
+          maxWidth={isDesktop ? "calc(100% - 448px)" : "100%"}
+          paddingX={isDesktop ? "30px" : "0"}
+          position={"relative"}
+        >
+          <Swiper
+            ref={swiperRef}
+            className="reviews-container"
+            modules={[FreeMode, Pagination]}
+            spaceBetween={isDesktop ? 32 : 24}
+            slidesPerView={"auto"}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+          >
+            {data.map((d) => (
+              <SwiperSlide
+                key={d.id}
+                style={{
+                  width: isDesktop ? "348px" : "300px",
+                  height: "auto",
+                }}
+              >
+                <ReviewCard2
+                  description={d.description}
+                  firstName={d.firstName}
+                  lastName={d.lastName}
+                  position={d.position}
+                  avatar={d.avatar}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {isDesktop && (
+            <>
+              <Box
+                component={"div"}
+                width={"60px"}
+                height={"60px"}
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                bgcolor={"#D2EDCC"}
+                borderRadius={"999px"}
+                position={"absolute"}
+                left={"0"}
+                top={"50%"}
+                zIndex={1}
+                sx={{
+                  transform: "translateY(-50%)",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  "&:hover": {
+                    bgcolor: "#1FA500",
+                  },
+                }}
+                onClick={() => {
+                  if (swiperRef.current) swiperRef.current.swiper.slidePrev();
+                }}
+              >
+                <FaChevronLeft size={16} color="#1E1E1E" />
+              </Box>
+              <Box
+                component={"div"}
+                width={"60px"}
+                height={"60px"}
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                bgcolor={"#D2EDCC"}
+                borderRadius={"999px"}
+                position={"absolute"}
+                right={"0"}
+                top={"50%"}
+                zIndex={1}
+                sx={{
+                  transform: "translateY(-50%)",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  "&:hover": {
+                    bgcolor: "#1FA500",
+                  },
+                }}
+                onClick={() => {
+                  if (swiperRef.current) swiperRef.current.swiper.slideNext();
+                }}
+              >
+                <FaChevronRight size={16} color="#1E1E1E" />
+              </Box>
+            </>
+          )}
+        </Box>
+      </Box>
+    </Box>
+  );
+};

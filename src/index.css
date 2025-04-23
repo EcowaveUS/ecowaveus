@@ -23,3 +23,22 @@ a {
   margin-right: auto;
   width: min(100vw - 40px, 1280px);
 }
+
+.reviews-container .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #eaeaea;
+  opacity: 1;
+}
+.reviews-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #1fa500;
+}
+.reviews-container .swiper-pagination {
+  position: relative;
+  margin-top: 24px;
+}
+@media (min-width: 900px) {
+  .reviews-container .swiper-pagination {
+    margin-top: 48px;
+  }
+}

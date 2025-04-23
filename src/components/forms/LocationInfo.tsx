@@ -25,7 +25,9 @@ export const LocationInfo = () => {
             color="#6C6C78"
             style={{ minWidth: "20px", marginTop: "5px" }}
           />
-          <Typography lineHeight={"30px"}>Info@ecowaveus.com</Typography>
+          <Typography lineHeight={"30px"} fontSize={"16px"}>
+            Info@ecowaveus.com
+          </Typography>
         </Box>
         <Box display={"flex"} gap={"6px"}>
           <FaPhone
@@ -33,7 +35,9 @@ export const LocationInfo = () => {
             color="#6C6C78"
             style={{ minWidth: "20px", marginTop: "5px" }}
           />
-          <Typography lineHeight={"30px"}>(978) 500 4081</Typography>
+          <Typography lineHeight={"30px"} fontSize={"16px"}>
+            (978) 500 4081
+          </Typography>
         </Box>
         <Box display={"flex"} gap={"6px"}>
           <FaClock
@@ -41,7 +45,7 @@ export const LocationInfo = () => {
             color="#6C6C78"
             style={{ minWidth: "20px", marginTop: "5px" }}
           />
-          <Typography lineHeight={"30px"}>
+          <Typography lineHeight={"30px"} fontSize={"16px"}>
             Monday -Friday 8:00 AM - 5:00 PM
           </Typography>
         </Box>
@@ -51,7 +55,7 @@ export const LocationInfo = () => {
             color="#6C6C78"
             style={{ minWidth: "20px", marginTop: "5px" }}
           />
-          <Typography lineHeight={"30px"}>
+          <Typography lineHeight={"30px"} fontSize={"16px"}>
             22 Broadway
             <br />
             Beverly, MA 01915
