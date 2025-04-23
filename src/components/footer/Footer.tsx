@@ -13,10 +13,10 @@ export const Footer = () => {
         paddingTop={isDesktop ? "64px" : "48px"}
         paddingBottom={"64px"}
         display={"flex"}
-        alignItems={"start"}
         justifyContent={"space-between"}
         gap={"64px"}
         flexDirection={isDesktop ? "row" : "column"}
+        alignItems={"stretch"}
       >
         <LogoFooter />
         <Box
@@ -24,7 +24,7 @@ export const Footer = () => {
           display={"flex"}
           flexDirection={isDesktop ? "row" : "column"}
           gap={"32px"}
-          alignItems={"flex-start"}
+          alignItems={"stretch"}
         >
           <NavigationFooter
             title="Services"
@@ -49,6 +49,7 @@ export const Footer = () => {
             display={"flex"}
             flexDirection={"column"}
             gap={isDesktop ? "24px" : "32px"}
+            alignItems={"stretch"}
           >
             <NavigationFooter
               title="Local Office"
