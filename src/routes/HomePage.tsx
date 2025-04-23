@@ -23,9 +23,9 @@ export const HomePage = () => {
         />
       </Helmet>
 
-      {/* <SwitchFuture />
-        <OursBrands images={brandImages} />
-        <Inovation
+      {/* <SwitchFuture /> */}
+      <OursBrands images={brandImages} />
+      {/* <Inovation
           title="Expertise at Great Prices"
           content="At EcowaveUS, we specialize in providing sustainable energy solutions, including heat pumps, EV chargers, energy storage and solar panels - all designed to maximize energy efficiency and savings. We are passionate about leading the clean energy transition and empowering our clients with the tools and knowledge to create a cleaner, greener, and more cost-effective future for generations to come."
           images={[
