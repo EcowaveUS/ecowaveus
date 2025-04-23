@@ -1,5 +1,5 @@
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
-import { FaClock, FaEnvelope, FaMapMarked, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaMapMarked, FaPhone, FaRegClock } from "react-icons/fa";
 
 export const LocationInfo = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
@@ -40,7 +40,7 @@ export const LocationInfo = () => {
           </Typography>
         </Box>
         <Box display={"flex"} gap={"6px"}>
-          <FaClock
+          <FaRegClock
             size={20}
             color="#6C6C78"
             style={{ minWidth: "20px", marginTop: "5px" }}

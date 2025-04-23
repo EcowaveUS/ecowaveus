@@ -36,6 +36,7 @@ export const SwitchFuture = () => {
         position={"relative"}
       >
         <Box
+          paddingTop={isDesktop ? "100px" : "0"}
           component={"div"}
           maxWidth={isDesktop ? "763px" : "100%"}
           position={"absolute"}
