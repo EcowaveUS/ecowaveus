@@ -42,8 +42,8 @@ export const HomePage = () => {
             },
           ]}
           logo="/images/logo-ecowave.png"
-        />
-        <OurSolutions /> */}
+        /> */}
+      <OurSolutions />
       <ReviewsComponent />
       <ContactComponent />
       <Areas />

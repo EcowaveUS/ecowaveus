@@ -34,6 +34,7 @@ export const ReviewsComponent = () => {
           <Typography
             fontWeight={600}
             fontSize={isDesktop ? "48px" : "24px"}
+            lineHeight={isDesktop ? "58px" : "32px"}
             color={"#fff"}
           >
             What our client say about us

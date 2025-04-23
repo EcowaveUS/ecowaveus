@@ -7,6 +7,10 @@ import iconHeatPumps from "../assets/icons/Icon-heat-pumps.png";
 import iconEvCharger from "../assets/icons/Icon-ev-charger.png";
 import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 
+import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.png";
+import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.png";
+import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage-new.png";
+
 export const CardInfo = [
   {
     title: "Mon - Fri  8:00 AM - 5:00 PM",
@@ -44,24 +48,28 @@ export const services = [
     content: "Efficient Comfort: Advanced solutions for heating and cooling.",
     url: "/heat-pumps",
     icon: iconHeatPumps,
+    iconNew: iconHeatPumpsNew,
   },
   {
     title: "EV-Chargers",
     content: "Charge Anywhere: Fast, reliable power for your electric vehicle.",
     url: "/ev-chargers",
     icon: iconEvCharger,
+    iconNew: iconEvChargerNew,
   },
   {
     title: "Energy Storage",
     content: "Store Smart: Harness and manage renewable energy efficiently.",
     url: "/energy-storage",
     icon: iconEnergyStorage,
+    iconNew: iconEnergyStorageNew,
   },
   {
     title: "Solar Panels",
     content: "Store Smart: Harness and manage renewable energy efficiently.",
     url: "/solar-panels",
     icon: iconHeatPumps,
+    iconNew: iconEnergyStorageNew,
   },
 ];
 
