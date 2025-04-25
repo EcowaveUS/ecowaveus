@@ -42,3 +42,17 @@ a {
     margin-top: 48px;
   }
 }
+
+.solutions-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #eaeaea;
+  opacity: 1;
+}
+.solutions-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #1fa500;
+}
+.solutions-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 24px;
+}

@@ -1,19 +1,21 @@
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../../constants/data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
 export const OurSolutions = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const isWide = useMediaQuery(`(min-width: 1280px)`);
   return (
     <Box bgcolor={"#F6F6F6"}>
       <Box
         component={"div"}
         paddingTop={isDesktop ? "80px" : "36px"}
-        paddingBottom={isDesktop ? "80px" : "48px"}
+        paddingBottom={isDesktop ? (isWide ? "80px" : "35px") : "16px"}
         display={"flex"}
         flexDirection={"column"}
         gap={isDesktop ? "80px" : "48px"}
@@ -52,13 +54,18 @@ export const OurSolutions = () => {
           </Typography>
         </Box>
         <Swiper
-          modules={[FreeMode]}
+          modules={[FreeMode, Pagination]}
+          className="solutions-swiper"
           spaceBetween={0}
           slidesPerView={"auto"}
           freeMode={true}
           style={{ maxWidth: "100%" }}
-          slidesOffsetBefore={isDesktop ? 0 : 20}
-          slidesOffsetAfter={isDesktop ? 0 : 20}
+          slidesOffsetBefore={isWide ? 0 : 20}
+          slidesOffsetAfter={isWide ? 0 : 20}
+          pagination={{
+            clickable: true,
+            dynamicBullets: false,
+          }}
         >
           {services.map((s, _idx) => (
             <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
