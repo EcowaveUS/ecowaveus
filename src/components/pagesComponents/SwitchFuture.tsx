@@ -8,27 +8,15 @@ export const SwitchFuture = () => {
     <Box
       height={isDesktop ? "800px" : "640px"}
       sx={{
-        backgroundImage: `url(/images/wind-farm.jpg)`,
+        backgroundImage: `url(/images/${
+          isDesktop ? "wind-farm-desktop" : "wind-farm-mobile"
+        }.png)`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "left",
         backgroundRepeat: "no-repeat",
       }}
       position={"relative"}
     >
-      <Box
-        component={"div"}
-        position={"absolute"}
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        width={"100%"}
-        height={"100%"}
-        zIndex={1}
-        sx={{
-          background: "#00000066",
-        }}
-      ></Box>
       <Box
         component={"div"}
         height={"100%"}
@@ -49,17 +37,20 @@ export const SwitchFuture = () => {
         >
           <Typography
             fontWeight={600}
+            fontFamily={"Inter !important"}
+            letterSpacing={"0 !important"}
             fontSize={isDesktop ? "80px" : "48px"}
             color={"white"}
-            lineHeight={"100%"}
+            lineHeight={isDesktop ? "100%" : "52px"}
           >
             Riding the wave off eco-innovation
           </Typography>
           <Typography
             fontWeight={400}
+            fontFamily={"Inter !important"}
             fontSize={isDesktop ? "18px" : "20px"}
             color={"white"}
-            lineHeight={"100%"}
+            lineHeight={isDesktop ? "26px" : "28px"}
             marginTop={isDesktop ? "24px" : "20px"}
           >
             Affordable solutions tailored for savings and efficiency.
@@ -67,7 +58,7 @@ export const SwitchFuture = () => {
           <Button
             sx={{
               marginTop: isDesktop ? "40px" : "32px",
-              backgroundColor: "#35AE1A",
+              backgroundColor: "#198400",
               color: "white",
               borderRadius: "999px",
               padding: isDesktop ? "12px 20px" : "12px 16px",
@@ -78,7 +69,9 @@ export const SwitchFuture = () => {
               cursor: "pointer",
               transition: "background 0.3s ease",
               border: "none",
-              "&:hover": { backgroundColor: "#35911A" },
+              fontFamily: "Inter !important",
+              letterSpacing: "1% !important",
+              "&:hover": { backgroundColor: "#198400" },
             }}
             onClick={() => navigate("/contact-us")}
           >
