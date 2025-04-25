@@ -1,12 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
-import {
-  FaFacebook,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
 
 export const BottomFooter = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
