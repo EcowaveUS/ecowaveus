@@ -56,8 +56,8 @@ export const BottomFooter = () => {
               <img
                 src={
                   isDesktop
-                    ? "/images/icons/icon-facebook-white-2.png"
-                    : "/images/icons/icon-facebook-white-1.png"
+                    ? "/images/icons/icon-facebook-white-2.svg"
+                    : "/images/icons/icon-facebook-white-1.svg"
                 }
                 alt="facebook"
               />
@@ -80,7 +80,7 @@ export const BottomFooter = () => {
               justifyContent={"center"}
             >
               <img
-                src={"/images/icons/icon-instagram-white.png"}
+                src={"/images/icons/icon-instagram-white.svg"}
                 alt="instagram"
               />
             </Box>
@@ -101,7 +101,7 @@ export const BottomFooter = () => {
               justifyContent={"center"}
             >
               <img
-                src={"/images/icons/icon-linkedin-white.png"}
+                src={"/images/icons/icon-linkedin-white.svg"}
                 alt="linkedin"
               />
             </Box>

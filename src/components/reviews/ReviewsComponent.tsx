@@ -118,7 +118,7 @@ export const ReviewsComponent = () => {
                 }}
               >
                 <img
-                  src="images/icons/icon-chevron-left.png"
+                  src="images/icons/icon-chevron-left.svg"
                   alt="arrow-left"
                 />
               </Box>
@@ -148,7 +148,7 @@ export const ReviewsComponent = () => {
                 }}
               >
                 <img
-                  src="/images/icons/icon-chevron-right.png"
+                  src="/images/icons/icon-chevron-right.svg"
                   alt="arrow-right"
                 />
               </Box>
