@@ -6,7 +6,9 @@ export const ExpertiseComponent = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(180deg, #3D3D43 0%, #202023 100%)",
+        background: isDesktop
+          ? "linear-gradient(180deg, #3D3D43 0%, #202023 100%)"
+          : "linear-gradient(180deg, #55555D 0%, #252529 100%)",
       }}
     >
       <Box
