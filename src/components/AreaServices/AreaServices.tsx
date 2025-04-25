@@ -8,6 +8,8 @@ export const AreaServices = () => {
         fontSize={isDesktop ? "48px" : "24px"}
         fontWeight={isDesktop ? 600 : 800}
         color={"#FFFFFF"}
+        lineHeight={isDesktop ? "58px" : "32px"}
+        fontFamily={isDesktop ? "Inter !important" : "Montserrat !important"}
       >
         Service Area
       </Typography>
@@ -15,6 +17,8 @@ export const AreaServices = () => {
         fontSize={isDesktop ? "24px" : "20px"}
         fontWeight={isDesktop ? 600 : 400}
         color={"#FFFFFF"}
+        lineHeight={"32px"}
+        fontFamily={"Inter !important"}
         marginTop={"8px"}
       >
         North Shore of Massachusetts
@@ -26,9 +30,25 @@ export const AreaServices = () => {
         width={"100%"}
         bgcolor={"#FFFFFF66"}
       ></Box>
-      <Typography fontSize={isDesktop ? "16px" : "14px"} color={"#FFFFFF"}>
-        Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester |
-        Marblehead | Wenham | Ipswich | Rockport | Lynnfield
+      <Typography
+        fontSize={isDesktop ? "16px" : "14px"}
+        color={"#FFFFFF"}
+        fontFamily={"Inter !important"}
+        lineHeight={"24px"}
+      >
+        {isDesktop ? (
+          <>
+            <span>
+              Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester
+            </span>
+            <br />
+            <span style={{ marginTop: "8px" }}>
+              Marblehead | Wenham | Ipswich | Rockport | Lynnfield
+            </span>
+          </>
+        ) : (
+          "Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester | Marblehead | Wenham | Ipswich | Rockport | Lynnfield"
+        )}
       </Typography>
       <Button
         sx={{
@@ -43,7 +63,9 @@ export const AreaServices = () => {
           cursor: "pointer",
           transition: "background 0.3s ease",
           border: "none",
-          "&:hover": { backgroundColor: "#35911A" },
+          fontFamily: "Inter !important",
+          lineHeight: "20px",
+          "&:hover": { backgroundColor: "#35AE1A" },
         }}
       >
         View more

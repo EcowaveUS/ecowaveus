@@ -1,5 +1,6 @@
 import { Box, Theme, useMediaQuery } from "@mui/material";
-import serviceMapImage from "../../assets/images/service-map.png";
+import serviceMapImageDesktop from "../../assets/images/service-map-desktop.png";
+import serviceMapImageMobile from "../../assets/images/service-map-mobile.png";
 import { AreaServices } from "./AreaServices";
 
 const Areas = () => {
@@ -10,10 +11,12 @@ const Areas = () => {
         height={isDesktop ? "489px" : "289px"}
         component="div"
         sx={{
-          backgroundImage: `url(${serviceMapImage})`,
+          backgroundImage: `url(${
+            isDesktop ? serviceMapImageDesktop : serviceMapImageMobile
+          })`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "right center",
+          backgroundPosition: "right",
         }}
         position={"relative"}
       >
