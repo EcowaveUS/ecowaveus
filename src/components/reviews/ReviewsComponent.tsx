@@ -6,7 +6,6 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { ReviewCard2 } from "../cards/ReviewCard2";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { useRef } from "react";
 
 export const ReviewsComponent = () => {
@@ -18,31 +17,38 @@ export const ReviewsComponent = () => {
     <Box bgcolor={"#0C4200"}>
       <Box
         component={"div"}
-        className="container"
         paddingTop={"80px"}
-        paddingBottom={isDesktop ? "80px" : "48px"}
+        className={isDesktop ? "container" : ""}
+        paddingBottom={isDesktop ? "74px" : "42px"}
         display={"flex"}
         flexDirection={isDesktop ? "row" : "column"}
-        gap={"48px"}
+        gap={isDesktop ? "32px" : "48px"}
         justifyContent={"space-between"}
       >
         <Box
           component={"div"}
+          className={isDesktop ? "" : "container"}
           minWidth={isDesktop ? "400px" : "100%"}
           maxWidth={isDesktop ? "400px" : "100%"}
         >
           <Typography
             fontWeight={600}
+            fontFamily={"Inter !important"}
             fontSize={isDesktop ? "48px" : "24px"}
             lineHeight={isDesktop ? "58px" : "32px"}
+            textAlign={isDesktop ? "left" : "center"}
             color={"#fff"}
           >
             What our client say about us
           </Typography>
           <Typography
+            fontWeight={400}
+            fontFamily={"Inter !important"}
             fontSize={isDesktop ? "16px" : "14px"}
             color={"#fff"}
             marginTop={"16px"}
+            textAlign={isDesktop ? "left" : "center"}
+            lineHeight={isDesktop ? "32px" : "20px"}
           >
             Explore the personal stories of our customers and see how Ecowave's
             sustainable solutions have enriched their lives.
@@ -50,8 +56,8 @@ export const ReviewsComponent = () => {
         </Box>
         <Box
           flex={1}
-          maxWidth={isDesktop ? "calc(100% - 448px)" : "100%"}
-          paddingX={isDesktop ? "30px" : "0"}
+          maxWidth={isDesktop ? "calc(100% - 432px)" : "100%"}
+          paddingX={isDesktop ? "61px" : "0"}
           position={"relative"}
         >
           <Swiper
@@ -64,6 +70,8 @@ export const ReviewsComponent = () => {
             pagination={{
               clickable: true,
             }}
+            slidesOffsetAfter={isDesktop ? 0 : 20}
+            slidesOffsetBefore={isDesktop ? 0 : 20}
           >
             {data.map((d) => (
               <SwiperSlide
@@ -95,7 +103,7 @@ export const ReviewsComponent = () => {
                 bgcolor={"#D2EDCC"}
                 borderRadius={"999px"}
                 position={"absolute"}
-                left={"0"}
+                left={"31px"}
                 top={"50%"}
                 zIndex={1}
                 sx={{
@@ -103,14 +111,17 @@ export const ReviewsComponent = () => {
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   "&:hover": {
-                    bgcolor: "#1FA500",
+                    bgcolor: "#D2EDCC",
                   },
                 }}
                 onClick={() => {
                   if (swiperRef.current) swiperRef.current.swiper.slidePrev();
                 }}
               >
-                <FaChevronLeft size={16} color="#1E1E1E" />
+                <img
+                  src="/images/icons/icon-chevron-left.png"
+                  alt="arrow-left"
+                />
               </Box>
               <Box
                 component={"div"}
@@ -122,7 +133,7 @@ export const ReviewsComponent = () => {
                 bgcolor={"#D2EDCC"}
                 borderRadius={"999px"}
                 position={"absolute"}
-                right={"0"}
+                right={"31px"}
                 top={"50%"}
                 zIndex={1}
                 sx={{
@@ -130,14 +141,17 @@ export const ReviewsComponent = () => {
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   "&:hover": {
-                    bgcolor: "#1FA500",
+                    bgcolor: "#D2EDCC",
                   },
                 }}
                 onClick={() => {
                   if (swiperRef.current) swiperRef.current.swiper.slideNext();
                 }}
               >
-                <FaChevronRight size={16} color="#1E1E1E" />
+                <img
+                  src="/images/icons/icon-chevron-right.png"
+                  alt="arrow-right"
+                />
               </Box>
             </>
           )}
