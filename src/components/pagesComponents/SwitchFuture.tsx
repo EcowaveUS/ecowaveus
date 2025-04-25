@@ -43,7 +43,16 @@ export const SwitchFuture = () => {
             color={"white"}
             lineHeight={isDesktop ? "100%" : "52px"}
           >
-            Riding the wave off eco-innovation
+            {isDesktop ? (
+              <>
+                Riding the wave off{" "}
+                <span style={{ background: "rgba(2, 45, 87, 0.4)" }}>
+                  eco-innovation
+                </span>
+              </>
+            ) : (
+              "Riding the wave off eco-innovation"
+            )}
           </Typography>
           <Typography
             fontWeight={400}
