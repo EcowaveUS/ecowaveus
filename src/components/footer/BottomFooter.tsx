@@ -33,6 +33,8 @@ export const BottomFooter = () => {
           color="#ffffff"
           fontSize={isDesktop ? "12px" : "14px"}
           fontWeight={isDesktop ? "500" : "400"}
+          lineHeight={isDesktop ? "150%" : "20px"}
+          fontFamily={"Inter !important"}
         >
           © 2021 Ecowave. All Rights Reserved.
         </Typography>
@@ -43,68 +45,72 @@ export const BottomFooter = () => {
           gap={isDesktop ? "24px" : "12px"}
         >
           <Link
+            style={{ order: isDesktop ? 1 : 2 }}
             to={
               import.meta.env.VITE_FACEBOOK_LINK || "https://www.facebook.com/"
             }
           >
-            {isDesktop ? (
-              <FaFacebook size={18} />
-            ) : (
-              <Box
-                borderRadius={"999px"}
-                bgcolor={"#01162C"}
-                width={"32px"}
-                height={"32px"}
-                display={"flex"}
-                alignItems={"center"}
-                justifyContent={"center"}
-              >
-                <FaFacebookF size={14} />
-              </Box>
-            )}
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                src={
+                  isDesktop
+                    ? "/images/icons/icon-facebook-white-2.png"
+                    : "/images/icons/icon-facebook-white-1.png"
+                }
+                alt="facebook"
+              />
+            </Box>
           </Link>
           <Link
+            style={{ order: isDesktop ? 2 : 1 }}
             to={
               import.meta.env.VITE_INSTAGRAM_LINK ||
               "https://www.instagram.com/"
             }
           >
-            {isDesktop ? (
-              <FaInstagram size={18} />
-            ) : (
-              <Box
-                borderRadius={"999px"}
-                bgcolor={"#01162C"}
-                width={"32px"}
-                height={"32px"}
-                display={"flex"}
-                alignItems={"center"}
-                justifyContent={"center"}
-              >
-                <FaInstagram size={14} />
-              </Box>
-            )}
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                src={"/images/icons/icon-instagram-white.png"}
+                alt="instagram"
+              />
+            </Box>
           </Link>
           <Link
+            style={{ order: 3 }}
             to={
               import.meta.env.VITE_LINKEDIN_LINK || "https://www.linkedin.com/"
             }
           >
-            {isDesktop ? (
-              <FaLinkedinIn size={18} />
-            ) : (
-              <Box
-                borderRadius={"999px"}
-                bgcolor={"#01162C"}
-                width={"32px"}
-                height={"32px"}
-                display={"flex"}
-                alignItems={"center"}
-                justifyContent={"center"}
-              >
-                <FaLinkedinIn size={14} />
-              </Box>
-            )}
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                src={"/images/icons/icon-linkedin-white.png"}
+                alt="linkedin"
+              />
+            </Box>
           </Link>
         </Box>
       </Box>
