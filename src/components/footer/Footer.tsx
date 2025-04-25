@@ -60,16 +60,18 @@ export const Footer = () => {
                 { text: "22 Broadway,<br />Beverly, MA, 01915", url: "" },
               ]}
             />
-            <NavigationFooter
-              width={300}
-              title="Hours"
-              links={[
-                {
-                  text: "Mon - Fri  8:00 AM - 5:00 PM<br />Sat - Sun Closed",
-                  url: "",
-                },
-              ]}
-            />
+            {isDesktop && (
+              <NavigationFooter
+                width={300}
+                title="Hours"
+                links={[
+                  {
+                    text: "Mon - Fri  8:00 AM - 5:00 PM<br />Sat - Sun Closed",
+                    url: "",
+                  },
+                ]}
+              />
+            )}
           </Box>
         </Box>
       </Box>

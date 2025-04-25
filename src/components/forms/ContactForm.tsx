@@ -222,7 +222,13 @@ export const ContactForm = () => {
               </div>
             )}
           </div>
-          <Typography color={"#505059"} fontSize={"14px"} align="right">
+          <Typography
+            color={"#505059"}
+            fontSize={"14px"}
+            align="right"
+            fontFamily={"Inter !important"}
+            lineHeight={"20px"}
+          >
             {formik.values.message.length}/80
           </Typography>
         </InputFormContainer>
