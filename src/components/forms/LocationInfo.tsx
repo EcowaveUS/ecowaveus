@@ -20,12 +20,7 @@ export const LocationInfo = () => {
         gap={"12px"}
         marginTop={"16px"}
       >
-        <Box
-          display={"flex"}
-          gap={"6px"}
-          component={"a"}
-          href="mailto:info@ecowaveus.com"
-        >
+        <Box display={"flex"} gap={"6px"}>
           <Box
             component={"div"}
             width={20}
@@ -37,6 +32,9 @@ export const LocationInfo = () => {
             <img src="/images/icons/icon-email-gray.svg" alt="envelope" />
           </Box>
           <Typography
+            component={"a"}
+            href="mailto:info@ecowaveus.com"
+            sx={{ textDecoration: "underline" }}
             lineHeight={"20px"}
             fontSize={"16px"}
             fontFamily={"Inter !important"}
@@ -45,7 +43,7 @@ export const LocationInfo = () => {
             Info@ecowaveus.com
           </Typography>
         </Box>
-        <Box display={"flex"} gap={"6px"} component={"a"} href="tel:9785004081">
+        <Box display={"flex"} gap={"6px"}>
           <Box
             component={"div"}
             width={20}
@@ -57,6 +55,9 @@ export const LocationInfo = () => {
             <img src="/images/icons/icon-phone-gray.svg" alt="phone" />
           </Box>
           <Typography
+            component={"a"}
+            href="tel:9785004081"
+            sx={{ textDecoration: "underline" }}
             lineHeight={"20px"}
             fontSize={"16px"}
             fontFamily={"Inter !important"}
