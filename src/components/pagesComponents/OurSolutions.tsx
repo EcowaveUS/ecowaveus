@@ -99,6 +99,7 @@ export const OurSolutions = () => {
                       alignItems={"center"}
                       justifyContent={"center"}
                       bgcolor={"#1FA500"}
+                      border={"1px solid #FFFFFF1A"}
                     >
                       <img src={s.iconNew} alt={s.title} />
                     </Box>

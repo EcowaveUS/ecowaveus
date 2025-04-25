@@ -34,29 +34,41 @@ export const HeaderNew = () => {
           <InfoContainer>
             <IconContainer>
               <img
-                src="/images/icons/icon-clock-white.png"
+                src="/images/icons/icon-clock-white.svg"
                 alt="icon-clock-white"
               />
             </IconContainer>
             <InfoText>Mon - Fri 8:00AM - 5:00PM</InfoText>
           </InfoContainer>
-          <InfoContainer component={"a"} href="mailto:info@ecowaveus.com">
+          <InfoContainer>
             <IconContainer>
               <img
-                src="/images/icons/icon-email-white.png"
+                src="/images/icons/icon-email-white.svg"
                 alt="icon-email-white"
               />
             </IconContainer>
-            <InfoText>info@ecowaveus.com</InfoText>
+            <InfoText
+              component={"a"}
+              href="mailto:info@ecowaveus.com"
+              sx={{ textDecoration: "underline" }}
+            >
+              info@ecowaveus.com
+            </InfoText>
           </InfoContainer>
-          <InfoContainer component={"a"} href="tel:+9785004081">
+          <InfoContainer>
             <IconContainer>
               <img
-                src="/images/icons/icon-phone-white.png"
+                src="/images/icons/icon-phone-white.svg"
                 alt="icon-phone-white"
               />
             </IconContainer>
-            <InfoText>(978) 500-4081</InfoText>
+            <InfoText
+              component={"a"}
+              href="tel:+9785004081"
+              sx={{ textDecoration: "underline" }}
+            >
+              (978) 500-4081
+            </InfoText>
           </InfoContainer>
         </Box>
       </Box>
@@ -149,7 +161,7 @@ export const HeaderNew = () => {
           sx={{ cursor: "pointer" }}
           onClick={() => setIsOpenMobileMenu(true)}
         >
-          <img src="/images/icons/icon-menu-black.png" alt="icon-menu-black" />
+          <img src="/images/icons/icon-menu-black.svg" alt="icon-menu-black" />
         </Box>
         <Link to={"/"}>
           <img
@@ -171,7 +183,7 @@ export const HeaderNew = () => {
           href="tel:+9785004081"
         >
           <img
-            src="/images/icons/icon-phone-black.png"
+            src="/images/icons/icon-phone-black.svg"
             alt="icon-phone-black"
           />
         </Box>
@@ -219,7 +231,7 @@ export const HeaderNew = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => setIsOpenMobileMenu(false)}
           >
-            <img src="/images/icons/icon-x-black.png" alt="icon-x-black" />
+            <img src="/images/icons/icon-x-black.svg" alt="icon-x-black" />
           </Box>
         </Box>
       </Box>

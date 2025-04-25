@@ -7,9 +7,9 @@ import iconHeatPumps from "../assets/icons/Icon-heat-pumps.png";
 import iconEvCharger from "../assets/icons/Icon-ev-charger.png";
 import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 
-import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.png";
-import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.png";
-import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage-new.png";
+import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.svg";
+import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.svg";
+import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage-new.svg";
 
 export const CardInfo = [
   {

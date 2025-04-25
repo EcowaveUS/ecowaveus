@@ -1,22 +1,28 @@
+import React, { useEffect, useState } from "react";
 import { Avatar, Box, Theme, Typography, useMediaQuery } from "@mui/material";
-import React from "react";
 
 interface ReviewCard2Props {
   description: string;
   firstName: string;
   lastName: string;
-  avatar: string;
   position: string;
 }
 
 export const ReviewCard2: React.FC<ReviewCard2Props> = ({
   firstName,
   lastName,
-  avatar,
   description,
   position,
 }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const [gender, setGender] = useState<null | "female" | "male">(null);
+  useEffect(() => {
+    fetch(`https://api.genderize.io?name=${firstName}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setGender(data.gender);
+      });
+  }, [firstName]);
   return (
     <Box
       component={"div"}
@@ -62,7 +68,7 @@ export const ReviewCard2: React.FC<ReviewCard2Props> = ({
       <Box display={"flex"} gap={"16px"} alignItems={"center"}>
         <Avatar
           style={{ width: "60px", height: "60px" }}
-          src={`/images/avatars/${avatar}`}
+          src={`/images/avatars/avatar-${gender}.jpg`}
         />
         <div>
           <Typography

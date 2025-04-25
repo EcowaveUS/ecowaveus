@@ -86,7 +86,6 @@ export const ReviewsComponent = () => {
                   firstName={d.firstName}
                   lastName={d.lastName}
                   position={d.position}
-                  avatar={d.avatar}
                 />
               </SwiperSlide>
             ))}
@@ -119,7 +118,7 @@ export const ReviewsComponent = () => {
                 }}
               >
                 <img
-                  src="/images/icons/icon-chevron-left.png"
+                  src="images/icons/icon-chevron-left.png"
                   alt="arrow-left"
                 />
               </Box>

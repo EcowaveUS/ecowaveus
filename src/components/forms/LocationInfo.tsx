@@ -34,7 +34,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-email-gray.png" alt="envelope" />
+            <img src="/images/icons/icon-email-gray.svg" alt="envelope" />
           </Box>
           <Typography
             lineHeight={"20px"}
@@ -54,7 +54,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-phone-gray.png" alt="phone" />
+            <img src="/images/icons/icon-phone-gray.svg" alt="phone" />
           </Box>
           <Typography
             lineHeight={"20px"}
@@ -74,7 +74,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-map-gray.png" alt="map" />
+            <img src="/images/icons/icon-map-gray.svg" alt="map" />
           </Box>
           <Typography
             lineHeight={"30px"}
@@ -94,7 +94,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-map-gray.png" alt="map" />
+            <img src="/images/icons/icon-map-gray.svg" alt="map" />
           </Box>
           <Typography
             lineHeight={"30px"}

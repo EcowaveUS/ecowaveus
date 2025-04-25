@@ -46,7 +46,13 @@ export const SwitchFuture = () => {
             {isDesktop ? (
               <>
                 Riding the wave off{" "}
-                <span style={{ background: "rgba(2, 45, 87, 0.4)" }}>
+                <span
+                  style={{
+                    background: "rgba(2, 45, 87, 0.4)",
+                    height: "86px",
+                    display: "inline-block",
+                  }}
+                >
                   eco-innovation
                 </span>
               </>
