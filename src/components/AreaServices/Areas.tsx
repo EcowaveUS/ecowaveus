@@ -20,15 +20,16 @@ const Areas = () => {
         }}
         position={"relative"}
       >
-        {/* <Box
-          height={"100%"}
-          width={"100%"}
-          sx={{
-            background: isDesktop
-              ? "linear-gradient(90deg, #022241 12.57%, rgba(2, 39, 74, 0.91) 29.63%, rgba(3, 46, 89, 0.765732) 43.84%, rgba(5, 87, 167, 0) 100%)"
-              : "linear-gradient(90deg, #022241 0%, rgba(3, 44, 84, 0.81) 40%, rgba(4, 66, 126, 0.39825) 75.5%, rgba(5, 87, 167, 0) 100%)",
-          }}
-        ></Box> */}
+        {isDesktop && (
+          <Box
+            height={"100%"}
+            width={"100%"}
+            sx={{
+              background:
+                "linear-gradient(90deg, #022241 12.57%, rgba(2, 39, 74, 0.91) 29.63%, rgba(3, 46, 89, 0.765732) 43.84%, rgba(5, 87, 167, 0) 100%)",
+            }}
+          ></Box>
+        )}
         {isDesktop && (
           <Box
             position={"absolute"}
