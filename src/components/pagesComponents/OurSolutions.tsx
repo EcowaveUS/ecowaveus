@@ -12,7 +12,6 @@ export const OurSolutions = () => {
     <Box bgcolor={"#F6F6F6"}>
       <Box
         component={"div"}
-        className="container"
         paddingTop={isDesktop ? "80px" : "36px"}
         paddingBottom={isDesktop ? "80px" : "48px"}
         display={"flex"}
@@ -24,13 +23,17 @@ export const OurSolutions = () => {
           maxWidth={"612px"}
           marginLeft={"auto"}
           marginRight={"auto"}
+          className="container"
         >
           <Typography
             fontWeight={600}
             fontSize={isDesktop ? "48px" : "24px"}
             align="center"
-            color={"#252529"}
-            lineHeight={"120%"}
+            color={isDesktop ? "#181A1C" : "#252529"}
+            lineHeight={isDesktop ? "100%" : "32px"}
+            fontFamily={
+              isDesktop ? "AvenirNext !important" : "Inter !important"
+            }
           >
             Empowering your sustainable choices
           </Typography>
@@ -38,30 +41,49 @@ export const OurSolutions = () => {
             marginTop={"16px"}
             fontSize={isDesktop ? "16px" : "14px"}
             align="center"
-            color={"#181A1C80"}
+            lineHeight={isDesktop ? "150%" : "20px"}
+            fontFamily={"Inter !important"}
+            color={isDesktop ? "#181A1C80" : "#6C6C78"}
+            letterSpacing={isDesktop ? "0.01em" : "0.02em"}
           >
-            Driving innovation in renewable technologies for a greener tomorrow:
-            harnessing the power of sustainability to transform energy
-            consumption and foster environmental stewardship.
+            {isDesktop
+              ? "Driving innovation in renewable technologies for a greener tomorrow: harnessing the power of sustainability to transform energy consumption and foster environmental stewardship."
+              : "Olives bbq broccoli meatball marinara. Bianca pesto Chicago roll anchovies meatball Hawaiian parmesan sautéed mozzarella."}
           </Typography>
         </Box>
         <Swiper
           modules={[FreeMode]}
-          spaceBetween={12}
+          spaceBetween={0}
           slidesPerView={"auto"}
           freeMode={true}
           style={{ maxWidth: "100%" }}
+          slidesOffsetBefore={isDesktop ? 0 : 20}
+          slidesOffsetAfter={isDesktop ? 0 : 20}
         >
-          <SwiperSlide style={{ width: "fit-content" }}>
-            <Box
-              borderRadius={"12px"}
-              padding={"24px"}
-              bgcolor={"white"}
-              display={"flex"}
-            >
-              {services.map((s, _idx) => (
-                <Box key={_idx} display={"flex"} alignItems={"stretch"}>
-                  <Box width={"259px"} minWidth={"259px"} maxWidth={"259px"}>
+          {services.map((s, _idx) => (
+            <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
+              <Box
+                borderRadius={
+                  _idx === 0
+                    ? "12px 0 0 12px"
+                    : _idx === services.length - 1
+                    ? "0 12px 12px 0"
+                    : "0"
+                }
+                padding={"24px"}
+                paddingRight={_idx !== services.length - 1 ? "8px" : "24px"}
+                bgcolor={"white"}
+              >
+                <Box display={"flex"} alignItems={"stretch"}>
+                  <Box
+                    width={"259px"}
+                    minWidth={"259px"}
+                    maxWidth={"259px"}
+                    height={"268px"}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    justifyContent={"center"}
+                  >
                     <Box
                       width={"48px"}
                       height={"48px"}
@@ -76,6 +98,7 @@ export const OurSolutions = () => {
                     <Typography
                       marginTop={"24px"}
                       fontWeight={600}
+                      fontFamily={"Inter !important"}
                       fontSize={isDesktop ? "48px" : "32px"}
                       color={"#252529"}
                       lineHeight={"100%"}
@@ -86,6 +109,8 @@ export const OurSolutions = () => {
                       marginTop={"24px"}
                       fontSize={"16px"}
                       color={"#0B081F80"}
+                      lineHeight={"150%"}
+                      fontFamily={"Inter !important"}
                       sx={{
                         lineClamp: 2,
                         overflow: "hidden",
@@ -104,6 +129,9 @@ export const OurSolutions = () => {
                         textDecoration: "underline",
                         color: "#0B6BD9",
                         marginTop: "12px",
+                        fontFamily: "Inter !important",
+                        lineHeight: "16px",
+                        display: "block",
                       }}
                     >
                       Learn more
@@ -112,16 +140,15 @@ export const OurSolutions = () => {
                   {_idx !== services.length - 1 && (
                     <Box
                       marginLeft={"32px"}
-                      marginRight={"32px"}
                       bgcolor={"#181A1C1A"}
                       width={"1px"}
-                      height={"100%"}
+                      height={"268px"}
                     ></Box>
                   )}
                 </Box>
-              ))}
-            </Box>
-          </SwiperSlide>
+              </Box>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Box>
     </Box>

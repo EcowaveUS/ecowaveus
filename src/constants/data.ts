@@ -59,7 +59,7 @@ export const services = [
     iconNew: iconHeatPumpsNew,
   },
   {
-    title: "EV-Chargers",
+    title: "EV Chargers",
     content: "Charge Anywhere: Fast, reliable power for your electric vehicle.",
     url: "/ev-chargers",
     icon: iconEvCharger,
@@ -74,7 +74,7 @@ export const services = [
   },
   {
     title: "Solar Panels",
-    content: "Store Smart: Harness and manage renewable energy efficiently.",
+    content: "Go Solar: Capture clean energy with high-performance panels.",
     url: "/solar-panels",
     icon: iconHeatPumps,
     iconNew: iconEnergyStorageNew,
