@@ -10,6 +10,8 @@ import {
   Theme,
   Typography,
   Button,
+  FormControl,
+  FormHelperText,
 } from "@mui/material";
 import styled from "styled-components";
 import { useFormik } from "formik";
@@ -67,7 +69,12 @@ export const ContactForm = () => {
     },
   });
 
-  const options = ["Ev Chargers", "Heat Pumps", "Energy Storage"];
+  const options = [
+    { label: "Select an option", value: "" },
+    { label: "Ev Chargers", value: "Ev Chargers" },
+    { label: "Heat Pumps", value: "Heat Pumps" },
+    { label: "Energy Storage", value: "Energy Storage" },
+  ];
 
   return (
     <FormWrapper
@@ -150,44 +157,71 @@ export const ContactForm = () => {
           </InputFormContainer>
           <InputFormContainer>
             <Label>Product</Label>
-            <SelectField
-              name="option"
-              value={formik.values.option}
-              onChange={formik.handleChange}
+            <FormControl
+              fullWidth
               error={formik.touched.option && Boolean(formik.errors.option)}
-              onBlur={formik.handleBlur}
             >
-              {options?.map((option) => (
-                <MenuItem
-                  style={{ fontSize: "14px", lineHeight: "20px" }}
-                  key={option}
-                  value={option}
-                >
-                  {option}
-                </MenuItem>
-              ))}
-            </SelectField>
+              <SelectField
+                name="option"
+                value={formik.values.option}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                displayEmpty
+              >
+                {options?.map((option) => (
+                  <MenuItem
+                    key={option.value}
+                    value={option.value}
+                    style={{ fontSize: "14px", lineHeight: "20px" }}
+                  >
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </SelectField>
+
+              {formik.touched.option && formik.errors.option && (
+                <FormHelperText>{formik.errors.option}</FormHelperText>
+              )}
+            </FormControl>
           </InputFormContainer>
         </FormInputs>
         <InputFormContainer style={{ marginBottom: "32px" }}>
           <Label>How can we help?</Label>
-          <Textarea
-            aria-label="minimum height"
-            minRows={3}
-            style={{
-              width: "100%",
-              minHeight: "100px",
-              maxHeight: "100px",
-              borderRadius: "12px",
-              padding: "12px 16px",
-              border: "1px solid #C6C6CC",
-              resize: "none",
-            }}
-            name="message"
-            value={formik.values.message}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
+          <div>
+            <Textarea
+              aria-label="minimum height"
+              minRows={3}
+              style={{
+                width: "100%",
+                minHeight: "100px",
+                maxHeight: "100px",
+                borderRadius: "12px",
+                padding: "12px 16px",
+                border:
+                  formik.touched.message && formik.errors.message
+                    ? "1px solid #d32f2f"
+                    : "1px solid #C6C6CC",
+                resize: "none",
+              }}
+              name="message"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+
+            {formik.touched.message && formik.errors.message && (
+              <div
+                style={{
+                  color: "#d32f2f",
+                  fontSize: "0.75rem",
+                  margin: "3px 14px 0",
+                  fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+                }}
+              >
+                {formik.errors.message}
+              </div>
+            )}
+          </div>
           <Typography color={"#505059"} fontSize={"14px"} align="right">
             {formik.values.message.length}/80
           </Typography>
@@ -205,7 +239,8 @@ export const ContactForm = () => {
             border: "none",
             cursor: "pointer",
             transition: "background 0.3s ease",
-            "&:hover": { backgroundColor: "#1a1a1d" },
+            fontFamily: "Montserrat !important",
+            "&:hover": { backgroundColor: "#252529" },
           }}
           type="submit"
         >
@@ -235,9 +270,10 @@ const InputFormContainer = styled.div`
 `;
 const Label = styled.label`
   color: #252529;
-  font-family: Inter;
+  font-family: Inter !important;
   font-size: 14px;
   font-weight: 600;
+  line-height: 20px;
 `;
 const InputField = styled(TextField)({
   "& .MuiInputBase-root": {

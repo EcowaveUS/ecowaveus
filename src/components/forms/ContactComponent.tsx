@@ -4,7 +4,7 @@ import { Box, Theme, useMediaQuery } from "@mui/material";
 import waveVectorImage from "../../assets/images/wave-vector.png";
 
 export const ContactComponent = () => {
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box component={"div"} bgcolor={"#F5F5F5"} position={"relative"}>
       <img
@@ -24,17 +24,17 @@ export const ContactComponent = () => {
         position={"relative"}
         component={"div"}
         className="container"
-        paddingTop={isDesktop ? "92px" : "44px"}
+        paddingTop={isDesktop ? "92px" : "48px"}
         paddingBottom={isDesktop ? "92px" : "0"}
         display={"flex"}
         flexDirection={isDesktop ? "row" : "column"}
-        gap={"24px"}
+        gap={isDesktop ? "96px" : "24px"}
         justifyContent={"space-between"}
       >
-        <Box component={"div"} width={isDesktop ? "50%" : "100%"}>
+        <Box component={"div"} flex={1}>
           <LocationInfo />
         </Box>
-        <Box component={"div"} width={isDesktop ? "50%" : "100%"}>
+        <Box component={"div"} minWidth={isDesktop ? "600px" : "100%"}>
           <ContactForm />
         </Box>
       </Box>
