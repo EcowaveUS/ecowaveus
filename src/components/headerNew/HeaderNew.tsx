@@ -1,11 +1,5 @@
 import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
-import {
-  FaEnvelope,
-  FaList,
-  FaPhone,
-  FaRegClock,
-  FaTimes,
-} from "react-icons/fa";
+import { FaList, FaPhone, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logoFooter from "../../assets/images/logo-footer.png";
@@ -24,7 +18,11 @@ export const HeaderNew = () => {
   }, [isOpenMobileMenu]);
   return isDesktop ? (
     <>
-      <Box component={"div"} bgcolor={"#01162C"}>
+      <Box
+        component={"div"}
+        bgcolor={"#01162C"}
+        borderBottom={"1px solid #FFFFFF1A"}
+      >
         <Box
           component={"div"}
           className="container"
@@ -36,21 +34,30 @@ export const HeaderNew = () => {
         >
           <InfoContainer>
             <IconContainer>
-              <FaRegClock size={13} color={"#FFFFFF"} />
+              <img
+                src="/images/icons/icon-clock-white.png"
+                alt="icon-clock-white"
+              />
             </IconContainer>
             <InfoText>Mon - Fri 8:00AM - 5:00PM</InfoText>
           </InfoContainer>
-          <InfoContainer>
+          <InfoContainer component={"a"} href="mailto:info@ecowaveus.com">
             <IconContainer>
-              <FaEnvelope size={13} color={"#FFFFFF"} />
+              <img
+                src="/images/icons/icon-email-white.png"
+                alt="icon-email-white"
+              />
             </IconContainer>
             <InfoText>info@ecowaveus.com</InfoText>
           </InfoContainer>
-          <InfoContainer>
+          <InfoContainer component={"a"} href="tel:+9785004081">
             <IconContainer>
-              <FaPhone size={13} color={"#FFFFFF"} />
+              <img
+                src="/images/icons/icon-phone-white.png"
+                alt="icon-phone-white"
+              />
             </IconContainer>
-            <InfoText>(978) 500 4081</InfoText>
+            <InfoText>(978) 500-4081</InfoText>
           </InfoContainer>
         </Box>
       </Box>
@@ -66,6 +73,7 @@ export const HeaderNew = () => {
           backdropFilter: "blur(5px)",
         }}
         marginBottom={isDesktop ? "-80px" : "0"}
+        borderBottom={"1px solid #FFFFFF0D"}
       >
         <Box
           component={"div"}
@@ -100,10 +108,11 @@ export const HeaderNew = () => {
                 fontSize: "12px",
                 fontWeight: "600",
                 lineHeight: "16px",
+                fontFamily: "Inter !important",
+                letterSpacing: "2% !important",
                 cursor: "pointer",
-                transition: "background 0.3s ease",
-                border: "none",
-                "&:hover": { backgroundColor: "#f0f0f0" },
+                border: "1px solid #C6C6CC",
+                "&:hover": { backgroundColor: "#ffffff" },
               }}
               onClick={() => navigate("/contact-us")}
             >
@@ -116,7 +125,7 @@ export const HeaderNew = () => {
   ) : !isOpenMobileMenu ? (
     <Box
       component={"div"}
-      bgcolor={"white"}
+      bgcolor={"#FFFFFF0D"}
       position={"sticky"}
       top={0}
       sx={{ boxShadow: "0px 4px 24px 0px #25252914" }}
@@ -129,7 +138,6 @@ export const HeaderNew = () => {
         display={"flex"}
         justifyContent={"space-between"}
         alignItems={"center"}
-        onClick={() => setIsOpenMobileMenu(true)}
       >
         <Box
           display={"flex"}
@@ -140,8 +148,9 @@ export const HeaderNew = () => {
           justifyContent={"center"}
           border={"1px solid #C6C6CC"}
           sx={{ cursor: "pointer" }}
+          onClick={() => setIsOpenMobileMenu(true)}
         >
-          <FaList color="#252529" size={12} />
+          <img src="/images/icons/icon-menu-black.png" alt="icon-menu-black" />
         </Box>
         <Link to={"/"}>
           <img
@@ -162,7 +171,10 @@ export const HeaderNew = () => {
           component={"a"}
           href="tel:+9785004081"
         >
-          <FaPhone color="#252529" size={13} />
+          <img
+            src="/images/icons/icon-phone-black.png"
+            alt="icon-phone-black"
+          />
         </Box>
       </Box>
     </Box>
@@ -208,7 +220,7 @@ export const HeaderNew = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => setIsOpenMobileMenu(false)}
           >
-            <FaTimes color="#252529" size={13} />
+            <img src="/images/icons/icon-x-black.png" alt="icon-x-black" />
           </Box>
         </Box>
       </Box>
@@ -223,9 +235,11 @@ export const HeaderNew = () => {
         <LinkItem1 to="/">Home</LinkItem1>
         <LinkItem1 to="/heat-pumps">Heat Pumps</LinkItem1>
         <LinkItem1 to="/ev-chargers">EV Chargers</LinkItem1>
-        <LinkItem1 to="/energy-storage">Home Batteries</LinkItem1>
+        <LinkItem1 to="/energy-storage">Energy Storage</LinkItem1>
         <LinkItem1 to="/about-us">About Us</LinkItem1>
         <LinkItem1 to="/contact-us">Contact Us</LinkItem1>
+        <LinkItem1 to="/">DT Financiero</LinkItem1>
+        <LinkItem1 to="/">Ayuda</LinkItem1>
       </Box>
       <Box paddingY={"16px"} borderTop={"1px solid #022D57"}>
         <Box className="container" component={"div"}>
@@ -240,9 +254,11 @@ export const HeaderNew = () => {
               fontWeight: "600",
               lineHeight: "20px",
               cursor: "pointer",
+              fontFamily: "Inter !important",
+              letterSpacing: "1% !important",
               transition: "background 0.3s ease",
               border: "none",
-              "&:hover": { backgroundColor: "#353535" },
+              "&:hover": { backgroundColor: "#404047" },
             }}
             onClick={() => navigate("/contact-us")}
           >
@@ -273,12 +289,16 @@ const InfoText = styled(Typography)({
   fontSize: "12px !important",
   fontWeight: "600 !important",
   color: "#FFFFFF",
+  fontFamily: "Inter !important",
+  letterSpacing: "2% !important",
 });
 
 const LinkItem = styled(Link)({
+  fontFamily: "Inter !important",
   fontSize: "14px",
   fontWeight: "600",
   color: "#FFFFFF",
+  letterSpacing: "0 !important",
 });
 
 const LinkItem1 = styled(Link)({
@@ -286,4 +306,6 @@ const LinkItem1 = styled(Link)({
   fontWeight: "700",
   color: "#FFFFFF",
   lineHeight: "20px",
+  fontFamily: "Montserrat !important",
+  letterSpacing: "1% !important",
 });
