@@ -47,6 +47,8 @@ export const ReviewCard2: React.FC<ReviewCard2Props> = ({
         flex={1}
         color={isDesktop ? "#2C2C2C" : "#6C6C78"}
         fontSize={"16px"}
+        fontFamily={"Inter !important"}
+        lineHeight={"136%"}
         style={{
           lineClamp: 8,
           display: "-webkit-box",
@@ -63,10 +65,22 @@ export const ReviewCard2: React.FC<ReviewCard2Props> = ({
           src={`/images/avatars/${avatar}`}
         />
         <div>
-          <Typography fontWeight={600} fontSize={"20px"} color={"#2C2C2C"}>
+          <Typography
+            fontWeight={600}
+            fontSize={"20px"}
+            color={"#2C2C2C"}
+            lineHeight={"100%"}
+            fontFamily={"Inter !important"}
+          >
             {firstName} {lastName}
           </Typography>
-          <Typography fontSize={"16px"} color={"#777777"}>
+          <Typography
+            fontSize={"16px"}
+            color={"#777777"}
+            lineHeight={"100%"}
+            marginTop={"4px"}
+            fontFamily={"Inter !important"}
+          >
             {position}
           </Typography>
         </div>
