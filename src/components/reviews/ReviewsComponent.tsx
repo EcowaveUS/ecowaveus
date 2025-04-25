@@ -86,6 +86,7 @@ export const ReviewsComponent = () => {
                   firstName={d.firstName}
                   lastName={d.lastName}
                   position={d.position}
+                  gender={d.gender as "male" | "female"}
                 />
               </SwiperSlide>
             ))}
