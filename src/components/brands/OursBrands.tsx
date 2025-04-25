@@ -13,37 +13,38 @@ export const OursBrands: React.FC<Props> = ({ images }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
 
   return (
-    <Box bgcolor={"white"}>
-      <Box
-        component={"div"}
-        className="container"
-        paddingY={isDesktop ? "32px" : "20px"}
+    <Box
+      component={"div"}
+      bgcolor={"white"}
+      paddingY={isDesktop ? "32px" : "20px"}
+    >
+      <Swiper
+        modules={[FreeMode]}
+        spaceBetween={isDesktop ? 12 : 6}
+        slidesPerView={"auto"}
+        freeMode={true}
+        slidesOffsetBefore={isDesktop ? 0 : 20}
+        slidesOffsetAfter={isDesktop ? 0 : 20}
+        style={{ maxWidth: "fit-content" }}
       >
-        <Swiper
-          modules={[FreeMode]}
-          spaceBetween={isDesktop ? 12 : 6}
-          slidesPerView={"auto"}
-          freeMode={true}
-          style={{ maxWidth: "100%" }}
-        >
-          {images.map((image, _idx) => (
-            <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
-              <Box
-                component={"div"}
-                paddingY={isDesktop ? "12px" : "6px"}
-                paddingX={isDesktop ? "24px" : "13px"}
-              >
-                <img
-                  src={image}
-                  alt={`brand-${_idx}`}
-                  height={isDesktop ? "60px" : "33px"}
-                  width={"auto"}
-                />
-              </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Box>
+        {images.map((image, _idx) => (
+          <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
+            <Box
+              component={"div"}
+              paddingY={isDesktop ? "12px" : "6px"}
+              paddingX={isDesktop ? "24px" : "13px"}
+            >
+              <img
+                style={{ filter: "grayscale(100%)" }}
+                src={image}
+                alt={`brand-${_idx}`}
+                height={isDesktop ? "60px" : "33px"}
+                width={"auto"}
+              />
+            </Box>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Box>
   );
 };

@@ -1,5 +1,4 @@
 import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
-import { FaList, FaPhone, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logoFooter from "../../assets/images/logo-footer.png";
@@ -125,7 +124,7 @@ export const HeaderNew = () => {
   ) : !isOpenMobileMenu ? (
     <Box
       component={"div"}
-      bgcolor={"#FFFFFF0D"}
+      bgcolor={"#FFFFFF"}
       position={"sticky"}
       top={0}
       sx={{ boxShadow: "0px 4px 24px 0px #25252914" }}
