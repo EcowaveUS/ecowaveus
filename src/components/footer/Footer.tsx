@@ -9,12 +9,12 @@ export const Footer = () => {
     <Box component="footer" sx={{ backgroundColor: "#022241" }}>
       <Box
         component="div"
-        className="container"
+        className="container-1"
         paddingTop={isDesktop ? "64px" : "48px"}
         paddingBottom={"64px"}
         display={"flex"}
         justifyContent={"space-between"}
-        gap={"64px"}
+        gap={isDesktop ? "24px" : "64px"}
         flexDirection={isDesktop ? "row" : "column"}
         alignItems={"stretch"}
       >
@@ -23,10 +23,11 @@ export const Footer = () => {
           component="div"
           display={"flex"}
           flexDirection={isDesktop ? "row" : "column"}
-          gap={"32px"}
+          gap={isDesktop ? "24px" : "32px"}
           alignItems={"stretch"}
         >
           <NavigationFooter
+            width={192}
             title="Services"
             links={[
               { text: "Heat Pumps", url: "/heat-pumps" },
@@ -37,10 +38,11 @@ export const Footer = () => {
             clickable
           />
           <NavigationFooter
+            width={192}
             title="Our Company"
             links={[
               { text: "About Us", url: "/about-us" },
-              { text: "Contact Us", url: "/contact-us" },
+              { text: "Reviews", url: "/contact-us" },
             ]}
             clickable
           />
@@ -52,12 +54,14 @@ export const Footer = () => {
             alignItems={"stretch"}
           >
             <NavigationFooter
+              width={300}
               title="Local Office"
               links={[
                 { text: "22 Broadway,<br />Beverly, MA, 01915", url: "" },
               ]}
             />
             <NavigationFooter
+              width={300}
               title="Hours"
               links={[
                 {

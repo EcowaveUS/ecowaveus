@@ -15,7 +15,13 @@ export const LogoFooter = () => {
       <Link to="/">
         <img src={logoFooter} height={"auto"} width={"183px"} />
       </Link>
-      <Typography fontSize="16px" fontFamily={"500"} color="#79C966">
+      <Typography
+        fontSize="16px"
+        lineHeight={"24px"}
+        fontWeight={"500"}
+        fontFamily={"Inter !important"}
+        color="#79C966"
+      >
         Riding the wave of Eco-Innovation
       </Typography>
     </Box>
