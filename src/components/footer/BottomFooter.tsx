@@ -56,8 +56,8 @@ export const BottomFooter = () => {
               <img
                 src={
                   isDesktop
-                    ? "/images/icons/icon-facebook-white-2.svg"
-                    : "/images/icons/icon-facebook-white-1.svg"
+                    ? "/images/icons/icon-facebook-white-1.svg"
+                    : "/images/icons/icon-facebook-white-2.svg"
                 }
                 alt="facebook"
               />
