@@ -1,6 +1,6 @@
 import { Box, Theme, useMediaQuery } from "@mui/material";
-import serviceMapImageDesktop from "../../assets/images/service-map-desktop.png";
-import serviceMapImageMobile from "../../assets/images/service-map-mobile.png";
+import serviceMapImageDesktop from "../../assets/images/service-map-desktop.svg";
+import serviceMapImageMobile from "../../assets/images/service-map-mobile.svg";
 import { AreaServices } from "./AreaServices";
 
 const Areas = () => {
