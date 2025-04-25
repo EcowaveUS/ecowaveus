@@ -14,12 +14,12 @@ export const ExpertiseComponent = () => {
         className="container"
         paddingTop={isDesktop ? "64px" : "80px"}
         paddingBottom={isDesktop ? "64px" : "48px"}
-        display={"grid"}
-        gridTemplateColumns={isDesktop ? "1fr 1fr" : "1fr"}
+        display={"flex"}
         gap={isDesktop ? "80px" : "32px"}
         alignItems={isDesktop ? "center" : "flex-start"}
+        flexDirection={isDesktop ? "row" : "column-reverse"}
       >
-        <Box component={"div"}>
+        <Box component={"div"} width={isDesktop ? "50%" : "100%"}>
           <img
             src={expertiseImage}
             alt="expertise"
@@ -27,7 +27,7 @@ export const ExpertiseComponent = () => {
             height={"auto"}
           />
         </Box>
-        <Box component={"div"}>
+        <Box component={"div"} width={isDesktop ? "50%" : "100%"}>
           <Typography
             fontSize={isDesktop ? "48px" : "32px"}
             color="white"
