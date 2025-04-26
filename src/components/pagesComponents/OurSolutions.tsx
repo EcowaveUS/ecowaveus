@@ -48,9 +48,9 @@ export const OurSolutions = () => {
             color={isDesktop ? "#181A1C80" : "#6C6C78"}
             letterSpacing={isDesktop ? "0.01em" : "0.02em"}
           >
-            {isDesktop
-              ? "Driving innovation in renewable technologies for a greener tomorrow: harnessing the power of sustainability to transform energy consumption and foster environmental stewardship."
-              : "Olives bbq broccoli meatball marinara. Bianca pesto Chicago roll anchovies meatball Hawaiian parmesan sautéed mozzarella."}
+            Driving innovation in renewable technologies for a greener tomorrow:
+            harnessing the power of sustainability to transform energy
+            consumption and foster environmental stewardship.
           </Typography>
         </Box>
         <Swiper

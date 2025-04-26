@@ -11,6 +11,7 @@ interface Props {
 
 export const OursBrands: React.FC<Props> = ({ images }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  const isWide = useMediaQuery(`(min-width: 1371px)`);
 
   return (
     <Box
@@ -27,23 +28,25 @@ export const OursBrands: React.FC<Props> = ({ images }) => {
         slidesOffsetAfter={isDesktop ? 0 : 20}
         style={{ maxWidth: "fit-content" }}
       >
-        {images.map((image, _idx) => (
-          <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
-            <Box
-              component={"div"}
-              paddingY={isDesktop ? "12px" : "6px"}
-              paddingX={isDesktop ? "24px" : "13px"}
-            >
-              <img
-                style={{ filter: "grayscale(100%)" }}
-                src={image}
-                alt={`brand-${_idx}`}
-                height={isDesktop ? "60px" : "33px"}
-                width={"auto"}
-              />
-            </Box>
-          </SwiperSlide>
-        ))}
+        {[...Array(isWide ? 1 : 50)]
+          .flatMap(() => images)
+          .map((image, _idx) => (
+            <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
+              <Box
+                component={"div"}
+                paddingY={isDesktop ? "12px" : "6px"}
+                paddingX={isDesktop ? "24px" : "13px"}
+              >
+                <img
+                  style={{ filter: "grayscale(100%)" }}
+                  src={image}
+                  alt={`brand-${_idx}`}
+                  height={isDesktop ? "60px" : "33px"}
+                  width={"auto"}
+                />
+              </Box>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </Box>
   );
