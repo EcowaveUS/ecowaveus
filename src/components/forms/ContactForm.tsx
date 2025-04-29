@@ -71,7 +71,7 @@ export const ContactForm = () => {
 
   const options = [
     { label: "Select an option", value: "" },
-    { label: "Ev Chargers", value: "Ev Chargers" },
+    { label: "EV Chargers", value: "EV Chargers" },
     { label: "Heat Pumps", value: "Heat Pumps" },
     { label: "Energy Storage", value: "Energy Storage" },
   ];

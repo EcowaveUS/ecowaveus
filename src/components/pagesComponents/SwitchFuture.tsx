@@ -53,11 +53,11 @@ export const SwitchFuture = () => {
                     display: "inline-block",
                   }}
                 >
-                  eco-innovation
+                  Eco-Innovation
                 </span>
               </>
             ) : (
-              "Riding the wave of eco-innovation"
+              "Riding the wave of Eco-Innovation"
             )}
           </Typography>
           <Typography
