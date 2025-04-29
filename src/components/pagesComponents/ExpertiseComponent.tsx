@@ -37,7 +37,7 @@ export const ExpertiseComponent = () => {
             fontWeight={600}
             fontFamily={"Inter !important"}
           >
-            Expertise at great prices
+            Expertise at Great Prices
           </Typography>
           <Typography
             fontSize={"16px"}

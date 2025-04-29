@@ -69,7 +69,7 @@ export const LocationInfo = () => {
         <Box display={"flex"} gap={"6px"} component={"div"}>
           <Box
             width={20}
-            height={30}
+            height={20}
             display={"flex"}
             component={"div"}
             justifyContent={"center"}
@@ -78,7 +78,7 @@ export const LocationInfo = () => {
             <img src="/images/icons/icon-clock-gray.svg" alt="map" />
           </Box>
           <Typography
-            lineHeight={"30px"}
+            lineHeight={"20px"}
             fontSize={"16px"}
             fontFamily={"Inter !important"}
             color={"#6C6C78"}
@@ -89,7 +89,7 @@ export const LocationInfo = () => {
         <Box display={"flex"} gap={"6px"} component={"div"}>
           <Box
             width={20}
-            height={30}
+            height={20}
             display={"flex"}
             component={"div"}
             justifyContent={"center"}
@@ -98,7 +98,7 @@ export const LocationInfo = () => {
             <img src="/images/icons/icon-map-gray.svg" alt="map" />
           </Box>
           <Typography
-            lineHeight={"30px"}
+            lineHeight={"20px"}
             fontSize={"16px"}
             fontFamily={"Inter !important"}
             color={"#6C6C78"}

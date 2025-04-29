@@ -95,7 +95,7 @@ export const HeaderNew = () => {
           justifyContent={"space-between"}
         >
           <Link to={"/"}>
-            <img src={logoFooter} alt="logo" width={"80px"} height={"auto"} />
+            <img src={logoFooter} alt="logo" width={"100px"} height={"auto"} />
           </Link>
           <Box
             component={"div"}
