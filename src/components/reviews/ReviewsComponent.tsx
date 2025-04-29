@@ -39,7 +39,7 @@ export const ReviewsComponent = () => {
             textAlign={isDesktop ? "left" : "center"}
             color={"#fff"}
           >
-            What our client say about us
+            What our clients say about us
           </Typography>
           <Typography
             fontWeight={400}
@@ -86,7 +86,6 @@ export const ReviewsComponent = () => {
                   firstName={d.firstName}
                   lastName={d.lastName}
                   position={d.position}
-                  gender={d.gender as "male" | "female"}
                 />
               </SwiperSlide>
             ))}

@@ -57,13 +57,13 @@ export const LocationInfo = () => {
           <Typography
             component={"a"}
             href="tel:9785004081"
-            sx={{ textDecoration: "underline" }}
             lineHeight={"20px"}
             fontSize={"16px"}
             fontFamily={"Inter !important"}
             color={"#6C6C78"}
           >
-            (978) 500 4081
+            <span>(</span>
+            <span style={{ textDecoration: "underline" }}>978) 500 4081</span>
           </Typography>
         </Box>
         <Box display={"flex"} gap={"6px"} component={"div"}>
@@ -75,7 +75,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-map-gray.svg" alt="map" />
+            <img src="/images/icons/icon-clock-gray.svg" alt="map" />
           </Box>
           <Typography
             lineHeight={"30px"}
@@ -83,7 +83,7 @@ export const LocationInfo = () => {
             fontFamily={"Inter !important"}
             color={"#6C6C78"}
           >
-            Monday -Friday 8:00 AM - 5:00 PM
+            Monday - Saturday 8:00 AM - 5:00 PM
           </Typography>
         </Box>
         <Box display={"flex"} gap={"6px"} component={"div"}>

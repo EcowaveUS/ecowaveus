@@ -45,7 +45,7 @@ export const SwitchFuture = () => {
           >
             {isDesktop ? (
               <>
-                Riding the wave off{" "}
+                Riding the wave of{" "}
                 <span
                   style={{
                     background: "rgba(2, 45, 87, 0.4)",
@@ -57,7 +57,7 @@ export const SwitchFuture = () => {
                 </span>
               </>
             ) : (
-              "Riding the wave off eco-innovation"
+              "Riding the wave of eco-innovation"
             )}
           </Typography>
           <Typography

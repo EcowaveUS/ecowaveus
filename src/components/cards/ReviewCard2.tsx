@@ -5,7 +5,6 @@ interface ReviewCard2Props {
   firstName: string;
   lastName: string;
   position: string;
-  gender: "male" | "female";
 }
 
 export const ReviewCard2: React.FC<ReviewCard2Props> = ({
@@ -13,7 +12,6 @@ export const ReviewCard2: React.FC<ReviewCard2Props> = ({
   lastName,
   description,
   position,
-  gender,
 }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
@@ -60,8 +58,8 @@ export const ReviewCard2: React.FC<ReviewCard2Props> = ({
       </Typography>
       <Box display={"flex"} gap={"16px"} alignItems={"center"}>
         <Avatar
-          style={{ width: "60px", height: "60px" }}
-          src={`/images/avatars/avatar-${gender}.jpg`}
+          style={{ width: "60px", height: "60px", borderRadius: 0 }}
+          src={`/images/avatars/avatar.png`}
         />
         <div>
           <Typography
