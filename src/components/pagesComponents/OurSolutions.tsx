@@ -83,6 +83,8 @@ export const OurSolutions = () => {
               >
                 <Box display={"flex"} alignItems={"stretch"}>
                   <Box
+                    component={Link}
+                    to={s.url}
                     width={"259px"}
                     minWidth={"259px"}
                     maxWidth={"259px"}
@@ -130,8 +132,7 @@ export const OurSolutions = () => {
                     >
                       {s.content}
                     </Typography>
-                    <Link
-                      to={s.url}
+                    <Typography
                       style={{
                         fontSize: "12px",
                         textDecoration: "underline",
@@ -143,7 +144,7 @@ export const OurSolutions = () => {
                       }}
                     >
                       Learn more
-                    </Link>
+                    </Typography>
                   </Box>
                   {_idx !== services.length - 1 && (
                     <Box

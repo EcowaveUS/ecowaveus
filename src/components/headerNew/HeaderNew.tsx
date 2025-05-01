@@ -1,5 +1,5 @@
 import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logoFooter from "../../assets/images/logo-footer.png";
 import { useEffect, useState } from "react";
@@ -8,6 +8,7 @@ export const HeaderNew = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     if (isOpenMobileMenu) {
       document.body.style.overflow = "hidden";
@@ -15,6 +16,9 @@ export const HeaderNew = () => {
       document.body.style.overflow = "auto";
     }
   }, [isOpenMobileMenu]);
+  useEffect(() => {
+    setIsOpenMobileMenu(false);
+  }, [location]);
   return isDesktop ? (
     <>
       <Box
@@ -249,8 +253,8 @@ export const HeaderNew = () => {
         <LinkItem1 to="/energy-storage">Energy Storage</LinkItem1>
         <LinkItem1 to="/about-us">About Us</LinkItem1>
         <LinkItem1 to="/contact-us">Contact Us</LinkItem1>
-        <LinkItem1 to="/">DT Financiero</LinkItem1>
-        <LinkItem1 to="/">Ayuda</LinkItem1>
+        {/* <LinkItem1 to="/">DT Financiero</LinkItem1>
+        <LinkItem1 to="/">Ayuda</LinkItem1> */}
       </Box>
       <Box paddingY={"16px"} borderTop={"1px solid #022D57"}>
         <Box className="container" component={"div"}>

@@ -22,7 +22,7 @@ export const LogoFooter = () => {
         fontFamily={"Inter !important"}
         color="#79C966"
       >
-        Riding the wave of Eco-Innovation
+        Riding the Wave of Eco-Innovation
       </Typography>
     </Box>
   );
