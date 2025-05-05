@@ -1,112 +1,100 @@
-import React from 'react'
-import styled from 'styled-components'
-import { BenefitsCard } from './BenefitsCard'
-
+import React from "react";
+import styled from "styled-components";
+import { BenefitsCard } from "./BenefitsCard";
+import { Theme, Typography, useMediaQuery } from "@mui/material";
 
 interface Props {
-  title: string,
-  subTitle?: string,
+  title: string;
+  subTitle?: string;
+  color: string;
 }
 
 export const ServiceBenefits: React.FC<Props> = ({
   title,
-  subTitle
+  subTitle,
+  color,
 }) => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   const cardInfo = [
     {
       id: 1,
-      title: 'Increase Home Value',
-      image: '/images/increase-icon-jpg.jpg'
+      title: "Increase Home Value",
+      image: "/images/increase-icon.svg",
     },
     {
       id: 2,
-      title: 'Energy Efficient',
-      image: '/images/energy-icon.png'
+      title: "Energy Efficient",
+      image: "/images/energy-icon.svg",
     },
     {
       id: 3,
-      title: 'Environmentally Friendly',
-      image: '/images/enviromentally-icon.png'
-
+      title: "Environmentally Friendly",
+      image: "/images/enviromentally-icon.svg",
     },
-  ]
+  ];
   return (
-    <BenefitsWrapper>
-      <HeaderContainer>
-        <SubTitle>{subTitle}</SubTitle>
-        <Title>{title}</Title>
+    <BenefitsWrapper style={{ backgroundColor: color }}>
+      <HeaderContainer className="container">
+        <Typography
+          color={"#79C966"}
+          fontWeight={800}
+          fontSize={isDesktop ? "16px" : "14px"}
+          fontFamily={"Inter !important"}
+          lineHeight={"24px"}
+          letterSpacing={"0 !important"}
+          textTransform={"uppercase"}
+          textAlign={"center"}
+        >
+          {subTitle}
+        </Typography>
+        <Typography
+          color={"white"}
+          fontWeight={isDesktop ? 600 : 800}
+          fontSize={isDesktop ? "48px" : "32px"}
+          letterSpacing={"0 !important"}
+          textAlign={"center"}
+          lineHeight={isDesktop ? "52px" : "40px"}
+          fontFamily={"Inter !important"}
+        >
+          {title}
+        </Typography>
       </HeaderContainer>
-      <IconsWrapper>
-        {
-          cardInfo.map((item) => (
-            <BenefitsCard
-              key={item.id}
-              id={item.id}
-              title={item.title}
-              image={item.image}
-            />
-          ))
-        }
+      <IconsWrapper
+        style={{
+          flexDirection: isDesktop ? "row" : "column",
+          alignItems: isDesktop ? "start" : "center",
+        }}
+      >
+        {cardInfo.map((item) => (
+          <BenefitsCard
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            image={item.image}
+          />
+        ))}
       </IconsWrapper>
     </BenefitsWrapper>
-  )
-}
+  );
+};
 const BenefitsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  width:80%;
-  gap: 2rem;
-  margin: 8rem 0;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  gap: 64px;
+  padding: 96px 0;
 `;
+
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
-  width: 28%;
-  @media (max-width: 1024px) {
-    width: 90%;
-  }
+  gap: 16px;
 `;
+
 const IconsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  width: 70%;
-  gap: 1rem;
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
+  justify-content: center;
+  gap: 48px;
 `;
-const Title = styled.h3`
-  color: #262626;
-  font-family: Inter;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  overflow-wrap: normal;
-  @media (max-width: 1024px) {
-    font-size: 2rem;
-  }
-`;
-const SubTitle = styled.h4`
-  color: #1C1F35;
-  font-family: Inter;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border-left: 4px solid #68BE54;
-  background: rgba(232, 232, 232, 0.50);
-  padding: 3px 9px 3px 8px;
-  width: fit-content;
-`

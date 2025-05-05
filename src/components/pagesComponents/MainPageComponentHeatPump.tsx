@@ -10,7 +10,7 @@ export const MainPageComponentHeatPump = () => {
       sx={{
         backgroundImage: `url(/images/heat-pumps-light.jpg)`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: isDesktop ? "center" : "60% center",
         backgroundRepeat: "no-repeat",
       }}
       position={"relative"}

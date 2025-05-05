@@ -67,8 +67,9 @@ export const HeatPumsPage = () => {
       <ServiceBenefits
         title="Benefits of Heat Pumps"
         subTitle="Maximizing Comfort and Efficiency"
+        color="#252529"
       />
-      <ImageBrackground>
+      {/* <ImageBrackground>
         <StyledImage
           src="/images/heat-pumps-list-background.png"
           alt="heatpumps-background"
@@ -97,16 +98,6 @@ export const HeatPumsPage = () => {
         </ProccesGridContainer>
       </ProccesComponent>
       <RebatesIncentives>
-        {/* <LinkWrapper>
-            <Text>
-              Check if your city is eligible:
-            </Text>
-            <Link to='https://frontdoor.portal.poweredbyefi.org/initiative/marebates'>
-              <LinkText>
-                https://frontdoor.portal.poweredbyefi.org/initiative/marebates
-              </LinkText>
-            </Link>
-          </LinkWrapper> */}
         <Text>
           Whole-home rebates are available to customers who install heat pumps
           as the sole source of heating and cooling (up to $10,000).
@@ -131,7 +122,7 @@ export const HeatPumsPage = () => {
             "/images/brands/bosch-logo.png",
           ]}
         />
-      </BrandsWrapper>
+      </BrandsWrapper> */}
     </>
   );
 };

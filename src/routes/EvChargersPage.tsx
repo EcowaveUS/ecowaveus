@@ -59,6 +59,7 @@ export const EvChargersPage = () => {
       <ServiceBenefits
         title="Benefits of EV-Chargers"
         subTitle="Maximize Time and Comfort"
+        color="#022D57"
       />
       <ImageBrackground>
         <StyledImage
