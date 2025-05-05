@@ -108,12 +108,44 @@ export const HeaderNew = () => {
             justifyContent={"end"}
             gap={"24px"}
           >
-            <LinkItem to="/">Home</LinkItem>
-            <LinkItem to="/heat-pumps">Heat Pumps</LinkItem>
-            <LinkItem to="/ev-chargers">EV Chargers</LinkItem>
-            <LinkItem to="/energy-storage">Home Batteries</LinkItem>
-            <LinkItem to="/about-us">About Us</LinkItem>
-            <LinkItem to="/contact-us">Contact Us</LinkItem>
+            <LinkItem
+              className={location.pathname === "/" ? "active" : ""}
+              to="/"
+            >
+              Home
+            </LinkItem>
+            <LinkItem
+              className={location.pathname === "/heat-pumps" ? "active" : ""}
+              to="/heat-pumps"
+            >
+              Heat Pumps
+            </LinkItem>
+            <LinkItem
+              className={location.pathname === "/ev-chargers" ? "active" : ""}
+              to="/ev-chargers"
+            >
+              EV Chargers
+            </LinkItem>
+            <LinkItem
+              className={
+                location.pathname === "/energy-storage" ? "active" : ""
+              }
+              to="/energy-storage"
+            >
+              Home Batteries
+            </LinkItem>
+            <LinkItem
+              className={location.pathname === "/about-us" ? "active" : ""}
+              to="/about-us"
+            >
+              About Us
+            </LinkItem>
+            <LinkItem
+              className={location.pathname === "/contact-us" ? "active" : ""}
+              to="/contact-us"
+            >
+              Contact Us
+            </LinkItem>
             <Button
               sx={{
                 backgroundColor: "#ffffff",
@@ -314,6 +346,25 @@ const LinkItem = styled(Link)({
   fontWeight: "600",
   color: "#FFFFFF",
   letterSpacing: "0 !important",
+  position: "relative",
+  "&:after": {
+    content: "''",
+    display: "block",
+    width: "100%",
+    height: "3px",
+    backgroundColor: "#1FA500",
+    position: "absolute",
+    top: "calc(100% + 29px)",
+    transform: "scaleX(0)",
+    transformOrigin: "left",
+    transition: "transform 0.3s ease",
+  },
+  "&:hover::after": {
+    transform: "scaleX(1)",
+  },
+  "&.active::after": {
+    transform: "scaleX(1)",
+  },
 });
 
 const LinkItem1 = styled(Link)({
