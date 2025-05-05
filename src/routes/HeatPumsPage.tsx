@@ -7,6 +7,7 @@ import { ProccesCard } from "../components/services/ProccesCard";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { Helmet } from "react-helmet";
 import { MainPageComponentHeatPump } from "../components/pagesComponents/MainPageComponentHeatPump";
+import { ContactComponent } from "../components/forms/ContactComponent";
 
 export const HeatPumsPage = () => {
   // const location = useLocation();
@@ -123,6 +124,7 @@ export const HeatPumsPage = () => {
           ]}
         />
       </BrandsWrapper> */}
+      <ContactComponent cat={2} />
     </>
   );
 };

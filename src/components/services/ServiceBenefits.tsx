@@ -14,7 +14,7 @@ export const ServiceBenefits: React.FC<Props> = ({
   subTitle,
   color,
 }) => {
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const cardInfo = [
     {
       id: 1,
