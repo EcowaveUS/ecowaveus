@@ -1,16 +1,16 @@
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
 import { ProccesCard } from "../components/services/ProccesCard";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
-import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { Helmet } from "react-helmet";
+import { MainPageComponentHeatPump } from "../components/pagesComponents/MainPageComponentHeatPump";
 
 export const HeatPumsPage = () => {
-  const location = useLocation();
-  const pathLocation = location.pathname;
+  // const location = useLocation();
+  // const pathLocation = location.pathname;
 
   const stepByStepList = [
     {
@@ -48,11 +48,7 @@ export const HeatPumsPage = () => {
   ];
 
   return (
-    <StyledPage
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <>
       <Helmet>
         <title>Electric Heat Pumps near Peabody, MA | Heat Pump Services</title>
         <meta
@@ -60,13 +56,14 @@ export const HeatPumsPage = () => {
           content="Searching for an electric heat pump installation nearby? We provide renewable energy and heat pumps for sale. Call EcoWave at 978-500-4081 and request a quote."
         />
       </Helmet>
-      <MainPageComponent
+      {/* <MainPageComponent
         title="Efficient Heating and Cooling for Your Home"
         subtitle="Efficient and Eco-Friendly:"
         content="A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas."
         pathLocation={pathLocation}
         backgroundImage="/images/heat-pumps.jpg"
-      />
+      /> */}
+      <MainPageComponentHeatPump />
       <ServiceBenefits
         title="Benefits of Heat Pumps"
         subTitle="Maximizing Comfort and Efficiency"
@@ -135,17 +132,17 @@ export const HeatPumsPage = () => {
           ]}
         />
       </BrandsWrapper>
-    </StyledPage>
+    </>
   );
 };
 
-const StyledPage = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-`;
+// const StyledPage = styled(motion.div)`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 100vh;
+// `;
 
 const Text = styled.p`
   color: #fff;
