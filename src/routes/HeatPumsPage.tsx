@@ -11,7 +11,7 @@ import { InstallationProcess } from "../components/pagesComponents/InstallationP
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 
 export const HeatPumsPage = () => {
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
 
   return (
     <>
@@ -92,6 +92,7 @@ export const HeatPumsPage = () => {
               <br />
               <br />
               <Typography
+                component={"span"}
                 fontFamily={"Inter !important"}
                 fontSize={"20px"}
                 fontWeight={600}
@@ -100,6 +101,7 @@ export const HeatPumsPage = () => {
               >
                 Federal Incentives
               </Typography>
+              <br />
               Federal tax credit 30% of the cost of the installation up to
               $2,000
             </Typography>

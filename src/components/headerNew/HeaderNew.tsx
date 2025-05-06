@@ -118,7 +118,7 @@ export const HeaderNew = () => {
               className={location.pathname === "/heat-pumps" ? "active" : ""}
               to="/heat-pumps"
             >
-              Heat Pumps
+              Heating & Cooling
             </LinkItem>
             <LinkItem
               className={location.pathname === "/ev-chargers" ? "active" : ""}
@@ -148,8 +148,8 @@ export const HeaderNew = () => {
             </LinkItem>
             <Button
               sx={{
-                backgroundColor: "#ffffff",
-                color: "#252529",
+                backgroundColor: "#198400",
+                color: "white",
                 borderRadius: "999px",
                 padding: "8px 16px",
                 fontSize: "12px",
@@ -158,12 +158,13 @@ export const HeaderNew = () => {
                 fontFamily: "Inter !important",
                 letterSpacing: "2% !important",
                 cursor: "pointer",
-                border: "1px solid #C6C6CC",
-                "&:hover": { backgroundColor: "#ffffff" },
+                border: "none",
+                // border: "1px solid #C6C6CC",
+                "&:hover": { backgroundColor: "#198400" },
               }}
               onClick={() => navigate("/contact-us")}
             >
-              Book Appt
+              Book an Appointment
             </Button>
           </Box>
         </Box>
@@ -280,7 +281,7 @@ export const HeaderNew = () => {
         flex={1}
       >
         <LinkItem1 to="/">Home</LinkItem1>
-        <LinkItem1 to="/heat-pumps">Heat Pumps</LinkItem1>
+        <LinkItem1 to="/heat-pumps">Heating & Cooling</LinkItem1>
         <LinkItem1 to="/ev-chargers">EV Chargers</LinkItem1>
         <LinkItem1 to="/energy-storage">Energy Storage</LinkItem1>
         <LinkItem1 to="/about-us">About Us</LinkItem1>

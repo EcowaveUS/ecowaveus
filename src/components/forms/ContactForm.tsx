@@ -17,7 +17,11 @@ import styled from "styled-components";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-export const ContactForm = () => {
+export const ContactForm = ({
+  btnColor = "#252529",
+}: {
+  btnColor?: string;
+}) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   const form = useRef();
 
@@ -72,7 +76,7 @@ export const ContactForm = () => {
   const options = [
     { label: "Select an option", value: "" },
     { label: "EV Chargers", value: "EV Chargers" },
-    { label: "Heat Pumps", value: "Heat Pumps" },
+    { label: "Heating & Cooling", value: "Heat Pumps" },
     { label: "Energy Storage", value: "Energy Storage" },
   ];
 
@@ -234,7 +238,7 @@ export const ContactForm = () => {
         </InputFormContainer>
         <Button
           sx={{
-            backgroundColor: "#252529",
+            backgroundColor: btnColor,
             color: "white",
             borderRadius: "999px",
             padding: "12px 20px",
@@ -246,7 +250,7 @@ export const ContactForm = () => {
             cursor: "pointer",
             transition: "background 0.3s ease",
             fontFamily: "Montserrat !important",
-            "&:hover": { backgroundColor: "#252529" },
+            "&:hover": { backgroundColor: btnColor },
           }}
           type="submit"
         >
