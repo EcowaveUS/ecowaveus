@@ -78,6 +78,7 @@ a {
   height: 16px;
   background-color: #d8d8de;
   margin: 20px 2px;
+  opacity: 1;
 }
 .installation-process .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #79c966;

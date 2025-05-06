@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 export const InstallationProcess = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Box bgcolor={"white"} py={isDesktop ? "96px" : "48px"}>
+    <Box bgcolor={"#F7F7F7"} py={isDesktop ? "96px" : "48px"}>
       <Box component={"div"} className="container-2">
         <Typography
           fontSize={isDesktop ? "16px" : "14px"}
