@@ -1,9 +1,10 @@
 import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router";
+import { ContactForm } from "../forms/ContactForm";
 
 export const MainPageComponentHeatPump = () => {
   const navigate = useNavigate();
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
       height={isDesktop ? "800px" : "640px"}
@@ -35,7 +36,7 @@ export const MainPageComponentHeatPump = () => {
         <Box
           paddingTop={isDesktop ? "100px" : "0"}
           component={"div"}
-          maxWidth={isDesktop ? "712px" : "100%"}
+          maxWidth={isDesktop ? "min(712px, 50% - 20px)" : "100%"}
           position={"absolute"}
           zIndex={2}
           left={0}
@@ -107,6 +108,20 @@ export const MainPageComponentHeatPump = () => {
             Schedule now
           </Button>
         </Box>
+        {isDesktop && (
+          <Box
+            component={"div"}
+            position={"absolute"}
+            right={0}
+            top={"50%"}
+            width={"calc(50% - 20px)"}
+            sx={{
+              transform: "translateY(-50%)",
+            }}
+          >
+            <ContactForm btnColor="#022241" />
+          </Box>
+        )}
       </Box>
     </Box>
   );
