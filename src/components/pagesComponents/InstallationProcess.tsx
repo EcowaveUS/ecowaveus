@@ -106,7 +106,7 @@ export const InstallationProcess = () => {
                       fontFamily={"Montserrat !important"}
                       color={"#252529"}
                     >
-                      Get a FREE Estimate
+                      Get an Estimate
                     </Typography>
                     <Typography
                       fontSize={isDesktop ? "16px" : "14px"}

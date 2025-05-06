@@ -9,6 +9,7 @@ import { MainPageComponentHeatPump } from "../components/pagesComponents/MainPag
 import { ContactComponent } from "../components/forms/ContactComponent";
 import { InstallationProcess } from "../components/pagesComponents/InstallationProcess";
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
+import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 
 export const HeatPumsPage = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
@@ -30,8 +31,9 @@ export const HeatPumsPage = () => {
         backgroundImage="/images/heat-pumps.jpg"
       /> */}
       <MainPageComponentHeatPump />
+      <ReviewsComponent />
       <ServiceBenefits
-        title="Benefits of Heat Pumps"
+        title="Benefits of Heating & Cooling"
         subTitle="Maximizing Comfort and Efficiency"
         color="#252529"
       />
@@ -81,20 +83,36 @@ export const HeatPumsPage = () => {
               color={"#0B081F"}
               mt={"24px"}
             >
+              <Typography
+                component={"span"}
+                fontFamily={"Inter !important"}
+                fontSize={"22px"}
+                fontWeight={600}
+                lineHeight={"26px"}
+                color={"#0B081F"}
+              >
+                Mass Save Rebates
+              </Typography>
+              <br />
               Whole-home rebates are available to customers who install heat
-              pumps as the sole source of heating and cooling (up to $10,000).
+              pumps as the sole source of heating and cooling{" "}
+              <span style={{ fontWeight: 700, color: "#1FA500" }}>
+                ($3,000 per ton, up to $16,000).
+              </span>
               <br />
               <br />
               Partial-home rebates are offered based on equipment or outdoor
               unit (tonnage) to customers who plan to keep an existing boiler or
-              furnace in place to supplement a new heat pump system ($1,250 per
-              ton, up to $10,000).
+              furnace in place to supplement a new heat pump system{" "}
+              <span style={{ fontWeight: 700, color: "#1FA500" }}>
+                ($1,250 per ton, up to $10,000).
+              </span>
               <br />
               <br />
               <Typography
                 component={"span"}
                 fontFamily={"Inter !important"}
-                fontSize={"20px"}
+                fontSize={"22px"}
                 fontWeight={600}
                 lineHeight={"26px"}
                 color={"#0B081F"}
