@@ -6,17 +6,14 @@ import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { StorageAdvantages } from "../components/pagesComponents/StorageAdvantages";
 import { Helmet } from "react-helmet";
+import { Box } from "@mui/material";
 
 export const EnergyStoragePage = () => {
   const location = useLocation();
   const pathLocation = location.pathname;
 
   return (
-    <StyledPage
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <>
       <Helmet>
         <title>
           Solar Battery Storage near Marblehead, MA | Backup Batteries
@@ -55,15 +52,17 @@ export const EnergyStoragePage = () => {
           installation cost for a battery storage.
         </Text>
       </RebatesIncentives>
-      <BrandsWrapper>
+      <Box width="100%">
+        {/* <BrandsWrapper> */}
         <OursBrands
           images={[
             "/images/brands/tesla-logo.png",
             "/images/brands/enphase-logo.png",
           ]}
         />
-      </BrandsWrapper>
-    </StyledPage>
+        {/* </BrandsWrapper> */}
+      </Box>
+    </>
   );
 };
 

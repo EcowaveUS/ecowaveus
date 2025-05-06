@@ -7,6 +7,7 @@ import { EvChargerCard } from "../components/services/EvChargerCard";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { Helmet } from "react-helmet";
+import { Box } from "@mui/material";
 
 export const EvChargersPage = () => {
   const location = useLocation();
@@ -56,11 +57,13 @@ export const EvChargersPage = () => {
         pathLocation={pathLocation}
         backgroundImage="/images/ev-charger-background.jpg"
       />
-      <ServiceBenefits
-        title="Benefits of EV-Chargers"
-        subTitle="Maximize Time and Comfort"
-        color="#022D57"
-      />
+      <Box width="100%">
+        <ServiceBenefits
+          title="Benefits of EV-Chargers"
+          subTitle="Maximize Time and Comfort"
+          color="#022D57"
+        />
+      </Box>
       <ImageBrackground>
         <StyledImage
           src="/images/ev-chargers-types-background.png"
@@ -102,7 +105,8 @@ export const EvChargersPage = () => {
           Act—a move that will give taxpayers up to $1,000 in a tax credit.
         </Text>
       </RebatesIncentives>
-      <BrandsWrapper>
+      <Box width="100%">
+        {/* <BrandsWrapper> */}
         <OursBrands
           images={[
             "/images/brands/tesla-logo.png",
@@ -111,7 +115,8 @@ export const EvChargersPage = () => {
             "/images/brands/siemens-logo.png",
           ]}
         />
-      </BrandsWrapper>
+        {/* </BrandsWrapper> */}
+      </Box>
     </StyledPage>
   );
 };
