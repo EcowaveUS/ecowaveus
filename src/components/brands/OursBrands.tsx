@@ -3,16 +3,17 @@ import { Box, Theme, useMediaQuery } from "@mui/material";
 
 interface Props {
   images: string[];
+  color?: string;
 }
 
-export const OursBrands: React.FC<Props> = ({ images }) => {
+export const OursBrands: React.FC<Props> = ({ images, color = "white" }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const isWide = useMediaQuery(`(min-width: 1371px)`);
 
   return (
     <Box
       component={"div"}
-      bgcolor={"white"}
+      bgcolor={color}
       paddingY={isDesktop ? "32px" : "20px"}
     >
       {isWide ? (

@@ -5,10 +5,12 @@ import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
 import { ProccesCard } from "../components/services/ProccesCard";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
+import { brandImagesNew } from "../constants/data";
 import { Helmet } from "react-helmet";
 import { MainPageComponentHeatPump } from "../components/pagesComponents/MainPageComponentHeatPump";
 import { ContactComponent } from "../components/forms/ContactComponent";
 import { InstallationProcess } from "../components/pagesComponents/InstallationProcess";
+import { Box } from "@mui/material";
 
 export const HeatPumsPage = () => {
   // const location = useLocation();
@@ -72,6 +74,18 @@ export const HeatPumsPage = () => {
         color="#252529"
       />
       <InstallationProcess />
+      <Box position={"relative"}>
+        <img
+          height={"696px"}
+          width={"100%"}
+          src="/images/trees.svg"
+          alt="trees"
+          style={{ objectFit: "cover" }}
+        />
+        <Box pt={"157px"} bgcolor={"#F6F8FA"}>
+          <OursBrands color="#F6F8FA" images={brandImagesNew} />
+        </Box>
+      </Box>
       {/* <ImageBrackground>
         <StyledImage
           src="/images/heat-pumps-list-background.png"
