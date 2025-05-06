@@ -30,7 +30,7 @@ export const Footer = () => {
             width={192}
             title="Services"
             links={[
-              { text: "Heat Pumps", url: "/heat-pumps" },
+              { text: "Heating & Cooling", url: "/heat-pumps" },
               { text: "EV Chargers", url: "/ev-chargers" },
               { text: "Solar Panels", url: "/solar-panels" },
               { text: "Energy Storage", url: "/energy-storage" },
