@@ -8,6 +8,7 @@ import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { Helmet } from "react-helmet";
 import { MainPageComponentHeatPump } from "../components/pagesComponents/MainPageComponentHeatPump";
 import { ContactComponent } from "../components/forms/ContactComponent";
+import { InstallationProcess } from "../components/pagesComponents/InstallationProcess";
 
 export const HeatPumsPage = () => {
   // const location = useLocation();
@@ -70,6 +71,7 @@ export const HeatPumsPage = () => {
         subTitle="Maximizing Comfort and Efficiency"
         color="#252529"
       />
+      <InstallationProcess />
       {/* <ImageBrackground>
         <StyledImage
           src="/images/heat-pumps-list-background.png"
