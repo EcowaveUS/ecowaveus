@@ -1,7 +1,7 @@
 import { useLocation } from "react-router";
 import styled from "styled-components";
 import { OursBrands } from "../components/brands/OursBrands";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { StorageAdvantages } from "../components/pagesComponents/StorageAdvantages";
@@ -66,12 +66,12 @@ export const EnergyStoragePage = () => {
   );
 };
 
-const StyledPage = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+// const StyledPage = styled(motion.div)`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// `;
 
 const Text = styled.p`
   color: #fff;
@@ -83,13 +83,13 @@ const Text = styled.p`
   margin-bottom: 1rem;
   text-align: center;
 `;
-const BrandsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #fff;
-`;
+// const BrandsWrapper = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   background-color: #fff;
+// `;
 const Subtitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #fff));
   text-align: center;

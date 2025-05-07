@@ -195,13 +195,13 @@ const TextProcces = styled.p`
   line-height: 151.523%; /* 24.244px */
   margin-bottom: 32px;
 `;
-const BrandsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #fff;
-`;
+// const BrandsWrapper = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   background-color: #fff;
+// `;
 const Subtitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #fff));
   text-align: center;
