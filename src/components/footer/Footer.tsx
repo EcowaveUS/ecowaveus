@@ -6,8 +6,13 @@ import { FixedFooter } from "./FixedFooter";
 
 export const Footer = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Box component="footer" sx={{ backgroundColor: "#022241" }} pb={"60px"}>
+    <Box
+      component="footer"
+      sx={{ backgroundColor: "#022241" }}
+      pb={isTablet ? "0px" : "60px"}
+    >
       <Box
         component="div"
         className="container-1"
@@ -77,7 +82,7 @@ export const Footer = () => {
         </Box>
       </Box>
       <BottomFooter />
-      <FixedFooter />
+      {!isTablet && <FixedFooter />}
     </Box>
   );
 };
