@@ -2,11 +2,12 @@ import { LogoFooter } from "./LogoFooter";
 import { NavigationFooter } from "./NavigationFooter";
 import { BottomFooter } from "./BottomFooter";
 import { Box, Theme, useMediaQuery } from "@mui/material";
+import { FixedFooter } from "./FixedFooter";
 
 export const Footer = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
-    <Box component="footer" sx={{ backgroundColor: "#022241" }}>
+    <Box component="footer" sx={{ backgroundColor: "#022241" }} pb={"60px"}>
       <Box
         component="div"
         className="container-1"
@@ -76,6 +77,7 @@ export const Footer = () => {
         </Box>
       </Box>
       <BottomFooter />
+      <FixedFooter />
     </Box>
   );
 };

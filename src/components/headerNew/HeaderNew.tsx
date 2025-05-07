@@ -210,6 +210,25 @@ export const HeaderNew = () => {
         </Link>
         <Box
           display={"flex"}
+          width={"48.5px"}
+          height={"48.5px"}
+          borderRadius={"999px"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          // border={"1px solid #C6C6CC"}
+          component={"a"}
+          href="tel:+9785004081"
+          bgcolor={"#022241"}
+        >
+          <img
+            width={22}
+            height={22}
+            src="/images/icons/icon-phone-fill.svg"
+            alt="icon-phone-fill"
+          />
+        </Box>
+        {/* <Box
+          display={"flex"}
           width={"32px"}
           height={"32px"}
           borderRadius={"999px"}
@@ -223,7 +242,7 @@ export const HeaderNew = () => {
             src="/images/icons/icon-phone-black.svg"
             alt="icon-phone-black"
           />
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   ) : (
