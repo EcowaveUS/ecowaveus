@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { EvChargerCard } from "../components/services/EvChargerCard";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Box } from "@mui/material";
 
 export const EvChargersPage = () => {

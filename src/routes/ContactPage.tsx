@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ContactForm } from "../components/forms/ContactForm";
 import { LocationInfo } from "../components/forms/LocationInfo";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export const ContactPage = () => {
   return (

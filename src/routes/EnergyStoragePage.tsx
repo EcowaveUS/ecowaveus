@@ -5,7 +5,7 @@ import { OursBrands } from "../components/brands/OursBrands";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { StorageAdvantages } from "../components/pagesComponents/StorageAdvantages";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Box } from "@mui/material";
 
 export const EnergyStoragePage = () => {

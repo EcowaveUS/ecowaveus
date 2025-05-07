@@ -4,7 +4,7 @@
 import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
 import { brandImagesNew } from "../constants/data";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { MainPageComponentHeatPump } from "../components/pagesComponents/MainPageComponentHeatPump";
 import { ContactComponent } from "../components/forms/ContactComponent";
 import { InstallationProcess } from "../components/pagesComponents/InstallationProcess";

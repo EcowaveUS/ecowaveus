@@ -5,7 +5,7 @@ import { SwitchFuture } from "../components/pagesComponents/SwitchFuture";
 import { OurSolutions } from "../components/pagesComponents/OurSolutions";
 import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 import { ContactComponent } from "../components/forms/ContactComponent";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { brandImagesNew } from "../constants/data";
 import Areas from "../components/AreaServices/Areas";
 // import { Grid as MuiGrid } from "@mui/material";
