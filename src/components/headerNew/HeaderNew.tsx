@@ -66,12 +66,9 @@ export const HeaderNew = () => {
                 alt="icon-phone-white"
               />
             </IconContainer>
-            <InfoText
-              component={"a"}
-              href="tel:+9785004081"
-              sx={{ textDecoration: "underline" }}
-            >
-              (978) 500-4081
+            <InfoText component={"a"} href="tel:+9785004081">
+              <span>(</span>
+              <span style={{ textDecoration: "underline" }}>978) 500 4081</span>
             </InfoText>
           </InfoContainer>
         </Box>
