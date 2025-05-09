@@ -1,4 +1,4 @@
-import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -56,6 +56,26 @@ export const InstallationProcess = () => {
                   flexDirection={"column"}
                   gap={isDesktop ? "48px" : "32px"}
                 >
+                  <Button
+                    sx={{
+                      backgroundColor: "#198400",
+                      color: "white",
+                      borderRadius: "999px",
+                      padding: "12px 20px",
+                      width: isDesktop ? "320px" : "100%",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      lineHeight: "20px",
+                      cursor: "pointer",
+                      transition: "background 0.3s ease",
+                      border: "none",
+                      fontFamily: "Inter !important",
+                      letterSpacing: "1% !important",
+                      "&:hover": { backgroundColor: "#198400" },
+                    }}
+                  >
+                    Get a Free Estimate
+                  </Button>
                   <Box
                     pl={isDesktop ? "24px" : "20px"}
                     borderLeft={"2px solid #D8D8DE"}
@@ -174,6 +194,26 @@ export const InstallationProcess = () => {
                   flexDirection={"column"}
                   gap={isDesktop ? "48px" : "32px"}
                 >
+                  <Button
+                    sx={{
+                      backgroundColor: "#198400",
+                      color: "white",
+                      borderRadius: "999px",
+                      padding: "12px 20px",
+                      width: isDesktop ? "320px" : "100%",
+                      fontSize: "14px",
+                      fontWeight: "600",
+                      lineHeight: "20px",
+                      cursor: "pointer",
+                      transition: "background 0.3s ease",
+                      border: "none",
+                      fontFamily: "Inter !important",
+                      letterSpacing: "1% !important",
+                      "&:hover": { backgroundColor: "#198400" },
+                    }}
+                  >
+                    Get a Free Estimate
+                  </Button>
                   <Box
                     pl={isDesktop ? "24px" : "20px"}
                     borderLeft={"2px solid #D8D8DE"}
