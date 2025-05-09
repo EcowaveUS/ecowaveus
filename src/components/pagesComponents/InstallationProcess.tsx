@@ -3,8 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router";
 
 export const InstallationProcess = () => {
+  const navigate = useNavigate();
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <Box bgcolor={"#F7F7F7"} py={isDesktop ? "96px" : "48px"}>
@@ -73,6 +75,7 @@ export const InstallationProcess = () => {
                       letterSpacing: "1% !important",
                       "&:hover": { backgroundColor: "#198400" },
                     }}
+                    onClick={() => navigate("/contact-us")}
                   >
                     Get a Free Estimate
                   </Button>
@@ -211,6 +214,7 @@ export const InstallationProcess = () => {
                       letterSpacing: "1% !important",
                       "&:hover": { backgroundColor: "#198400" },
                     }}
+                    onClick={() => navigate("/contact-us")}
                   >
                     Get a Free Estimate
                   </Button>
