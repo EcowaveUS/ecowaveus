@@ -56,7 +56,7 @@ export const LocationInfo = () => {
           </Box>
           <Typography
             component={"a"}
-            href="tel:9785004081"
+            href="tel:+19785004081"
             lineHeight={"20px"}
             fontSize={"16px"}
             fontFamily={"Inter !important"}

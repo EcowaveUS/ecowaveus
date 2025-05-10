@@ -9,7 +9,7 @@ export const FixedFooter = () => {
         <ItemIcon src={"/images/icons/icon-book.svg"} />
         <ItemText>Book</ItemText>
       </ItemContainer>
-      <ItemContainer component={Link} to="tel:+9785004081">
+      <ItemContainer component={Link} to="tel:+19785004081">
         <ItemIcon src={"/images/icons/icon-call.svg"} />
         <ItemText>Call</ItemText>
       </ItemContainer>
