@@ -1,6 +1,3 @@
-// import { useLocation } from "react-router-dom";
-// import styled from "styled-components";
-// import { motion } from "framer-motion";
 import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
 import { brandImagesNew } from "../constants/data";
@@ -11,6 +8,7 @@ import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 import { WhyChooseUs } from "../components/pagesComponents/WhyChooseUs";
 import { InstallationProcessUpdated } from "../components/pagesComponents/InstallationProcessUpdated";
+import { Financing } from "../components/pagesComponents/Financing";
 
 export const HeatPumsPage = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
@@ -25,13 +23,6 @@ export const HeatPumsPage = () => {
           content="Searching for an electric heat pump installation nearby? We provide renewable energy and heat pumps for sale. Call EcoWave at 978-500-4081 and request a quote."
         />
       </Helmet>
-      {/* <MainPageComponent
-        title="Efficient Heating and Cooling for Your Home"
-        subtitle="Efficient and Eco-Friendly:"
-        content="A heat pump efficiently transfers heat from one place to another using electricity, rather than generating heat directly. It operates at a remarkable 300% efficiency, delivering three times the heat for each unit of energy used, by harnessing solar energy. This makes it an eco-friendly and cost-effective alternative to traditional heating sources like oil or gas."
-        pathLocation={pathLocation}
-        backgroundImage="/images/heat-pumps.jpg"
-      /> */}
       <MainPageComponentHeatPump />
       <ServiceBenefits
         title="Benefits of Heating & Cooling"
@@ -125,6 +116,7 @@ export const HeatPumsPage = () => {
           </Box>
         </Box>
       </Box>
+      <Financing />
       <ReviewsComponent />
       <OursBrands color="#F6F8FA" images={brandImagesNew} />
       <ContactComponent cat={2} />
