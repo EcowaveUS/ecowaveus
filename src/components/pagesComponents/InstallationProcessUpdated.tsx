@@ -211,8 +211,11 @@ const GalleryBox = styled(Box)`
 `;
 
 const GalleryImage = styled.img`
-  border-radius: 12px;
+  border-radius: 8px;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
+  @media (min-width: 900px) {
+    border-radius: 12px;
+  }
 `;
