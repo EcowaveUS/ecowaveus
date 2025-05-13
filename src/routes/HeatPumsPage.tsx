@@ -10,6 +10,7 @@ import { ContactComponent } from "../components/forms/ContactComponent";
 import { InstallationProcess } from "../components/pagesComponents/InstallationProcess";
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
+import { WhyChooseUs } from "../components/pagesComponents/WhyChooseUs";
 
 export const HeatPumsPage = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
@@ -37,6 +38,7 @@ export const HeatPumsPage = () => {
         subTitle="Maximizing Comfort and Efficiency"
         color="#252529"
       />
+      <WhyChooseUs />
       <InstallationProcess />
       <Box position={"relative"}>
         <img
