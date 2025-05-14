@@ -184,19 +184,14 @@ export const HeaderNew = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Box
-          display={"flex"}
-          width={"32px"}
-          height={"32px"}
-          borderRadius={"999px"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          border={"1px solid #C6C6CC"}
-          sx={{ cursor: "pointer" }}
+        <img
           onClick={() => setIsOpenMobileMenu(true)}
-        >
-          <img src="/images/icons/icon-menu-black.svg" alt="icon-menu-black" />
-        </Box>
+          src="/images/icons/icon-menu-blue.svg"
+          width={"48.5"}
+          height={"48.5"}
+          alt="icon-menu-blue"
+          style={{ cursor: "pointer" }}
+        />
         <Link to={"/"}>
           <img
             src="/images/logo-header.png"
