@@ -52,7 +52,7 @@ export const brandImagesNew = [
 
 export const services = [
   {
-    title: "Heat Pumps",
+    title: "Heating & Cooling",
     content: "Efficient Comfort: Advanced solutions for heating and cooling.",
     url: "/heat-pumps",
     icon: iconHeatPumps,

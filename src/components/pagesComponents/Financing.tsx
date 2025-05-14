@@ -110,6 +110,10 @@ const DateText = styled(Typography)`
   letter-spacing: 0 !important;
   font-family: Inter !important;
   color: white;
+  @media (min-width: 600px) {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
 `;
 
 const DateBox = styled(Box)`
@@ -127,4 +131,9 @@ const DateBox = styled(Box)`
   font-weight: 800;
   font-family: Inter !important;
   color: #252529;
+  @media (min-width: 600px) {
+    width: 90px;
+    height: 90px;
+    font-size: 48px;
+  }
 `;

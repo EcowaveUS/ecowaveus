@@ -175,7 +175,7 @@ const DescriptionTitle = styled(Typography)`
   line-height: 20px !important;
   font-weight: 700 !important;
   letter-spacing: 1% !important;
-  font-family: "Montserrat !important";
+  font-family: Inter !important;
   color: #252529;
   @media (min-width: 900px) {
     font-size: 16px !important;
@@ -189,7 +189,7 @@ const DescriptionText = styled(Typography)`
   line-height: 20px !important;
   font-weight: 400 !important;
   letter-spacing: 1% !important;
-  font-family: "Inter !important";
+  font-family: Inter !important;
   color: #6c6c78;
   @media (min-width: 900px) {
     font-size: 16px !important;
