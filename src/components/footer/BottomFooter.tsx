@@ -32,6 +32,17 @@ export const BottomFooter = () => {
         >
           © 2021 Ecowave. All Rights Reserved.
         </Typography>
+        <Typography
+          component={Link}
+          to="/terms-and-conditions"
+          color="#ffffff"
+          fontSize={isDesktop ? "12px" : "14px"}
+          fontWeight={isDesktop ? "500" : "400"}
+          lineHeight={isDesktop ? "150%" : "20px"}
+          fontFamily={"Inter !important"}
+        >
+          Terms and Conditions
+        </Typography>
         <Box
           component="div"
           display="flex"
