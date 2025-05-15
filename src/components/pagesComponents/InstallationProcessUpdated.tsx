@@ -62,7 +62,7 @@ export const InstallationProcessUpdated = () => {
               }}
               onClick={() => navigate("/contact-us")}
             >
-              Get a Free Estimate
+              Get a FREE Estimate
             </Button>
             <DescriptionContainer>
               <DescriptionTitle>Contact Us</DescriptionTitle>
@@ -99,6 +99,7 @@ export const InstallationProcessUpdated = () => {
             display={"grid"}
             gridTemplateColumns={"1fr 1fr 1fr 1fr"}
             gap={"12px"}
+            width={isDesktop ? "auto" : "100%"}
           >
             <GalleryBox sx={{ alignItems: "end" }}>
               <GalleryImage

@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { FaAngleUp } from "react-icons/fa";
-import styled from 'styled-components';
-
+import { useLocation } from "react-router";
+import styled from "styled-components";
 
 export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { pathname } = useLocation();
 
   // Manejar el scroll de la página
   const handleScroll = () => {
-    if (window.scrollY >100) {
+    if (window.scrollY > 100) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -19,21 +20,25 @@ export const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   // Agregar un event listener cuando el componente se monta
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
       {isVisible && (
         <ScrollToTopButton onClick={scrollToTop}>
-          <FaAngleUp style={{ width: 24, height: 24 }}  />
+          <FaAngleUp style={{ width: 24, height: 24 }} />
         </ScrollToTopButton>
       )}
     </>
@@ -48,7 +53,7 @@ const ScrollToTopButton = styled.button`
   bottom: 1rem;
   right: 1rem;
   padding: 15px;
-  background-color: #003B76;
+  background-color: #003b76;
   color: white;
   border: none;
   border-radius: 50%;
