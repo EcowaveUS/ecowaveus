@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 
 export const WhyChooseUs: React.FC = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
