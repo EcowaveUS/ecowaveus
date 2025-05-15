@@ -51,6 +51,31 @@ export const BottomFooter = () => {
         >
           <Link
             style={{ order: isDesktop ? 1 : 2 }}
+            to={import.meta.env.VITE_GOOGLE_LINK || "https://www.google.com/"}
+          >
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                width={"18px"}
+                height={"18px"}
+                src={
+                  isDesktop
+                    ? "/images/icons/icon-google.svg"
+                    : "/images/icons/icon-google.svg"
+                }
+                alt="google"
+              />
+            </Box>
+          </Link>
+          <Link
+            style={{ order: isDesktop ? 2 : 3 }}
             to={
               import.meta.env.VITE_FACEBOOK_LINK || "https://www.facebook.com/"
             }
@@ -75,7 +100,7 @@ export const BottomFooter = () => {
             </Box>
           </Link>
           <Link
-            style={{ order: isDesktop ? 2 : 1 }}
+            style={{ order: isDesktop ? 3 : 1 }}
             to={
               import.meta.env.VITE_INSTAGRAM_LINK ||
               "https://www.instagram.com/"
