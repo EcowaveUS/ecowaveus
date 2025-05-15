@@ -16,21 +16,21 @@ export const EvChargersPage = () => {
   const evChargers = [
     {
       id: 1,
-      title: "Level 1 (120V) Charger",
+      title: "Level 1 Charger",
       image: "/images/ev-charger-level1.png",
       content:
         "Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery",
     },
     {
       id: 2,
-      title: "Level 2 (240V) Charger",
+      title: "Level 2 Charger",
       image: "/images/ev-charger-leve2.png",
       content:
         "Use a special 240V outlet and deliver a fast charge, typically taking 3-8 hours to fully charge an EV battery",
     },
     {
       id: 3,
-      title: "Level 3 (480V) Charger",
+      title: "Level 3 Charger",
       image: "/images/ev-charger-level3.png",
       content:
         "Provide a rapid charge, typically in 30-60 minutes, ideal for long trips and normally for public stations and commercial buildings",

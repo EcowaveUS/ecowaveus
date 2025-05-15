@@ -50,7 +50,7 @@ const ScrollToTopButton = styled.button`
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 6rem;
+  bottom: 60px;
   right: 1rem;
   padding: 15px;
   background-color: #003b76;
@@ -61,4 +61,7 @@ const ScrollToTopButton = styled.button`
   width: 50px;
   height: 50px;
   z-index: 1000;
+  @media (min-width: 600px) {
+    bottom: 82px;
+  }
 `;
