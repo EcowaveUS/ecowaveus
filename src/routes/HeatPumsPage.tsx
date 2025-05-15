@@ -25,7 +25,7 @@ export const HeatPumsPage = () => {
       </Helmet>
       <MainPageComponentHeatPump />
       <ServiceBenefits
-        title="Benefits of Heating & Cooling"
+        title="Benefits of Energy-Efficient Heating & Cooling"
         subTitle="Maximizing Comfort and Efficiency"
         color="#252529"
       />
