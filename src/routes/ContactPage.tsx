@@ -44,13 +44,14 @@ const BackgroundComponent = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 904px; /* 100% of the viewport height */
-  background-image: url("/images/contact-us-background.jpg");
+  background-image: url("/images/contact-us-background-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: -58rem;
   z-index: -1;
+  background-position: bottom;
   @media (max-width: 1024px) {
-    background-position: 50% 50%;
+    // background-position: 50% 50%;
     background-size: cover;
   }
 `;
@@ -64,6 +65,7 @@ const WrapperComponents = styled.div`
   box-shadow: 0px 4px 24px 0px rgba(39, 39, 42, 0.08);
   border-radius: 16px;
   padding: 2rem;
+  gap: 24px;
   @media (max-width: 1024px) {
     flex-direction: column;
     width: 90%;
