@@ -34,7 +34,7 @@ export const WhyChooseUs: React.FC = () => {
     },
   ];
   return (
-    <Box bgcolor={"#0C4200"} py={"96px"}>
+    <Box bgcolor={"#0C4200"} py={"92px"}>
       <Box component={"div"} className="container-2">
         <Typography
           color={"white"}

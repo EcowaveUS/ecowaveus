@@ -42,7 +42,7 @@ export const HeatPumsPage = () => {
       >
         <Box
           bgcolor={"#fff"}
-          borderRadius={"12px"}
+          borderRadius={"0 12px 12px 0"}
           component={"div"}
           px={isDesktop ? "64px" : "32px"}
           pt={isDesktop ? "64px" : "32px"}
@@ -67,7 +67,7 @@ export const HeatPumsPage = () => {
             </Typography>
             <Typography
               fontFamily={"Inter !important"}
-              fontSize={"18px"}
+              fontSize={"16px"}
               fontWeight={400}
               lineHeight={"26px"}
               color={"#0B081F"}
@@ -76,7 +76,7 @@ export const HeatPumsPage = () => {
               <Typography
                 component={"span"}
                 fontFamily={"Inter !important"}
-                fontSize={"22px"}
+                fontSize={"24px"}
                 fontWeight={600}
                 lineHeight={"26px"}
                 color={"#0B081F"}
@@ -102,7 +102,7 @@ export const HeatPumsPage = () => {
               <Typography
                 component={"span"}
                 fontFamily={"Inter !important"}
-                fontSize={"22px"}
+                fontSize={"24px"}
                 fontWeight={600}
                 lineHeight={"26px"}
                 color={"#0B081F"}

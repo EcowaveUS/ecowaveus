@@ -115,6 +115,7 @@ export const MainPageComponentHeatPump = () => {
             right={0}
             top={"50%"}
             width={"calc(50% - 20px)"}
+            mt={"40px"}
             sx={{
               transform: "translateY(-50%)",
             }}

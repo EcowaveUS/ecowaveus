@@ -102,54 +102,79 @@ export const InstallationProcessUpdated = () => {
           >
             <GalleryBox sx={{ alignItems: "end" }}>
               <GalleryImage
-                src="/images/why-grid/1.png"
-                style={{ aspectRatio: "2/3", width: "90%" }}
+                style={{
+                  aspectRatio: "2/3",
+                  width: "90%",
+                  background: `url(/images/why-grid/1.png) center`,
+                }}
               />
               <GalleryImage
-                src="/images/why-grid/2.webp"
-                style={{ aspectRatio: "1/1" }}
-              />
-            </GalleryBox>
-            <GalleryBox>
-              <GalleryImage
-                src="/images/why-grid/3.jpg"
-                style={{ aspectRatio: "2/3" }}
-              />
-              <GalleryImage
-                src="/images/why-grid/4.jpg"
-                style={{ aspectRatio: "2/3" }}
-              />
-              <GalleryImage
-                src="/images/why-grid/5.jpg"
-                style={{ aspectRatio: "1/1" }}
+                style={{
+                  aspectRatio: "1/1",
+                  background: `url(/images/why-grid/2.png) center`,
+                }}
               />
             </GalleryBox>
             <GalleryBox>
               <GalleryImage
-                src="/images/why-grid/6.png"
-                style={{ aspectRatio: "2/3" }}
+                style={{
+                  aspectRatio: "2/3",
+                  background: `url(/images/why-grid/3.png) center`,
+                }}
               />
               <GalleryImage
-                src="/images/why-grid/7.jpg"
-                style={{ aspectRatio: "2/3" }}
+                style={{
+                  aspectRatio: "2/3",
+                  background: `url(/images/why-grid/4.png) 29% center`,
+                }}
               />
               <GalleryImage
-                src="/images/why-grid/8.jpg"
-                style={{ aspectRatio: "4/3", marginBottom: "50px" }}
+                style={{
+                  aspectRatio: "1/1",
+                  background: `url(/images/why-grid/5.png) center`,
+                }}
               />
             </GalleryBox>
             <GalleryBox>
               <GalleryImage
-                src="/images/why-grid/9.png"
-                style={{ aspectRatio: "1/1" }}
+                style={{
+                  aspectRatio: "2/3",
+                  background: `url(/images/why-grid/6.png) 70% center`,
+                }}
               />
               <GalleryImage
-                src="/images/why-grid/10.jpg"
-                style={{ aspectRatio: "1/1", width: "90%" }}
+                style={{
+                  aspectRatio: "2/3",
+                  background: `url(/images/why-grid/7.png) center`,
+                }}
               />
               <GalleryImage
-                src="/images/why-grid/11.jpg"
-                style={{ aspectRatio: "2/3", width: "80%" }}
+                style={{
+                  aspectRatio: "4/3",
+                  marginBottom: "50px",
+                  background: `url(/images/why-grid/8.png) center`,
+                }}
+              />
+            </GalleryBox>
+            <GalleryBox>
+              <GalleryImage
+                style={{
+                  aspectRatio: "1/1",
+                  background: `url(/images/why-grid/9.png) center`,
+                }}
+              />
+              <GalleryImage
+                style={{
+                  aspectRatio: "1/1",
+                  background: `url(/images/why-grid/10.png) center`,
+                }}
+              />
+              <GalleryImage
+                style={{
+                  aspectRatio: "2/3",
+                  width: "80%",
+                  background: `url(/images/why-grid/11.png) center`,
+                }}
               />
             </GalleryBox>
           </Box>
@@ -206,11 +231,12 @@ const GalleryBox = styled(Box)`
   justify-content: center;
 `;
 
-const GalleryImage = styled.img`
+const GalleryImage = styled.div`
   border-radius: 8px;
-  object-fit: cover;
   max-width: 100%;
   width: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   @media (min-width: 900px) {
     border-radius: 12px;
   }

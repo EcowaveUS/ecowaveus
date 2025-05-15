@@ -4,7 +4,11 @@ import styled from "styled-components";
 export const Financing = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Box bgcolor={"#252529"} py={isDesktop ? "96px" : "48px"}>
+    <Box
+      bgcolor={"#252529"}
+      pt={isDesktop ? "92px" : "48px"}
+      pb={isDesktop ? "50px" : "48px"}
+    >
       <Box
         component={"div"}
         className="container-1"
