@@ -83,7 +83,10 @@ const BenefitsWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  padding: 92px 0;
+  padding: 48px 0;
+  @media (min-width: 900px) {
+    padding: 92px 0;
+  }
 `;
 
 const HeaderContainer = styled.div`

@@ -54,7 +54,7 @@ export const OurSolutions = () => {
           </Typography>
         </Box>
         <Swiper
-          modules={[FreeMode, Pagination]}
+          modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
           className="solutions-swiper"
           spaceBetween={0}
           slidesPerView={"auto"}

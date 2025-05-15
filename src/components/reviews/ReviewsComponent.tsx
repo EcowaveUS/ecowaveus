@@ -17,9 +17,9 @@ export const ReviewsComponent = () => {
     <Box bgcolor={"#0C4200"}>
       <Box
         component={"div"}
-        paddingTop={"80px"}
+        paddingTop={isDesktop ? "80px" : "48px"}
         className={isDesktop ? "container" : ""}
-        paddingBottom={isDesktop ? "74px" : "42px"}
+        paddingBottom={isDesktop ? "74px" : "48px"}
         display={"flex"}
         flexDirection={isDesktop ? "row" : "column"}
         gap={isDesktop ? "32px" : "48px"}
@@ -63,7 +63,7 @@ export const ReviewsComponent = () => {
           <Swiper
             ref={swiperRef}
             className="reviews-container"
-            modules={[FreeMode, Pagination]}
+            modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
             spaceBetween={isDesktop ? 32 : 24}
             slidesPerView={"auto"}
             freeMode={true}

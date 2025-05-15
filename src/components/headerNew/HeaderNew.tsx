@@ -190,7 +190,7 @@ export const HeaderNew = () => {
           width={"48.5"}
           height={"48.5"}
           alt="icon-menu-blue"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", marginLeft: "-7px" }}
         />
         <Link to={"/"}>
           <img

@@ -34,7 +34,7 @@ export const WhyChooseUs: React.FC = () => {
     },
   ];
   return (
-    <Box bgcolor={"#0C4200"} py={"92px"}>
+    <Box bgcolor={"#0C4200"} py={isDesktop ? "92px" : "48px"}>
       <Box component={"div"} className="container-2">
         <Typography
           color={"white"}
@@ -47,38 +47,46 @@ export const WhyChooseUs: React.FC = () => {
         >
           Why Choose EcowaveUS?
         </Typography>
-        <Grid mt={"50px"} container spacing={"48px"}>
+        <Box
+          mt={isDesktop ? "50px" : "24px"}
+          display={"grid"}
+          gridTemplateColumns={isDesktop ? "repeat(2, 1fr)" : "repeat(1, 1fr)"}
+          gap={"48px"}
+        >
           {detailsInfo.map((item) => (
-            <Grid item key={item.id} xs={12} sm={6}>
-              <Box display={"flex"} flexDirection={"column"} gap={"14px"}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  style={{ width: "70px", height: "auto" }}
-                />
-                <Typography
-                  color={"white"}
-                  fontWeight={600}
-                  fontSize={"24px"}
-                  lineHeight={"32px"}
-                  fontFamily={"Inter !important"}
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  color={"white"}
-                  fontWeight={400}
-                  fontSize={"16px"}
-                  lineHeight={"24px"}
-                  fontFamily={"Inter !important"}
-                >
-                  {item.description}
-                </Typography>
-                <Box height={"2px"} width={"50px"} bgcolor={"white"}></Box>
-              </Box>
-            </Grid>
+            <Box
+              key={item.id}
+              display={"flex"}
+              flexDirection={"column"}
+              gap={"14px"}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                style={{ width: "70px", height: "auto" }}
+              />
+              <Typography
+                color={"white"}
+                fontWeight={600}
+                fontSize={"24px"}
+                lineHeight={"32px"}
+                fontFamily={"Inter !important"}
+              >
+                {item.title}
+              </Typography>
+              <Typography
+                color={"white"}
+                fontWeight={400}
+                fontSize={"16px"}
+                lineHeight={"24px"}
+                fontFamily={"Inter !important"}
+              >
+                {item.description}
+              </Typography>
+              <Box height={"2px"} width={"50px"} bgcolor={"white"}></Box>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );
