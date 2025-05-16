@@ -50,7 +50,6 @@ export const BottomFooter = () => {
           gap={isDesktop ? "24px" : "12px"}
         >
           <Link
-            style={{ order: isDesktop ? 1 : 2 }}
             to={import.meta.env.VITE_GOOGLE_LINK || "https://www.google.com/"}
           >
             <Box
@@ -75,7 +74,6 @@ export const BottomFooter = () => {
             </Box>
           </Link>
           <Link
-            style={{ order: isDesktop ? 2 : 3 }}
             to={
               import.meta.env.VITE_FACEBOOK_LINK || "https://www.facebook.com/"
             }
@@ -100,7 +98,6 @@ export const BottomFooter = () => {
             </Box>
           </Link>
           <Link
-            style={{ order: isDesktop ? 3 : 1 }}
             to={
               import.meta.env.VITE_INSTAGRAM_LINK ||
               "https://www.instagram.com/"
@@ -122,7 +119,6 @@ export const BottomFooter = () => {
             </Box>
           </Link>
           <Link
-            style={{ order: 3 }}
             to={
               import.meta.env.VITE_LINKEDIN_LINK || "https://www.linkedin.com/"
             }
