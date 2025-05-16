@@ -87,7 +87,7 @@ export const SwitchFuture = () => {
               letterSpacing: "1% !important",
               "&:hover": { backgroundColor: "#198400" },
             }}
-            onClick={() => navigate("/contact-us")}
+            onClick={() => navigate("/contact-us#contact-form")}
           >
             Schedule now
           </Button>

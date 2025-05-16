@@ -159,7 +159,7 @@ export const HeaderNew = () => {
                 // border: "1px solid #C6C6CC",
                 "&:hover": { backgroundColor: "#198400" },
               }}
-              onClick={() => navigate("/contact-us")}
+              onClick={() => navigate("/contact-us#contact-form")}
             >
               Book an Appointment
             </Button>
@@ -319,7 +319,7 @@ export const HeaderNew = () => {
               border: "none",
               "&:hover": { backgroundColor: "#404047" },
             }}
-            onClick={() => navigate("/contact-us")}
+            onClick={() => navigate("/contact-us#contact-form")}
           >
             Book Appt
           </Button>

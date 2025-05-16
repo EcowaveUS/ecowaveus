@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const FixedFooter = () => {
   return (
     <Container>
-      <ItemContainer component={Link} to={"/contact-us"}>
+      <ItemContainer component={Link} to={"/contact-us#contact-form"}>
         <ItemIcon src={"/images/icons/icon-book.svg"} />
         <ItemText>Book</ItemText>
       </ItemContainer>

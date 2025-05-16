@@ -60,7 +60,7 @@ export const InstallationProcessUpdated = () => {
                 letterSpacing: "1% !important",
                 "&:hover": { backgroundColor: "#198400" },
               }}
-              onClick={() => navigate("/contact-us")}
+              onClick={() => navigate("/contact-us#contact-form")}
             >
               Get a FREE Estimate
             </Button>

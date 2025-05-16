@@ -3,8 +3,23 @@ import { ContactForm } from "../components/forms/ContactForm";
 import { LocationInfo } from "../components/forms/LocationInfo";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { Box, Theme, useMediaQuery } from "@mui/material";
+import { useEffect, useRef } from "react";
 
 export const ContactPage = () => {
+  useEffect(() => {
+    if (window.location.hash === "#contact-form") {
+      setTimeout(() => {
+        contactFormRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  }, []);
+
+  const contactFormRef = useRef<HTMLDivElement>(null);
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <StyledPage
       initial={{ opacity: 0.8 }}
@@ -24,7 +39,13 @@ export const ContactPage = () => {
       <Title>Contact Us</Title>
       <WrapperComponents>
         <LocationInfo />
-        <ContactForm />
+        <Box
+          component={"div"}
+          ref={contactFormRef}
+          sx={{ scrollMarginTop: isDesktop ? "120px" : "80px" }}
+        >
+          <ContactForm />
+        </Box>
       </WrapperComponents>
     </StyledPage>
   );

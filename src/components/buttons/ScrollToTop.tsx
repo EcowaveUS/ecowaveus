@@ -31,7 +31,14 @@ export const ScrollToTop = () => {
   }, []);
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    if (
+      pathname === "/contact-us" &&
+      window.location.hash === "#contact-form"
+    ) {
+      return;
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return (
