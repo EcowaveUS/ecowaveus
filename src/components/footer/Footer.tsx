@@ -1,9 +1,11 @@
 import { LogoFooter } from "./LogoFooter";
 import { NavigationFooter } from "./NavigationFooter";
 import { BottomFooter } from "./BottomFooter";
-import { Box, Theme, useMediaQuery } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { FixedFooter } from "./FixedFooter";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
+import logoFooter from "../../assets/images/logo-footer.png";
 
 export const Footer = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
@@ -11,7 +13,29 @@ export const Footer = () => {
   const pathname = useLocation();
 
   return pathname.pathname === "/free-estimate" ? (
-    <></>
+    <Box
+      component={"footer"}
+      bgcolor={"#022241"}
+      py={"24px"}
+      display={"flex"}
+      gap="12px"
+      alignItems={"center"}
+      flexDirection={"column"}
+    >
+      <Link to="/">
+        <img src={logoFooter} height={"auto"} width={"183px"} />
+      </Link>
+      <Typography
+        color="#ffffff"
+        textAlign={"center"}
+        fontSize={isDesktop ? "14px" : "16px"}
+        fontWeight={isDesktop ? "500" : "400"}
+        lineHeight={isDesktop ? "150%" : "20px"}
+        fontFamily={"Inter !important"}
+      >
+        © 2021 Ecowave. All Rights Reserved.
+      </Typography>
+    </Box>
   ) : (
     <Box
       component="footer"
