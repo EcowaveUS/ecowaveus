@@ -1,3 +1,5 @@
+import { ReviewsComponent } from "../../reviews/ReviewsComponent";
+
 export default function FreeEstimateReviews() {
-  return <div>Free Estimate Reviews</div>;
+  return <ReviewsComponent cat={2} />;
 }

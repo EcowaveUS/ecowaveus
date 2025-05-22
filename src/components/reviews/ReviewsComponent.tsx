@@ -8,7 +8,7 @@ import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { ReviewCard2 } from "../cards/ReviewCard2";
 import { useRef } from "react";
 
-export const ReviewsComponent = () => {
+export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const swiperRef = useRef<SwiperRef>(null);
   const data = reviews;
@@ -53,6 +53,23 @@ export const ReviewsComponent = () => {
             Explore the personal stories of our customers and see how Ecowave's
             sustainable solutions have enriched their lives.
           </Typography>
+          {cat === 2 && (
+            <img
+              alt="google-review"
+              style={{
+                marginLeft: isDesktop ? "0" : "auto",
+                marginRight: isDesktop ? "0" : "auto",
+                marginTop: "16px",
+                objectFit: "cover",
+                borderRadius: "32px",
+                display: "flex",
+                justifyContent: isDesktop ? "flex-start" : "center",
+              }}
+              src="/images/google-review.png"
+              width={"150px"}
+              height="auto"
+            />
+          )}
         </Box>
         <Box
           flex={1}
