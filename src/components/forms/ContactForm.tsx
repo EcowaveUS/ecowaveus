@@ -55,10 +55,10 @@ export const ContactForm = ({
     onSubmit: (values) => {
       emailjs
         .send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_rxhp9f2",
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_sexpm2s",
           values,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8tS6TT5TEINsGyxDa"
         )
         .then((response) => {
           alert("Email sent successfully!");
