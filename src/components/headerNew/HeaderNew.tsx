@@ -19,7 +19,9 @@ export const HeaderNew = () => {
   useEffect(() => {
     setIsOpenMobileMenu(false);
   }, [location]);
-  return isDesktop ? (
+  return location.pathname === "/free-estimate" ? (
+    <></>
+  ) : isDesktop ? (
     <>
       <Box
         component={"div"}

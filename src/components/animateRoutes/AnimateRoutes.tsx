@@ -7,6 +7,7 @@ import { EvChargersPage } from "../../routes/EvChargersPage";
 import { EnergyStoragePage } from "../../routes/EnergyStoragePage";
 import { PrivacyPolicyPage } from "../../routes/PrivacyPolicyPage";
 import { TermsAndConditionsPage } from "../../routes/TermsAndConditionsPage";
+import { FreeEstimatePage } from "../../routes/FreeEstimatePage";
 import { AnimatePresence } from "framer-motion";
 
 export const AnimateRoutes = () => {
@@ -25,6 +26,7 @@ export const AnimateRoutes = () => {
           path="/terms-and-conditions"
           element={<TermsAndConditionsPage />}
         />
+        <Route path="free-estimate" element={<FreeEstimatePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>

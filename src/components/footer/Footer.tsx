@@ -3,11 +3,16 @@ import { NavigationFooter } from "./NavigationFooter";
 import { BottomFooter } from "./BottomFooter";
 import { Box, Theme, useMediaQuery } from "@mui/material";
 import { FixedFooter } from "./FixedFooter";
+import { useLocation } from "react-router";
 
 export const Footer = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
-  return (
+  const pathname = useLocation();
+
+  return pathname.pathname === "/free-estimate" ? (
+    <></>
+  ) : (
     <Box
       component="footer"
       sx={{ backgroundColor: "#022241" }}
