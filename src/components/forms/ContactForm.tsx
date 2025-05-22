@@ -53,20 +53,18 @@ export const ContactForm = ({
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      // Enviar la solicitud a EmailJS
       emailjs
         .send(
-          "service_rxhp9f2", // Reemplaza con tu Service ID de EmailJS
-          "template_sexpm2s", // Reemplaza con tu Template ID de EmailJS
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           values,
-          "8tS6TT5TEINsGyxDa" // Reemplaza con tu User ID de EmailJS
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then((response) => {
           alert("Email sent successfully!");
           console.log("Email sent successfully:", response);
           formik.resetForm();
         })
-        // Manejador de errores del envío de la solicitud
         .catch((error) => {
           console.error("Error sending email:", error);
         });
