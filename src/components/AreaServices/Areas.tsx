@@ -3,7 +3,7 @@ import serviceMapImageDesktop from "../../assets/images/service-map-desktop.svg"
 import serviceMapImageMobile from "../../assets/images/service-map-mobile.svg";
 import { AreaServices } from "./AreaServices";
 
-const Areas = () => {
+const Areas = ({ cat = 1 }: { cat?: number }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <>
@@ -42,7 +42,7 @@ const Areas = () => {
             alignItems={"center"}
           >
             <div className="container">
-              <AreaServices />
+              <AreaServices cat={cat} />
             </div>
           </Box>
         )}
@@ -50,7 +50,7 @@ const Areas = () => {
       {!isDesktop && (
         <Box bgcolor={"#01162C"} paddingY={"48px"} width={"100%"}>
           <div className="container">
-            <AreaServices />
+            <AreaServices cat={cat} />
           </div>
         </Box>
       )}

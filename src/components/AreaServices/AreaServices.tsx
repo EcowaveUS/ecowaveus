@@ -1,6 +1,6 @@
 import { Box, Theme, Typography, useMediaQuery, Button } from "@mui/material";
 
-export const AreaServices = () => {
+export const AreaServices = ({ cat = 1 }: { cat?: number }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <Box component={"div"} maxWidth={isDesktop ? "498px" : "100%"}>
@@ -50,26 +50,28 @@ export const AreaServices = () => {
           "Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester | Marblehead | Wenham | Ipswich | Rockport | Lynnfield"
         )}
       </Typography>
-      <Button
-        sx={{
-          marginTop: "32px",
-          backgroundColor: "#35AE1A",
-          color: "white",
-          borderRadius: "999px",
-          padding: isDesktop ? "10px 20px" : "10px 16px",
-          width: isDesktop ? "auto" : "100%",
-          fontSize: "14px",
-          fontWeight: "600",
-          cursor: "pointer",
-          transition: "background 0.3s ease",
-          border: "none",
-          fontFamily: "Inter !important",
-          lineHeight: "20px",
-          "&:hover": { backgroundColor: "#35AE1A" },
-        }}
-      >
-        View more
-      </Button>
+      {cat === 1 && (
+        <Button
+          sx={{
+            marginTop: "32px",
+            backgroundColor: "#35AE1A",
+            color: "white",
+            borderRadius: "999px",
+            padding: isDesktop ? "10px 20px" : "10px 16px",
+            width: isDesktop ? "auto" : "100%",
+            fontSize: "14px",
+            fontWeight: "600",
+            cursor: "pointer",
+            transition: "background 0.3s ease",
+            border: "none",
+            fontFamily: "Inter !important",
+            lineHeight: "20px",
+            "&:hover": { backgroundColor: "#35AE1A" },
+          }}
+        >
+          View more
+        </Button>
+      )}
     </Box>
   );
 };

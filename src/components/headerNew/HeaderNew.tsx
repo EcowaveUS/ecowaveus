@@ -45,7 +45,7 @@ export const HeaderNew = () => {
         flexDirection={isDesktop ? "row" : "column"}
       >
         <Link to={"/"}>
-          <img src={logoFooter} alt="logo" width={"183px"} height={"auto"} />
+          <img src={logoFooter} alt="logo" width={"100px"} height={"auto"} />
         </Link>
         <Box
           component={"div"}
