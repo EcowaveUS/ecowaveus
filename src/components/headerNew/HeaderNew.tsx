@@ -31,7 +31,7 @@ export const HeaderNew = () => {
       sx={{
         backdropFilter: "blur(5px)",
       }}
-      marginBottom={isDesktop ? "-80px" : "150px"}
+      marginBottom={isDesktop ? "-80px" : "-150px"}
       borderBottom={"1px solid #FFFFFF0D"}
     >
       <Box

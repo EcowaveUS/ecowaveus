@@ -2,7 +2,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "../../routes/HomePage";
 import { AboutAsPage } from "../../routes/AboutAsPage";
 import { ContactPage } from "../../routes/ContactPage";
-import { HeatPumsPage } from "../../routes/HeatPumsPage";
+import { HeatPumpsPage } from "../../routes/HeatPumpsPage";
 import { EvChargersPage } from "../../routes/EvChargersPage";
 import { EnergyStoragePage } from "../../routes/EnergyStoragePage";
 import { PrivacyPolicyPage } from "../../routes/PrivacyPolicyPage";
@@ -18,7 +18,7 @@ export const AnimateRoutes = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about-us/*" element={<AboutAsPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="/heat-pumps" element={<HeatPumsPage />} />
+        <Route path="/heat-pumps" element={<HeatPumpsPage />} />
         <Route path="/ev-chargers" element={<EvChargersPage />} />
         <Route path="/energy-storage" element={<EnergyStoragePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
@@ -26,7 +26,7 @@ export const AnimateRoutes = () => {
           path="/terms-and-conditions"
           element={<TermsAndConditionsPage />}
         />
-        <Route path="free-estimate" element={<FreeEstimatePage />} />
+        <Route path="/free-estimate" element={<FreeEstimatePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>

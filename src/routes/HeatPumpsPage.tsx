@@ -10,7 +10,7 @@ import { WhyChooseUs } from "../components/pagesComponents/WhyChooseUs";
 import { InstallationProcessUpdated } from "../components/pagesComponents/InstallationProcessUpdated";
 import { Financing } from "../components/pagesComponents/Financing";
 
-export const HeatPumsPage = () => {
+export const HeatPumpsPage = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
 
