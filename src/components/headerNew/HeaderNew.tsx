@@ -20,7 +20,62 @@ export const HeaderNew = () => {
     setIsOpenMobileMenu(false);
   }, [location]);
   return location.pathname === "/free-estimate" ? (
-    <></>
+    <Box
+      component={"div"}
+      zIndex={100}
+      position={"sticky"}
+      width={"100%"}
+      top={"0"}
+      bgcolor={"#FFFFFF0D"}
+      left={0}
+      sx={{
+        backdropFilter: "blur(5px)",
+      }}
+      marginBottom={isDesktop ? "-80px" : "150px"}
+      borderBottom={"1px solid #FFFFFF0D"}
+    >
+      <Box
+        component={"div"}
+        className="container"
+        height={isDesktop ? "80px" : "150px"}
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={isDesktop ? "space-between" : "center "}
+        gap={isDesktop ? "0" : "12px"}
+        flexDirection={isDesktop ? "row" : "column"}
+      >
+        <Link to={"/"}>
+          <img src={logoFooter} alt="logo" width={"183px"} height={"auto"} />
+        </Link>
+        <Box
+          component={"div"}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"end"}
+          gap={"12px"}
+          flexDirection={isDesktop ? "row" : "column"}
+          width={isDesktop ? "auto" : "100%"}
+        >
+          <GreenButton
+            sx={{
+              width: isDesktop ? "auto" : "100%",
+            }}
+            component={"a"}
+            href="tel:+19785004081"
+          >
+            Call Us Now (978) 500-4081
+          </GreenButton>
+          <GreenButton
+            sx={{
+              width: isDesktop ? "auto" : "100%",
+            }}
+            onClick={() => navigate("#contact-form")}
+          >
+            Get a FREE Estimate
+          </GreenButton>
+        </Box>
+      </Box>
+    </Box>
   ) : isDesktop ? (
     <>
       <Box
@@ -145,26 +200,9 @@ export const HeaderNew = () => {
             >
               Contact Us
             </LinkItem>
-            <Button
-              sx={{
-                backgroundColor: "#198400",
-                color: "white",
-                borderRadius: "999px",
-                padding: "8px 16px",
-                fontSize: "12px",
-                fontWeight: "600",
-                lineHeight: "16px",
-                fontFamily: "Inter !important",
-                letterSpacing: "2% !important",
-                cursor: "pointer",
-                border: "none",
-                // border: "1px solid #C6C6CC",
-                "&:hover": { backgroundColor: "#198400" },
-              }}
-              onClick={() => navigate("/contact-us#contact-form")}
-            >
+            <GreenButton onClick={() => navigate("/contact-us#contact-form")}>
               Book an Appointment
-            </Button>
+            </GreenButton>
           </Box>
         </Box>
       </Box>
@@ -388,4 +426,19 @@ const LinkItem1 = styled(Link)({
   lineHeight: "20px",
   fontFamily: "Montserrat !important",
   letterSpacing: "1% !important",
+});
+
+const GreenButton = styled(Button)({
+  backgroundColor: "#198400 !important",
+  color: "white !important",
+  borderRadius: "999px !important",
+  padding: "8px 16px !important",
+  fontSize: "12px !important",
+  fontWeight: "600 !important",
+  lineHeight: "16px !important",
+  fontFamily: "Inter !important",
+  letterSpacing: "2% !important",
+  cursor: "pointer !important",
+  border: "none !important",
+  "&:hover": { backgroundColor: "#198400 !important" },
 });

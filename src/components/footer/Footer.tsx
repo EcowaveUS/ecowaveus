@@ -28,7 +28,7 @@ export const Footer = () => {
       <Typography
         color="#ffffff"
         textAlign={"center"}
-        fontSize={isDesktop ? "14px" : "16px"}
+        fontSize={isDesktop ? "12px" : "14px"}
         fontWeight={isDesktop ? "500" : "400"}
         lineHeight={isDesktop ? "150%" : "20px"}
         fontFamily={"Inter !important"}
