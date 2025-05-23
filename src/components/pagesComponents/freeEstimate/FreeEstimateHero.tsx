@@ -86,7 +86,13 @@ export default function FreeEstimateHero() {
               Call Us Now
             </GreenButton>
             <GreenButton
-              onClick={() => navigate("#contact-form")}
+              onClick={() => {
+                const el = document.getElementById("contact-form");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                  history.pushState(null, "", "#contact-form");
+                }
+              }}
               sx={{
                 width: isDesktop ? "250px" : "100%",
               }}

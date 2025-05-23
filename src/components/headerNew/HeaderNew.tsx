@@ -69,7 +69,13 @@ export const HeaderNew = () => {
             sx={{
               width: isDesktop ? "auto" : "100%",
             }}
-            onClick={() => navigate("#contact-form")}
+            onClick={() => {
+              const el = document.getElementById("contact-form");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+                history.pushState(null, "", "#contact-form");
+              }
+            }}
           >
             Get a FREE Estimate
           </GreenButton>
