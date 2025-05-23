@@ -12,7 +12,7 @@ export default function FreeEstimateAdvantage() {
           "linear-gradient(135deg, #0f2e4f, #000000 0%, #4c7ca6 100%)",
       }}
     >
-      <Box component={"div"} className="container">
+      <Box component={"div"} className="container-2">
         <Typography
           color={"white"}
           fontWeight={isDesktop ? 600 : 800}
