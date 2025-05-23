@@ -1,10 +1,8 @@
 import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
-import { useNavigate } from "react-router";
 import { ContactForm } from "../../forms/ContactForm";
 import styled from "styled-components";
 
 export default function FreeEstimateHero() {
-  const navigate = useNavigate();
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
