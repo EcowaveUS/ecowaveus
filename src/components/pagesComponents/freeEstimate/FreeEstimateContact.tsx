@@ -97,6 +97,7 @@ export default function FreeEstimateContact() {
             gap={"16px"}
             alignItems={"center"}
             width={"100%"}
+            flexWrap={"wrap"}
           >
             <GreenButton
               component={"a"}
