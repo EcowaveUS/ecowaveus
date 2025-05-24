@@ -61,7 +61,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
                 marginRight: isDesktop ? "0" : "auto",
                 marginTop: "16px",
                 objectFit: "cover",
-                borderRadius: "32px",
+                borderRadius: "41px",
                 display: "flex",
                 justifyContent: isDesktop ? "flex-start" : "center",
               }}
