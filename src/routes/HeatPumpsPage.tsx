@@ -117,7 +117,7 @@ export const HeatPumpsPage = () => {
         </Box>
       </Box>
       <Financing />
-      <ReviewsComponent />
+      <ReviewsComponent cat={2} />
       <OursBrands color="#F6F8FA" images={brandImagesNew} />
       <ContactComponent cat={2} />
     </>

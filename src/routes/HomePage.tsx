@@ -45,7 +45,7 @@ export const HomePage = () => {
         /> */}
       <ExpertiseComponent />
       <OurSolutions />
-      <ReviewsComponent />
+      <ReviewsComponent cat={2} />
       <ContactComponent cat={1} />
       <Areas />
     </>
