@@ -36,7 +36,7 @@ export default function FreeEstimateAdvantage() {
           maxWidth={"600px"}
           mx={"auto"}
         >
-          At EcowaveUS, we simplify affordable electrification, helping you fild
+          At EcowaveUS, we simplify affordable electrification, helping you find
           the best combination for your home and budget
         </Typography>
         <Box

@@ -64,7 +64,7 @@ export default function FreeEstimateFinancing() {
             lineHeight={isDesktop ? "120%" : "20px"}
           >
             <strong>The Power of Choice.</strong> Select the timeline that fits
-            your budget while enjoying immediate evergy savings. Your
+            your budget while enjoying immediate energy savings. Your
             sustainable future starts with a plan that works for you.
           </Typography>
           <Box
