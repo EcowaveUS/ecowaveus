@@ -39,6 +39,9 @@ export default function SolutionCard({
         color={"#181a1c"}
         fontWeight={700}
         lineHeight={"48px"}
+        sx={{
+          overflowWrap: "anywhere",
+        }}
       >
         {title}
       </Typography>
