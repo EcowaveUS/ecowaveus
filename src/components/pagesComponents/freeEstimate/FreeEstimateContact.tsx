@@ -68,6 +68,7 @@ export default function FreeEstimateContact() {
           flexDirection={"column"}
           justifyContent={"center"}
           gap={isDesktop ? "24px" : "16px"}
+          width={isDesktop ? "auto" : "100%"}
         >
           <Typography
             fontWeight={600}

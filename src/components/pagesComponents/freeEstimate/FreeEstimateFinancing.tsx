@@ -72,6 +72,7 @@ export default function FreeEstimateFinancing() {
             gap={"16px"}
             alignItems={"center"}
             width={"100%"}
+            flexWrap={"wrap"}
           >
             <GreenButton
               component={"a"}
@@ -98,16 +99,18 @@ export default function FreeEstimateFinancing() {
             </GreenButton>
           </Box>
         </Box>
-        <Box
-          sx={{
-            width: isDesktop ? "500px" : "100%",
-            minWidth: isDesktop ? "500px" : "100%",
-            height: "600px",
-            background: "url('/images/free-financing.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></Box>
+        {isDesktop && (
+          <Box
+            sx={{
+              width: isDesktop ? "500px" : "100%",
+              minWidth: isDesktop ? "500px" : "100%",
+              height: "600px",
+              background: "url('/images/free-financing.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></Box>
+        )}
       </Box>
     </Box>
   );
