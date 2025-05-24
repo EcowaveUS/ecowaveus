@@ -1,17 +1,20 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 
 export default function SolutionCard({
   title,
   image,
+  height = 80,
 }: {
   title: string;
   image: string;
+  height?: number;
 }) {
+  const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <Box
       component={"div"}
       flexDirection={"column"}
-      gap={"20px"}
+      gap={"8px"}
       justifyContent={"end"}
       bgcolor={"white"}
       pt={"48px"}
@@ -31,14 +34,14 @@ export default function SolutionCard({
       <img
         src={image}
         alt={title}
-        style={{ height: "80px", width: "fit-content" }}
+        style={{ height: `${height}px`, width: "fit-content" }}
       />
       <Typography
-        fontSize={"40px"}
+        fontSize={isTablet ? "40px" : "24px"}
         fontFamily={"Inter !important"}
         color={"#181a1c"}
         fontWeight={700}
-        lineHeight={"48px"}
+        lineHeight={isTablet ? "48px" : "32px"}
         sx={{
           overflowWrap: "anywhere",
         }}

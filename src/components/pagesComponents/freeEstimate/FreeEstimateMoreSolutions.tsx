@@ -46,6 +46,7 @@ export default function FreeEstimateMoreSolutions() {
         }
       >
         <SolutionCard
+          height={100}
           title="Electrical Service Upgrade"
           image="/images/solution-1.png"
         />
@@ -54,7 +55,11 @@ export default function FreeEstimateMoreSolutions() {
           title="Whole-home batteries"
           image="/images/solution-3.png"
         />
-        <SolutionCard title="Solar Panels" image="/images/solution-4.png" />
+        <SolutionCard
+          height={110}
+          title="Solar Panels"
+          image="/images/solution-4.png"
+        />
       </Box>
     </Box>
   );
