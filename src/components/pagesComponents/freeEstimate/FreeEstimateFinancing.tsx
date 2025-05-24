@@ -33,7 +33,7 @@ export default function FreeEstimateFinancing() {
             color={"white"}
             lineHeight={isDesktop ? "120%" : "40px"}
           >
-            Up to $25,000 Interest-Free Financing for Your Heating & Cooling
+            Up to $25,000 <span style={{color: "#fdd643"}}>Interest-Free</span> Financing for Your Heating & Cooling
             Project
           </Typography>
           <Box
