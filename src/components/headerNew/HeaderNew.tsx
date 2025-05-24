@@ -206,7 +206,10 @@ export const HeaderNew = () => {
             >
               Contact Us
             </LinkItem>
-            <GreenButton onClick={() => navigate("/contact-us#contact-form")}>
+            <GreenButton
+              sx={{ paddingY: "8px !important", lineHeight: "16px !important" }}
+              onClick={() => navigate("/contact-us#contact-form")}
+            >
               Book an Appointment
             </GreenButton>
           </Box>
@@ -438,10 +441,10 @@ const GreenButton = styled(Button)({
   backgroundColor: "#198400 !important",
   color: "white !important",
   borderRadius: "999px !important",
-  padding: "8px 16px !important",
+  padding: "12px 16px !important",
   fontSize: "12px !important",
   fontWeight: "600 !important",
-  lineHeight: "16px !important",
+  lineHeight: "20px !important",
   fontFamily: "Inter !important",
   letterSpacing: "2% !important",
   cursor: "pointer !important",
