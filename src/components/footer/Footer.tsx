@@ -33,7 +33,7 @@ export const Footer = () => {
         lineHeight={isDesktop ? "150%" : "20px"}
         fontFamily={"Inter !important"}
       >
-        © 2021 Ecowave. All Rights Reserved.
+        © {new Date().getFullYear()} Ecowave. All Rights Reserved.
       </Typography>
     </Box>
   ) : (
