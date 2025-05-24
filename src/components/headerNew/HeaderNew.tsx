@@ -447,4 +447,9 @@ const GreenButton = styled(Button)({
   cursor: "pointer !important",
   border: "none !important",
   "&:hover": { backgroundColor: "#198400 !important" },
+  "@media (max-width: 899px)": {
+    padding: "12px 20px !important",
+    fontSize: "14px !important",
+    lineHeight: "20px !important",
+  },
 });
