@@ -4,10 +4,12 @@ export default function SolutionCard({
   title,
   image,
   height = 80,
+  width = 100,
 }: {
   title: string;
   image: string;
   height?: number;
+  width?: number;
 }) {
   const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
@@ -34,12 +36,12 @@ export default function SolutionCard({
       <img
         src={image}
         alt={title}
-        style={{ height: `${height}px`, width: "fit-content" }}
+        style={{ height: `${height}px`, width: `${width}px` }}
       />
       <Typography
         fontSize={isTablet ? "40px" : "24px"}
         fontFamily={"Inter !important"}
-        color={"#181a1c"}
+        color={"#2c2c2c"}
         fontWeight={700}
         lineHeight={isTablet ? "48px" : "32px"}
         sx={{

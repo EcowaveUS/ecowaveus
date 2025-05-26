@@ -47,15 +47,24 @@ export default function FreeEstimateMoreSolutions() {
       >
         <SolutionCard
           height={100}
+          width={76.06}
           title="Electrical Service Upgrade"
           image="/images/solution-1.png"
         />
-        <SolutionCard title="EV Chargers" image="/images/solution-2.png" />
         <SolutionCard
+          width={108.8}
+          height={80}
+          title="EV Chargers"
+          image="/images/solution-2.png"
+        />
+        <SolutionCard
+          width={109.63}
+          height={80}
           title="Whole-home batteries"
           image="/images/solution-3.png"
         />
         <SolutionCard
+          width={107.73}
           height={110}
           title="Solar Panels"
           image="/images/solution-4.png"
