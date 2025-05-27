@@ -14,7 +14,7 @@ export default function FreeEstimateMoreSolutions() {
         backgroundPosition: "bottom",
         backgroundRepeat: "no-repeat",
       }}
-      pt={isDesktop ? "240px" : "60px"}
+      pt={isDesktop ? "120px" : "60px"}
       pb={isDesktop ? "120px" : "60px"}
     >
       <Box
