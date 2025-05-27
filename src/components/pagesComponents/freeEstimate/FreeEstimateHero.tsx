@@ -6,7 +6,7 @@ export default function FreeEstimateHero() {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
-      height={isDesktop ? "800px" : "640px"}
+      height={isDesktop ? "800px" : "750px"}
       sx={{
         backgroundImage: `url(/images/free-estimate.jpg)`,
         backgroundSize: "cover",
@@ -33,17 +33,36 @@ export default function FreeEstimateHero() {
         position={"relative"}
       >
         <Box
-          paddingTop={isDesktop ? "100px" : "0"}
+          // paddingTop={isDesktop ? "100px" : "0"}
           component={"div"}
           maxWidth={isDesktop ? "min(712px, 50% - 20px)" : "100%"}
           position={"absolute"}
           zIndex={2}
           left={0}
           bottom={isDesktop ? "120px" : "30px"}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={isDesktop ? "24px" : "16px"}
           // sx={{
           //   transform: "translateY(-50%)",
           // }}
         >
+          <Typography
+            py={"12px"}
+            px={"8px"}
+            bgcolor={"#fdd643"}
+            borderRadius={"12px"}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "20px" : "16px"}
+            fontWeight={600}
+            lineHeight={isDesktop ? "24px" : "20px"}
+            letterSpacing={"5%"}
+            color={"#053b74"}
+            textAlign={"center"}
+          >
+            Today's Offer: Up to $10K Rebates for ductless mini splits and heat
+            pumps + 0% financing options.
+          </Typography>
           <Typography
             fontWeight={600}
             fontFamily={"Inter !important"}
@@ -60,14 +79,12 @@ export default function FreeEstimateHero() {
             fontSize={isDesktop ? "22px" : "18px"}
             color={"white"}
             lineHeight={isDesktop ? "30px" : "24px"}
-            marginTop={isDesktop ? "24px" : "16px"}
             letterSpacing={"0 !important"}
           >
             Get a Free Consultation and Discover Tailored Solutions for Your
             Home
           </Typography>
           <Box
-            mt={isDesktop ? "24px" : "16px"}
             display={"flex"}
             flexDirection={isDesktop ? "row" : "column"}
             gap={"16px"}
@@ -99,21 +116,14 @@ export default function FreeEstimateHero() {
             </GreenButton>
           </Box>
           <Typography
-            py={"12px"}
-            px={"8px"}
-            bgcolor={"#C4DFFF"}
-            borderRadius={"12px"}
-            fontFamily={"Inter !important"}
-            fontSize={isDesktop ? "20px" : "16px"}
             fontWeight={600}
-            lineHeight={isDesktop ? "24px" : "20px"}
-            letterSpacing={"5%"}
-            color={"#004BCE"}
-            textAlign={"center"}
-            mt={isDesktop ? "42px" : "20px"}
+            fontFamily={"Inter !important"}
+            letterSpacing={"0 !important"}
+            fontSize={isDesktop ? "52px" : "36px"}
+            color={"white"}
+            lineHeight={isDesktop ? "120%" : "40px"}
           >
-            Today's Offer: Up to $10K Rebates for ductless mini splits and heat
-            pumps + 0% financing options.
+            Mass Save® Partners
           </Typography>
         </Box>
         {isDesktop && (
