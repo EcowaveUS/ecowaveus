@@ -13,7 +13,7 @@ export default function FreeEstimateSavings() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      pt={isDesktop ? "300px" : "120px"}
+      pt={isDesktop ? "300px" : "60px"}
       pb={isDesktop ? "120px" : "60px"}
     >
       <Box
