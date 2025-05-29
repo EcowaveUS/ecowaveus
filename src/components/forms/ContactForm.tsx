@@ -33,7 +33,7 @@ export const ContactForm = ({
       .string()
       .email("Enter a valid email")
       .required("Email is required"),
-    address: yup.string().required("Address is required"),
+    address: yup.string().required("ZIP Code is required"),
     option: yup.string().required("Option is required"),
     message: yup
       .string()
@@ -146,7 +146,7 @@ export const ContactForm = ({
             />
           </InputFormContainer>
           <InputFormContainer>
-            <Label>Address</Label>
+            <Label>ZIP Code</Label>
             <InputField
               variant="outlined"
               name="address"
