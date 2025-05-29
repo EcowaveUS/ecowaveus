@@ -16,6 +16,7 @@ import {
 import styled from "styled-components";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import toast from "react-hot-toast";
 
 export const ContactForm = ({
   btnColor = "#252529",
@@ -61,7 +62,13 @@ export const ContactForm = ({
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8tS6TT5TEINsGyxDa"
         )
         .then((response) => {
-          alert("Email sent successfully!");
+          toast.success(
+            "Thank you for contacting EcowaveUS. We've received your message.",
+            {
+              position: "bottom-right",
+              duration: 5000,
+            }
+          );
           console.log("Email sent successfully:", response);
           formik.resetForm();
         })
