@@ -191,7 +191,7 @@ export const ContactForm = ({
             </FormControl>
           </InputFormContainer>
         </FormInputs>
-        <InputFormContainer style={{ marginBottom: "32px" }}>
+        <InputFormContainer style={{ marginBottom: "0px" }}>
           <Label>How can we help?</Label>
           <div>
             <Textarea
@@ -353,7 +353,6 @@ const MessageBox = styled(Box)({
   borderRadius: "12px",
   padding: "12px 16px",
   boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
-  border: "1px solid #D8D8DE",
   maxWidth: "300px",
   display: "flex",
   alignItems: "flex-start",
