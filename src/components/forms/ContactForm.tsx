@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Box,
@@ -25,6 +25,8 @@ export const ContactForm = ({
 }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   const form = useRef();
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [showMessage, setShowMessage] = useState<boolean>(false);
 
   const validationSchema = yup.object({
     firstName: yup.string().required("First name is required"),
@@ -54,6 +56,8 @@ export const ContactForm = ({
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
+      setIsSending(true);
+      setShowMessage(true);
       emailjs
         .send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_rxhp9f2",
@@ -61,18 +65,12 @@ export const ContactForm = ({
           values,
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8tS6TT5TEINsGyxDa"
         )
-        .then((response) => {
-          toast.success(
-            "Thank you for contacting EcowaveUS. We've received your message.",
-            {
-              position: "bottom-right",
-              duration: 5000,
-            }
-          );
-          console.log("Email sent successfully:", response);
+        .then(() => {
+          setIsSending(false);
           formik.resetForm();
         })
         .catch((error) => {
+          setIsSending(false);
           console.error("Error sending email:", error);
         });
     },
@@ -241,26 +239,61 @@ export const ContactForm = ({
             {formik.values.message.length}/80
           </Typography>
         </InputFormContainer>
-        <Button
-          sx={{
-            backgroundColor: btnColor,
-            color: "white",
-            borderRadius: "999px",
-            padding: "12px 20px",
-            width: isDesktop ? "auto" : "100%",
-            fontSize: "14px",
-            fontWeight: "700",
-            lineHeight: "20px",
-            border: "none",
-            cursor: "pointer",
-            transition: "background 0.3s ease",
-            fontFamily: "Montserrat !important",
-            "&:hover": { backgroundColor: btnColor },
-          }}
-          type="submit"
-        >
-          Submit
-        </Button>
+        <Box position={"relative"}>
+          <Button
+            sx={{
+              backgroundColor: btnColor,
+              color: "white",
+              borderRadius: "999px",
+              padding: "12px 20px",
+              width: isDesktop ? "auto" : "100%",
+              fontSize: "14px",
+              fontWeight: "700",
+              lineHeight: "20px",
+              border: "none",
+              cursor: "pointer",
+              transition: "background 0.3s ease",
+              fontFamily: "Montserrat !important",
+              "&:hover": { backgroundColor: btnColor },
+            }}
+            type="submit"
+          >
+            Submit
+          </Button>
+          {showMessage && (
+            <MessageBox>
+              <img
+                src={
+                  isSending
+                    ? "/images/blue-info.png"
+                    : "/images/green-check.png"
+                }
+                alt={isSending ? "blue-info" : "green-check"}
+                width={20}
+                height={20}
+                style={{ marginTop: isSending ? "0px" : "10px" }}
+              />
+              <Typography
+                color={"#252529"}
+                fontSize={"14px"}
+                lineHeight={"20px"}
+                fontFamily={"Inter !important"}
+              >
+                {isSending
+                  ? "Sending..."
+                  : "Thank you for contacting EcowaveUS. We've received your message."}
+              </Typography>
+              <img
+                src="/images/icons/icon-x-black.svg"
+                alt="cross"
+                width={10}
+                height={10}
+                onClick={() => setShowMessage(false)}
+                style={{ cursor: "pointer" }}
+              />
+            </MessageBox>
+          )}
+        </Box>
       </Box>
     </FormWrapper>
   );
@@ -310,4 +343,21 @@ const SelectField = styled(Select)({
     fontSize: "14px",
     lineHeight: "20px",
   },
+});
+
+const MessageBox = styled(Box)({
+  position: "absolute",
+  left: 0,
+  top: "54px",
+  zIndex: 40,
+  bgColor: "white",
+  borderRadius: "12px",
+  padding: "12px 16px",
+  boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
+  border: "1px solid #D*D*DE",
+  maxWidth: "300px",
+  display: "flex",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  gap: "10px",
 });
