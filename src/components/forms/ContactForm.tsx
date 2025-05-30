@@ -16,6 +16,7 @@ import {
 import styled from "styled-components";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import toast from "react-hot-toast";
 
 export const ContactForm = ({
   btnColor = "#252529",
@@ -349,7 +350,7 @@ const MessageBox = styled(Box)({
   left: 0,
   top: "54px",
   zIndex: 40,
-  bgColor: "white",
+  backgroundColor: "white",
   borderRadius: "12px",
   padding: "12px 16px",
   boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
