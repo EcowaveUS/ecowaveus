@@ -16,7 +16,6 @@ import {
 import styled from "styled-components";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import toast from "react-hot-toast";
 
 export const ContactForm = ({
   btnColor = "#252529",
