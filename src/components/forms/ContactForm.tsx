@@ -238,61 +238,49 @@ export const ContactForm = ({
             {formik.values.message.length}/80
           </Typography>
         </InputFormContainer>
-        <Box position={"relative"}>
-          <Button
-            sx={{
-              backgroundColor: btnColor,
-              color: "white",
-              borderRadius: "999px",
-              padding: "12px 20px",
-              width: isDesktop ? "auto" : "100%",
-              fontSize: "14px",
-              fontWeight: "700",
-              lineHeight: "20px",
-              border: "none",
-              cursor: "pointer",
-              transition: "background 0.3s ease",
-              fontFamily: "Montserrat !important",
-              "&:hover": { backgroundColor: btnColor },
-            }}
-            type="submit"
-          >
-            Submit
-          </Button>
-          {showMessage && (
-            <MessageBox>
-              <img
-                src={
-                  isSending
-                    ? "/images/blue-info.png"
-                    : "/images/green-check.png"
-                }
-                alt={isSending ? "blue-info" : "green-check"}
-                width={20}
-                height={20}
-                style={{ marginTop: isSending ? "0px" : "10px" }}
-              />
-              <Typography
-                color={"#252529"}
-                fontSize={"14px"}
-                lineHeight={"20px"}
-                fontFamily={"Inter !important"}
-              >
-                {isSending
-                  ? "Sending..."
-                  : "Thank you for contacting EcowaveUS. We've received your message."}
-              </Typography>
-              <img
-                src="/images/icons/icon-x-black.svg"
-                alt="cross"
-                width={10}
-                height={10}
-                onClick={() => setShowMessage(false)}
-                style={{ cursor: "pointer" }}
-              />
-            </MessageBox>
-          )}
-        </Box>
+        <Button
+          sx={{
+            backgroundColor: btnColor,
+            color: "white",
+            borderRadius: "999px",
+            padding: "12px 20px",
+            width: isDesktop ? "auto" : "100%",
+            fontSize: "14px",
+            fontWeight: "700",
+            lineHeight: "20px",
+            border: "none",
+            cursor: "pointer",
+            transition: "background 0.3s ease",
+            fontFamily: "Montserrat !important",
+            "&:hover": { backgroundColor: btnColor },
+          }}
+          type="submit"
+        >
+          Submit
+        </Button>
+        {showMessage && (
+          <MessageBox>
+            <img
+              src={
+                isSending ? "/images/blue-info.png" : "/images/green-check.png"
+              }
+              alt={isSending ? "blue-info" : "green-check"}
+              width={15}
+              height={15}
+              style={{ minWidth: "15px", marginTop: "2.5px" }}
+            />
+            <Typography
+              color={"#252529"}
+              fontSize={"14px"}
+              lineHeight={"20px"}
+              fontFamily={"Inter !important"}
+            >
+              {isSending
+                ? "Sending..."
+                : "Thank you for contacting EcowaveUS. We've received your message."}
+            </Typography>
+          </MessageBox>
+        )}
       </Box>
     </FormWrapper>
   );
@@ -345,17 +333,8 @@ const SelectField = styled(Select)({
 });
 
 const MessageBox = styled(Box)({
-  position: "absolute",
-  left: 0,
-  top: "54px",
-  zIndex: 40,
-  backgroundColor: "white",
-  borderRadius: "12px",
-  padding: "12px 16px",
-  boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
-  maxWidth: "300px",
+  marginTop: "10px",
   display: "flex",
   alignItems: "flex-start",
-  justifyContent: "space-between",
   gap: "10px",
 });
