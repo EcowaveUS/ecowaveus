@@ -104,6 +104,11 @@ export const ContactForm = ({
     { label: "EV Chargers", value: "EV Chargers" },
     { label: "Heating & Cooling", value: "Heat Pumps" },
     { label: "Energy Storage", value: "Energy Storage" },
+    {
+      label: "Electrical Service Upgrade",
+      value: "Electrical Service Upgrade",
+    },
+    { label: "Electrical Work", value: "Electrical Work" },
   ];
 
   return (
