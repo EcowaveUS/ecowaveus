@@ -64,9 +64,33 @@ export const ContactForm = ({
           values,
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8tS6TT5TEINsGyxDa"
         )
-        .then(() => {
+        .then(async () => {
           setIsSending(false);
           formik.resetForm();
+          const zohoTokenRes = await fetch(
+            `${import.meta.env.VITE_API_URI}/zoho-token`,
+            {
+              method: "GET",
+            }
+          );
+          const zohoTokenData = await zohoTokenRes.json();
+          const zohoToken = zohoTokenData.access_token;
+          await fetch(`${import.meta.env.VITE_API_URI}/zoho-leads`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              accessToken: zohoToken,
+              firstName: values.firstName,
+              lastName: values.lastName,
+              phone: values.phone,
+              email: values.email,
+              zipCode: values.address,
+              product: values.option,
+              message: values.message,
+            }),
+          });
         })
         .catch((error) => {
           setIsSending(false);
