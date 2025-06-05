@@ -28,15 +28,27 @@ export const ContactForm = ({
   const [showMessage, setShowMessage] = useState<boolean>(false);
 
   const validationSchema = yup.object({
-    firstName: yup.string().required("First name is required"),
-    lastName: yup.string().required("Last name is required"),
-    phone: yup.string().required("Phone is required"),
+    firstName: yup
+      .string()
+      .required("First name is required")
+      .max(100, "Max 100 characters"),
+    lastName: yup
+      .string()
+      .required("Last name is required")
+      .max(100, "Max 100 characters"),
+    phone: yup
+      .string()
+      .required("Phone is required")
+      .matches(/^\+?[0-9]{10,15}$/, "Enter a valid phone number"),
     email: yup
       .string()
       .email("Enter a valid email")
       .required("Email is required"),
-    address: yup.string().required("ZIP Code is required"),
-    option: yup.string().required("Option is required"),
+    address: yup
+      .string()
+      .required("ZIP Code is required")
+      .matches(/^\d{5}(-\d{4})?$/, "Enter a valid ZIP code"),
+    option: yup.string().required("Product option is required"),
     message: yup
       .string()
       .required("Message is required")
