@@ -77,8 +77,6 @@ export const ContactForm = ({
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8tS6TT5TEINsGyxDa"
         )
         .then(async () => {
-          setIsSending(false);
-          formik.resetForm();
           const zohoTokenRes = await fetch(
             `${import.meta.env.VITE_API_URI}/zoho-token`,
             {
@@ -103,6 +101,8 @@ export const ContactForm = ({
               message: values.message,
             }),
           });
+          setIsSending(false);
+          formik.resetForm();
         })
         .catch((error) => {
           setIsSending(false);
