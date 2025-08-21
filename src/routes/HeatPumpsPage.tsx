@@ -33,7 +33,7 @@ export const HeatPumpsPage = () => {
       <InstallationProcessUpdated />
       <Box
         position={"relative"}
-        height={isTablet ? "696px" : "800px"}
+        height={isTablet ? "696px" : "1260px"}
         width={"100%"}
         sx={{
           background: `url("/images/trees.svg") no-repeat center`,
@@ -48,7 +48,7 @@ export const HeatPumpsPage = () => {
           pt={isDesktop ? "64px" : "32px"}
           pb={"24px"}
           position={"absolute"}
-          bottom={isDesktop ? "100px" : "50px"}
+          bottom={isDesktop ? "45px" : "50px"}
           width={"min(1280px, 100% - 40px)"}
           left={"0"}
           sx={{
@@ -112,6 +112,25 @@ export const HeatPumpsPage = () => {
               <br />
               Federal tax credit 30% of the cost of the installation up to&nbsp;
               <span style={{ fontWeight: 700, color: "#1FA500" }}>$2,000</span>
+              &nbsp;
+              <span style={{ fontWeight: 700, color: "#b33727" }}>(Don't miss out! This is only available for installations completed by December 31, 2025.)</span>
+              <br />
+              <br />
+              <Typography
+                component={"span"}
+                fontFamily={"Inter !important"}
+                fontSize={"24px"}
+                fontWeight={600}
+                lineHeight={"26px"}
+                color={"#0B081F"}
+              >
+                Reduced Winter Electric Rates
+              </Typography>
+              <br />
+              Customers of Eversource, National Grid, and Unitil with installed heat pumps are now eligible for a new seasonal discounted electric rate.
+              <br />
+              <br />
+              This program is designed to significantly lower electricity costs during the winter, offering an average savings of <span style={{ fontWeight: 700, color: "#1FA500" }}>$540</span> for qualifying households.
             </Typography>
           </Box>
         </Box>
