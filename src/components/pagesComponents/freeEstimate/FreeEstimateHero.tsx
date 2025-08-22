@@ -6,7 +6,7 @@ export default function FreeEstimateHero() {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
-      height={isDesktop ? "800px" : "750px"}
+      height={isDesktop ? "1000px" : "1010px"}
       sx={{
         backgroundImage: `url(/images/free-estimate.jpg)`,
         backgroundSize: "cover",
@@ -39,7 +39,7 @@ export default function FreeEstimateHero() {
           position={"absolute"}
           zIndex={2}
           left={0}
-          bottom={isDesktop ? "120px" : "30px"}
+          bottom={isDesktop ? "90px" : "30px"}
           display={"flex"}
           flexDirection={"column"}
           gap={isDesktop ? "24px" : "16px"}
@@ -60,8 +60,14 @@ export default function FreeEstimateHero() {
             color={"#053b74"}
             textAlign={"center"}
           >
-            Today's Offer: Up to $10K Rebates for ductless mini splits and heat
-            pumps + 0% financing options.
+            <b>Act Now! Federal Incentive Is Expiring!</b>
+            <br />
+            The $2,000 Federal Tax Credit for new heat pump installations ends
+            permanently on
+            <br />
+            <b>
+              <u>December 31, 2025.</u>
+            </b>
           </Typography>
           <Typography
             fontWeight={600}
@@ -124,6 +130,31 @@ export default function FreeEstimateHero() {
             lineHeight={isDesktop ? "120%" : "40px"}
           >
             Mass Save® Partners
+          </Typography>
+          <Typography
+            py={"12px"}
+            px={"8px"}
+            bgcolor={"#fdd643"}
+            borderRadius={"12px"}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "20px" : "16px"}
+            fontWeight={600}
+            lineHeight={isDesktop ? "24px" : "20px"}
+            letterSpacing={"5%"}
+            color={"#053b74"}
+          >
+            <b>
+              BREAKING NEWS: Special Electrical Rate for Heat Pumps! Lower Your
+              Winter Bills
+            </b>
+            <br />
+            <br />
+            Install a heat pump now and get exclusive access to new discounted
+            electricity rates
+            <br />
+            <b>
+              <u>starting this November.</u>
+            </b>
           </Typography>
         </Box>
         {isDesktop && (
