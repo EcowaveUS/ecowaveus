@@ -123,6 +123,7 @@ export const MainPageComponentHeatPump = () => {
           >
             <b>Act Now! Federal Incentive Is Expiring!</b>
             <br />
+            <br />
             The $2,000 Federal Tax Credit for new heat pump installations ends
             permanently on&nbsp;
             <b>

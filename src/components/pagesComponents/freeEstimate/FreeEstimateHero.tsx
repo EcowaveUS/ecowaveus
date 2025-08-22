@@ -62,6 +62,7 @@ export default function FreeEstimateHero() {
           >
             <b>Act Now! Federal Incentive Is Expiring!</b>
             <br />
+            <br />
             The $2,000 Federal Tax Credit for new heat pump installations ends
             permanently on
             <br />
@@ -150,8 +151,7 @@ export default function FreeEstimateHero() {
             <br />
             <br />
             Install a heat pump now and get exclusive access to new discounted
-            electricity rates
-            <br />
+            electricity rates&nbsp;
             <b>
               <u>starting this November.</u>
             </b>
