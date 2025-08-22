@@ -8,6 +8,7 @@ import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
+import { VehicleCharger } from "../components/pagesComponents/VehicleCharger";
 
 export const EvChargersPage = () => {
   const location = useLocation();
@@ -80,6 +81,11 @@ export const EvChargersPage = () => {
             you're at home, at work, or on a long journey, there's a charging
             solution that fits your lifestyle.
           </TypesText>
+          <CarsContainer>
+            {[0, 1, 2].map((l) => (
+              <VehicleCharger level={l} key={l} />
+            ))}
+          </CarsContainer>
           <TypesText>
             EcowaveUS recommends Level 2 charging, as it offers the perfect
             balance of fast charging speeds and practical installation for both
@@ -140,7 +146,7 @@ const TypesTitle = styled(Typography)`
   text-align: center;
 `;
 const TypesText = styled(Typography)`
-  max-width: 840px;
+  max-width: 650px;
   color: #666c89;
   font-size: 16px !important;
   line-height: 151% !important;
@@ -181,6 +187,17 @@ const ProccesComponent = styled.div`
   @media (max-width: 1024px) {
     width: 90%;
     margin: -3rem auto 3rem;
+    padding: 1rem;
+  }
+`;
+const CarsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: -30px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 // const ProccesCardWrapper = styled.div`
