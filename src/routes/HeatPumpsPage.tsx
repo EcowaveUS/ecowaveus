@@ -33,7 +33,7 @@ export const HeatPumpsPage = () => {
       <InstallationProcessUpdated />
       <Box
         position={"relative"}
-        height={isTablet ? "696px" : "1260px"}
+        height={isTablet ? "775px" : "1340px"}
         width={"100%"}
         sx={{
           background: `url("/images/trees.svg") no-repeat center`,
@@ -112,9 +112,20 @@ export const HeatPumpsPage = () => {
               <br />
               Federal tax credit 30% of the cost of the installation up to&nbsp;
               <span style={{ fontWeight: 700, color: "#1FA500" }}>$2,000</span>
-              &nbsp;
-              <span style={{ fontWeight: 700, color: "#b33727" }}>(Don't miss out! This is only available for installations completed by December 31, 2025.)</span>
               <br />
+              <br />
+              <span
+                style={{
+                  fontWeight: 700,
+                  color: "#b33727",
+                  textTransform: "uppercase",
+                  maxWidth: "400px",
+                  display: "block",
+                }}
+              >
+                Don't miss out! This is only available for installations
+                completed by December 31, 2025.
+              </span>
               <br />
               <Typography
                 component={"span"}
@@ -124,13 +135,20 @@ export const HeatPumpsPage = () => {
                 lineHeight={"26px"}
                 color={"#0B081F"}
               >
-                Reduced Winter Electric Rates
+                BREAKING NEWS! Reduced Winter Electric Rates
               </Typography>
               <br />
-              Customers of Eversource, National Grid, and Unitil with installed heat pumps are now eligible for a new seasonal discounted electric rate.
+              Customers of Eversource, National Grid, and Unitil with installed
+              heat pumps are now eligible for a new seasonal discounted electric
+              rate.
               <br />
               <br />
-              This program is designed to significantly lower electricity costs during the winter, offering an average savings of <span style={{ fontWeight: 700, color: "#1FA500" }}>$540</span> for qualifying households.
+              This program is designed to significantly lower electricity costs
+              during the winter, offering an average savings of
+              <span style={{ fontWeight: 700, color: "#1FA500" }}>
+                $540
+              </span>{" "}
+              for qualifying households.
             </Typography>
           </Box>
         </Box>
