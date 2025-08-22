@@ -66,7 +66,7 @@ export default function FreeEstimateHero() {
             permanently on
             <br />
             <b>
-              <u>December 31, 2025.</u>
+              <u>December 31, 2025</u>.
             </b>
           </Typography>
           <Typography

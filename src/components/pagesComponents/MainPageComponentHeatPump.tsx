@@ -7,7 +7,7 @@ export const MainPageComponentHeatPump = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
-      height={isDesktop ? "800px" : "640px"}
+      height={isDesktop ? "800px" : "770px"}
       sx={{
         backgroundImage: `url(/images/heat-pumps-light.jpg)`,
         backgroundSize: "cover",
@@ -40,7 +40,7 @@ export const MainPageComponentHeatPump = () => {
           position={"absolute"}
           zIndex={2}
           left={0}
-          bottom={isDesktop ? "200px" : "107px"}
+          bottom={isDesktop ? "100px" : "87px"}
           // sx={{
           //   transform: "translateY(-50%)",
           // }}
@@ -107,6 +107,28 @@ export const MainPageComponentHeatPump = () => {
           >
             Schedule now
           </Button>
+          <Typography
+            py={"12px"}
+            px={"8px"}
+            bgcolor={"#fdd643"}
+            borderRadius={"12px"}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "20px" : "16px"}
+            fontWeight={600}
+            lineHeight={isDesktop ? "24px" : "20px"}
+            letterSpacing={"5%"}
+            color={"#053b74"}
+            textAlign={"center"}
+            marginTop={isDesktop ? "24px" : "20px"}
+          >
+            <b>Act Now! Federal Incentive Is Expiring!</b>
+            <br />
+            The $2,000 Federal Tax Credit for new heat pump installations ends
+            permanently on&nbsp;
+            <b>
+              <u>December 31, 2025</u>.
+            </b>
+          </Typography>
         </Box>
         {isDesktop && (
           <Box
