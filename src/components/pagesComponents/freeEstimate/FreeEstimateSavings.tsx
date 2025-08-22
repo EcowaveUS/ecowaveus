@@ -61,7 +61,7 @@ export default function FreeEstimateSavings() {
             price="$16,000"
           />
           <SavingComponent
-            title1="whole-home rebates"
+            title1="partial-home rebates"
             title2="up to"
             price="$10,000"
           />
@@ -69,8 +69,36 @@ export default function FreeEstimateSavings() {
             title1="tax credit 30% of the cost of"
             title2="the installation up to"
             price="$2,000"
+            title3="Don't miss out! This is only available for installations completed by December 31, 2025."
           />
         </Box>
+        <Typography
+          fontFamily={"Inter !important"}
+          fontSize={"18px"}
+          fontWeight={700}
+          lineHeight={"150%"}
+          color={"#0B081F"}
+          textAlign={"center"}
+          maxWidth={"550px"}
+          textTransform={"uppercase"}
+        >
+          Reduced Winter Electric Rates
+        </Typography>
+        <Typography
+          fontFamily={"Inter !important"}
+          fontSize={"14px"}
+          fontWeight={400}
+          lineHeight={"150%"}
+          color={"#0B081F"}
+          textAlign={"center"}
+          maxWidth={"650px"}
+        >
+          Customers of Eversource, National Grid, and Unitil with installed heat
+          pumps are now eligible for a new seasonal discounted electric rate.
+          This program is designed to significantly lower electricity costs
+          during the winter, offering an average savings of $540 for qualifying
+          households.
+        </Typography>
       </Box>
     </Box>
   );

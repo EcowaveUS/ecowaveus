@@ -4,10 +4,12 @@ export default function SavingComponent({
   title1,
   title2,
   price,
+  title3,
 }: {
   title1: string;
   title2: string;
   price: string;
+  title3?: string;
 }) {
   return (
     <Box
@@ -29,7 +31,7 @@ export default function SavingComponent({
         fontWeight={400}
         textAlign={"center"}
         textTransform={"uppercase"}
-        mt={'2px'}
+        mt={"2px"}
       >
         {title1}
       </Typography>
@@ -44,6 +46,19 @@ export default function SavingComponent({
         {title2}&nbsp;
         <span style={{ fontWeight: 700, color: "#198400" }}>{price}</span>
       </Typography>
+      {title3 && (
+        <Typography
+          fontSize={"14px"}
+          fontFamily={"Inter !important"}
+          color={"#b33727"}
+          fontWeight={700}
+          textAlign={"center"}
+          textTransform={"uppercase"}
+          mt={"2px"}
+        >
+          {title3}
+        </Typography>
+      )}
     </Box>
   );
 }
