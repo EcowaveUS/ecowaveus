@@ -48,17 +48,17 @@ export default function FreeEstimateAdvantage() {
           <AdvantageComponent
             title="Heating & Cooling Installation"
             offValue="5%"
-            date="6/30/25"
+            date="8/31/25"
           />
           <AdvantageComponent
             title="Electrical Service Upgrade with Heating & Cooling Installation"
             offValue="$1,000"
-            date="6/30/25"
+            date="8/31/25"
           />
           <AdvantageComponent
             title="EV Charger Installation"
             offValue="$100"
-            date="6/30/25"
+            date="8/31/25"
           />
         </Box>
         <Box

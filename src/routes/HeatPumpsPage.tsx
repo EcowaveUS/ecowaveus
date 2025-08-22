@@ -119,12 +119,13 @@ export const HeatPumpsPage = () => {
                   fontWeight: 700,
                   color: "#b33727",
                   textTransform: "uppercase",
-                  maxWidth: "400px",
+                  maxWidth: "515px",
                   display: "block",
                 }}
               >
                 Don't miss out! This is only available for installations
-                completed by December 31, 2025.
+                completed by{" "}
+                <span style={{ whiteSpace: "nowrap" }}>December 31, 2025.</span>
               </span>
               <br />
               <Typography
@@ -144,7 +145,7 @@ export const HeatPumpsPage = () => {
               <br />
               <br />
               This program is designed to significantly lower electricity costs
-              during the winter, offering an average savings of
+              during the winter, offering an average savings of&nbsp;
               <span style={{ fontWeight: 700, color: "#1FA500" }}>
                 $540
               </span>{" "}
