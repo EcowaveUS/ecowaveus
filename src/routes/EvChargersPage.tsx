@@ -5,10 +5,11 @@ import { OursBrands } from "../components/brands/OursBrands";
 import { motion } from "framer-motion";
 // import { EvChargerCard } from "../components/services/EvChargerCard";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
-import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
+// import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
 import { VehicleCharger } from "../components/pagesComponents/VehicleCharger";
+import { MainPageComponentEvChargers } from "../components/pagesComponents/MainPageComponentEvChargers";
 
 export const EvChargersPage = () => {
   const location = useLocation();
@@ -53,7 +54,7 @@ export const EvChargersPage = () => {
           content="If you need EV charger installation services, then contact our solar energy company. We can install an EV charging station for your home. Call 978-500-4081!"
         />
       </Helmet>
-      <MainPageComponent
+      <MainPageComponentEvChargers
         title="Charge Faster, Go Further"
         content="We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable."
         pathLocation={pathLocation}
@@ -73,7 +74,7 @@ export const EvChargersPage = () => {
           alt="heatpumps-background"
         />
       </ImageBrackground>
-      <div style={{ background: "#198400", width: "100%" }}>
+      <div style={{ background: "#0c4200", width: "100%" }}>
         <ProccesComponent>
           <TypesTitle>Types of Electric Vehicle Chargers</TypesTitle>
           <TypesText>

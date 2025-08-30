@@ -44,7 +44,8 @@ export const brandImages = [
 
 export const brandImagesNew = [
   "/images/brands-new/mitsubishi.png",
-  "/images/brands-new/lg.png",
+  // "/images/brands-new/lg.png",
+  "/images/brands-new/bosch.png",
   "/images/brands-new/fujitsu.png",
   "/images/brands-new/daikin.png",
   "/images/brands-new/tesla.png",
