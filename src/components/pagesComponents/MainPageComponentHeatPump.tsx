@@ -40,12 +40,12 @@ export const MainPageComponentHeatPump = () => {
           position={"absolute"}
           zIndex={2}
           left={0}
-          bottom={isDesktop ? "100px" : "87px"}
+          bottom={isDesktop ? "100px" : "47px"}
           // sx={{
           //   transform: "translateY(-50%)",
           // }}
         >
-          <Typography
+          {/* <Typography
             width={"fit-content"}
             py={"4px"}
             px={"8px"}
@@ -60,6 +60,16 @@ export const MainPageComponentHeatPump = () => {
             color={"#004BCE"}
           >
             Efficient and Eco-Friendly:
+          </Typography> */}
+          <Typography
+            fontWeight={500}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "40px" : "24px"}
+            color={"white"}
+            lineHeight={isDesktop ? "100%" : "28px"}
+          >
+            <span style={{ color: "#1fa500" }}>Mass Save</span> Heat Pump
+            Leaders
           </Typography>
           <Typography
             mt={"24px"}

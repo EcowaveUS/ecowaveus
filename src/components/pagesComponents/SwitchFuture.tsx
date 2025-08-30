@@ -26,7 +26,7 @@ export const SwitchFuture = () => {
         <Box
           paddingTop={isDesktop ? "100px" : "0"}
           component={"div"}
-          maxWidth={isDesktop ? "763px" : "100%"}
+          maxWidth={isDesktop ? "900px" : "100%"}
           position={"absolute"}
           zIndex={2}
           left={0}
@@ -36,6 +36,17 @@ export const SwitchFuture = () => {
           }}
         >
           <Typography
+            fontWeight={500}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "60px" : "40px"}
+            color={"white"}
+            lineHeight={isDesktop ? "100%" : "44px"}
+          >
+            <span style={{ color: "#1fa500" }}>Mass Save</span> Heat Pump
+            Leaders
+          </Typography>
+          <Typography
+            marginTop={isDesktop ? "24px" : "20px"}
             fontWeight={600}
             fontFamily={"Inter !important"}
             letterSpacing={"0 !important"}
