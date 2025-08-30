@@ -57,7 +57,8 @@ export const EnergyStoragePage = () => {
         <OursBrands
           images={[
             "/images/brands/tesla-logo.png",
-            "/images/brands/enphase-logo.png",
+            "/images/brands/enphase.png",
+            "/images/brands/franklinwh.png",
           ]}
         />
         {/* </BrandsWrapper> */}
