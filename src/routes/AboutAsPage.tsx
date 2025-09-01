@@ -5,11 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 export const AboutAsPage = () => {
   return (
-    <Wrapper
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <Wrapper>
       <Helmet>
         <title>
           About Us | Renewable Energy and Solar Power in Beverly, MA

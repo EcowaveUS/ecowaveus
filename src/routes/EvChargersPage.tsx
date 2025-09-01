@@ -40,11 +40,7 @@ export const EvChargersPage = () => {
   // ];
 
   return (
-    <StyledPage
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <StyledPage>
       <Helmet>
         <title>
           EV Charging Station Installation near Danvers, MA | ecoWave
