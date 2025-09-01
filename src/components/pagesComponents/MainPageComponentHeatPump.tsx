@@ -11,7 +11,7 @@ export const MainPageComponentHeatPump = () => {
       sx={{
         backgroundImage: `url(/images/heat-pumps-light.jpg)`,
         backgroundSize: "cover",
-        backgroundPosition: isDesktop ? "center" : "60% center",
+        backgroundPosition: isDesktop ? "60% center" : "40% center",
         backgroundRepeat: "no-repeat",
       }}
       position={"relative"}
@@ -68,8 +68,8 @@ export const MainPageComponentHeatPump = () => {
             color={"white"}
             lineHeight={isDesktop ? "100%" : "28px"}
           >
-            <span style={{ color: "#1fa500" }}>Mass Save</span> Heat Pump
-            Leaders
+            <span style={{ color: "#1fa500" }}>Mass Save</span>
+            {!isDesktop && <br />} Heat Pump Leaders
           </Typography>
           <Typography
             mt={"24px"}
