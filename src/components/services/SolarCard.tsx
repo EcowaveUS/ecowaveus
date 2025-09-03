@@ -11,7 +11,7 @@ interface Props {
 export const SolarCard: React.FC<Props> = ({ title, image }) => {
   return (
     <IconCard>
-      <img style={{ width: "64x", height: "auto" }} src={image} alt={title} />
+      <img style={{ width: "80px", height: "auto" }} src={image} alt={title} />
       <IconText>{title}</IconText>
     </IconCard>
   );
