@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
 import { motion } from "framer-motion";
 // import { EvChargerCard } from "../components/services/EvChargerCard";
@@ -9,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
 import { VehicleCharger } from "../components/pagesComponents/VehicleCharger";
 import { MainPageComponentSolarPanels } from "../components/pagesComponents/MainPageComponentSolarPanels";
+import { WhySolar } from "../components/services/WhySolar";
 
 export const SolarPanelsPage = () => {
   return (
@@ -26,10 +26,10 @@ export const SolarPanelsPage = () => {
         backgroundImage="/images/solar-panels-background.png"
       />
       <Box width="100%">
-        <ServiceBenefits
-          title="Benefits of EV-Chargers"
-          subTitle="Maximize Time and Comfort"
-          color="#022D57"
+        <WhySolar
+          title="Why Choose Solar?"
+          subTitle="Go solar with ecowaveus"
+          color="#252529"
         />
       </Box>
       <ImageBrackground>
