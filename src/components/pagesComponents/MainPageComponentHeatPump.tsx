@@ -7,11 +7,11 @@ export const MainPageComponentHeatPump = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
-      height={isDesktop ? "800px" : "770px"}
+      height={isDesktop ? "800px" : "820px"}
       sx={{
         backgroundImage: `url(/images/heat-pumps-light.jpg)`,
         backgroundSize: "cover",
-        backgroundPosition: isDesktop ? "60% center" : "40% center",
+        backgroundPosition: isDesktop ? "center" : "60% center",
         backgroundRepeat: "no-repeat",
       }}
       position={"relative"}
@@ -64,11 +64,15 @@ export const MainPageComponentHeatPump = () => {
           <Typography
             fontWeight={500}
             fontFamily={"Inter !important"}
-            fontSize={isDesktop ? "40px" : "24px"}
+            fontSize={isDesktop ? "40px" : "36px"}
             color={"white"}
-            lineHeight={isDesktop ? "100%" : "28px"}
+            lineHeight={isDesktop ? "100%" : "40px"}
           >
-            <span style={{ color: "#1fa500" }}>Mass Save</span>
+            <span
+              style={{ color: "#1fa500", fontWeight: isDesktop ? 400 : 700 }}
+            >
+              Mass Save
+            </span>
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography>
           <Typography
