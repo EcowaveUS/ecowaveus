@@ -9,6 +9,7 @@ import { PrivacyPolicyPage } from "../../routes/PrivacyPolicyPage";
 import { TermsAndConditionsPage } from "../../routes/TermsAndConditionsPage";
 import { FreeEstimatePage } from "../../routes/FreeEstimatePage";
 import { AnimatePresence } from "framer-motion";
+import { SolarPanelsPage } from "../../routes/SolarPanelsPage";
 
 export const AnimateRoutes = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ export const AnimateRoutes = () => {
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/heat-pumps" element={<HeatPumpsPage />} />
         <Route path="/ev-chargers" element={<EvChargersPage />} />
+        <Route path="/solar-panels" element={<SolarPanelsPage />} />
         <Route path="/energy-storage" element={<EnergyStoragePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route

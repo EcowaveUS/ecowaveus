@@ -187,6 +187,12 @@ export const HeaderNew = () => {
               EV Chargers
             </LinkItem>
             <LinkItem
+              className={location.pathname === "/solar-panels" ? "active" : ""}
+              to="/solar-panels"
+            >
+              Solar Panels
+            </LinkItem>
+            <LinkItem
               className={
                 location.pathname === "/energy-storage" ? "active" : ""
               }
@@ -343,6 +349,7 @@ export const HeaderNew = () => {
         <LinkItem1 to="/">Home</LinkItem1>
         <LinkItem1 to="/heat-pumps">Heating & Cooling</LinkItem1>
         <LinkItem1 to="/ev-chargers">EV Chargers</LinkItem1>
+        <LinkItem1 to="/solar-panels">Solar Panels</LinkItem1>
         <LinkItem1 to="/energy-storage">Energy Storage</LinkItem1>
         <LinkItem1 to="/about-us">About Us</LinkItem1>
         <LinkItem1 to="/contact-us">Contact Us</LinkItem1>
