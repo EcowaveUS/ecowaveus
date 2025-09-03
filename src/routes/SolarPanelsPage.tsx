@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
@@ -9,52 +8,22 @@ import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
 import { VehicleCharger } from "../components/pagesComponents/VehicleCharger";
-import { MainPageComponentEvChargers } from "../components/pagesComponents/MainPageComponentEvChargers";
+import { MainPageComponentSolarPanels } from "../components/pagesComponents/MainPageComponentSolarPanels";
 
 export const SolarPanelsPage = () => {
-  const location = useLocation();
-  const pathLocation = location.pathname;
-
-  // const evChargers = [
-  //   {
-  //     id: 1,
-  //     title: "Level 1 Charger",
-  //     image: "/images/ev-charger-level1.png",
-  //     content:
-  //       "Use a standard household outlet and deliver a slow charge, typically taking 8-12 hours to fully charge an EV battery",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Level 2 Charger",
-  //     image: "/images/ev-charger-leve2.png",
-  //     content:
-  //       "Use a special 240V outlet and deliver a fast charge, typically taking 3-8 hours to fully charge an EV battery",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Level 3 Charger",
-  //     image: "/images/ev-charger-level3.png",
-  //     content:
-  //       "Provide a rapid charge, typically in 30-60 minutes, ideal for long trips and normally for public stations and commercial buildings",
-  //   },
-  // ];
-
   return (
     <StyledPage>
       <Helmet>
-        <title>
-          EV Charging Station Installation near Danvers, MA | ecoWave
-        </title>
+        <title>Solar Panels Installation near Beverly, MA | ecoWave</title>
         <meta
           name="description"
-          content="If you need EV charger installation services, then contact our solar energy company. We can install an EV charging station for your home. Call 978-500-4081!"
+          content="If you need solar panels installation services, then contact our solar energy company. We can install solar panels for your home. Call 978-500-4081!"
         />
       </Helmet>
-      <MainPageComponentEvChargers
-        title="Charge Faster, Go Further"
-        content="We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable."
-        pathLocation={pathLocation}
-        backgroundImage="/images/ev-charger-background.jpg"
+      <MainPageComponentSolarPanels
+        title="Harness the Sun, Power Your Future"
+        content="Unlock maximum efficiency by pairing your solar panels with a high-efficiency heat pump. This powerful combination empowers you to heat and cool your home with clean, renewable energy, slashing your utility bills, increasing your home's value, and delivering complete energy independence."
+        backgroundImage="/images/solar-panels-background.png"
       />
       <Box width="100%">
         <ServiceBenefits
