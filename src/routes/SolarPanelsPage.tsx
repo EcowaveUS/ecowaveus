@@ -80,8 +80,9 @@ export const SolarPanelsPage = () => {
               your needs and financial goals.
             </TypesText>
             <OpportunitesContainer>
-              {solarOpportunities.map((opportunity) => (
+              {solarOpportunities.map((opportunity, _idx) => (
                 <SolarOpportunity
+                  order={_idx}
                   key={opportunity.title}
                   opportunity={opportunity}
                 />

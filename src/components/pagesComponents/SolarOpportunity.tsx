@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 export const SolarOpportunity = ({
   opportunity,
+  order,
 }: {
+  order: number;
   opportunity: { image: string; title: string; texts: string[] };
 }) => {
   return (
@@ -19,7 +21,11 @@ export const SolarOpportunity = ({
         gap: "12px",
       }}
     >
-      <img height={100} src={opportunity.image} />
+      <img
+        height={order === 2 ? 170 : 100}
+        src={opportunity.image}
+        style={{ marginTop: order === 2 ? "-36px" : "0" }}
+      />
       <p
         style={{
           fontSize: "18px",
@@ -27,6 +33,7 @@ export const SolarOpportunity = ({
           textTransform: "uppercase",
           color: "#000000",
           textAlign: "center",
+          marginTop: order === 2 ? "-36px" : "0",
         }}
       >
         {opportunity.title}
