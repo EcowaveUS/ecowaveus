@@ -42,8 +42,8 @@ export const SwitchFuture = () => {
             color={"white"}
             lineHeight={isDesktop ? "100%" : "44px"}
           >
-            <span style={{ color: "#1fa500" }}>Mass Save</span> Heat Pump
-            Leaders
+            <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>{" "}
+            Heat Pump Leaders
           </Typography>
           <Typography
             marginTop={isDesktop ? "24px" : "20px"}

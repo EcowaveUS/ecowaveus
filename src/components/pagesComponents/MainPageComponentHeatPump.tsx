@@ -68,11 +68,7 @@ export const MainPageComponentHeatPump = () => {
             color={"white"}
             lineHeight={isDesktop ? "100%" : "40px"}
           >
-            <span
-              style={{ color: "#1fa500", fontWeight: isDesktop ? 400 : 700 }}
-            >
-              Mass Save
-            </span>
+            <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography>
           <Typography
