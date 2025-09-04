@@ -119,7 +119,6 @@ export const SolarPanelsPage = () => {
               fontWeight={600}
               lineHeight={"100%"}
               color={"#0B081F"}
-              textAlign={"right"}
             >
               Maximize your savings
             </Typography>
@@ -130,7 +129,6 @@ export const SolarPanelsPage = () => {
               lineHeight={"26px"}
               color={"#0B081F"}
               mt={"24px"}
-              textAlign={"right"}
             >
               <Typography
                 component={"span"}
@@ -148,7 +146,7 @@ export const SolarPanelsPage = () => {
               <span style={{ fontWeight: 700, color: "#1FA500" }}>
                 30% tax credit
               </span>{" "}
-              on the total cost of the installation.{" "}
+              on the total cost of the installation. <br />
               <span style={{ fontWeight: 700, color: "#b33727" }}>
                 Don’t miss out! This is only available available for solar
                 installations made through the end of 2025.
