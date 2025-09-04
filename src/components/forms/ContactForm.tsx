@@ -115,6 +115,7 @@ export const ContactForm = ({
     { label: "Select an option", value: "" },
     { label: "EV Chargers", value: "EV Chargers" },
     { label: "Heating & Cooling", value: "Heat Pumps" },
+    { label: "Solar Panels", value: "Solar Panels" },
     { label: "Energy Storage", value: "Energy Storage" },
     {
       label: "Electrical Service Upgrade",
