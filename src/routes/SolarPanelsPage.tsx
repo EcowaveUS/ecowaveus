@@ -6,6 +6,47 @@ import { MainPageComponentSolarPanels } from "../components/pagesComponents/Main
 import { WhySolar } from "../components/services/WhySolar";
 import Areas from "../components/AreaServices/Areas";
 import { OursBrands } from "../components/brands/OursBrands";
+import { SolarOpportunity } from "../components/pagesComponents/SolarOpportunity";
+
+const solarOpportunities = [
+  {
+    image: "/images/PPA.png",
+    title: "Power purchase agreement",
+    texts: [
+      "Go solar with no initial investment.",
+      "System is provided, installed, owned, and managed by the solar company.",
+      "Pay a predictable, lower electricity rate.",
+      "Enjoy a maintenance-free experience.",
+      "Start saving right away with a locked-in rate.",
+      "Great for a hands-off solar option with no upfront cost.",
+    ],
+  },
+  {
+    image: "/images/solar-ownership-1.png",
+    title: "solar ownership",
+    texts: [
+      "Purchase or finance with a loan.",
+      "You own the system and its benefits.",
+      "Receive all federal and state incentives.",
+      "After payoff, electricity is essentially free.",
+      "Build long-term savings and ROI.",
+      "Can increase your home’s resale value.",
+      "Ideal for homeowners seeking maximum return and equity",
+    ],
+  },
+  {
+    image: "/images/solar-ownership-2.png",
+    title: "off the grid (owned solar + batteries)",
+    texts: [
+      "Achieve energy independence from the utility grid",
+      "Store excess solar energy for night use and outages",
+      "Protect your home from blackouts and rising energy costs",
+      "Receive federal and state incentives for solar + batteries",
+      "Lower long-term electricity expenses after payoff",
+      "Boost property value with a resilient energy system",
+    ],
+  },
+];
 
 export const SolarPanelsPage = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
@@ -29,6 +70,24 @@ export const SolarPanelsPage = () => {
           subTitle="Go solar with ecowaveus"
           color="#252529"
         />
+        <div style={{ backgroundColor: "#0c4200" }}>
+          <ProccesComponent className="container">
+            <TypesTitle>Your Solar Opportunities</TypesTitle>
+            <TypesText>
+              Understanding the path you take on your solar journey is key.
+              Below is a comparison to help you decide which option best suits
+              your needs and financial goals.
+            </TypesText>
+            <OpportunitesContainer>
+              {solarOpportunities.map((opportunity) => (
+                <SolarOpportunity
+                  key={opportunity.title}
+                  opportunity={opportunity}
+                />
+              ))}
+            </OpportunitesContainer>
+          </ProccesComponent>
+        </div>
         <Box
           paddingTop={"45px"}
           paddingBottom={"45px"}
@@ -131,4 +190,40 @@ const StyledPage = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+const TypesTitle = styled(Typography)`
+  max-width: 840px;
+  color: #fff;
+  font-weight: 700 !important;
+  font-size: 35px !important;
+  line-height: normal !important;
+  font-family: Inter !important;
+  text-align: center;
+`;
+const TypesText = styled(Typography)`
+  max-width: 850px;
+  color: #fff;
+  font-size: 16px !important;
+  line-height: 151% !important;
+  font-family: Roboto !important;
+  text-align: center;
+`;
+const ProccesComponent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  gap: 16px;
+  @media (max-width: 1024px) {
+    padding: 1rem 0;
+  }
+`;
+const OpportunitesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
