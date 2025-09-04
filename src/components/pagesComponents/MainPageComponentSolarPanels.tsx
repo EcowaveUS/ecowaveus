@@ -33,10 +33,10 @@ export const MainPageComponentSolarPanels: React.FC<Props> = ({
 const Container = styled.div<Props>`
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
-  height: 100vh; /* 100% of the viewport height */
+  height: 800px;
   background: url(${(props) => props.backgroundImage}) no-repeat center; /* ver de agregar fixed */
   background-size: cover;
   background-color: #e4ecf6;
@@ -51,7 +51,7 @@ const Container = styled.div<Props>`
     align-items: flex-start;
     background-position: center center;
     height: fit-content;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 `;
 
@@ -59,7 +59,7 @@ const HeaderContainer = styled.div<Props>`
   height: auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 5rem;
+  padding-bottom: 100px;
   align-items: flex-start;
   gap: 24px;
   @media (max-width: 768px) {
