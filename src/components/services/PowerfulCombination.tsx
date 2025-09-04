@@ -43,12 +43,16 @@ export const PowerfulCombination: React.FC = () => {
         className="container"
         style={{
           display: "grid",
-          gridTemplateColumns: isDesktop ? "repeat(2, 1fr)" : "repeat(1, 1fr)",
+          gridTemplateColumns: isDesktop ? "6fr 4fr" : "repeat(1, 1fr)",
         }}
       >
         <img
           src="/images/solar-graphic.png"
-          style={{ width: "100%", height: "auto" }}
+          style={{
+            width: "100%",
+            height: "auto",
+            marginTop: isDesktop ? "-20px" : "0",
+          }}
         />
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           {texts.map((text, index) => (
