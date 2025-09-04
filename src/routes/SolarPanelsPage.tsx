@@ -105,9 +105,7 @@ export const SolarPanelsPage = () => {
             bgcolor={"#fff"}
             borderRadius={"12px 0 0 12px"}
             component={"div"}
-            px={isDesktop ? "64px" : "32px"}
-            pt={isDesktop ? "64px" : "32px"}
-            pb={"24px"}
+            padding={isDesktop ? "64px" : "32px"}
             width={"min(1280px, 100% - 40px)"}
             sx={{
               boxShadow: "0px 2px 12px 0px #7979850A",
