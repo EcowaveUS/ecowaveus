@@ -75,6 +75,7 @@ const BenefitsWrapper = styled.div`
   justify-content: space-between;
   gap: 64px;
   padding: 48px 0;
+  background-color: #f1f5f9;
   @media (min-width: 900px) {
     padding: 92px 0;
   }
