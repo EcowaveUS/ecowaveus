@@ -7,6 +7,7 @@ import { WhySolar } from "../components/services/WhySolar";
 import Areas from "../components/AreaServices/Areas";
 import { OursBrands } from "../components/brands/OursBrands";
 import { SolarOpportunity } from "../components/pagesComponents/SolarOpportunity";
+import { PowerfulCombination } from "../components/services/PowerfulCombination";
 
 const solarOpportunities = [
   {
@@ -88,6 +89,7 @@ export const SolarPanelsPage = () => {
             </OpportunitesContainer>
           </ProccesComponent>
         </div>
+        <PowerfulCombination />
         <Box
           paddingTop={"45px"}
           paddingBottom={"45px"}
