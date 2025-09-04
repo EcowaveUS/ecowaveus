@@ -213,10 +213,10 @@ const ProccesComponent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
-  gap: 16px;
+  padding: 6rem 0;
+  gap: 32px;
   @media (max-width: 1024px) {
-    padding: 1rem 0;
+    padding: 3rem 0;
   }
 `;
 const OpportunitesContainer = styled.div`
