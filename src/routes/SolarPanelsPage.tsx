@@ -92,8 +92,8 @@ export const SolarPanelsPage = () => {
         </div>
         <PowerfulCombination />
         <Box
-          paddingTop={"45px"}
-          paddingBottom={"45px"}
+          paddingTop={"90px"}
+          paddingBottom={"90px"}
           sx={{
             background: `url("/images/photo-background-savings.png") no-repeat center`,
             backgroundSize: "cover",
