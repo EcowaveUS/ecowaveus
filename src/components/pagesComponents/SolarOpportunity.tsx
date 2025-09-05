@@ -66,4 +66,8 @@ const FixedRedLabel = styled.div`
   width: fit-content;
   white-space: nowrap;
   margin: 0 -36px -33px auto;
+  @media (max-width: 440px) {
+    font-size: 10px;
+    margin-right: -42px;
+  }
 `;

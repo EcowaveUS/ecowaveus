@@ -52,7 +52,7 @@ export const PowerfulCombination: React.FC = () => {
           style={{
             width: "100%",
             height: "auto",
-            marginTop: isDesktop ? "-20px" : "0",
+            marginTop: isDesktop ? "-20px" : "15px",
             transform: isDesktop ? "none" : "scale(1.3)",
           }}
         />
