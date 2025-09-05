@@ -44,6 +44,7 @@ export const PowerfulCombination: React.FC = () => {
         style={{
           display: "grid",
           gridTemplateColumns: isDesktop ? "6fr 4fr" : "repeat(1, 1fr)",
+          overflow: "hidden",
         }}
       >
         <img
@@ -52,9 +53,10 @@ export const PowerfulCombination: React.FC = () => {
             width: "100%",
             height: "auto",
             marginTop: isDesktop ? "-20px" : "0",
+            transform: isDesktop ? "none" : "scale(1.3)",
           }}
         />
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginTop: isDesktop ? "0" : "30px" }}>
           {texts.map((text, index) => (
             <div
               key={index}

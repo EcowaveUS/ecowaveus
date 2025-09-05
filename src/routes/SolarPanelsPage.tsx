@@ -37,7 +37,7 @@ const solarOpportunities = [
   },
   {
     image: "/images/solar-ownership-2.png",
-    title: "off the grid (owned solar + batteries)",
+    title: "off the grid<br />(owned solar + batteries)",
     texts: [
       "Achieve energy independence from the utility grid",
       "Store excess solar energy for night use and outages",

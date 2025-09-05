@@ -26,7 +26,8 @@ export const SolarOpportunity = ({
         src={opportunity.image}
         style={{ marginTop: order === 2 ? "-36px" : "0" }}
       />
-      <p
+      <div
+        dangerouslySetInnerHTML={{ __html: opportunity.title }}
         style={{
           fontSize: "18px",
           fontWeight: "bold",
@@ -35,9 +36,7 @@ export const SolarOpportunity = ({
           textAlign: "center",
           marginTop: order === 2 ? "-36px" : "0",
         }}
-      >
-        {opportunity.title}
-      </p>
+      />
       {opportunity.texts.map((text, _index) => (
         <React.Fragment key={_index}>
           <img src="/images/green-bullet-points.png" width={20} />
