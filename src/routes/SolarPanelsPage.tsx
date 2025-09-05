@@ -220,7 +220,7 @@ const ProccesComponent = styled.div`
 const OpportunitesContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 48px;
   width: 100%;
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);

@@ -12,7 +12,7 @@ export const SolarOpportunity = ({
     <div
       style={{
         borderRadius: "16px",
-        padding: "24px 24px 48px",
+        padding: "24px 48px 48px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -61,9 +61,9 @@ const FixedRedLabel = styled.div`
   color: #fff;
   font-weight: 700;
   border-radius: 8px;
-  padding: 4px 24px;
+  padding: 4px 8px;
   font-size: 12px;
   width: fit-content;
   white-space: nowrap;
-  margin: 0 -24px -33px auto;
+  margin: 0 -48px -33px auto;
 `;
