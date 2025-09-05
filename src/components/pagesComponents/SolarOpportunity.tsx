@@ -42,7 +42,10 @@ export const SolarOpportunity = ({
           <img src="/images/green-bullet-points.png" width={20} />
           <div style={{ position: "relative" }}>
             <InfoText>{text}</InfoText>
-            {order === 2 && _index === 2 && <FixedRedLabel>Deadline: December 31st</FixedRedLabel>}
+            {((order === 1 && _index === 2) ||
+              (order === 2 && _index === 3)) && (
+              <FixedRedLabel>Deadline: December 31st</FixedRedLabel>
+            )}
           </div>
         </React.Fragment>
       ))}
@@ -65,9 +68,8 @@ const FixedRedLabel = styled.div`
   padding: 4px 24px;
   font-size: 12px;
   top: -34px;
-  left: -110px;
+  left: 50%;
   width: fit-content;
-  @media (max-width: 768px) {
-    left: -24px;
-  }
+  transform: translateX(-50%);
+  white-space: nowrap;
 `;
