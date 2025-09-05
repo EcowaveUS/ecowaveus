@@ -39,11 +39,10 @@ export const SolarOpportunity = ({
       />
       {opportunity.texts.map((text, _index) => (
         <React.Fragment key={_index}>
-          {(order === 1 && _index === 2) || (order === 2 && _index === 3) ? (
+          {order === 1 && _index === 2 && (
             <FixedRedLabel>Deadline: December 31st</FixedRedLabel>
-          ) : (
-            <img src="/images/green-bullet-points.png" width={20} />
           )}
+          <img src="/images/green-bullet-points.png" width={20} />
           <InfoText>{text}</InfoText>
         </React.Fragment>
       ))}
@@ -66,5 +65,5 @@ const FixedRedLabel = styled.div`
   font-size: 12px;
   width: fit-content;
   white-space: nowrap;
-  margin: 0 auto;
+  margin: 0 -24px -33px auto;
 `;
