@@ -65,5 +65,5 @@ const FixedRedLabel = styled.div`
   font-size: 12px;
   width: fit-content;
   white-space: nowrap;
-  margin: 0 -48px -33px auto;
+  margin: 0 -36px -33px auto;
 `;
