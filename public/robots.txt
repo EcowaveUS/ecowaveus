@@ -1,0 +1,26 @@
+# Robots.txt for EcowaveUS - Optimized for SEO
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Block access to sensitive directories (if any exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Allow important files for SEO
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+
+# Sitemap location - helps search engines discover your content
+Sitemap: https://www.ecowaveus.com/sitemap.xml
+
+# Crawl-delay: 1 second (optional - prevents server overload)
+# Note: Most modern search engines ignore this, but it's good practice
+Crawl-delay: 1
+
+# Host directive (helps with canonical domain)
+Host: https://www.ecowaveus.com
