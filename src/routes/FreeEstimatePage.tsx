@@ -14,13 +14,12 @@ export const FreeEstimatePage = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Free Estimate | Renewable Energy and Solar Power in Beverly, MA
-        </title>
+        <title>Free Heat Pump Estimate | Beverly, MA | EcowaveUS</title>
         <meta
           name="description"
-          content="Get a free estimate for your home or business with ecoWaveUS. We offer solar panels, heat pumps, EV chargers, and energy storage solutions. Call 978-500-4081 to get started!"
+          content="Get a free estimate for heat pumps, solar, EV chargers & energy storage in Beverly, MA. Mass Save rebates & 0% financing available. Call EcowaveUS at 978-500-4081!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/free-estimate" />
       </Helmet>
       <FreeEstimateHero />
       <FreeEstimateAdvantage />

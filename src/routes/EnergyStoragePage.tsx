@@ -15,13 +15,12 @@ export const EnergyStoragePage = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Solar Battery Storage near Marblehead, MA | Backup Batteries
-        </title>
+        <title>Home Battery Storage | Backup & Savings | EcowaveUS</title>
         <meta
           name="description"
-          content="Improve your home or business with energy storage solutions from ecoWave. Solar battery storage can increase energy efficiency. Contact us to learn more!"
+          content="Reliable home battery storage systems in Beverly, MA. Solar battery backup for power outages & energy savings. Professional installation by EcowaveUS. Call 978-500-4081!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/energy-storage" />
       </Helmet>
       <MainPageComponent
         title="Storing Power, Empowering Lives"

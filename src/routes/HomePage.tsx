@@ -21,6 +21,7 @@ export const HomePage = () => {
           name="description"
           content="Our solar installation company in Beverly offers solar battery storage, EV charger installations, electric heat pumps and more. Call 978-500-4081 to get started!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/" />
       </Helmet>
       <SwitchFuture />
       <OursBrands images={brandImagesNew} />

@@ -42,13 +42,12 @@ export const EvChargersPage = () => {
   return (
     <StyledPage>
       <Helmet>
-        <title>
-          EV Charging Station Installation near Danvers, MA | ecoWave
-        </title>
+        <title>EV Charger Installation | Level 2 Home & Commercial | EcowaveUS</title>
         <meta
           name="description"
-          content="If you need EV charger installation services, then contact our solar energy company. We can install an EV charging station for your home. Call 978-500-4081!"
+          content="Professional EV charger installation in Beverly, MA. Level 1, 2 & 3 charging stations for home and business. Fast, reliable service. Call EcowaveUS at 978-500-4081!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/ev-chargers" />
       </Helmet>
       <MainPageComponentEvChargers
         title="Charge Faster, Go Further"

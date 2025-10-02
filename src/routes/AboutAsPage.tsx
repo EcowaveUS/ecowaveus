@@ -7,13 +7,12 @@ export const AboutAsPage = () => {
   return (
     <Wrapper>
       <Helmet>
-        <title>
-          About Us | Renewable Energy and Solar Power in Beverly, MA
-        </title>
+        <title>About EcowaveUS | Heat Pump & Clean Energy Pros</title>
         <meta
           name="description"
-          content="Learn how we provide clean energy solutions for homes and businesses throughout the North Shore! We can help you maximize energy efficiency and savings."
+          content="Meet the EcowaveUS team - your trusted clean energy experts in Beverly, MA. Specializing in heat pumps, solar, EV chargers & energy storage. Call 978-500-4081!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/about-us" />
       </Helmet>
       <Container>
         <ImageWrapper>

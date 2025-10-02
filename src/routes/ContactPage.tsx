@@ -27,13 +27,12 @@ export const ContactPage = () => {
       exit={{ opacity: 0 }}
     >
       <Helmet>
-        <title>
-          Contact ecoWave | Solar Power and Renewable Energy Services
-        </title>
+        <title>Contact EcowaveUS | Get a Free Heat Pump Quote</title>
         <meta
           name="description"
-          content="Our solar installation company in Beverly specializes in energy storage, solar panels, EV charging station installations, and more. Find out how you can save!"
+          content="Contact EcowaveUS for free estimates on heat pumps, solar, EV chargers & energy storage in Beverly, MA. Expert installation & Mass Save rebates. Call 978-500-4081!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/contact-us" />
       </Helmet>
       <BackgroundComponent></BackgroundComponent>
       <Title>Contact Us</Title>

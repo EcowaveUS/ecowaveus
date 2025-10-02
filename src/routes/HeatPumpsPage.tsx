@@ -17,11 +17,12 @@ export const HeatPumpsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Electric Heat Pumps near Peabody, MA | Heat Pump Services</title>
+        <title>Heat Pumps in Beverly, MA | Installation | EcowaveUS</title>
         <meta
           name="description"
-          content="Searching for an electric heat pump installation nearby? We provide renewable energy and heat pumps for sale. Call EcoWave at 978-500-4081 and request a quote."
+          content="Professional heat pump installation in Beverly, MA. Energy-efficient heating & cooling solutions with Mass Save rebates. Call EcowaveUS at 978-500-4081 for a free estimate!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/heat-pumps" />
       </Helmet>
       <MainPageComponentHeatPump />
       <ServiceBenefits

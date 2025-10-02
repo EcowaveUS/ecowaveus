@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { MapContainer } from "../components/maps/MapContainer";
 import { ListAreaService } from "../components/AreaServices/ListAreaService";
 
@@ -89,17 +90,27 @@ export const AreaServicePage = () => {
     },
   ];
   return (
-    <StyledPage
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <LocationsWrapper>
-        <PageTitle>Area Services</PageTitle>
-        <ListAreaService location={location} />
-      </LocationsWrapper>
-      <MapContainer markersPoints={markersPoint} />
-    </StyledPage>
+    <>
+      <Helmet>
+        <title>Service Areas | Beverly, Salem, Gloucester | EcowaveUS</title>
+        <meta
+          name="description"
+          content="EcowaveUS serves Beverly, Salem, Gloucester, Marblehead & North Shore MA. Heat pumps, solar, EV chargers & energy storage installation. Call 978-500-4081!"
+        />
+        <link rel="canonical" href="https://www.ecowaveus.com/locations" />
+      </Helmet>
+      <StyledPage
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <LocationsWrapper>
+          <PageTitle>Area Services</PageTitle>
+          <ListAreaService location={location} />
+        </LocationsWrapper>
+        <MapContainer markersPoints={markersPoint} />
+      </StyledPage>
+    </>
   );
 };
 
@@ -110,10 +121,9 @@ const StyledPage = styled(motion.div)`
   justify-content: center;
   width: 100%;
 `;
-const PageTitle = styled.h3`
+const PageTitle = styled.h1`
 font-size: 2.5rem;
 line-height: 2.5rem;
-le
 font-weight: 600;
 color: grey;
 text-align: left;

@@ -54,11 +54,12 @@ export const SolarPanelsPage = () => {
   return (
     <StyledPage>
       <Helmet>
-        <title>Solar Panels Installation near Beverly, MA | ecoWave</title>
+        <title>Solar Panel Installation | Beverly & North Shore | EcowaveUS</title>
         <meta
           name="description"
-          content="If you need solar panels installation services, then contact our solar energy company. We can install solar panels for your home. Call 978-500-4081!"
+          content="Professional solar panel installation in Beverly, MA & North Shore. Clean energy solutions with Mass Save rebates & financing. Call EcowaveUS at 978-500-4081!"
         />
+        <link rel="canonical" href="https://www.ecowaveus.com/solar-panels" />
       </Helmet>
       <MainPageComponentSolarPanels
         title="Harness the Sun, Power Your Future"
