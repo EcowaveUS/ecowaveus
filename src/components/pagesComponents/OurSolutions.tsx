@@ -1,159 +1,163 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../../constants/data";
-import { ServicesCard } from "../cards/ServicesCard";
-import useWindowWidth from "../../custom-hooks/useWindowWidth";
-import Slider from "react-slick";
-import styled from "styled-components";
-
-import blackVector  from "/src/assets/images/wave-vector-black.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 export const OurSolutions = () => {
-  const windowWidth = useWindowWidth();
-  const settings = {
-    dots: false,
-    infinite: true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    centerMode: false,
-    centerPadding: "0",
-    responsive: [
-      {
-        breakpoint: 960,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
-  };
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  const isWide = useMediaQuery(`(min-width: 1280px)`);
   return (
-    <>
+    <Box bgcolor={"#F6F6F6"}>
       <Box
-        sx={{
-          position: "relative",
-          backgroundColor: "#f5f5f5",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: "3rem",
-          padding: "7rem 0",
-          width: "100%",
-        }}
+        component={"div"}
+        paddingTop={isDesktop ? "80px" : "36px"}
+        paddingBottom={isDesktop ? (isWide ? "80px" : "35px") : "16px"}
+        display={"flex"}
+        flexDirection={"column"}
+        gap={isDesktop ? "80px" : "48px"}
       >
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "24px",
-            width: "50%",
-            "@media (max-width: 768px)": {
-              width: "90%",
-            },
-          }}
+          component={"div"}
+          maxWidth={"612px"}
+          marginLeft={"auto"}
+          marginRight={"auto"}
+          className="container"
         >
           <Typography
-            variant={windowWidth > 768 ? "h3" : "h4"}
-            sx={{
-              textAlign: "center",
-              fontWeight: "700",
-            }}
+            fontWeight={600}
+            fontSize={isDesktop ? "48px" : "24px"}
+            align="center"
+            color={isDesktop ? "#181A1C" : "#252529"}
+            lineHeight={isDesktop ? "100%" : "32px"}
+            fontFamily={"Inter !important"}
           >
-            Empowering your <br /> sustainable choices
+            Empowering your sustainable choices
           </Typography>
           <Typography
-            variant={windowWidth > 768 ? "body1" : "body2"}
-            sx={{
-              color: "#6C6C78",
-              fontStyle: "normal",
-              lineHeight: "32px",
-              textAlign: "center",
-            }}
+            marginTop={"16px"}
+            fontSize={isDesktop ? "16px" : "14px"}
+            align="center"
+            lineHeight={isDesktop ? "150%" : "20px"}
+            fontFamily={"Inter !important"}
+            color={isDesktop ? "#181A1C80" : "#6C6C78"}
+            letterSpacing={isDesktop ? "0.01em" : "0.02em"}
           >
             Driving innovation in renewable technologies for a greener tomorrow:
             harnessing the power of sustainability to transform energy
             consumption and foster environmental stewardship.
           </Typography>
         </Box>
-        {windowWidth > 768 ? (
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "24px",
-              margin: "5rem 0",
-            }}
-          >
-            {services.map((solution, index) => (
-              <ServicesCard
-                key={index}
-                title={solution.title}
-                content={solution.content}
-                url={solution.url}
-                icon={solution.icon}
-              />
-            ))}
-          </Box>
-        ) : (
-          <StyledSlider {...settings}>
-            {services.map((solution, index) => (
-              <ServicesCard
-                key={index}
-                title={solution.title}
-                content={solution.content}
-                url={solution.url}
-                icon={solution.icon}
-              />
-            ))}
-          </StyledSlider>
-        )}
-        <Box
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "auto",
-            top: "0",
-            backgroundColor: "transparent",
-            zIndex: 1,
+        <Swiper
+          modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
+          className="solutions-swiper"
+          spaceBetween={0}
+          slidesPerView={"auto"}
+          freeMode={true}
+          style={{ maxWidth: "100%" }}
+          slidesOffsetBefore={isWide ? 0 : 20}
+          slidesOffsetAfter={isWide ? 0 : 20}
+          pagination={{
+            clickable: true,
+            dynamicBullets: false,
           }}
         >
-          <img
-            style={{ width: "100%", height: "auto" }}
-            src={blackVector}
-            alt="Group"
-          />
-        </Box>
+          {services.map((s, _idx) => (
+            <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
+              <Box
+                borderRadius={
+                  _idx === 0
+                    ? "12px 0 0 12px"
+                    : _idx === services.length - 1
+                    ? "0 12px 12px 0"
+                    : "0"
+                }
+                padding={"24px"}
+                paddingRight={_idx !== services.length - 1 ? "8px" : "24px"}
+                bgcolor={"white"}
+              >
+                <Box display={"flex"} alignItems={"stretch"}>
+                  <Box
+                    component={Link}
+                    to={s.url}
+                    width={"259px"}
+                    minWidth={"259px"}
+                    maxWidth={"259px"}
+                    height={"268px"}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    justifyContent={"center"}
+                  >
+                    <Box
+                      width={"48px"}
+                      height={"48px"}
+                      borderRadius={"999px"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                      bgcolor={"#1FA500"}
+                      border={"1px solid #FFFFFF1A"}
+                    >
+                      <img src={s.iconNew} alt={s.title} />
+                    </Box>
+                    <Typography
+                      marginTop={"24px"}
+                      fontWeight={600}
+                      fontFamily={"Inter !important"}
+                      fontSize={isDesktop ? "48px" : "32px"}
+                      color={"#252529"}
+                      lineHeight={"100%"}
+                    >
+                      {s.title}
+                    </Typography>
+                    <Typography
+                      marginTop={"24px"}
+                      fontSize={"16px"}
+                      color={"#0B081F80"}
+                      lineHeight={"150%"}
+                      fontFamily={"Inter !important"}
+                      sx={{
+                        lineClamp: 2,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                      }}
+                    >
+                      {s.content}
+                    </Typography>
+                    <Typography
+                      style={{
+                        fontSize: "12px",
+                        textDecoration: "underline",
+                        color: "#0B6BD9",
+                        marginTop: "12px",
+                        fontFamily: "Inter !important",
+                        lineHeight: "16px",
+                        display: "block",
+                      }}
+                    >
+                      Learn more
+                    </Typography>
+                  </Box>
+                  {_idx !== services.length - 1 && (
+                    <Box
+                      marginLeft={"32px"}
+                      bgcolor={"#181A1C1A"}
+                      width={"1px"}
+                      height={"268px"}
+                    ></Box>
+                  )}
+                </Box>
+              </Box>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
-    </>
+    </Box>
   );
 };
-
-const StyledSlider = styled(Slider)`
-  width: 100%;
-  padding: 2rem 0;
-  overflow-x: hidden;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  .slick-track {
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .slick-slide {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-
-`;

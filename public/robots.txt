@@ -1,0 +1,70 @@
+# Robots.txt for EcowaveUS - SEO Optimized for Beverly, MA Clean Energy Services
+# Last Updated: October 2025
+# Allows search engines to efficiently crawl and index our heat pump, solar, and EV charger services
+
+User-agent: *
+Allow: /
+
+# === CRAWL BUDGET OPTIMIZATION ===
+# Block technical and administrative directories to focus crawl budget on valuable content
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /test/
+Disallow: /staging/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/
+Disallow: /.git/
+
+# Block duplicate content and parameter URLs that could weaken SEO authority
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+Disallow: /*?campaign=*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+
+# Block search and filter pages that could create duplicate content
+Disallow: /search*
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*?sort=*
+
+# === IMPORTANT SEO FILES ===
+# Explicitly allow critical SEO and user experience files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+Allow: /manifest.json
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+Allow: /*.svg
+
+# === SITEMAP INTEGRATION ===
+# Direct search engines to our comprehensive sitemap for efficient content discovery
+Sitemap: https://www.ecowaveus.com/sitemap.xml
+
+# === CRAWL OPTIMIZATION ===
+# Reasonable crawl delay to prevent server overload while maintaining good crawl frequency
+Crawl-delay: 1
+
+# === CANONICAL DOMAIN ===
+# Specify preferred domain to consolidate SEO authority
+Host: https://www.ecowaveus.com
+
+# === SEARCH ENGINE SPECIFIC OPTIMIZATIONS ===
+# Google-specific optimizations for better Beverly, MA local SEO
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing-specific optimizations for local search visibility
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

@@ -7,9 +7,9 @@ import iconHeatPumps from "../assets/icons/Icon-heat-pumps.png";
 import iconEvCharger from "../assets/icons/Icon-ev-charger.png";
 import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
+import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.svg";
+import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.svg";
+import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage-new.svg";
 
 export const CardInfo = [
   {
@@ -30,42 +30,55 @@ export const CardInfo = [
 ];
 
 export const brandImages = [
-  "/images/brands/mitsubishi-logo.png",
-  "/images/brands/lg-logo.png",
-  "/images/brands/fujitsu-logo.png",
-  "/images/brands/daikin-logo.png",
-  "/images/brands/tesla-logo.png",
-  "/images/brands/chargepoint-logo.png",
-  "/images/brands/bosch-logo.png",
-  "/images/brands/enphase-logo.png",
-  "/images/brands/legrand-logo.png",
-  "/images/brands/siemens-logo.png",
+  "/images/brands/mitsubishi-logo.webp",
+  "/images/brands/lg-logo.webp",
+  "/images/brands/fujitsu-logo.webp",
+  "/images/brands/daikin-logo.webp",
+  "/images/brands/tesla-logo.webp",
+  "/images/brands/chargepoint-logo.webp",
+  "/images/brands/bosch-logo.webp",
+  "/images/brands/enphase-logo.webp",
+  "/images/brands/legrand-logo.webp",
+  "/images/brands/siemens-logo.webp",
+];
+
+export const brandImagesNew = [
+  "/images/brands-new/mitsubishi.webp",
+  // "/images/brands-new/lg.webp",
+  "/images/brands-new/bosch.png",
+  "/images/brands-new/fujitsu.webp",
+  "/images/brands-new/daikin.png",
+  "/images/brands-new/tesla.webp",
 ];
 
 export const services = [
   {
-    title: "Heat Pumps",
+    title: "Heating & Cooling",
     content: "Efficient Comfort: Advanced solutions for heating and cooling.",
     url: "/heat-pumps",
     icon: iconHeatPumps,
+    iconNew: iconHeatPumpsNew,
   },
   {
-    title: "EV-Chargers",
+    title: "EV Chargers",
     content: "Charge Anywhere: Fast, reliable power for your electric vehicle.",
     url: "/ev-chargers",
     icon: iconEvCharger,
+    iconNew: iconEvChargerNew,
   },
   {
     title: "Energy Storage",
     content: "Store Smart: Harness and manage renewable energy efficiently.",
     url: "/energy-storage",
     icon: iconEnergyStorage,
+    iconNew: iconEnergyStorageNew,
   },
   {
     title: "Solar Panels",
-    content: "Store Smart: Harness and manage renewable energy efficiently.",
+    content: "Go Solar: Capture clean energy with high-performance panels.",
     url: "/solar-panels",
     icon: iconHeatPumps,
+    iconNew: iconEnergyStorageNew,
   },
 ];
 
@@ -155,43 +168,40 @@ export const location = [
   "Lynnfield",
 ];
 
-
-
 export const sidebarData = [
   {
     title: "Home",
     path: "/",
-    icon: React.createElement(AiIcons.AiFillHome),
     cName: "nav-text",
   },
   {
-    title: "Heat Pumps",
+    title: "Heating & Cooling",
     path: "/heat-pumps",
-    icon: React.createElement(IoIcons.IoIosPaper),
     cName: "nav-text",
   },
   {
     title: "EV Chargers",
     path: "/ev-chargers",
-    icon: React.createElement(FaIcons.FaCartPlus),
     cName: "nav-text",
   },
   {
     title: "Energy Storage",
     path: "/energy-storage",
-    icon: React.createElement(IoIcons.IoMdPeople),
+    cName: "nav-text",
+  },
+  {
+    title: "Solar Panels",
+    path: "/solar-panels",
     cName: "nav-text",
   },
   {
     title: "About Us",
     path: "/about-us",
-    icon: React.createElement(FaIcons.FaEnvelopeOpenText),
     cName: "nav-text",
   },
   {
-    title: "Contact Us",
-    path: "/contact-us",
-    icon: React.createElement(IoIcons.IoMdHelpCircle),
+    title: "Contact",
+    path: "/contact",
     cName: "nav-text",
   },
 ];

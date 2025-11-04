@@ -49,7 +49,7 @@ const ItemWrapper = styled.div`
   justify-content: center;
   width: 58px;
   height: 58px;
-  background-image: url('/images/green-ellipse.png');
+  background-image: url('/images/green-ellipse.webp');
 `;
 const ItemNumber = styled.p`
 color: var(--fore-allways---white, #FFF);
@@ -81,7 +81,7 @@ line-height: normal;
 `;
 const TextContent = styled.p`
   color: #666C89;
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -89,7 +89,7 @@ const TextContent = styled.p`
   max-width: 424px;
   span {
     color: #1FA500;
-    font-family: Roboto;
+    font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;

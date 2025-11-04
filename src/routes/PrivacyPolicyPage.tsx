@@ -1,14 +1,30 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, Theme } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export const PrivacyPolicyPage = () => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Box
+    <>
+      <Helmet>
+        <title>Privacy Policy | EcowaveUS</title>
+        <meta
+          name="description"
+          content="Privacy policy for EcowaveUS. Learn how we protect your personal information when using our heat pump, solar, and energy storage services in Beverly, MA."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.ecowaveus.com/privacy-policy" />
+      </Helmet>
+      <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#f1f5f9",
-        padding: "30px",
+        backgroundImage: `url(/images/${isDesktop ? "wind-farm-desktop.webp" : "wind-farm-mobile.webp"})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        paddingTop: "230px",
+        minHeight: "100vh",
       }}
     >
       <Box
@@ -33,7 +49,7 @@ export const PrivacyPolicyPage = () => {
             padding: "1.5rem",
           }}
         >
-          <Typography variant="h3" >Privacy Policy</Typography>
+          <Typography variant="h1" component="h1">Privacy Policy</Typography>
           <Typography variant="body1" color="#ababab" >
             Welcome to Ecowave. We are committed to protecting your privacy and
             ensuring that your personal information is handled in a safe and
@@ -210,5 +226,6 @@ export const PrivacyPolicyPage = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };

@@ -1,144 +1,57 @@
-import { Box, Divider, Typography } from "@mui/material";
-import locationsImage from "../../assets/images/locations-background.png";
-import useWindowWidth from "../../custom-hooks/useWindowWidth";
-import { CommonButton } from "../common/CommonButton";
+import { Box, Theme, useMediaQuery } from "@mui/material";
+import serviceMapImageDesktop from "../../assets/images/service-map-desktop.svg";
+import serviceMapImageMobile from "../../assets/images/service-map-mobile.svg";
+import { AreaServices } from "./AreaServices";
 
-const Areas = () => {
-  const windowWidth = useWindowWidth();
-
+const Areas = ({ cat = 1 }: { cat?: number }) => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <>
-      {windowWidth <= 1024 ? (
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            width: "100%",
-            margin: "0",
-          }}
-        >
+      <Box
+        height={isDesktop ? "489px" : "289px"}
+        component="div"
+        sx={{
+          backgroundImage: `url(${
+            isDesktop ? serviceMapImageDesktop : serviceMapImageMobile
+          })`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right",
+        }}
+        position={"relative"}
+      >
+        {isDesktop && (
           <Box
+            height={"100%"}
+            width={"100%"}
             sx={{
-              width: "100%",
-              aspectRatio: "16 / 12", // o la relación que necesites
-              overflow: "hidden",
+              background:
+                "linear-gradient(90deg, #022241 12.57%, rgba(2, 39, 74, 0.91) 29.63%, rgba(3, 46, 89, 0.765732) 43.84%, rgba(5, 87, 167, 0) 100%)",
             }}
-          >
-            <img
-              src={locationsImage}
-              alt="locations"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "80% center",
-              }}
-            />
-          </Box>
+          ></Box>
+        )}
+        {isDesktop && (
           <Box
-            sx={{
-              backgroundColor: "#01162C",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              gap: "24px",
-              width: "100%",
-              padding: "48px 20px",
-            }}
+            position={"absolute"}
+            bottom={0}
+            left={0}
+            right={0}
+            height={"100%"}
+            width={"100%"}
+            display={"flex"}
+            alignItems={"center"}
           >
-            <Typography variant="h4" color="#fff">
-              Service Areas
-            </Typography>
-            <Divider
-              sx={{ width: "85%", backgroundColor: "#fff", height: "1px" }}
-            />
-            <Typography variant="body1" color="#fff">
-              North Shore of Massachusetts
-            </Typography>
-            <Typography
-              variant="body2"
-              color="#fff"
-              sx={{
-                lineHeight: "2.5rem",
-              }}
-            >
-              Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester
-              Marblehead | Wenham | Ipswich | Lynnfield
-            </Typography>
-            <CommonButton
-              variant="contained"
-              sx={{
-                width: "100%",
-                backgroundColor: "#35AE1A",
-                padding: "12px 20px",
-                borderRadius: "50px",
-                color: "#fff",
-                fontSize: "14px",
-                fontWeight: 600,
-              }}
-            >
-              View more
-            </CommonButton>
+            <div className="container">
+              <AreaServices cat={cat} />
+            </div>
           </Box>
-        </Box>
-      ) : (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            width: "100%",
-            backgroundImage: `url(${locationsImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            aspectRatio: "19/7",
-            padding: "0 4rem",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              gap: "24px",
-              width: "45%",
-              paddingLeft: "4rem",
-            }}
-          >
-            <Typography variant="h3" color="#fff">
-              Service Areas
-            </Typography>
-            <Divider
-              sx={{ width: "85%", backgroundColor: "#fff", height: "1px" }}
-            />
-            <Typography variant="body1" color="#fff">
-              North Shore of Massachusetts
-            </Typography>
-            <Typography variant="body2" color="#fff">
-              Beverly | Manchester-by-the-Sea | Hamilton | Essex | Gloucester
-              Marblehead | Wenham | Ipswich | Lynnfield
-            </Typography>
-            <CommonButton
-              variant="contained"
-              sx={{
-                backgroundColor: "#35AE1A",
-                padding: "12px 20px",
-                borderRadius: "50px",
-                color: "#fff",
-                fontSize: "14px",
-                fontWeight: 600,
-                '&:hover': {
-                  backgroundColor: "#35AE1A",
-                },
-              }}
-            >
-              View more
-            </CommonButton>
-          </Box>
+        )}
+      </Box>
+      {!isDesktop && (
+        <Box bgcolor={"#01162C"} paddingY={"48px"} width={"100%"}>
+          <div className="container">
+            <AreaServices cat={cat} />
+          </div>
         </Box>
       )}
     </>

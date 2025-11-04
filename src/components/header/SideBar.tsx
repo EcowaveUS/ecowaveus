@@ -10,6 +10,12 @@ interface MenuComponentProps {
   sidebar: boolean
 }
 
+interface SidebarItem {
+  title: string;
+  path: string;
+  cName: string;
+}
+
 export const SideBar: React.FC<MenuComponentProps> = ({
   showSidebar,
   sidebar
@@ -20,7 +26,7 @@ export const SideBar: React.FC<MenuComponentProps> = ({
       <IconContext.Provider value={{ color: "undefined" }}>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
-            {sidebarData.map((item, index) => {
+            {sidebarData.map((item: SidebarItem, index: number) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>

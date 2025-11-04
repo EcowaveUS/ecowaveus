@@ -1,126 +1,154 @@
-import { Box, Button, Typography } from "@mui/material";
-import { useNavigate } from "react-router";
-
-import iconFacebook from "../../assets/icons/Icon-facebook.png";
-import iconInstagram from "../../assets/icons/Icon-ig.png";
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Theme } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 export const BottomFooter = () => {
-  const navigate = useNavigate();
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Box
-      sx={{
-        display: "flex",
-        width: "100%",
-        justifyContent: "space-between",
-        alignItems: "center",
-        margin: "1rem 0",
-        '@media (max-width: 1024px)': {
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0.5rem',
-          margin: '0.5rem 0',
-        },
-      }}
-    >
+    <Box component="div">
       <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        component="div"
+        height="1px"
+        bgcolor={isDesktop ? "#FFFFFF0D" : "#D8D8DE"}
+        marginX={isDesktop ? "0" : "20px"}
+      ></Box>
+      <Box
+        component="div"
+        className="container"
+        paddingTop={isDesktop ? "32px" : "24px"}
+        paddingBottom={isDesktop ? "32px" : "48px"}
+        display="flex"
+        flexDirection={isDesktop ? "row" : "column"}
+        gap="24px"
+        justifyContent="space-between"
+        alignItems="center"
       >
-        <Typography variant="body2" color="#fff"
-          sx={{
-            fontSize: '14px'
-          }}
+        <Typography
+          color="#ffffff"
+          fontSize={isDesktop ? "12px" : "14px"}
+          fontWeight={isDesktop ? "500" : "400"}
+          lineHeight={isDesktop ? "150%" : "20px"}
+          fontFamily={"Inter !important"}
         >
-          © 2021 Ecowave. All Rights Reserved.
+          © {new Date().getFullYear()} Ecowave. All Rights Reserved.
         </Typography>
-        <Box>
-          <Button
-            onClick={() => navigate("/privacy-policy")}
-            variant={"text"}
-            sx={{
-              textTransform: "none",
-              fontFamily: "InterMedium",
-              fontSize: "0.8rem",
-              textDecoration: "underline",
-              color: "#fff",
-              "&:hover": {
-                textDecoration: "underline",
-                backgroundColor: "transparent",
-                color: "#ababab",
-              },
-            }}
-          >
-            Privacy Policy
-          </Button>
-          <Button
-            onClick={() => navigate("/terms-and-conditions")}
-            variant={"text"}
-            sx={{
-              textTransform: "none",
-              fontFamily: "InterMedium",
-              fontSize: "0.8rem",
-              textDecoration: "underline",
-              color: "#fff",
-              "&:hover": {
-                textDecoration: "underline",
-                backgroundColor: "transparent",
-                color: "#ababab",
-              },
-            }}
+        
+        {/* Internal Links for SEO Crawlability */}
+        <Box
+          component="div"
+          display="flex"
+          flexDirection={isDesktop ? "row" : "column"}
+          gap={isDesktop ? "24px" : "12px"}
+          alignItems="center"
+        >
+          <Typography
+            component={Link}
+            to="/terms-and-conditions"
+            color="#ffffff"
+            fontSize={isDesktop ? "12px" : "14px"}
+            fontWeight={isDesktop ? "500" : "400"}
+            lineHeight={isDesktop ? "150%" : "20px"}
+            fontFamily={"Inter !important"}
+            sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
           >
             Terms and Conditions
-          </Button>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "1rem",
-          marginRight: "3rem",
-        }}
-      >
-        <Box
-          sx={{
-            width: "32px",
-            height: "32px",
-          }}
-        >
-          <img
-            src={iconInstagram}
-            alt="logo"
-            style={{ width: "100%", height: "auto" }}
-          />
+          </Typography>
         </Box>
         <Box
-          sx={{
-            width: "32px",
-            height: "32px",
-          }}
+          component="div"
+          display="flex"
+          alignItems="center"
+          gap={isDesktop ? "24px" : "12px"}
         >
-          <img
-            src={iconFacebook}
-            alt="logo"
-            style={{ width: "100%", height: "auto" }}
-          />
-        </Box>
-        <Box
-          sx={{
-            width: "32px",
-            height: "32px",
-          }}
-        >
-          <img
-            src={iconInstagram}
-            alt="logo"
-            style={{ width: "100%", height: "auto" }}
-          />
+          <Link
+            to={import.meta.env.VITE_GOOGLE_LINK || "https://www.google.com/"}
+          >
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                width={"18px"}
+                height={"18px"}
+                src={
+                  isDesktop
+                    ? "/images/icons/icon-google.webp"
+                    : "/images/icons/icon-google.webp"
+                }
+                alt="google"
+              />
+            </Box>
+          </Link>
+          <Link
+            to={
+              import.meta.env.VITE_FACEBOOK_LINK || "https://www.facebook.com/"
+            }
+          >
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                src={
+                  isDesktop
+                    ? "/images/icons/icon-facebook-white-1.webp"
+                    : "/images/icons/icon-facebook-white-2.webp"
+                }
+                alt="facebook"
+              />
+            </Box>
+          </Link>
+          <Link
+            to={
+              import.meta.env.VITE_INSTAGRAM_LINK ||
+              "https://www.instagram.com/"
+            }
+          >
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                src={"/images/icons/icon-instagram-white.webp"}
+                alt="instagram"
+              />
+            </Box>
+          </Link>
+          <Link
+            to={
+              import.meta.env.VITE_LINKEDIN_LINK || "https://www.linkedin.com/"
+            }
+          >
+            <Box
+              borderRadius={isDesktop ? 0 : "999px"}
+              bgcolor={isDesktop ? "transparent" : "#01162C"}
+              width={isDesktop ? "18px" : "32px"}
+              height={isDesktop ? "18px" : "32px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <img
+                src={"/images/icons/icon-linkedin-white.webp"}
+                alt="linkedin"
+              />
+            </Box>
+          </Link>
         </Box>
       </Box>
     </Box>

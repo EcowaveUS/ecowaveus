@@ -8,36 +8,36 @@ export const StorageAdvantages = () => {
       id: 1,
       title: 'Emergency Backup',
       content: 'Provides electricity during power outages, ensuring stability for critical appliances',
-      image: '/images/storage-icon01.png'
+      image: '/images/storage-icon01.webp'
     },
     {
       id: 2,
       title: 'Enhanced Solar Usage',
       content: 'Stores excess solar energy for use during  periods without sunlight, maximizing renewable energy use',
-      image: '/images/storage-icon02.png'
+      image: '/images/storage-icon02.webp'
     },
     {
       id: 3,
       title: 'Lower Energy Costs',
       content: 'Saves money by storing electricity when rates are low and using it during peak times',
-      image: '/images/storage-icon03.png'
+      image: '/images/storage-icon03.webp'
     },
     {
       id: 4,
       title: 'Reduced Carbon Footprint',
       content: 'Supports a greener lifestyle by facilitating the use of renewable energy sources',
-      image: '/images/storage-icon04.png'
+      image: '/images/storage-icon04.webp'
     },
     {
       id: 5,
       title: 'Increased Property Value',
       content: 'Makes homes more appealing in the real estate market with energy storage systems',
-      image: '/images/storage-icon05.png'
+      image: '/images/storage-icon05.webp'
     }
   ]
   return (
     <StyledComponent>
-      <LeftBackground src="images/storage-background-left.png" alt="Energy Storage" />
+      <LeftBackground src="images/storage-background-left.webp" alt="Energy Storage" />
       <ContentWrapper>
         <Title>Advantages of Having Energy Storage</Title>
         <CardWrapper>
@@ -56,7 +56,7 @@ export const StorageAdvantages = () => {
           }
         </CardWrapper>
       </ContentWrapper>
-      <RightBackground src="images/storage-background.png" alt="Energy Storage" />
+      <RightBackground src="images/storage-background.webp" alt="Energy Storage" />
     </StyledComponent>
   )
 }

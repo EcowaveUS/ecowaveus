@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import leftIcon from '../../assets/icons/arrow-left.png'
 
 interface Props {
   onClick: () => void;
@@ -9,7 +8,7 @@ interface Props {
 export const LeftArrow: React.FC<Props> = ({ onClick }) => {
   return (
     <StyldedWrapper onClick={onClick}>
-      <ArrowImage src={leftIcon} alt="arrow-left" />
+      <ArrowImage src="/images/arrow-left-circle.webp" alt="arrow-left" />
     </StyldedWrapper>
   )
 }
@@ -17,7 +16,7 @@ export const LeftArrow: React.FC<Props> = ({ onClick }) => {
 const StyldedWrapper = styled.div`
   position: absolute;
   top: 50%;
-  left: -1.5rem;
+  left: 1rem;
   cursor: pointer;
   align-items: center;
   width: 64px;

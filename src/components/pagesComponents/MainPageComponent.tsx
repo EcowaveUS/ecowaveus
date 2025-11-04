@@ -110,7 +110,7 @@ text-align: ${props => props.pathLocation === '/ev-chargers' ? 'right' : 'left'}
 const Text = styled.p<Props>`
   width: 90%;
   color: var(--White, var(--fore-allways---white, #FFF));
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;

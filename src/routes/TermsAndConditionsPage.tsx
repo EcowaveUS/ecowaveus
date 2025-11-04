@@ -1,14 +1,30 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, Theme } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export const TermsAndConditionsPage = () => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
-    <Box
+    <>
+      <Helmet>
+        <title>Terms and Conditions | EcowaveUS</title>
+        <meta
+          name="description"
+          content="Terms and conditions for EcowaveUS services. Read our terms of service for heat pump, solar, and energy storage installations in Beverly, MA."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.ecowaveus.com/terms-and-conditions" />
+      </Helmet>
+      <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#f1f5f9",
-        padding: "30px",
+        backgroundImage: `url(/images/${isDesktop ? "wind-farm-desktop.webp" : "wind-farm-mobile.webp"})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        paddingTop: "230px",
+        minHeight: "100vh",
       }}
     >
       <Box
@@ -33,8 +49,37 @@ export const TermsAndConditionsPage = () => {
             padding: "1.5rem",
           }}
         >
-          <Typography variant="h3">Terms and Conditions</Typography>
-          <Typography variant="body1" color="#ababab">
+          <Typography 
+            variant="h1" 
+            component="h1"
+            sx={{
+              wordWrap: "break-word",
+              overflowWrap: "break-word",
+              hyphens: "auto",
+              lineHeight: 1.2,
+              fontSize: {
+                xs: "2rem",
+                sm: "2.5rem",
+                md: "3rem"
+              }
+            }}
+          >
+            Terms and Conditions
+          </Typography>
+          <Typography 
+            variant="body1" 
+            color="#ababab"
+            sx={{
+              wordWrap: "break-word",
+              overflowWrap: "break-word",
+              hyphens: "auto",
+              lineHeight: 1.5,
+              fontSize: {
+                xs: "0.9rem",
+                sm: "1rem"
+              }
+            }}
+          >
             Welcome to Ecowave. By accessing or using our website,
             <Link to="https://ecowaveus.com">
               <span
@@ -42,6 +87,7 @@ export const TermsAndConditionsPage = () => {
                   marginLeft: "3px",
                   color: "#ababab",
                   textDecoration: "underline",
+                  wordBreak: "break-all"
                 }}
               >
                 https://ecowaveus.com
@@ -206,5 +252,6 @@ export const TermsAndConditionsPage = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };

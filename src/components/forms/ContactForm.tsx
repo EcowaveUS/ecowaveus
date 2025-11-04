@@ -1,33 +1,58 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Box,
+  TextField,
   MenuItem,
   Select,
   TextareaAutosize as Textarea,
-  FormControl,
+  useMediaQuery,
+  Theme,
   Typography,
+  Button,
+  FormControl,
+  FormHelperText,
 } from "@mui/material";
 import styled from "styled-components";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { TextInput } from "../common/TextInput";
-import { CommonButton } from "../common/CommonButton";
 
-export const ContactForm = () => {
+export const ContactForm = ({
+  btnColor = "#252529",
+}: {
+  btnColor?: string;
+}) => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   const form = useRef();
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [showMessage, setShowMessage] = useState<boolean>(false);
 
   const validationSchema = yup.object({
-    firstName: yup.string().required("First name is required"),
-    lastName: yup.string().required("Last name is required"),
-    phone: yup.string().required("Phone is required"),
+    firstName: yup
+      .string()
+      .required("First name is required")
+      .max(100, "Max 100 characters"),
+    lastName: yup
+      .string()
+      .required("Last name is required")
+      .max(100, "Max 100 characters"),
+    phone: yup
+      .string()
+      .required("Phone is required")
+      .matches(/^\+?[0-9]{10,15}$/, "Enter a valid phone number"),
     email: yup
       .string()
       .email("Enter a valid email")
       .required("Email is required"),
-    address: yup.string().required("Address is required"),
-    option: yup.string().required("Option is required"),
-    message: yup.string().required("Message is required"),
+    address: yup
+      .string()
+      .required("ZIP Code is required")
+      .matches(/^\d{5}(-\d{4})?$/, "Enter a valid ZIP code"),
+    option: yup.string().required("Product option is required"),
+    message: yup
+      .string()
+      .required("Message is required")
+      .max(80, "Max 80 characters"),
   });
 
   const formik = useFormik({
@@ -42,179 +67,316 @@ export const ContactForm = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      // Enviar la solicitud a EmailJS
+      setIsSending(true);
+      setShowMessage(true);
       emailjs
         .send(
-          "service_rxhp9f2", // Reemplaza con tu Service ID de EmailJS
-          "template_sexpm2s", // Reemplaza con tu Template ID de EmailJS
+          import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_rxhp9f2",
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_sexpm2s",
           values,
-          "8tS6TT5TEINsGyxDa" // Reemplaza con tu User ID de EmailJS
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8tS6TT5TEINsGyxDa"
         )
-        .then((response) => {
-          alert("Email sent successfully!");
-          console.log("Email sent successfully:", response);
+        .then(async () => {
+          const zohoTokenRes = await fetch(
+            `${import.meta.env.VITE_API_URI}/zoho-token`,
+            {
+              method: "GET",
+            }
+          );
+          const zohoTokenData = await zohoTokenRes.json();
+          const zohoToken = zohoTokenData.access_token;
+          await fetch(`${import.meta.env.VITE_API_URI}/zoho-leads`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              accessToken: zohoToken,
+              firstName: values.firstName,
+              lastName: values.lastName,
+              phone: values.phone,
+              email: values.email,
+              zipCode: values.address,
+              product: values.option,
+              message: values.message,
+            }),
+          });
+          setIsSending(false);
           formik.resetForm();
         })
-        // Manejador de errores del envío de la solicitud
         .catch((error) => {
+          setIsSending(false);
           console.error("Error sending email:", error);
         });
     },
   });
 
-  const options = ["Ev Chargers", "Heat Pumps", "Energy Storage"];
+  const options = [
+    { label: "Select an option", value: "" },
+    { label: "Heating & Cooling", value: "Heat Pumps" },
+    { label: "EV Chargers", value: "EV Chargers" },
+    { label: "Solar Panels", value: "Solar Panels" },
+    { label: "Energy Storage", value: "Energy Storage" },
+    {
+      label: "Electrical Service Upgrade",
+      value: "Electrical Service Upgrade",
+    },
+    { label: "Electrical Work", value: "Electrical Work" },
+  ];
 
   return (
-    <Box
-      component="form"
-      sx={{
-        width: "100%",
-        backgroundColor: "#fff",
-        padding: "2rem",
+    <FormWrapper
+      style={{
+        backgroundColor: "white",
+        borderRadius: "24px",
         border: "1px solid #D8D8DE",
-        borderRadius: "11px",
-        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
+        padding: isDesktop ? "32px" : "20px",
       }}
-      noValidate
-      autoComplete="off"
-      onSubmit={formik.handleSubmit}
-      ref={form}
     >
-      <FormInputs>
-        <TextInput
-          label="First name"
-          type="text"
-          value={formik.values.firstName}
-          error={!!(formik.touched.firstName && formik.errors.firstName)}
-          helperText={
-            formik.touched.firstName && formik.errors.firstName
-              ? formik.errors.firstName
-              : ""
-          }
-          onChange={formik.handleChange}
-          handleBlur={formik.handleBlur}
-          name="firstName"
-        />
-        <TextInput
-          label="Last name"
-          type="text"
-          value={formik.values.lastName}
-          error={!!(formik.touched.lastName && formik.errors.lastName)}
-          helperText={
-            formik.touched.lastName && formik.errors.lastName
-              ? formik.errors.lastName
-              : ""
-          }
-          onChange={formik.handleChange}
-          handleBlur={formik.handleBlur}
-          name="lastName"
-        />
-        <TextInput
-          label="Phone"
-          type="text"
-          value={formik.values.phone}
-          error={!!(formik.touched.phone && formik.errors.phone)}
-          helperText={
-            formik.touched.phone && formik.errors.phone
-              ? formik.errors.phone
-              : ""
-          }
-          onChange={formik.handleChange}
-          handleBlur={formik.handleBlur}
-          name="phone"
-        />
-        <TextInput
-          label="Email"
-          type="email"
-          value={formik.values.email}
-          error={!!(formik.touched.email && formik.errors.email)}
-          helperText={
-            formik.touched.email && formik.errors.email
-              ? formik.errors.email
-              : ""
-          }
-          onChange={formik.handleChange}
-          handleBlur={formik.handleBlur}
-          name="email"
-        />
-        <TextInput
-          label="Address"
-          type="text"
-          value={formik.values.address}
-          error={!!(formik.touched.address && formik.errors.address)}
-          helperText={
-            formik.touched.address && formik.errors.address
-              ? formik.errors.address
-              : ""
-          }
-          onChange={formik.handleChange}
-          handleBlur={formik.handleBlur}
-          name="address"
-        />
-        <FormControl>
-          <Typography variant="body2" fontWeight="bold" color="#252529" mb={2}>
-            Select an option
-          </Typography>
-          <Select
-            fullWidth
-            id="demo-simple-select"
-            labelId="demo-simple-select-label"
-            name="option"
-            label="Select an option"
-            value={formik.values.option}
-            onChange={formik.handleChange}
-            error={formik.touched.option && Boolean(formik.errors.option)}
-            onBlur={formik.handleBlur}
-            sx={{
-              height: "44px",
-              borderRadius: "16px",
-            }}
+      <Box
+        component="form"
+        noValidate
+        autoComplete="off"
+        onSubmit={formik.handleSubmit}
+        ref={form}
+      >
+        <FormInputs>
+          <InputFormContainer>
+            <Label>First name</Label>
+            <InputField
+              variant="outlined"
+              name="firstName"
+              value={formik.values.firstName}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.firstName && Boolean(formik.errors.firstName)
+              }
+              helperText={formik.touched.firstName && formik.errors.firstName}
+              onBlur={formik.handleBlur}
+            />
+          </InputFormContainer>
+          <InputFormContainer>
+            <Label>Last name</Label>
+            <InputField
+              variant="outlined"
+              name="lastName"
+              value={formik.values.lastName}
+              onChange={formik.handleChange}
+              error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+              helperText={formik.touched.lastName && formik.errors.lastName}
+              onBlur={formik.handleBlur}
+            />
+          </InputFormContainer>
+          <InputFormContainer>
+            <Label>Phone</Label>
+            <InputField
+              variant="outlined"
+              name="phone"
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+              error={formik.touched.phone && Boolean(formik.errors.phone)}
+              helperText={formik.touched.phone && formik.errors.phone}
+              onBlur={formik.handleBlur}
+            />
+          </InputFormContainer>
+          <InputFormContainer>
+            <Label>Email</Label>
+            <InputField
+              variant="outlined"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
+              onBlur={formik.handleBlur}
+            />
+          </InputFormContainer>
+          <InputFormContainer>
+            <Label>ZIP Code</Label>
+            <InputField
+              variant="outlined"
+              name="address"
+              value={formik.values.address}
+              onChange={formik.handleChange}
+              error={formik.touched.address && Boolean(formik.errors.address)}
+              helperText={formik.touched.address && formik.errors.address}
+              onBlur={formik.handleBlur}
+            />
+          </InputFormContainer>
+          <InputFormContainer>
+            <Label>Product</Label>
+            <FormControl
+              fullWidth
+              error={formik.touched.option && Boolean(formik.errors.option)}
+            >
+              <SelectField
+                name="option"
+                value={formik.values.option}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                displayEmpty
+              >
+                {options?.map((option) => (
+                  <MenuItem
+                    key={option.value}
+                    value={option.value}
+                    style={{ fontSize: "14px", lineHeight: "20px" }}
+                  >
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </SelectField>
+
+              {formik.touched.option && formik.errors.option && (
+                <FormHelperText>{formik.errors.option}</FormHelperText>
+              )}
+            </FormControl>
+          </InputFormContainer>
+        </FormInputs>
+        <InputFormContainer style={{ marginBottom: "0px" }}>
+          <Label>How can we help?</Label>
+          <div>
+            <Textarea
+              aria-label="minimum height"
+              minRows={3}
+              style={{
+                width: "100%",
+                minHeight: "100px",
+                maxHeight: "100px",
+                borderRadius: "12px",
+                padding: "12px 16px",
+                border:
+                  formik.touched.message && formik.errors.message
+                    ? "1px solid #d32f2f"
+                    : "1px solid #C6C6CC",
+                resize: "none",
+              }}
+              name="message"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+
+            {formik.touched.message && formik.errors.message && (
+              <div
+                style={{
+                  color: "#d32f2f",
+                  fontSize: "0.75rem",
+                  margin: "3px 14px 0",
+                  fontFamily: "Inter, Helvetica, Arial, sans-serif",
+                }}
+              >
+                {formik.errors.message}
+              </div>
+            )}
+          </div>
+          <Typography
+            color={"#505059"}
+            fontSize={"14px"}
+            align="right"
+            fontFamily={"Inter !important"}
+            lineHeight={"20px"}
           >
-            {options?.map((option) => (
-              <MenuItem key={option} value={option}>
-                {option}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </FormInputs>
-      <InputContainer>
-        <Textarea
-          aria-label="minimum height"
-          minRows={3}
-          placeholder="How can we help?"
-          style={{
-            width: "100%",
-            minHeight: "100px",
-            maxHeight: "100px",
-            borderRadius: "11px",
-            padding: "16px",
-            border: "1px solid #D0D0D0",
-            resize: "none",
-            boxShadow: "none",
+            {formik.values.message.length}/80
+          </Typography>
+        </InputFormContainer>
+        <Button
+          sx={{
+            backgroundColor: btnColor,
+            color: "white",
+            borderRadius: "999px",
+            padding: "12px 20px",
+            width: isDesktop ? "auto" : "100%",
+            fontSize: "14px",
+            fontWeight: "700",
+            lineHeight: "20px",
+            border: "none",
+            cursor: "pointer",
+            transition: "background 0.3s ease",
+            fontFamily: "Inter !important",
+            "&:hover": { backgroundColor: btnColor },
           }}
-          name="message"
-          value={formik.values.message}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-      </InputContainer>
-      <CommonButton>Submit</CommonButton>
-    </Box>
+          type="submit"
+        >
+          Submit
+        </Button>
+        {showMessage && (
+          <MessageBox>
+            <img
+              src={
+                isSending ? "/images/blue-info.webp" : "/images/green-check.webp"
+              }
+              alt={isSending ? "blue-info" : "green-check"}
+              width={15}
+              height={15}
+              style={{ minWidth: "15px", marginTop: "2.5px" }}
+            />
+            <Typography
+              color={"#252529"}
+              fontSize={"14px"}
+              lineHeight={"20px"}
+              fontFamily={"Inter !important"}
+            >
+              {isSending
+                ? "Sending..."
+                : "Thank you for contacting EcowaveUS. We've received your message."}
+            </Typography>
+          </MessageBox>
+        )}
+      </Box>
+    </FormWrapper>
   );
 };
 
+const FormWrapper = styled.div``;
 const FormInputs = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 1rem;
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
   }
 `;
-
-const InputContainer = styled.div`
-  margin-bottom: 1rem;
+const InputFormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
+const Label = styled.label`
+  color: #252529;
+  font-family: Inter !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+`;
+const InputField = styled(TextField)({
+  "& .MuiInputBase-root": {
+    borderRadius: "12px",
+    padding: "12px 16px",
+    fontSize: "14px",
+    lineHeight: "20px",
+  },
+  "& .MuiInputBase-input": {
+    padding: "0",
+  },
+});
+const SelectField = styled(Select)({
+  "&.MuiInputBase-root": {
+    borderRadius: "12px",
+  },
+  "& .MuiSelect-select": {
+    padding: "12px 16px",
+    fontSize: "14px",
+    lineHeight: "20px",
+  },
+});
+
+const MessageBox = styled(Box)({
+  marginTop: "10px",
+  display: "flex",
+  alignItems: "flex-start",
+  gap: "10px",
+});

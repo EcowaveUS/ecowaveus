@@ -1,36 +1,33 @@
 import { useLocation } from "react-router";
 import styled from "styled-components";
 import { OursBrands } from "../components/brands/OursBrands";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { MainPageComponent } from "../components/pagesComponents/MainPageComponent";
 import { StorageAdvantages } from "../components/pagesComponents/StorageAdvantages";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+import { Box } from "@mui/material";
 
 export const EnergyStoragePage = () => {
   const location = useLocation();
   const pathLocation = location.pathname;
 
   return (
-    <StyledPage
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <>
       <Helmet>
-        <title>
-          Solar Battery Storage near Marblehead, MA | Backup Batteries
-        </title>
+        <title>Home Battery Storage | Backup & Savings | EcowaveUS</title>
         <meta
           name="description"
-          content="Improve your home or business with energy storage solutions from ecoWave. Solar battery storage can increase energy efficiency. Contact us to learn more!"
+          content="Reliable home battery storage systems in Beverly, MA. Solar battery backup for power outages & energy savings. Professional installation by EcowaveUS. Call 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.ecowaveus.com/energy-storage" />
       </Helmet>
       <MainPageComponent
         title="Storing Power, Empowering Lives"
         content="Unlock the full potential of sustainable living with our energy storage systems, designed specifically for your home. At EcowaveUS, we believe that every homeowner deserves access to affordable and reliable energy storage solutions. Our energy storage systems not only provide a safety net against power outages, but also allow you to make the most of your solar installations, storing excess energy for use any time."
         pathLocation={pathLocation}
-        backgroundImage="/images/energy-storage01.jpg"
+        backgroundImage="/images/energy-storage01.webp"
       />
       <StorageAdvantages />
       <RebatesIncentives route={pathLocation}>
@@ -55,43 +52,45 @@ export const EnergyStoragePage = () => {
           installation cost for a battery storage.
         </Text>
       </RebatesIncentives>
-      <BrandsWrapper>
+      <Box width="100%">
+        {/* <BrandsWrapper> */}
         <OursBrands
           images={[
-            "/images/brands/tesla-logo.png",
-            "/images/brands/enphase-logo.png",
+            "/images/brands/tesla-logo.webp",
+            "/images/brands/enphase.webp",
+            "/images/brands/franklinwh.webp",
           ]}
         />
-      </BrandsWrapper>
-    </StyledPage>
+        {/* </BrandsWrapper> */}
+      </Box>
+    </>
   );
 };
 
-const StyledPage = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 100px;
-`;
+// const StyledPage = styled(motion.div)`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// `;
 
 const Text = styled.p`
   color: #fff;
 
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 1.5rem;
   font-style: normal;
   line-height: 1.8rem;
   margin-bottom: 1rem;
   text-align: center;
 `;
-const BrandsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #fff;
-`;
+// const BrandsWrapper = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   background-color: #fff;
+// `;
 const Subtitle = styled.h5`
   color: var(--White, var(--fore-allways---white, #fff));
   text-align: center;

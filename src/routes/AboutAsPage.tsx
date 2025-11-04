@@ -1,28 +1,25 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { ProjectCards } from "../components/pagesComponents/ProjectCards";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export const AboutAsPage = () => {
   return (
-    <Wrapper
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <Wrapper>
       <Helmet>
-        <title>
-          About Us | Renewable Energy and Solar Power in Beverly, MA
-        </title>
+        <title>About EcowaveUS | Heat Pump & Clean Energy Pros</title>
         <meta
           name="description"
-          content="Learn how we provide clean energy solutions for homes and businesses throughout the North Shore! We can help you maximize energy efficiency and savings."
+          content="Meet the EcowaveUS team - your trusted clean energy experts in Beverly, MA. Specializing in heat pumps, solar, EV chargers & energy storage. Call 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.ecowaveus.com/about-us" />
       </Helmet>
       <Container>
         <ImageWrapper>
-          <Logo src="/images/logo-header.png" alt="solar panels" />
+          <Logo src="/images/logo-header.webp" alt="solar panels" />
         </ImageWrapper>
+        <h1 style={{ position: 'absolute', left: '-9999px', fontSize: '1px' }}>About EcowaveUS - Heat Pump & Clean Energy Experts</h1>
       </Container>
       <TransportWrapper>
         <TransportTitle>RIDING THE WAVE OF ECO-INNOVATION</TransportTitle>
@@ -49,14 +46,13 @@ const Wrapper = styled(motion.div)`
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-top: 60px;
 `;
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url("/images/solar-panels.jpg");
+  background-image: url("/images/solar-panels.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -86,10 +82,10 @@ const TransportWrapper = styled.div`
     width: 80%;
   }
 `;
-const TransportTitle = styled.h1`
+const TransportTitle = styled.h2`
   color: #343434;
   text-align: center;
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
@@ -100,7 +96,7 @@ const TransportTitle = styled.h1`
 `;
 const Text = styled.p`
   color: rgba(0, 0, 0, 0.75);
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;

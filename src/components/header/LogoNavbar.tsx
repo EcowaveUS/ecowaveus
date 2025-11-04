@@ -14,7 +14,7 @@ export const LogoNavbar = () => {
     >
       <Link to="/">
         <img
-          src="/images/logo-header.png"
+          src="/images/logo-header.webp"
           alt="logo"
           style={{ width: "117px", height: "28px" }}
         />

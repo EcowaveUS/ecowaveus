@@ -1,81 +1,109 @@
-import { Box, Typography } from "@mui/material";
-import { CommonButton } from "../common/CommonButton";
+import { Box, Button, Theme, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router";
-import useWindowWidth from "../../custom-hooks/useWindowWidth";
 
 export const SwitchFuture = () => {
   const navigate = useNavigate();
-  const windowWidth = useWindowWidth();
-
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <Box
+      height={isDesktop ? "800px" : "640px"}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        backgroundImage: `url("/images/wind-farm.jpg")`,
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `url(/images/${isDesktop ? "wind-farm-desktop.webp" : "wind-farm-mobile.webp"
+          })`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
-        aspectRatio: "16/7",
-        backgroundColor: "rgba(0, 0, 0, 0.1)",
-        gap: "1rem",
-        "@media (max-width: 720px)": {
-          padding: "2rem 1.5rem",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          marginTop: "64px",
-        },
+        backgroundPosition: "left",
+        backgroundRepeat: "no-repeat",
       }}
+      position={"relative"}
     >
-      {windowWidth > 720 ? (
-        <Typography sx={{ textAlign: "center" }} variant="h1">
-          Riding the wave off eco- <br />
-          innovation
-        </Typography>
-      ) : (
-        <Typography sx={{ textAlign: "left", color: '#fff' }} variant="h3">
-          Riding the wave off eco- <br />
-          innovation
-        </Typography>
-      )}
-      <Typography
-        variant="body1"
-        sx={{
-          width: "45%",
-          textAlign: "center",
-          marginBottom: "24px",
-          color: "#fff",
-          "@media (max-width: 720px)": {
-            width: "80%",
-            textAlign: "left",
-          },
-        }}
+      <Box
+        component={"div"}
+        height={"100%"}
+        className="container"
+        position={"relative"}
       >
-        Affordable solutions tailored for savings and efficiency.
-      </Typography>
-      <CommonButton
-        onClick={() => navigate("/contact-us")}
-        sx={{
-          width: `${windowWidth > 720 ? "auto" : "100%"}`,
-          backgroundColor: "#198400",
-          padding: "12px 20px",
-          color: "#fff",
-          fontFamily: "Inter",
-          fontSize: "14px",
-          fontWeight: 600,
-          lineHeight: "20px",
-          letterSpacing: "1%",
-          borderRadius: "50px",
-          '&:hover': {
-            backgroundColor: '#198400',
-          },
-        }}
-      >
-        Schedule now
-      </CommonButton>
+        <Box
+          paddingTop={isDesktop ? "100px" : "0"}
+          component={"div"}
+          maxWidth={isDesktop ? "900px" : "100%"}
+          position={"absolute"}
+          zIndex={2}
+          left={0}
+          top={"50%"}
+          sx={{
+            transform: "translateY(-50%)",
+          }}
+        >
+          <Typography
+            fontWeight={500}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "60px" : "40px"}
+            color={"white"}
+            lineHeight={isDesktop ? "100%" : "44px"}
+          >
+            <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>{" "}
+            Heat Pump Leaders
+          </Typography>
+          <Typography
+            component="h1"
+            marginTop={isDesktop ? "24px" : "20px"}
+            fontWeight={600}
+            fontFamily={"Inter !important"}
+            letterSpacing={"0 !important"}
+            fontSize={isDesktop ? "80px" : "48px"}
+            color={"white"}
+            lineHeight={isDesktop ? "100%" : "52px"}
+          >
+            {isDesktop ? (
+              <>
+                Riding the Wave of{" "}
+                <span
+                  style={{
+                    height: "86px",
+                    display: "inline-block",
+                  }}
+                >
+                  Eco-Innovation
+                </span>
+              </>
+            ) : (
+              "Riding the Wave of Eco-Innovation"
+            )}
+          </Typography>
+          <Typography
+            fontWeight={400}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "18px" : "20px"}
+            color={"white"}
+            lineHeight={isDesktop ? "26px" : "28px"}
+            marginTop={isDesktop ? "24px" : "20px"}
+          >
+            Affordable solutions tailored for savings and efficiency.
+          </Typography>
+          <Button
+            sx={{
+              marginTop: isDesktop ? "40px" : "32px",
+              backgroundColor: "#198400",
+              color: "white",
+              borderRadius: "999px",
+              padding: isDesktop ? "12px 20px" : "12px 16px",
+              width: isDesktop ? "auto" : "100%",
+              fontSize: "14px",
+              fontWeight: "600",
+              lineHeight: "20px",
+              cursor: "pointer",
+              transition: "background 0.3s ease",
+              border: "none",
+              fontFamily: "Inter !important",
+              letterSpacing: "1% !important",
+              "&:hover": { backgroundColor: "#198400" },
+            }}
+            onClick={() => navigate("/contact-us#contact-form")}
+          >
+            Schedule now
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 };

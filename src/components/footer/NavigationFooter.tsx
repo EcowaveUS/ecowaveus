@@ -1,5 +1,7 @@
+import { Box, Collapse, Theme, Typography, useMediaQuery } from "@mui/material";
+import { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
 
 interface NavProps {
   title: string;
@@ -7,59 +9,73 @@ interface NavProps {
     text: string;
     url: string;
   }[];
+  clickable?: boolean;
+  width: number;
 }
 
-export const NavigationFooter: React.FC<NavProps> = ({ title, links }) => {
+export const NavigationFooter: React.FC<NavProps> = ({
+  title,
+  links,
+  clickable = false,
+  width,
+}) => {
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  const [open, setOpen] = useState(true);
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        justifyContent: "flex-start",
-        gap: "1.5rem",
-
-      }}
+      component={"div"}
+      display={"flex"}
+      flexDirection={"column"}
+      gap={isDesktop ? "24px" : "16px"}
+      width={isDesktop ? width + "px" : "100%"}
     >
-      <Typography
-        variant="body2"
-        color="#ffffff"
-        fontWeight={700}
-      >
-          {title}
-      </Typography>
       <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "flex-start",
-          gap: "0.5rem",
-          paddingRight: "5rem",
-          '& > li': {
-            listStyle: "none",
-            color: "#ffffff",
-            fontFamily: "InterLight",
-            fontSize: "16px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "20px", /* 125% */
-            opacity: 0.8,
-            textDecoration: "none",
-          },
-        }}
+        width={isDesktop ? width + "px" : "100%"}
+        component={"div"}
+        display={"flex"}
+        alignItems={"center"}
+        gap={"8px"}
+        justifyContent={"space-between"}
+        onClick={() => setOpen(!open)}
+        sx={{ cursor: isDesktop ? "default" : "pointer" }}
       >
-        {links.map((link, index) => (
-          <li key={index}>
-            <Link
-              to={link.url}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              {link.text}
-            </Link>
-          </li>
-        ))}
+        <Typography
+          fontSize={"14px"}
+          color="#ffffff"
+          fontWeight={700}
+          lineHeight={"20px"}
+          fontFamily={"Inter !important"}
+        >
+          {title}
+        </Typography>
+        {!isDesktop && open && <FaChevronDown size={11} />}
+        {!isDesktop && !open && <FaChevronUp size={11} />}
       </Box>
+      <Collapse in={isDesktop || open} timeout="auto" unmountOnExit>
+        <Box
+          component={"div"}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={"16px"}
+        >
+          {links.map((link, index) => (
+            <Box
+              key={index}
+              fontSize={"14px"}
+              color="#ffffff"
+              fontWeight={400}
+              lineHeight={"20px"}
+              fontFamily={"Inter !important"}
+            >
+              {clickable ? (
+                <Link to={link.url}>{link.text}</Link>
+              ) : (
+                <div dangerouslySetInnerHTML={{ __html: link.text }} />
+              )}
+            </Box>
+          ))}
+        </Box>
+      </Collapse>
     </Box>
   );
 };

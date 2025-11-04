@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import arrowRight from '../../assets/icons/arrow-right.png'
 
 interface Props {
   onClick: () => void;
@@ -9,7 +8,7 @@ interface Props {
 export const RightArrow: React.FC<Props> = ({ onClick }) => {
   return (
     <StyldedWrapper onClick={onClick}>
-      <ArrowImage src={arrowRight} alt="arrow-left" />
+      <ArrowImage src="/images/arrow-right-circle.webp" alt="arrow-left" />
     </StyldedWrapper>
   )
 }
@@ -17,7 +16,7 @@ export const RightArrow: React.FC<Props> = ({ onClick }) => {
 const StyldedWrapper = styled.div`
   position: absolute;
   top: 50%;
-  right: -2rem;
+  right: 1rem;
   cursor: pointer;
   align-items: center;
   width: 64px;
