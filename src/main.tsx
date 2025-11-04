@@ -4,9 +4,10 @@ import { StrictMode } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme/themeConfig.ts";
 import { Toaster } from "react-hot-toast";
-import "./fonts.css";
-import "./fonts-inter.css";
-import "./fonts-avenir-next.css";
+// Fonts loaded via Google Fonts in index.html for better performance
+// import "./fonts.css";
+// import "./fonts-inter.css";
+// import "./fonts-avenir-next.css";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(

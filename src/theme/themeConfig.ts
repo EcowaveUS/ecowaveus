@@ -11,38 +11,45 @@ export const theme = createTheme({
   },
   typography: {
     h1: {
-      fontFamily: 'InterExtraBold',
+      fontFamily: 'Inter',
+      fontWeight: 800,
       fontSize: '76px',
       lineHeight: 1.3,
       letterSpacing: '0.02em',
     },
     h3: {
-      fontFamily: 'InterExtraBold',
+      fontFamily: 'Inter',
+      fontWeight: 800,
       fontSize: '48px',
       lineHeight: '58px',
       color:'#252529'
     },
     h4: {
-      fontFamily: 'InterMedium',
+      fontFamily: 'Inter',
+      fontWeight: 500,
       fontSize: '24px',
       lineHeight: '40px',
       color:'#252529'
     },
     h5: {
-      fontFamily: 'InterExtraBold',
+      fontFamily: 'Inter',
+      fontWeight: 800,
       fontSize: '20px',
       lineHeight: '28px',
       color:'#252529'
     },
     h6:{
-      fontFamily: 'InterMedium',
+      fontFamily: 'Inter',
+      fontWeight: 500,
     },
     body1:{
-      fontFamily: 'InterLight',
+      fontFamily: 'Inter',
+      fontWeight: 300,
       fontSize: '20px',
     },
     body2:{
-      fontFamily: 'InterLight',
+      fontFamily: 'Inter',
+      fontWeight: 300,
       fontSize: '16px',
     },
   },

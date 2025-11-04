@@ -44,7 +44,7 @@ export const NavigationFooter: React.FC<NavProps> = ({
           color="#ffffff"
           fontWeight={700}
           lineHeight={"20px"}
-          fontFamily={isDesktop ? "Montserrat !important" : "Inter !important"}
+          fontFamily={"Inter !important"}
         >
           {title}
         </Typography>

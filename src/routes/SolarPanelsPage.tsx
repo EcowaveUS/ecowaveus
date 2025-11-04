@@ -11,7 +11,7 @@ import { PowerfulCombination } from "../components/services/PowerfulCombination"
 
 const solarOpportunities = [
   {
-    image: "/images/PPA.png",
+    image: "/images/PPA.webp",
     title: "Power purchase agreement",
     texts: [
       "Go solar with no initial investment.",
@@ -23,7 +23,7 @@ const solarOpportunities = [
     ],
   },
   {
-    image: "/images/solar-ownership-1.png",
+    image: "/images/solar-ownership-1.webp",
     title: "solar ownership",
     texts: [
       "Purchase or finance with a loan.",
@@ -36,7 +36,7 @@ const solarOpportunities = [
     ],
   },
   {
-    image: "/images/solar-ownership-2.png",
+    image: "/images/solar-ownership-2.webp",
     title: "off the grid<br />(owned solar + batteries)",
     texts: [
       "Achieve energy independence from the utility grid",
@@ -59,12 +59,13 @@ export const SolarPanelsPage = () => {
           name="description"
           content="Professional solar panel installation in Beverly, MA & North Shore. Clean energy solutions with Mass Save rebates & financing. Call EcowaveUS at 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/solar-panels" />
       </Helmet>
       <MainPageComponentSolarPanels
         title="Harness the Sun, Power Your Future"
         content="Unlock maximum efficiency by pairing your solar panels with a high-efficiency heat pump. This powerful combination empowers you to heat and cool your home with clean, renewable energy, slashing your utility bills, increasing your home's value, and delivering complete energy independence."
-        backgroundImage="/images/solar-panels-background.png"
+        backgroundImage="/images/solar-panels-background.webp"
       />
       <Box width="100%">
         <WhySolar
@@ -96,7 +97,7 @@ export const SolarPanelsPage = () => {
           paddingTop={"90px"}
           paddingBottom={"90px"}
           sx={{
-            background: `url("/images/photo-background-savings.png") no-repeat center`,
+            background: `url("/images/photo-background-savings.webp") no-repeat center`,
             backgroundSize: "cover",
           }}
           display={"flex"}
@@ -175,8 +176,8 @@ export const SolarPanelsPage = () => {
         </Box>
         <OursBrands
           images={[
-            "/images/brands/enphase.png",
-            "/images/brands/solar-edge-logo.png",
+            "/images/brands/enphase.webp",
+            "/images/brands/solar-edge-logo.webp",
           ]}
         />
         <Areas />
@@ -205,7 +206,7 @@ const TypesText = styled(Typography)`
   color: #fff;
   font-size: 16px !important;
   line-height: 151% !important;
-  font-family: Roboto !important;
+  font-family: Inter !important;
   text-align: center;
 `;
 const ProccesComponent = styled.div`

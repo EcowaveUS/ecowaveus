@@ -8,9 +8,8 @@ export const SwitchFuture = () => {
     <Box
       height={isDesktop ? "800px" : "640px"}
       sx={{
-        backgroundImage: `url(/images/${
-          isDesktop ? "wind-farm-desktop" : "wind-farm-mobile"
-        }.png)`,
+        backgroundImage: `url(/images/${isDesktop ? "wind-farm-desktop.webp" : "wind-farm-mobile.webp"
+          })`,
         backgroundSize: "cover",
         backgroundPosition: "left",
         backgroundRepeat: "no-repeat",
@@ -46,6 +45,7 @@ export const SwitchFuture = () => {
             Heat Pump Leaders
           </Typography>
           <Typography
+            component="h1"
             marginTop={isDesktop ? "24px" : "20px"}
             fontWeight={600}
             fontFamily={"Inter !important"}

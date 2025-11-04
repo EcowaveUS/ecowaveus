@@ -27,7 +27,7 @@ export const InstallationProcess = () => {
           fontSize={isDesktop ? "48px" : "32px"}
           lineHeight={isDesktop ? "58px" : "40px"}
           fontWeight={isDesktop ? 600 : 800}
-          fontFamily={isDesktop ? "Inter !important" : "Montserrat !important"}
+          fontFamily={"Inter !important"}
           color={"#252529"}
         >
           Installation Process
@@ -93,7 +93,7 @@ export const InstallationProcess = () => {
                       letterSpacing={
                         isDesktop ? "0 !important" : "1% !important"
                       }
-                      fontFamily={"Montserrat !important"}
+                      fontFamily={"Inter !important"}
                       color={"#252529"}
                     >
                       Contact Us
@@ -126,7 +126,7 @@ export const InstallationProcess = () => {
                       letterSpacing={
                         isDesktop ? "0 !important" : "1% !important"
                       }
-                      fontFamily={"Montserrat !important"}
+                      fontFamily={"Inter !important"}
                       color={"#252529"}
                     >
                       Get an Estimate
@@ -153,14 +153,14 @@ export const InstallationProcess = () => {
                     height={"100%"}
                     borderRadius={"8px"}
                     sx={{
-                      background: "url(/images/heat-pumps-ip-1.svg)",
+                      background: "url(/images/heat-pumps-ip-1.webp)",
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
                     }}
                   ></Box>
                 ) : (
                   <img
-                    src="/images/heat-pumps-ip-1.svg"
+                    src="/images/heat-pumps-ip-1.webp"
                     width={"100%"}
                     height={"auto"}
                     style={{ borderRadius: "8px" }}
@@ -232,7 +232,7 @@ export const InstallationProcess = () => {
                       letterSpacing={
                         isDesktop ? "0 !important" : "1% !important"
                       }
-                      fontFamily={"Montserrat !important"}
+                      fontFamily={"Inter !important"}
                       color={"#252529"}
                     >
                       Contract and Schedule
@@ -264,7 +264,7 @@ export const InstallationProcess = () => {
                       letterSpacing={
                         isDesktop ? "0 !important" : "1% !important"
                       }
-                      fontFamily={"Montserrat !important"}
+                      fontFamily={"Inter !important"}
                       color={"#252529"}
                     >
                       Contract and Schedule
@@ -296,7 +296,7 @@ export const InstallationProcess = () => {
                       letterSpacing={
                         isDesktop ? "0 !important" : "1% !important"
                       }
-                      fontFamily={"Montserrat !important"}
+                      fontFamily={"Inter !important"}
                       color={"#252529"}
                     >
                       Rebates and Incentives Forms
@@ -333,14 +333,14 @@ export const InstallationProcess = () => {
                     height={"100%"}
                     borderRadius={"8px"}
                     sx={{
-                      background: "url(/images/heat-pumps-ip-2.svg)",
+                      background: "url(/images/heat-pumps-ip-2.webp)",
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
                     }}
                   ></Box>
                 ) : (
                   <img
-                    src="/images/heat-pumps-ip-2.svg"
+                    src="/images/heat-pumps-ip-2.webp"
                     width={"100%"}
                     height={"auto"}
                     style={{ borderRadius: "8px" }}

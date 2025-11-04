@@ -1,33 +1,34 @@
 import React from "react";
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
+import LazyImage from "../common/LazyImage";
 
 export const WhyChooseUs: React.FC = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   const detailsInfo = [
     {
       id: 1,
-      image: "/images/why-hassle.png",
+      image: "/images/why-hassle.webp",
       title: "Hassle-Free Financial Applications & Rebate Claims",
       description:
         "We help you apply for financing and rebate forms, providing step-by-step guides to ensure you understand the process and maximize your incentives.",
     },
     {
       id: 2,
-      image: "/images/why-premium.png",
+      image: "/images/why-premium.webp",
       title: "Premium Quality Installations & Materials",
       description:
         "We are committed to providing premium quality installations, ensuring the best outcome for all our clients.",
     },
     {
       id: 3,
-      image: "/images/why-all.png",
+      image: "/images/why-all.webp",
       title: "Your All-in-one Partner for your Energy Solutions",
       description:
         "Discover how our comprehensive knowledge of available products ensures you achieve the best energy savings for your home.",
     },
     {
       id: 4,
-      image: "/images/why-support.png",
+      image: "/images/why-support.webp",
       title: "Direct Support",
       description:
         "We offer direct support to our customers, ensuring you receive all necessary assistance throughout your experience.",
@@ -60,7 +61,7 @@ export const WhyChooseUs: React.FC = () => {
               flexDirection={"column"}
               gap={"14px"}
             >
-              <img
+              <LazyImage
                 src={item.image}
                 alt={item.title}
                 style={{ width: "70px", height: "auto" }}

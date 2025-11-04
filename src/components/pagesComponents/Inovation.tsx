@@ -24,7 +24,7 @@ export const Inovation: React.FC<Props> = ({
         <Text>{content}</Text>
       </ContentWrapper>
       <ImageContainer>
-        <Image src='/images/innovation-01.png' />
+        <Image src='/images/innovation-01.webp' />
       </ImageContainer>
       <ImageWrapper>
         {

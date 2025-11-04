@@ -15,22 +15,22 @@ export const WhySolar: React.FC<Props> = ({ title, subTitle, color }) => {
     {
       id: 1,
       title: "Gain Energy Independence",
-      image: "/images/independence.png",
+      image: "/images/independence.webp",
     },
     {
       id: 2,
       title: "Reduce Your Electricity Bills",
-      image: "/images/reduce.png",
+      image: "/images/reduce.webp",
     },
     {
       id: 3,
       title: "Increase Your Home's Value",
-      image: "/images/home-value.png",
+      image: "/images/home-value.webp",
     },
     {
       id: 4,
       title: "Protect the Environment",
-      image: "/images/environment.png",
+      image: "/images/environment.webp",
     },
   ];
   return (

@@ -106,7 +106,7 @@ export default function FreeEstimateFinancing() {
               width: isDesktop ? "500px" : "100%",
               minWidth: isDesktop ? "500px" : "100%",
               height: "600px",
-              background: "url('/images/free-financing.jpg')",
+              background: "url('/images/free-financing.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

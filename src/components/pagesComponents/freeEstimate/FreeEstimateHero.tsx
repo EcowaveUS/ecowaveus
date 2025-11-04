@@ -8,7 +8,7 @@ export default function FreeEstimateHero() {
     <Box
       height={isDesktop ? "1000px" : "1010px"}
       sx={{
-        backgroundImage: `url(/images/free-estimate.jpg)`,
+        backgroundImage: `url(/images/free-estimate.webp)`,
         backgroundSize: "cover",
         backgroundPosition: isDesktop ? "center" : "60% center",
         backgroundRepeat: "no-repeat",
@@ -71,6 +71,7 @@ export default function FreeEstimateHero() {
             </b>
           </Typography>
           <Typography
+            component="h1"
             fontWeight={600}
             fontFamily={"Inter !important"}
             letterSpacing={"0 !important"}

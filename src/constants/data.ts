@@ -30,25 +30,25 @@ export const CardInfo = [
 ];
 
 export const brandImages = [
-  "/images/brands/mitsubishi-logo.png",
-  "/images/brands/lg-logo.png",
-  "/images/brands/fujitsu-logo.png",
-  "/images/brands/daikin-logo.png",
-  "/images/brands/tesla-logo.png",
-  "/images/brands/chargepoint-logo.png",
-  "/images/brands/bosch-logo.png",
-  "/images/brands/enphase-logo.png",
-  "/images/brands/legrand-logo.png",
-  "/images/brands/siemens-logo.png",
+  "/images/brands/mitsubishi-logo.webp",
+  "/images/brands/lg-logo.webp",
+  "/images/brands/fujitsu-logo.webp",
+  "/images/brands/daikin-logo.webp",
+  "/images/brands/tesla-logo.webp",
+  "/images/brands/chargepoint-logo.webp",
+  "/images/brands/bosch-logo.webp",
+  "/images/brands/enphase-logo.webp",
+  "/images/brands/legrand-logo.webp",
+  "/images/brands/siemens-logo.webp",
 ];
 
 export const brandImagesNew = [
-  "/images/brands-new/mitsubishi.png",
-  // "/images/brands-new/lg.png",
+  "/images/brands-new/mitsubishi.webp",
+  // "/images/brands-new/lg.webp",
   "/images/brands-new/bosch.png",
-  "/images/brands-new/fujitsu.png",
+  "/images/brands-new/fujitsu.webp",
   "/images/brands-new/daikin.png",
-  "/images/brands-new/tesla.png",
+  "/images/brands-new/tesla.webp",
 ];
 
 export const services = [

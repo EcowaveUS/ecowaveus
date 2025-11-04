@@ -9,7 +9,7 @@ export const MainPageComponentHeatPump = () => {
     <Box
       height={isDesktop ? "800px" : "820px"}
       sx={{
-        backgroundImage: `url(/images/heat-pumps-light.jpg)`,
+        backgroundImage: `url(/images/heat-pumps-light.webp)`,
         backgroundSize: "cover",
         backgroundPosition: isDesktop ? "center" : "60% center",
         backgroundRepeat: "no-repeat",
@@ -72,6 +72,7 @@ export const MainPageComponentHeatPump = () => {
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography>
           <Typography
+            component="h1"
             mt={"24px"}
             fontWeight={600}
             fontFamily={"Inter !important"}

@@ -48,7 +48,7 @@ export const PowerfulCombination: React.FC = () => {
         }}
       >
         <img
-          src="/images/solar-graphic.png"
+          src="/images/solar-graphic.webp"
           style={{
             width: "100%",
             height: "auto",
@@ -62,7 +62,7 @@ export const PowerfulCombination: React.FC = () => {
               key={index}
               style={{ display: "flex", gap: "16px", alignItems: "center" }}
             >
-              <img src="/images/blue-bullet-point.png" width={30} />
+              <img src="/images/blue-bullet-point.webp" width={30} alt="Benefit point" />
               <p
                 dangerouslySetInnerHTML={{ __html: text }}
                 style={{ color: "black" }}

@@ -21,7 +21,7 @@ export default function FreeEstimateContact() {
       component={"div"}
       position={"relative"}
       sx={{
-        background: "url('/images/free-estimate-contact.jpg')",
+        background: "url('/images/free-estimate-contact.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center 25%",
         backgroundRepeat: "no-repeat",

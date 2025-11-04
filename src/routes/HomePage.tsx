@@ -10,19 +10,22 @@ import { brandImagesNew } from "../constants/data";
 import Areas from "../components/AreaServices/Areas";
 // import { Grid as MuiGrid } from "@mui/material";
 import { ExpertiseComponent } from "../components/pagesComponents/ExpertiseComponent";
+import SchemaMarkup from "../components/seo/SchemaMarkup";
 
 export const HomePage = () => {
   // const Grid = motion(MuiGrid);
   return (
     <>
       <Helmet>
-        <title>ecoWave | Renewable Energy | Solar Energy in Beverly, MA</title>
+        <title>Heat Pumps & HVAC in Beverly, MA | EcowaveUS</title>
         <meta
           name="description"
-          content="Our solar installation company in Beverly offers solar battery storage, EV charger installations, electric heat pumps and more. Call 978-500-4081 to get started!"
+          content="Professional heat pump & HVAC installation in Beverly, MA. Mass Save rebates available. Energy-efficient heating & cooling solutions. Call EcowaveUS at 978-500-4081 for free estimate!"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/" />
       </Helmet>
+      <SchemaMarkup type="LocalBusiness" />
       <SwitchFuture />
       <OursBrands images={brandImagesNew} />
       <ExpertiseComponent />

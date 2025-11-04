@@ -6,11 +6,11 @@ export const FixedFooter = () => {
   return (
     <Container>
       <ItemContainer component={Link} to={"/contact-us#contact-form"}>
-        <ItemIcon src={"/images/icons/icon-book.svg"} />
+        <ItemIcon src={"/images/icons/icon-book.webp"} />
         <ItemText>Book</ItemText>
       </ItemContainer>
       <ItemContainer component={Link} to="tel:+19785004081">
-        <ItemIcon src={"/images/icons/icon-call.svg"} />
+        <ItemIcon src={"/images/icons/icon-call.webp"} />
         <ItemText>Call</ItemText>
       </ItemContainer>
       <ItemContainer
@@ -18,7 +18,7 @@ export const FixedFooter = () => {
         sx={{ borderRight: "none" }}
         to="mailto:info@ecowaveus.com"
       >
-        <ItemIcon src={"/images/icons/icon-email.svg"} />
+        <ItemIcon src={"/images/icons/icon-email.webp"} />
         <ItemText>Email</ItemText>
       </ItemContainer>
     </Container>

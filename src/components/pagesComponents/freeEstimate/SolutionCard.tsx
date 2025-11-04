@@ -29,7 +29,7 @@ export default function SolutionCard({
       <img
         width={"24px"}
         height={"24px"}
-        src={"/images/plus_in_circle.png"}
+        src={"/images/plus_in_circle.webp"}
         alt={"plus"}
         style={{ position: "absolute", top: "16px", right: "16px" }}
       />

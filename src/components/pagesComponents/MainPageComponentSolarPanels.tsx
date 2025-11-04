@@ -110,7 +110,7 @@ const Title = styled.h1<Props>`
 const Text = styled.p<Props>`
   width: 90%;
   color: var(--White, var(--fore-allways---white, #fff));
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;

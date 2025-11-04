@@ -33,9 +33,7 @@ export const OurSolutions = () => {
             align="center"
             color={isDesktop ? "#181A1C" : "#252529"}
             lineHeight={isDesktop ? "100%" : "32px"}
-            fontFamily={
-              isDesktop ? "AvenirNext !important" : "Inter !important"
-            }
+            fontFamily={"Inter !important"}
           >
             Empowering your sustainable choices
           </Typography>

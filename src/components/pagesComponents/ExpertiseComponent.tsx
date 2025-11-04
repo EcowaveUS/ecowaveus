@@ -1,5 +1,5 @@
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
-import expertiseImage from "../../assets/images/expertise.svg";
+import expertiseImage from "../../assets/images/expertise.webp";
 
 export const ExpertiseComponent = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));

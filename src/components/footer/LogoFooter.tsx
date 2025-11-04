@@ -13,7 +13,7 @@ export const LogoFooter = () => {
       }}
     >
       <Link to="/">
-        <img src={logoFooter} height={"auto"} width={"183px"} />
+        <img src={logoFooter} height={"auto"} width={"183px"} alt="EcowaveUS Logo" />
       </Link>
       <Typography
         fontSize="16px"

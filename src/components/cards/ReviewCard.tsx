@@ -94,7 +94,7 @@ const DateText = styled.p`
 `;
 const ReviewTitle = styled.p`
   color: #343434;
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -104,7 +104,7 @@ const ReviewTitle = styled.p`
 `;
 const Reviewtext = styled.p`
   color: #343434;
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

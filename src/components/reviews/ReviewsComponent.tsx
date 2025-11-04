@@ -65,7 +65,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
                 display: "flex",
                 justifyContent: isDesktop ? "flex-start" : "center",
               }}
-              src="/images/google-review.png"
+              src="/images/google-review.webp"
               width={"150px"}
               height="auto"
             />
@@ -135,7 +135,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
                 }}
               >
                 <img
-                  src="images/icons/icon-chevron-left.svg"
+                  src="images/icons/icon-chevron-left.webp"
                   alt="arrow-left"
                 />
               </Box>
@@ -165,7 +165,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
                 }}
               >
                 <img
-                  src="/images/icons/icon-chevron-right.svg"
+                  src="/images/icons/icon-chevron-right.webp"
                   alt="arrow-right"
                 />
               </Box>

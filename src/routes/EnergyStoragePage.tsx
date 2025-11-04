@@ -20,13 +20,14 @@ export const EnergyStoragePage = () => {
           name="description"
           content="Reliable home battery storage systems in Beverly, MA. Solar battery backup for power outages & energy savings. Professional installation by EcowaveUS. Call 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/energy-storage" />
       </Helmet>
       <MainPageComponent
         title="Storing Power, Empowering Lives"
         content="Unlock the full potential of sustainable living with our energy storage systems, designed specifically for your home. At EcowaveUS, we believe that every homeowner deserves access to affordable and reliable energy storage solutions. Our energy storage systems not only provide a safety net against power outages, but also allow you to make the most of your solar installations, storing excess energy for use any time."
         pathLocation={pathLocation}
-        backgroundImage="/images/energy-storage01.jpg"
+        backgroundImage="/images/energy-storage01.webp"
       />
       <StorageAdvantages />
       <RebatesIncentives route={pathLocation}>
@@ -55,9 +56,9 @@ export const EnergyStoragePage = () => {
         {/* <BrandsWrapper> */}
         <OursBrands
           images={[
-            "/images/brands/tesla-logo.png",
-            "/images/brands/enphase.png",
-            "/images/brands/franklinwh.png",
+            "/images/brands/tesla-logo.webp",
+            "/images/brands/enphase.webp",
+            "/images/brands/franklinwh.webp",
           ]}
         />
         {/* </BrandsWrapper> */}
@@ -76,7 +77,7 @@ export const EnergyStoragePage = () => {
 const Text = styled.p`
   color: #fff;
 
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 1.5rem;
   font-style: normal;
   line-height: 1.8rem;

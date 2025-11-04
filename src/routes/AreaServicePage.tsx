@@ -97,6 +97,7 @@ export const AreaServicePage = () => {
           name="description"
           content="EcowaveUS serves Beverly, Salem, Gloucester, Marblehead & North Shore MA. Heat pumps, solar, EV chargers & energy storage installation. Call 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/locations" />
       </Helmet>
       <StyledPage

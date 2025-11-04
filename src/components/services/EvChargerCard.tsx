@@ -94,7 +94,7 @@ const TextContent = styled.p`
   color: var(--White, var(--fore-allways---white, #1c1f35));
 
   color: #1c1f35;
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

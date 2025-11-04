@@ -87,7 +87,7 @@ const Wrapper = styled.div`
   background: linear-gradient(90deg, #003B76 -1.19%, #4579AD 57.78%, #7CB6F1 115.08%), no-repeat, top, top, fixed;
   border-radius: 3rem 3rem 0 0;
 `;
-const Title = styled.h1`
+const Title = styled.h2`
   color: #fff;
   text-align: center;
   font-family: Inter;

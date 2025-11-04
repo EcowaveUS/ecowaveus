@@ -21,7 +21,7 @@ export default function SavingComponent({
       <img
         width={"40px"}
         height={"auto"}
-        src="/images/circle-check.png"
+        src="/images/circle-check.webp"
         alt="saving-icon"
       />
       <Typography

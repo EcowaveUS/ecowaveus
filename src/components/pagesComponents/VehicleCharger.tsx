@@ -9,7 +9,7 @@ const levelData = [
     a: "Standard Household Outlet",
     b: "Adds 2-5 miles of range per hour",
     c: "Everyday charging at home, simply plug it in overnight and you're ready to go by morning.",
-    image: "6.png",
+    image: "6.webp",
   },
   {
     color: "#cbeaeb",
@@ -19,7 +19,7 @@ const levelData = [
     a: "Special 240V Outlet (like for an oven)",
     b: "Adds 10-30 miles of range per hour",
     c: "Home or workplace charging when you need a full charge in just a few hours.",
-    image: "7.png",
+    image: "7.webp",
   },
   {
     color: "#d5d5d5",
@@ -28,7 +28,7 @@ const levelData = [
     a: "Specialized DC Fast Charging Equipment",
     b: "Adds 150-350+ miles of range in under an hour",
     c: "Public charging stations, enabling long-distance travel with minimal downtime.",
-    image: "8.png",
+    image: "8.webp",
   },
 ];
 
@@ -65,19 +65,19 @@ export const VehicleCharger = ({ level }: { level: number }) => {
         <InfoText style={{ marginTop: "12px" }}>
           {levelData[level].title}
         </InfoText>
-        <img src="/images/ev-charger-tab/2.png" width={40} />
+        <img src="/images/ev-charger-tab/2.webp" width={40} alt="Voltage indicator" />
         <InfoText style={{ marginBottom: "12px" }}>
           {levelData[level].v}
         </InfoText>
-        <img src="/images/ev-charger-tab/3.png" width={30} />
+        <img src="/images/ev-charger-tab/3.webp" width={30} alt="Amperage indicator" />
         <InfoText style={{ marginBlock: "12px" }}>
           {levelData[level].a}
         </InfoText>
-        <img src="/images/ev-charger-tab/4.png" width={30} />
+        <img src="/images/ev-charger-tab/4.webp" width={30} alt="Power indicator" />
         <InfoText style={{ marginBlock: "12px" }}>
           {levelData[level].b}
         </InfoText>
-        <img src="/images/ev-charger-tab/5.png" width={30} />
+        <img src="/images/ev-charger-tab/5.webp" width={30} alt="Charging time indicator" />
         <InfoText style={{ marginTop: "12px" }}>{levelData[level].c}</InfoText>
       </InfoContainer>
     </div>

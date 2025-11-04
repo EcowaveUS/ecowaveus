@@ -29,7 +29,7 @@ const StyledTopFooter = styled.div`
   }
 `;
 const Title = styled.h3`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
   color: #fff;

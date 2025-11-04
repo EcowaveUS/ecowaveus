@@ -32,6 +32,7 @@ export const ContactPage = () => {
           name="description"
           content="Contact EcowaveUS for free estimates on heat pumps, solar, EV chargers & energy storage in Beverly, MA. Expert installation & Mass Save rebates. Call 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/contact-us" />
       </Helmet>
       <BackgroundComponent></BackgroundComponent>
@@ -54,25 +55,38 @@ const StyledPage = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 8rem;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
 `;
 const BackgroundComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 904px; /* 100% of the viewport height */
-  background-image: url("/images/contact-us-background-2.jpg");
+  height: 100vh;
+  background-image: url("/images/contact-us-background-2.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: -58rem;
+  background-position: center;
   z-index: -1;
-  background-position: bottom;
-  @media (max-width: 1024px) {
-    // background-position: 50% 50%;
-    background-size: cover;
+  
+  @media (max-width: 768px) {
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
   }
 `;
 const WrapperComponents = styled.div`
@@ -86,24 +100,44 @@ const WrapperComponents = styled.div`
   border-radius: 16px;
   padding: 2rem;
   gap: 24px;
+  margin-bottom: 4rem;
   @media (max-width: 1024px) {
     flex-direction: column;
     width: 90%;
+    margin-bottom: 3rem;
+  }
+  @media (max-width: 360px) {
+    width: 95%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
   }
 `;
 const Title = styled.h1`
   color: var(--fore-allways---white, #fff);
-
   font-family: Inter;
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  text-transform: capitalize;
   text-align: left;
   width: 80%;
-  margin: 18rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
+  position: relative;
+  z-index: 1;
+  
   @media (max-width: 768px) {
     width: 90%;
+    font-size: 2.5rem;
+    margin: 2rem 0 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+  
+  @media (max-width: 375px) {
+    font-size: 1.8rem;
+    margin: 1rem 0 1rem 0;
   }
 `;

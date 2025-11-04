@@ -21,7 +21,8 @@ const Roadmap: React.FC = () => {
   useEffect(() => {
     const fetchAndParseXML = async () => {
       try {
-        const response = await axios.get("/sitemap.xml");
+        // Use a local sitemap file instead of making a cross-origin request
+        const response = await axios.get("/sitemap-local.xml");
         const wordXML = response.data;
 
         // Extract the relevant part of the XML (assuming it's in <w:t> tags)

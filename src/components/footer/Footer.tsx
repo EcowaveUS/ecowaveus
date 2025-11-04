@@ -78,6 +78,7 @@ export const Footer = () => {
             links={[
               { text: "About Us", url: "/about-us" },
               { text: "Reviews", url: "/contact-us#contact-form" },
+              { text: "Free Estimate", url: "/free-estimate" },
             ]}
             clickable
           />

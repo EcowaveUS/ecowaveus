@@ -9,6 +9,7 @@ import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 import { WhyChooseUs } from "../components/pagesComponents/WhyChooseUs";
 import { InstallationProcessUpdated } from "../components/pagesComponents/InstallationProcessUpdated";
 import { Financing } from "../components/pagesComponents/Financing";
+import SchemaMarkup from "../components/seo/SchemaMarkup";
 
 export const HeatPumpsPage = () => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
@@ -20,10 +21,19 @@ export const HeatPumpsPage = () => {
         <title>Heat Pumps in Beverly, MA | Installation | EcowaveUS</title>
         <meta
           name="description"
-          content="Professional heat pump installation in Beverly, MA. Energy-efficient heating & cooling solutions with Mass Save rebates. Call EcowaveUS at 978-500-4081 for a free estimate!"
+          content="Expert heat pump installation in Beverly, Salem, Gloucester & Manchester-by-the-Sea. Mass Save certified installers. 0% HEAT loan financing available. Call 978-500-4081!"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/heat-pumps" />
       </Helmet>
+      <SchemaMarkup 
+        type="Service" 
+        data={{
+          name: "Heat Pump Installation",
+          description: "Professional heat pump installation in Beverly, MA with Mass Save rebates",
+          price: "Contact for pricing"
+        }} 
+      />
       <MainPageComponentHeatPump />
       <ServiceBenefits
         title="Benefits of Energy-Efficient Heating & Cooling"
@@ -37,7 +47,7 @@ export const HeatPumpsPage = () => {
         height={isTablet ? "775px" : "1340px"}
         width={"100%"}
         sx={{
-          background: `url("/images/trees.svg") no-repeat center`,
+          background: `url("/images/trees.webp") no-repeat center`,
           backgroundSize: "cover",
         }}
       >

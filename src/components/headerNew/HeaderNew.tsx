@@ -101,7 +101,7 @@ export const HeaderNew = () => {
           <InfoContainer>
             <IconContainer>
               <img
-                src="/images/icons/icon-clock-white.svg"
+                  src="/images/icons/icon-clock-white.webp"
                 alt="icon-clock-white"
               />
             </IconContainer>
@@ -110,7 +110,7 @@ export const HeaderNew = () => {
           <InfoContainer>
             <IconContainer>
               <img
-                src="/images/icons/icon-email-white.svg"
+                  src="/images/icons/icon-email-white.webp"
                 alt="icon-email-white"
               />
             </IconContainer>
@@ -125,7 +125,7 @@ export const HeaderNew = () => {
           <InfoContainer>
             <IconContainer>
               <img
-                src="/images/icons/icon-phone-white.svg"
+                  src="/images/icons/icon-phone-white.webp"
                 alt="icon-phone-white"
               />
             </IconContainer>
@@ -241,7 +241,7 @@ export const HeaderNew = () => {
       >
         <img
           onClick={() => setIsOpenMobileMenu(true)}
-          src="/images/icons/icon-menu-blue.svg"
+              src="/images/icons/icon-menu-blue.webp"
           width={"48.5"}
           height={"48.5"}
           alt="icon-menu-blue"
@@ -270,7 +270,7 @@ export const HeaderNew = () => {
           <img
             width={22}
             height={22}
-            src="/images/icons/icon-phone-fill.svg"
+                src="/images/icons/icon-phone-fill.webp"
             alt="icon-phone-fill"
           />
         </Box>
@@ -286,7 +286,7 @@ export const HeaderNew = () => {
           href="tel:+19785004081"
         >
           <img
-            src="/images/icons/icon-phone-black.svg"
+            src="/images/icons/icon-phone-black.webp"
             alt="icon-phone-black"
           />
         </Box> */}
@@ -317,7 +317,7 @@ export const HeaderNew = () => {
         >
           <Link to={"/"}>
             <img
-              src="/images/logo-header.png"
+                    src="/images/logo-header.png"
               alt="logo"
               width={"121px"}
               height={"auto"}
@@ -334,7 +334,7 @@ export const HeaderNew = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => setIsOpenMobileMenu(false)}
           >
-            <img src="/images/icons/icon-x-black.svg" alt="icon-x-black" />
+                  <img src="/images/icons/icon-x-black.webp" alt="icon-x-black" />
           </Box>
         </Box>
       </Box>
@@ -440,7 +440,7 @@ const LinkItem1 = styled(Link)({
   fontWeight: "700",
   color: "#FFFFFF",
   lineHeight: "20px",
-  fontFamily: "Montserrat !important",
+  fontFamily: "Inter !important",
   letterSpacing: "1% !important",
 });
 

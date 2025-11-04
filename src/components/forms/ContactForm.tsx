@@ -113,8 +113,8 @@ export const ContactForm = ({
 
   const options = [
     { label: "Select an option", value: "" },
-    { label: "EV Chargers", value: "EV Chargers" },
     { label: "Heating & Cooling", value: "Heat Pumps" },
+    { label: "EV Chargers", value: "EV Chargers" },
     { label: "Solar Panels", value: "Solar Panels" },
     { label: "Energy Storage", value: "Energy Storage" },
     {
@@ -263,7 +263,7 @@ export const ContactForm = ({
                   color: "#d32f2f",
                   fontSize: "0.75rem",
                   margin: "3px 14px 0",
-                  fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+                  fontFamily: "Inter, Helvetica, Arial, sans-serif",
                 }}
               >
                 {formik.errors.message}
@@ -293,7 +293,7 @@ export const ContactForm = ({
             border: "none",
             cursor: "pointer",
             transition: "background 0.3s ease",
-            fontFamily: "Montserrat !important",
+            fontFamily: "Inter !important",
             "&:hover": { backgroundColor: btnColor },
           }}
           type="submit"
@@ -304,7 +304,7 @@ export const ContactForm = ({
           <MessageBox>
             <img
               src={
-                isSending ? "/images/blue-info.png" : "/images/green-check.png"
+                isSending ? "/images/blue-info.webp" : "/images/green-check.webp"
               }
               alt={isSending ? "blue-info" : "green-check"}
               width={15}

@@ -91,7 +91,7 @@ const ContentWrapper = styled.div`
 `;
 const Title = styled.p`
   color: var(--fore-allways---white, #FFF);
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -102,7 +102,7 @@ const Title = styled.p`
 const CategoryText = styled.p`
   padding-left: 0.5rem;
   color: #1FA500;
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

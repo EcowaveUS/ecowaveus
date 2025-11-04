@@ -9,7 +9,7 @@ export default function FreeEstimateMoreSolutions() {
       component={"div"}
       position={"relative"}
       sx={{
-        background: "url('/images/contact-us-background-2.jpg')",
+        background: "url('/images/contact-us-background-2.webp')",
         backgroundSize: "cover",
         backgroundPosition: "bottom",
         backgroundRepeat: "no-repeat",
@@ -49,25 +49,25 @@ export default function FreeEstimateMoreSolutions() {
           height={100}
           width={76.06}
           title="Electrical Service Upgrade"
-          image="/images/solution-1.png"
+          image="/images/solution-1.webp"
         />
         <SolutionCard
           width={108.8}
           height={80}
           title="EV Chargers"
-          image="/images/solution-2.png"
+          image="/images/solution-2.webp"
         />
         <SolutionCard
           width={109.63}
           height={80}
           title="Whole-home batteries"
-          image="/images/solution-3.png"
+          image="/images/solution-3.webp"
         />
         <SolutionCard
           width={107.73}
           height={110}
           title="Solar Panels"
-          image="/images/solution-4.png"
+          image="/images/solution-4.webp"
         />
       </Box>
     </Box>

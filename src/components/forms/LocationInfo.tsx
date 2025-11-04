@@ -29,7 +29,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-email-gray.svg" alt="envelope" />
+            <img src="/images/icons/icon-email-gray.webp" alt="envelope" />
           </Box>
           <Typography
             component={"a"}
@@ -52,7 +52,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-phone-gray.svg" alt="phone" />
+            <img src="/images/icons/icon-phone-gray.webp" alt="phone" />
           </Box>
           <Typography
             component={"a"}
@@ -75,7 +75,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-clock-gray.svg" alt="map" />
+            <img src="/images/icons/icon-clock-gray.webp" alt="map" />
           </Box>
           <Typography
             lineHeight={"20px"}
@@ -95,7 +95,7 @@ export const LocationInfo = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src="/images/icons/icon-map-gray.svg" alt="map" />
+            <img src="/images/icons/icon-map-gray.webp" alt="map" />
           </Box>
           <Typography
             lineHeight={"20px"}

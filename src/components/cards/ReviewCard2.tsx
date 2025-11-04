@@ -59,7 +59,7 @@ export const ReviewCard2: React.FC<ReviewCard2Props> = ({
       <Box display={"flex"} gap={"16px"} alignItems={"center"}>
         <Avatar
           style={{ width: "60px", height: "60px", borderRadius: 0 }}
-          src={`/images/avatars/avatar.png`}
+          src={`/images/avatars/avatar.webp`}
         />
         <div>
           <Typography

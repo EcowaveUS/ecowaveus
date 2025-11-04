@@ -24,7 +24,7 @@ export const InstallationProcessUpdated = () => {
           fontSize={isDesktop ? "48px" : "32px"}
           lineHeight={isDesktop ? "58px" : "40px"}
           fontWeight={isDesktop ? 600 : 800}
-          fontFamily={isDesktop ? "Inter !important" : "Montserrat !important"}
+          fontFamily={"Inter !important"}
           color={"#252529"}
         >
           Installation Process
@@ -106,13 +106,13 @@ export const InstallationProcessUpdated = () => {
                 style={{
                   aspectRatio: "2/3",
                   width: "90%",
-                  background: `url(/images/why-grid/1.png) center / cover`,
+                  background: `url(/images/why-grid/1.webp) center / cover`,
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "1/1",
-                  background: `url(/images/why-grid/2.png) center / cover`,
+                  background: `url(/images/why-grid/2.webp) center / cover`,
                 }}
               />
             </GalleryBox>
@@ -120,19 +120,19 @@ export const InstallationProcessUpdated = () => {
               <GalleryImage
                 style={{
                   aspectRatio: "2/3",
-                  background: `url(/images/why-grid/3.png) center / cover`,
+                  background: `url(/images/why-grid/3.webp) center / cover`,
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "2/3",
-                  background: `url(/images/why-grid/4.png) 29% center / cover`,
+                  background: `url(/images/why-grid/4.webp) 29% center / cover`,
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "1/1",
-                  background: `url(/images/why-grid/5.png) center / cover`,
+                  background: `url(/images/why-grid/5.webp) center / cover`,
                 }}
               />
             </GalleryBox>
@@ -140,20 +140,20 @@ export const InstallationProcessUpdated = () => {
               <GalleryImage
                 style={{
                   aspectRatio: "2/3",
-                  background: `url(/images/why-grid/6.png) 70% center / cover`,
+                  background: `url(/images/why-grid/6.webp) 70% center / cover`,
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "2/3",
-                  background: `url(/images/why-grid/7.png) center / cover`,
+                  background: `url(/images/why-grid/7.webp) center / cover`,
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "4/3",
                   marginBottom: "50px",
-                  background: `url(/images/why-grid/8.png) center / cover`,
+                  background: `url(/images/why-grid/8.webp) center / cover`,
                 }}
               />
             </GalleryBox>
@@ -161,20 +161,20 @@ export const InstallationProcessUpdated = () => {
               <GalleryImage
                 style={{
                   aspectRatio: "1/1",
-                  background: "url(/images/why-grid/9.png) center 0% / 130%",
+                  background: "url(/images/why-grid/9.webp) center 0% / 130%",
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "1/1",
-                  background: `url(/images/why-grid/10.png) center / cover`,
+                  background: `url(/images/why-grid/10.webp) center / cover`,
                 }}
               />
               <GalleryImage
                 style={{
                   aspectRatio: "2/3",
                   width: "80%",
-                  background: `url(/images/why-grid/11.png) center / cover`,
+                  background: `url(/images/why-grid/11.webp) center / cover`,
                 }}
               />
             </GalleryBox>

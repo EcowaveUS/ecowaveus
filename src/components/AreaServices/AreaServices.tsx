@@ -9,7 +9,7 @@ export const AreaServices = ({ cat = 1 }: { cat?: number }) => {
         fontWeight={isDesktop ? 600 : 800}
         color={"#FFFFFF"}
         lineHeight={isDesktop ? "58px" : "32px"}
-        fontFamily={isDesktop ? "Inter !important" : "Montserrat !important"}
+        fontFamily={"Inter !important"}
       >
         Service Area
       </Typography>

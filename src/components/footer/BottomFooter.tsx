@@ -32,17 +32,28 @@ export const BottomFooter = () => {
         >
           © {new Date().getFullYear()} Ecowave. All Rights Reserved.
         </Typography>
-        <Typography
-          component={Link}
-          to="/terms-and-conditions"
-          color="#ffffff"
-          fontSize={isDesktop ? "12px" : "14px"}
-          fontWeight={isDesktop ? "500" : "400"}
-          lineHeight={isDesktop ? "150%" : "20px"}
-          fontFamily={"Inter !important"}
+        
+        {/* Internal Links for SEO Crawlability */}
+        <Box
+          component="div"
+          display="flex"
+          flexDirection={isDesktop ? "row" : "column"}
+          gap={isDesktop ? "24px" : "12px"}
+          alignItems="center"
         >
-          Terms and Conditions
-        </Typography>
+          <Typography
+            component={Link}
+            to="/terms-and-conditions"
+            color="#ffffff"
+            fontSize={isDesktop ? "12px" : "14px"}
+            fontWeight={isDesktop ? "500" : "400"}
+            lineHeight={isDesktop ? "150%" : "20px"}
+            fontFamily={"Inter !important"}
+            sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
+          >
+            Terms and Conditions
+          </Typography>
+        </Box>
         <Box
           component="div"
           display="flex"
@@ -66,8 +77,8 @@ export const BottomFooter = () => {
                 height={"18px"}
                 src={
                   isDesktop
-                    ? "/images/icons/icon-google.svg"
-                    : "/images/icons/icon-google.svg"
+                    ? "/images/icons/icon-google.webp"
+                    : "/images/icons/icon-google.webp"
                 }
                 alt="google"
               />
@@ -90,8 +101,8 @@ export const BottomFooter = () => {
               <img
                 src={
                   isDesktop
-                    ? "/images/icons/icon-facebook-white-1.svg"
-                    : "/images/icons/icon-facebook-white-2.svg"
+                    ? "/images/icons/icon-facebook-white-1.webp"
+                    : "/images/icons/icon-facebook-white-2.webp"
                 }
                 alt="facebook"
               />
@@ -113,7 +124,7 @@ export const BottomFooter = () => {
               justifyContent={"center"}
             >
               <img
-                src={"/images/icons/icon-instagram-white.svg"}
+                src={"/images/icons/icon-instagram-white.webp"}
                 alt="instagram"
               />
             </Box>
@@ -133,7 +144,7 @@ export const BottomFooter = () => {
               justifyContent={"center"}
             >
               <img
-                src={"/images/icons/icon-linkedin-white.svg"}
+                src={"/images/icons/icon-linkedin-white.webp"}
                 alt="linkedin"
               />
             </Box>

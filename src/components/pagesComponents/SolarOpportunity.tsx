@@ -42,7 +42,7 @@ export const SolarOpportunity = ({
           {order === 1 && _index === 2 && (
             <FixedRedLabel>Deadline: December 31st</FixedRedLabel>
           )}
-          <img src="/images/green-bullet-points.png" width={20} />
+          <img src="/images/green-bullet-points.webp" width={20} />
           <InfoText>{text}</InfoText>
         </React.Fragment>
       ))}

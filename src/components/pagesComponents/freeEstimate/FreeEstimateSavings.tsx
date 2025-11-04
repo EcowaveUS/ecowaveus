@@ -8,7 +8,7 @@ export default function FreeEstimateSavings() {
       component={"div"}
       position={"relative"}
       sx={{
-        background: "url('/images/trees.svg')",
+        background: "url('/images/trees.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
