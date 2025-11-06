@@ -26,13 +26,13 @@ export const HeaderNew = () => {
       position={"sticky"}
       width={"100%"}
       top={"0"}
-      bgcolor={"#FFFFFF0D"}
+      bgcolor={"#1E40AF33"}
       left={0}
       sx={{
         backdropFilter: "blur(5px)",
       }}
       marginBottom={isDesktop ? "-80px" : "-150px"}
-      borderBottom={"1px solid #FFFFFF0D"}
+      borderBottom={"1px solid #3B82F633"}
     >
       <Box
         component={"div"}
@@ -142,13 +142,13 @@ export const HeaderNew = () => {
         position={"sticky"}
         width={"100%"}
         top={"0"}
-        bgcolor={"#FFFFFF0D"}
+        bgcolor={"#1E40AF33"}
         left={0}
         sx={{
           backdropFilter: "blur(5px)",
         }}
         marginBottom={isDesktop ? "-80px" : "0"}
-        borderBottom={"1px solid #FFFFFF0D"}
+        borderBottom={"1px solid #3B82F633"}
       >
         <Box
           component={"div"}

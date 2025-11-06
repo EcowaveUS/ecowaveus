@@ -8,10 +8,9 @@ export const SwitchFuture = () => {
     <Box
       height={isDesktop ? "800px" : "640px"}
       sx={{
-        backgroundImage: `url(/images/${isDesktop ? "wind-farm-desktop.webp" : "wind-farm-mobile.webp"
-          })`,
+        backgroundImage: `url(/images/home_hero_bg.webp)`,
         backgroundSize: "cover",
-        backgroundPosition: "left",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
       position={"relative"}
