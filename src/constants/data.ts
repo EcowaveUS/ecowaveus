@@ -10,6 +10,8 @@ import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.svg";
 import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.svg";
 import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage-new.svg";
+import iconElectricalUpgrades from "../assets/icons/Icon-electrical-upgrades.svg";
+import iconHPWaterHeaters from "../assets/icons/Icon-h-p-water-heaters.svg";
 
 export const CardInfo = [
   {
@@ -79,6 +81,20 @@ export const services = [
     url: "/solar-panels",
     icon: iconHeatPumps,
     iconNew: iconEnergyStorageNew,
+  },
+  {
+    title: "Electrical Upgrades",
+    content: "Future-Proof Power: Expand capacity, improve safety, and prep your home for heat pumps, EVs, solar, and batteries.",
+    url: "/",
+    icon: iconHeatPumps,
+    iconNew: iconElectricalUpgrades,
+  },
+  {
+    title: "H.P. Water Heaters",
+    content: "Heat Smart, Save More: Faster recovery, better insulation, and steady performance for busy homes.",
+    url: "/",
+    icon: iconHeatPumps,
+    iconNew: iconHPWaterHeaters,
   },
 ];
 

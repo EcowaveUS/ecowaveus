@@ -58,112 +58,225 @@ export const OurSolutions = () => {
           marginLeft: "auto",
           marginRight: "auto",
         }} />
-        <Swiper
-          modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
-          className="solutions-swiper"
-          spaceBetween={0}
-          slidesPerView={"auto"}
-          freeMode={true}
-          style={{ maxWidth: "100%" }}
-          slidesOffsetBefore={isWide ? 0 : 20}
-          slidesOffsetAfter={isWide ? 0 : 20}
-          pagination={{
-            clickable: true,
-            dynamicBullets: false,
-          }}
+        <Box
+          component={"div"}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={"24px"}
         >
-          {services.map((s, _idx) => (
-            <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
-              <Box
-                borderRadius={
-                  _idx === 0
-                    ? "12px 0 0 12px"
-                    : _idx === services.length - 1
-                    ? "0 12px 12px 0"
-                    : "0"
-                }
-                padding={"24px"}
-                paddingRight={_idx !== services.length - 1 ? "8px" : "24px"}
-                bgcolor={"white"}
-              >
-                <Box display={"flex"} alignItems={"stretch"}>
-                  <Box
-                    component={Link}
-                    to={s.url}
-                    width={"259px"}
-                    minWidth={"259px"}
-                    maxWidth={"259px"}
-                    height={"268px"}
-                    display={"flex"}
-                    flexDirection={"column"}
-                    justifyContent={"center"}
-                  >
+          <Swiper
+            modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
+            className="solutions-swiper"
+            spaceBetween={0}
+            slidesPerView={"auto"}
+            freeMode={true}
+            style={{ maxWidth: "100%" }}
+            slidesOffsetBefore={isWide ? 0 : 20}
+            slidesOffsetAfter={isWide ? 0 : 20}
+            pagination={{
+              clickable: true,
+              dynamicBullets: false,
+            }}
+          >
+            {services.slice(0, 4).map((s, _idx) => (
+              <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
+                <Box
+                  borderRadius={
+                    _idx === 0
+                      ? "12px 0 0 12px"
+                      : _idx === 3
+                      ? "0 12px 12px 0"
+                      : "0"
+                  }
+                  padding={"24px"}
+                  paddingRight={_idx !== 3? "8px" : "24px"}
+                  bgcolor={"white"}
+                >
+                  <Box display={"flex"} alignItems={"stretch"}>
                     <Box
-                      width={"48px"}
-                      height={"48px"}
-                      borderRadius={"999px"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"center"}
-                      bgcolor={"#1FA500"}
-                      border={"1px solid #FFFFFF1A"}
-                    >
-                      <img src={s.iconNew} alt={s.title} />
-                    </Box>
-                    <Typography
-                      marginTop={"24px"}
-                      fontWeight={600}
-                      fontFamily={"Inter !important"}
-                      fontSize={isDesktop ? "48px" : "32px"}
-                      color={"#252529"}
-                      lineHeight={"100%"}
-                    >
-                      {s.title}
-                    </Typography>
-                    <Typography
-                      marginTop={"24px"}
-                      fontSize={"16px"}
-                      color={"#0B081F80"}
-                      lineHeight={"150%"}
-                      fontFamily={"Inter !important"}
-                      sx={{
-                        lineClamp: 2,
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                      }}
-                    >
-                      {s.content}
-                    </Typography>
-                    <Typography
-                      style={{
-                        fontSize: "12px",
-                        textDecoration: "underline",
-                        color: "#0B6BD9",
-                        marginTop: "12px",
-                        fontFamily: "Inter !important",
-                        lineHeight: "16px",
-                        display: "block",
-                      }}
-                    >
-                      Learn more
-                    </Typography>
-                  </Box>
-                  {_idx !== services.length - 1 && (
-                    <Box
-                      marginLeft={"32px"}
-                      bgcolor={"#181A1C1A"}
-                      width={"1px"}
+                      component={Link}
+                      to={s.url}
+                      width={"259px"}
+                      minWidth={"259px"}
+                      maxWidth={"259px"}
                       height={"268px"}
-                    ></Box>
-                  )}
+                      display={"flex"}
+                      flexDirection={"column"}
+                      justifyContent={"center"}
+                    >
+                      <Box
+                        width={"48px"}
+                        height={"48px"}
+                        borderRadius={"999px"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        bgcolor={"#1FA500"}
+                        border={"1px solid #FFFFFF1A"}
+                      >
+                        <img src={s.iconNew} alt={s.title} />
+                      </Box>
+                      <Typography
+                        marginTop={"24px"}
+                        fontWeight={600}
+                        fontFamily={"Inter !important"}
+                        fontSize={isDesktop ? "48px" : "32px"}
+                        color={"#252529"}
+                        lineHeight={"100%"}
+                      >
+                        {s.title}
+                      </Typography>
+                      <Typography
+                        marginTop={"24px"}
+                        fontSize={"16px"}
+                        color={"#0B081F80"}
+                        lineHeight={"150%"}
+                        fontFamily={"Inter !important"}
+                        sx={{
+                          lineClamp: 2,
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {s.content}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontSize: "12px",
+                          textDecoration: "underline",
+                          color: "#0B6BD9",
+                          marginTop: "12px",
+                          fontFamily: "Inter !important",
+                          lineHeight: "16px",
+                          display: "block",
+                        }}
+                      >
+                        Learn more
+                      </Typography>
+                    </Box>
+                    {_idx !== 3 && (
+                      <Box
+                        marginLeft={"32px"}
+                        bgcolor={"#181A1C1A"}
+                        width={"1px"}
+                        height={"268px"}
+                      ></Box>
+                    )}
+                  </Box>
                 </Box>
-              </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Swiper
+            modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
+            className="solutions-swiper"
+            spaceBetween={0}
+            slidesPerView={"auto"}
+            freeMode={true}
+            style={{ maxWidth: "100%" }}
+            slidesOffsetBefore={isWide ? 0 : 20}
+            slidesOffsetAfter={isWide ? 0 : 20}
+            pagination={{
+              clickable: true,
+              dynamicBullets: false,
+            }}
+          >
+            {services.slice(4).map((s, _idx) => (
+              <SwiperSlide style={{ width: "fit-content" }} key={_idx}>
+                <Box
+                  borderRadius={
+                    _idx === 0
+                      ? "12px 0 0 12px"
+                      : _idx === 1
+                      ? "0 12px 12px 0"
+                      : "0"
+                  }
+                  padding={"24px"}
+                  paddingRight={_idx !== 1 ? "8px" : "24px"}
+                  bgcolor={"white"}
+                >
+                  <Box display={"flex"} alignItems={"stretch"}>
+                    <Box
+                      component={Link}
+                      to={s.url}
+                      width={"259px"}
+                      minWidth={"259px"}
+                      maxWidth={"259px"}
+                      height={"268px"}
+                      display={"flex"}
+                      flexDirection={"column"}
+                      justifyContent={"center"}
+                    >
+                      <Box
+                        width={"48px"}
+                        height={"48px"}
+                        borderRadius={"999px"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        bgcolor={"#1FA500"}
+                        border={"1px solid #FFFFFF1A"}
+                      >
+                        <img src={s.iconNew} alt={s.title} />
+                      </Box>
+                      <Typography
+                        marginTop={"24px"}
+                        fontWeight={600}
+                        fontFamily={"Inter !important"}
+                        fontSize={isDesktop ? "48px" : "32px"}
+                        color={"#252529"}
+                        lineHeight={"100%"}
+                      >
+                        {s.title}
+                      </Typography>
+                      <Typography
+                        marginTop={"24px"}
+                        fontSize={"16px"}
+                        color={"#0B081F80"}
+                        lineHeight={"150%"}
+                        fontFamily={"Inter !important"}
+                        sx={{
+                          lineClamp: 2,
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {s.content}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontSize: "12px",
+                          textDecoration: "underline",
+                          color: "#0B6BD9",
+                          marginTop: "12px",
+                          fontFamily: "Inter !important",
+                          lineHeight: "16px",
+                          display: "block",
+                        }}
+                      >
+                        Learn more
+                      </Typography>
+                    </Box>
+                    {_idx !== 1 && (
+                      <Box
+                        marginLeft={"32px"}
+                        bgcolor={"#181A1C1A"}
+                        width={"1px"}
+                        height={"268px"}
+                      ></Box>
+                    )}
+                  </Box>
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
       </Box>
     </Box>
   );
