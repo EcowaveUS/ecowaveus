@@ -18,7 +18,7 @@ export const OurSolutions = () => {
         paddingBottom={isDesktop ? (isWide ? "80px" : "35px") : "16px"}
         display={"flex"}
         flexDirection={"column"}
-        gap={isDesktop ? "80px" : "48px"}
+        gap={isDesktop ? "60px" : "32px"}
       >
         <Box
           component={"div"}
@@ -51,6 +51,13 @@ export const OurSolutions = () => {
             consumption and foster environmental stewardship.
           </Typography>
         </Box>
+        <img src="/images/one_stop_shop.webp" alt="one_stop_shop" style={{
+          width: "100%",
+          maxWidth: "612px",
+          height: "auto",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }} />
         <Swiper
           modules={isDesktop ? [FreeMode, Pagination] : [Pagination]}
           className="solutions-swiper"
