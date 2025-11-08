@@ -98,6 +98,219 @@ export const services = [
   },
 ];
 
+export const decarbonization = [
+  {
+    title: "Insulation",
+    description: "Conserve energy and improve system efficiency. It's the first step because without proper insulation you'll waste energy",
+    image: "Insulation.webp",
+    imgPosition: {
+      desktop: {
+        top: '185px',
+        left: '203px',
+      },
+      mobile: {
+        top: '105px',
+        left: 'calc(50% - 79px)',
+      },
+    },
+    titlePosition: {
+      desktop: {
+        top: '185px',
+        left: '0px',
+      },
+      mobile: {
+        top: '0px',
+        left: 'calc(50% - 173px)',
+      },
+    },
+    descriptionPosition: {
+      desktop: {
+        top: '221px',
+        left: '0px',
+      },
+      mobile: {
+        top: '26px',
+        left: 'calc(50% - 173px)',
+      },
+    },
+  },
+  {
+    title: "Electrical Service Upgrade",
+    description: "Prepare your home for future electrification; adding heat pumps, solar, EV chargers without having to upgrade again later",
+    image: "Electrical Service Upgrade.webp",
+    imgPosition: {
+      desktop: {
+        top: '439px',
+        left: '287px',
+      },
+      mobile: {
+        top: '257px',
+        left: 'calc(50% - 14px)',
+      },
+    },
+    titlePosition: {
+      desktop: {
+        top: '439px',
+        left: '467px',
+      },
+      mobile: {
+        top: '146px',
+        left: 'calc(50% + 93px)',
+      },
+    },
+    descriptionPosition: {
+      desktop: {
+        top: '506px',
+        left: '467px',
+      },
+      mobile: {
+        top: '221px',
+        left: 'calc(50% + 93px)',
+      },
+    },
+  },
+  {
+    title: "Heat Pumps",
+    description: "Get efficient heating and cooling while being ready to phase out fossil fuels. We size systems for 100% heating capacity even with dual fuel setups!",
+    image: "Heat Pumps.webp",
+    imgPosition: {
+      desktop: {
+        top: '691px',
+        left: '203px',
+      },
+      mobile: {
+        top: '410px',
+        left: 'calc(50% - 79px)',
+      },
+    },
+    titlePosition: {
+      desktop: {
+        top: '691px',
+        left: '0px',
+      },
+      mobile: {
+        top: '300px',
+        left: 'calc(50% - 173px)',
+      },
+    },
+    descriptionPosition: {
+      desktop: {
+        top: '727px',
+        left: '0px',
+      },
+      mobile: {
+        top: '355px',
+        left: 'calc(50% - 173px)',
+      },
+    },
+  },
+  {
+    title: "Solar Panels",
+    description: "Generate your own clean energy to power your heat pumps and other electrical loads",
+    image: "Solar Panels.webp",
+    imgPosition: {
+      desktop: {
+        top: '946px',
+        left: '287px',
+      },
+      mobile: {
+        top: '560px',
+        left: 'calc(50% - 14px)',
+      },
+    },
+    titlePosition: {
+      desktop: {
+        top: '946px',
+        left: '467px',
+      },
+      mobile: {
+        top: '488px',
+        left: 'calc(50% + 93px)',
+      },
+    },
+    descriptionPosition: {
+      desktop: {
+        top: '980px',
+        left: '467px',
+      },
+      mobile: {
+        top: '541px',
+        left: 'calc(50% + 93px)',
+      },
+    },
+  },
+  {
+    title: "EV Chargers",
+    description: "Complete your home's electrification with EV charging powered by your solar",
+    image: "EV Chargers.webp",
+    imgPosition: {
+      desktop: {
+        top: '1197px',
+        left: '203px',
+      },
+      mobile: {
+        top: '714px',
+        left: 'calc(50% - 79px)',
+      },
+    },
+    titlePosition: {
+      desktop: {
+        top: '1197px',
+        left: '0px',
+      },
+      mobile: {
+        top: '670px',
+        left: 'calc(50% - 173px)',
+      },
+    },
+    descriptionPosition: {
+      desktop: {
+        top: '1230px',
+        left: '0px',
+      },
+      mobile: {
+        top: '727px',
+        left: 'calc(50% - 173px)',
+      },
+    },
+  },
+  {
+    title: "Energy Storage",
+    description: "Keep your critical systems running during outages and use stored solar energy at night",
+    image: "Energy Storage.webp",
+    imgPosition: {
+      desktop: {
+        top: '1452px',
+        left: '287px',
+      },
+      mobile: {
+        top: '864px',
+        left: 'calc(50% - 14px)',
+      },
+    },
+    titlePosition: {
+      desktop: {
+        top: '1452px',
+        left: '467px',
+      },
+      mobile: {
+        top: '787px',
+        left: 'calc(50% + 93px)',
+      },
+    },
+    descriptionPosition: {
+      desktop: {
+        top: '1484px',
+        left: '467px',
+      },
+      mobile: {
+        top: '843px',
+        left: 'calc(50% + 93px)',
+      },
+    },
+  },
+];
+
 export const markersPoint = [
   {
     name: "Beverly",

@@ -11,6 +11,7 @@ import Areas from "../components/AreaServices/Areas";
 // import { Grid as MuiGrid } from "@mui/material";
 import { ExpertiseComponent } from "../components/pagesComponents/ExpertiseComponent";
 import SchemaMarkup from "../components/seo/SchemaMarkup";
+import { Decarbonization } from "../components/pagesComponents/Decarbonization";
 
 export const HomePage = () => {
   // const Grid = motion(MuiGrid);
@@ -30,6 +31,7 @@ export const HomePage = () => {
       <OursBrands images={brandImagesNew} />
       <ExpertiseComponent />
       <OurSolutions />
+      <Decarbonization />
       <ReviewsComponent cat={2} />
       <ContactComponent cat={1} />
       <Areas />
