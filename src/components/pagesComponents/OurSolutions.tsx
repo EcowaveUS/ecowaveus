@@ -116,7 +116,7 @@ export const OurSolutions = () => {
                           bgcolor={"#1FA500"}
                           border={"1px solid #FFFFFF1A"}
                         >
-                          <img src={s.iconNew} alt={s.title} />
+                          <img src={s.iconNew} width={_idx > 3 ? 48 : undefined} height={_idx > 3 ? 48 : undefined} alt={s.title} />
                         </Box>
                         <Typography
                           marginTop={"24px"}
@@ -213,7 +213,7 @@ export const OurSolutions = () => {
                           bgcolor={"#1FA500"}
                           border={"1px solid #FFFFFF1A"}
                         >
-                          <img src={s.iconNew} alt={s.title} />
+                          <img src={s.iconNew} width={48} height={48} alt={s.title} />
                         </Box>
                         <Typography
                           marginTop={"24px"}
@@ -298,7 +298,7 @@ export const OurSolutions = () => {
                   bgcolor={"#1FA500"}
                   border={"1px solid #FFFFFF1A"}
                 >
-                  <img src={s.iconNew} alt={s.title} />
+                  <img src={s.iconNew} width={_idx > 3 ? 48 : 32} height={_idx > 3 ? 48 : 32} alt={s.title} />
                 </Box>
                 <Typography
                   marginTop={"16px"}

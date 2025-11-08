@@ -10,8 +10,8 @@ import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.svg";
 import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.svg";
 import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage-new.svg";
-import iconElectricalUpgrades from "../assets/icons/Icon-electrical-upgrades.svg";
-import iconHPWaterHeaters from "../assets/icons/Icon-h-p-water-heaters.svg";
+import iconElectricalUpgrades from "../assets/icons/Icon-electrical-upgrades.webp";
+import iconHPWaterHeaters from "../assets/icons/Icon-h-p-water-heaters.webp";
 
 export const CardInfo = [
   {
