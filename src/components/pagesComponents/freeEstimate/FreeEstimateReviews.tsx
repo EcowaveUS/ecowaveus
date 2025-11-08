@@ -1,5 +1,5 @@
 import { ReviewsComponent } from "../../reviews/ReviewsComponent";
 
 export default function FreeEstimateReviews() {
-  return <ReviewsComponent cat={2} />;
+  return <ReviewsComponent cat={3} />;
 }

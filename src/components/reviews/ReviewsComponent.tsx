@@ -7,13 +7,49 @@ import "swiper/css/pagination";
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 import { ReviewCard2 } from "../cards/ReviewCard2";
 import { useRef } from "react";
+import GoogleReviews from "./GoogleReivews";
 
 export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   const swiperRef = useRef<SwiperRef>(null);
   const data = reviews;
 
-  return (
+  return cat === 3 ? (
+    <Box bgcolor={"#0C4200"} id="google-reviews">
+      <Box
+        component={"div"}
+        paddingTop={isDesktop ? "80px" : "48px"}
+        className={isDesktop ? "container" : "container-2"}
+        paddingBottom={isDesktop ? "74px" : "48px"}
+        display={"flex"}
+        flexDirection={"column"}
+        gap={isDesktop ? "32px" : "48px"}
+        alignItems={"center"}
+      >
+        <Typography
+            fontWeight={600}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "48px" : "24px"}
+            lineHeight={isDesktop ? "58px" : "32px"}
+            textAlign={isDesktop ? "left" : "center"}
+            color={"#fff"}
+          >
+            What our clients say about us
+          </Typography>
+          <Typography
+            fontWeight={400}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "16px" : "14px"}
+            color={"#fff"}
+            textAlign={isDesktop ? "left" : "center"}
+            lineHeight={isDesktop ? "32px" : "20px"}
+          >
+            Explore the personal stories of our customers and see how Ecowave's
+            sustainable solutions have enriched their lives.
+          </Typography>
+        <GoogleReviews />
+      </Box>
+    </Box>) : (
     <Box bgcolor={"#0C4200"}>
       <Box
         component={"div"}

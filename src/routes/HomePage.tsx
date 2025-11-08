@@ -32,7 +32,7 @@ export const HomePage = () => {
       <ExpertiseComponent />
       <OurSolutions />
       <Decarbonization />
-      <ReviewsComponent cat={2} />
+      <ReviewsComponent cat={3} />
       <ContactComponent cat={1} />
       <Areas />
     </>

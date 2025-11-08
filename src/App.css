@@ -20,3 +20,12 @@ li{
 .hidden {
   display: none;
 }
+/* Hide Elfsight attribution link */
+#google-reviews a[href*="elfsight.com"] {
+  display: none !important;
+}
+
+/* Alternative selector - more specific */
+#google-reviews a[href*="elfsight.com/google-reviews-widget"] {
+  display: none !important;
+}
