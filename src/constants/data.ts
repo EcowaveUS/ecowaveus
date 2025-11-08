@@ -85,14 +85,14 @@ export const services = [
   {
     title: "Electrical Upgrades",
     content: "Future-Proof Power: Expand capacity, improve safety, and prep your home for heat pumps, EVs, solar, and batteries.",
-    url: "/",
+    url: "/contact-us#contact-form",
     icon: iconHeatPumps,
     iconNew: iconElectricalUpgrades,
   },
   {
     title: "H.P. Water Heaters",
     content: "Heat Smart, Save More: Faster recovery, better insulation, and steady performance for busy homes.",
-    url: "/",
+    url: "/contact-us#contact-form",
     icon: iconHeatPumps,
     iconNew: iconHPWaterHeaters,
   },
