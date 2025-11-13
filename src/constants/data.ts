@@ -104,33 +104,31 @@ export const decarbonization = [
     description: "Conserve energy and improve system efficiency. It's the first step because without proper insulation you'll waste energy",
     image: "Insulation.webp",
     imgPosition: {
-      desktop: {
-        top: '185px',
-        left: '203px',
-      },
       mobile: {
         top: '105px',
         left: 'calc(50% - 79px)',
       },
-    },
-    titlePosition: {
+      tablet: {
+        top: '141px',
+        left: 'calc(50% - 95px)',
+      },
       desktop: {
         top: '185px',
-        left: '0px',
-      },
-      mobile: {
-        top: '0px',
-        left: 'calc(50% - 173px)',
+        left: 'calc(50% - 100px)',
       },
     },
-    descriptionPosition: {
-      desktop: {
-        top: '221px',
-        left: '0px',
-      },
+    titlePosition: {
       mobile: {
-        top: '26px',
+        top: '81px',
         left: 'calc(50% - 173px)',
+      },
+      tablet: {
+        top: '114px',
+        left: 'calc(50% - 280px)',
+      },
+      desktop: {
+        top: '141px',
+        left: 'calc(50% - 350px)',
       },
     },
   },
@@ -139,175 +137,260 @@ export const decarbonization = [
     description: "Prepare your home for future electrification; adding heat pumps, solar, EV chargers without having to upgrade again later",
     image: "Electrical Service Upgrade.webp",
     imgPosition: {
-      desktop: {
-        top: '439px',
-        left: '287px',
-      },
       mobile: {
         top: '257px',
         left: 'calc(50% - 14px)',
       },
-    },
-    titlePosition: {
+      tablet: {
+        top: '342px',
+        left: 'calc(50% - 27px)',
+      },
       desktop: {
         top: '439px',
-        left: '467px',
-      },
-      mobile: {
-        top: '146px',
-        left: 'calc(50% + 93px)',
+        left: 'calc(50% - 34px)',
       },
     },
-    descriptionPosition: {
+    titlePosition: {
+      mobile: {
+        top: '231px',
+        left: 'calc(50% + 78px)',
+      },
+      tablet: {
+        top: '312px',
+        left: 'calc(50% + 110px)',
+      },
       desktop: {
-        top: '506px',
-        left: '467px',
-      },
-      mobile: {
-        top: '221px',
-        left: 'calc(50% + 93px)',
+        top: '392px',
+        left: 'calc(50% + 125px)',
       },
     },
+    img: {
+      name: "decarbonization photo - electrical upgrade.webp",
+      alt: "decarbonization photo - electrical upgrade",
+      objectPosition: 'bottom',
+      position: {
+        tablet: {
+          top: '295px',
+          left: 'calc(50% - 280px)',
+        },
+        desktop: {
+          top: '363px',
+          left: 'calc(50% - 350px)',
+        },
+      },
+      height: {
+        tablet: '220px',
+        desktop: '280px',
+      }
+    }
   },
   {
     title: "Heat Pumps",
     description: "Get efficient heating and cooling while being ready to phase out fossil fuels. We size systems for 100% heating capacity even with dual fuel setups!",
     image: "Heat Pumps.webp",
     imgPosition: {
-      desktop: {
-        top: '691px',
-        left: '203px',
-      },
       mobile: {
         top: '410px',
         left: 'calc(50% - 79px)',
       },
-    },
-    titlePosition: {
+      tablet: {
+        top: '546px',
+        left: 'calc(50% - 95px)',
+      },
       desktop: {
         top: '691px',
-        left: '0px',
-      },
-      mobile: {
-        top: '300px',
-        left: 'calc(50% - 173px)',
+        left: 'calc(50% - 100px)',
       },
     },
-    descriptionPosition: {
+    titlePosition: {
+      mobile: {
+        top: '386px',
+        left: 'calc(50% - 173px)',
+      },
+      tablet: {
+        top: '521px',
+        left: 'calc(50% - 280px)',
+      },
       desktop: {
-        top: '727px',
-        left: '0px',
-      },
-      mobile: {
-        top: '355px',
-        left: 'calc(50% - 173px)',
+        top: '657px',
+        left: 'calc(50% - 350px)',
       },
     },
+    img: {
+      name: "decarbonization photo - HP.webp",
+      alt: "decarbonization photo - HP",
+      objectPosition: 'center',
+      position: {
+        tablet: {
+          top: '490px',
+          left: 'calc(50% + 110px)',
+        },
+        desktop: {
+          top: '622px',
+          left: 'calc(50% + 125px)',
+        },
+      },
+      height: {
+        tablet: '200px',
+        desktop: '255px',
+      }
+    }
   },
   {
     title: "Solar Panels",
     description: "Generate your own clean energy to power your heat pumps and other electrical loads",
     image: "Solar Panels.webp",
     imgPosition: {
-      desktop: {
-        top: '946px',
-        left: '287px',
-      },
       mobile: {
         top: '560px',
         left: 'calc(50% - 14px)',
       },
-    },
-    titlePosition: {
+      tablet: {
+        top: '747px',
+        left: 'calc(50% - 27px)',
+      },
       desktop: {
         top: '946px',
-        left: '467px',
-      },
-      mobile: {
-        top: '488px',
-        left: 'calc(50% + 93px)',
+        left: 'calc(50% - 34px)',
       },
     },
-    descriptionPosition: {
+    titlePosition: {
+      mobile: {
+        top: '538px',
+        left: 'calc(50% + 78px)',
+      },
+      tablet: {
+        top: '719px',
+        left: 'calc(50% + 110px)',
+      },
       desktop: {
-        top: '980px',
-        left: '467px',
-      },
-      mobile: {
-        top: '541px',
-        left: 'calc(50% + 93px)',
+        top: '902px',
+        left: 'calc(50% + 125px)',
       },
     },
+    img: {
+      name: "decarbonization photo - solar.webp",
+      alt: "decarbonization photo - solar",
+      objectPosition: 'left',
+      position: {
+        tablet: {
+          top: '754px',
+          left: 'calc(50% - 280px)',
+        },
+        desktop: {
+          top: '936px',
+          left: 'calc(50% - 350px)',
+        },
+      },
+      height: {
+        tablet: '150px',
+        desktop: '200px',
+      }
+    }
   },
   {
     title: "EV Chargers",
     description: "Complete your home's electrification with EV charging powered by your solar",
     image: "EV Chargers.webp",
     imgPosition: {
-      desktop: {
-        top: '1197px',
-        left: '203px',
-      },
       mobile: {
         top: '714px',
         left: 'calc(50% - 79px)',
       },
-    },
-    titlePosition: {
+      tablet: {
+        top: '950px',
+        left: 'calc(50% - 95px)',
+      },
       desktop: {
         top: '1197px',
-        left: '0px',
-      },
-      mobile: {
-        top: '670px',
-        left: 'calc(50% - 173px)',
+        left: 'calc(50% - 100px)',
       },
     },
-    descriptionPosition: {
+    titlePosition: {
+      mobile: {
+        top: '690px',
+        left: 'calc(50% - 173px)',
+      },
+      tablet: {
+        top: '928px',
+        left: 'calc(50% - 280px)',
+      },
       desktop: {
-        top: '1230px',
-        left: '0px',
-      },
-      mobile: {
-        top: '727px',
-        left: 'calc(50% - 173px)',
+        top: '1161px',
+        left: 'calc(50% - 350px)',
       },
     },
+    img: {
+      name: "decarbonization photo - ev charger.webp",
+      alt: "decarbonization photo - ev charger",
+      objectPosition: 'center',
+      position: {
+        tablet: {
+          top: '936px',
+          left: 'calc(50% + 110px)',
+        },
+        desktop: {
+          top: '1182px',
+          left: 'calc(50% + 125px)',
+        },
+      },
+      height: {
+        tablet: '150px',
+        desktop: '180px',
+      }
+    }
   },
   {
     title: "Energy Storage",
     description: "Keep your critical systems running during outages and use stored solar energy at night",
     image: "Energy Storage.webp",
     imgPosition: {
-      desktop: {
-        top: '1452px',
-        left: '287px',
-      },
       mobile: {
         top: '864px',
         left: 'calc(50% - 14px)',
       },
-    },
-    titlePosition: {
+      tablet: {
+        top: '1152px',
+        left: 'calc(50% - 27px)',
+      },
       desktop: {
         top: '1452px',
-        left: '467px',
-      },
-      mobile: {
-        top: '787px',
-        left: 'calc(50% + 93px)',
+        left: 'calc(50% - 34px)',
       },
     },
-    descriptionPosition: {
+    titlePosition: {
+      mobile: {
+        top: '840px',
+        left: 'calc(50% + 78px)',
+      },
+      tablet: {
+        top: '1124px',
+        left: 'calc(50% + 110px)',
+      },
       desktop: {
-        top: '1484px',
-        left: '467px',
-      },
-      mobile: {
-        top: '843px',
-        left: 'calc(50% + 93px)',
+        top: '1408px',
+        left: 'calc(50% + 125px)',
       },
     },
+    img: {
+      name: "decarbonization photo - batteries.webp",
+      alt: "decarbonization photo - batteries",
+      objectPosition: 'center',
+      position: {
+        tablet: {
+          top: '1119px',
+          left: 'calc(50% - 280px)',
+        },
+        desktop: {
+          top: '1404px',
+          left: 'calc(50% - 350px)',
+        },
+      },
+      height: {
+        tablet: '220px',
+        desktop: '280px',
+      }
+    }
   },
 ];
 

@@ -3,50 +3,51 @@ import { decarbonization } from "../../constants/data";
 import React from "react";
 
 export const Decarbonization = () => {
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("lg"));
+  const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.down("md"));
+  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
 
   return (
     <Box bgcolor={"#0C4200"}>
       <Box
         component={"div"}
         paddingTop={isDesktop ? "80px" : "48px"}
-        className={isDesktop ? "container" : ""}
-        maxWidth={isDesktop ? "1024px" : "100%"}
         paddingBottom={isDesktop ? "74px" : "48px"}
         display={"flex"}
-        gap={"32px"}
-        justifyContent={isDesktop ? "space-between" : "center"}
+        justifyContent={"center"}
+        className={isDesktop ? "container" : ""}
       >
-        <Box
-          width={"624px"}
-          position={"relative"}
-          component={'div'}
-        >
-          <Typography
-            fontWeight={700}
-            fontSize={isDesktop ? "48px" : "32px"}
-            lineHeight={"100%"}
-            fontFamily={"Inter !important"}
-            color={"white"}
-            textAlign={"center"}
-            fontStyle={"italic"}
+        <Box>
+          <Box
+            maxWidth={"624px"}
+            component={'div'}
           >
-            Your Decarbonization<br />Journey
-          </Typography>
-          <Typography
-            fontSize={"16px"}
-            lineHeight={"150%"}
-            fontFamily={"Inter !important"}
-            color={"#D8D8DE"}
-            textAlign={"center"}
-            marginTop={"24px"}
-            marginBottom={"24px"}
-            fontWeight={'500'}
-          >
-            Transform your home at your own pace.
-          </Typography>
+            <Typography
+              fontWeight={700}
+              fontSize={isDesktop ? "48px" : "32px"}
+              lineHeight={"100%"}
+              fontFamily={"Inter !important"}
+              color={"white"}
+              textAlign={"center"}
+              fontStyle={"italic"}
+            >
+              Your Decarbonization<br />Journey
+            </Typography>
+            <Typography
+              fontSize={"16px"}
+              lineHeight={"150%"}
+              fontFamily={"Inter !important"}
+              color={"#D8D8DE"}
+              textAlign={"center"}
+              marginTop={"24px"}
+              fontWeight={'500'}
+              >
+              Transform your home at your own pace.
+            </Typography>
+          </Box>
           <Box
             position="relative"
+            marginTop={"24px"}
           >
             <img
               src="/images/decarbonization/Decarbonization Path with markers.webp"
@@ -55,7 +56,7 @@ export const Decarbonization = () => {
                 display: 'block',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                width: isDesktop ? '250px' : '150px',
+                width: isMobile ? '150px' : isTablet ? '200px' : '250px',
               }}
             />
             {decarbonization.map((item) => (
@@ -64,112 +65,58 @@ export const Decarbonization = () => {
                   src={`/images/decarbonization/${item.image}`}
                   alt={item.title}
                   style={{
-                    width: isDesktop ? '138px' : '95px',
+                    width: isMobile ? '95px' : isTablet ? '125px' : '138px',
                     height: 'auto',
                     position: 'absolute',
-                    top: isDesktop ? item.imgPosition.desktop.top : item.imgPosition.mobile.top,
-                    left: isDesktop ? item.imgPosition.desktop.left : item.imgPosition.mobile.left,
+                    top: isMobile ? item.imgPosition.mobile.top : isTablet ? item.imgPosition.tablet.top : item.imgPosition.desktop.top,
+                    left: isMobile ? item.imgPosition.mobile.left : isTablet ? item.imgPosition.tablet.left : item.imgPosition.desktop.left,
                   }}
                 />
-                <Typography
-                  fontSize={isDesktop ? "18px" : "16px"}
-                  fontFamily={"Inter !important"}
-                  color={"white"}
-                  fontWeight={'700'}
-                  width={isDesktop ? "200px" : "75px"}
+                <Box
+                  component={'div'}
+                  width={isMobile ? '100px' : isTablet ? '180px' : "250px"}
                   position="absolute"
-                  top={isDesktop ? item.titlePosition.desktop.top : item.titlePosition.mobile.top}
-                  left={isDesktop ? item.titlePosition.desktop.left : item.titlePosition.mobile.left}
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  fontSize={isDesktop ? "16px" : "12px"}
+                  top={isMobile ? item.titlePosition.mobile.top : isTablet ? item.titlePosition.tablet.top : item.titlePosition.desktop.top}
+                  left={isMobile ? item.titlePosition.mobile.left : isTablet ? item.titlePosition.tablet.left : item.titlePosition.desktop.left}
                   fontFamily={"Inter !important"}
-                  color={"white"}
-                  width={isDesktop ? "200px" : "75px"}
-                  position="absolute"
-                  top={isDesktop ? item.descriptionPosition.desktop.top : item.descriptionPosition.mobile.top}
-                  left={isDesktop ? item.descriptionPosition.desktop.left : item.descriptionPosition.mobile.left}
                 >
-                  {item.description}
-                </Typography>
+                  <Typography
+                    fontSize={isMobile ? '14px' : isTablet ? '16px' : "18px"}
+                    fontWeight={'700'}
+                    color={"white"}
+                  >
+                    {item.title}
+                  </Typography>
+                  {!isMobile && (
+                    <Typography
+                      fontSize={isDesktop ? "16px" : "12px"}
+                      marginTop={"4px"}
+                      color={"white"}
+                    >
+                      {item.description}
+                    </Typography>
+                  )}
+                </Box>
+                {!isMobile && item.img && (
+                  <img
+                    src={`/images/decarbonization/${item.img?.name}`}
+                    alt={item.img?.alt}
+                    style={{
+                      position: 'absolute',
+                      borderRadius: '12px',
+                      width: isTablet ? '130px' : '160px',
+                      top: isTablet ? item.img?.position.tablet.top : item.img?.position.desktop.top,
+                      left: isTablet ? item.img?.position.tablet.left : item.img?.position.desktop.left,
+                      height: isTablet ? item.img?.height.tablet : item.img?.height.desktop,
+                      objectPosition: item.img?.objectPosition,
+                      objectFit: 'cover',
+                    }}
+                  />
+                )}
               </React.Fragment>
             ))}
           </Box>
         </Box>
-        {isDesktop && (
-          <Box flex={1} position="relative" gap="30px" display="flex" flexDirection="column">
-            <img
-              src="/images/decarbonization/decarbonization photo - electrical upgrade.webp"
-              alt="decarbonization photo - electrical upgrade"
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                width: '170px',
-                borderRadius: '12px',
-                marginTop: '525px',
-                height: '286px',
-                objectFit: 'cover',
-                objectPosition: 'bottom',
-              }}
-            />
-            <img
-              src="/images/decarbonization/decarbonization photo - HP.webp"
-              alt="decarbonization photo - HP"
-              style={{
-                display: 'block',
-                marginLeft: '60px',
-                marginRight: 'auto',
-                width: '170px',
-                borderRadius: '12px',
-                height: '240px',
-                objectFit: 'cover',
-                objectPosition: 'center',
-              }}
-            />
-            <img
-              src="/images/decarbonization/decarbonization photo - solar.webp"
-              alt="decarbonization photo - solar"
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                width: '170px',
-                borderRadius: '12px',
-                height: '200px',
-                objectFit: 'cover',
-                objectPosition: 'left',
-              }}
-            />
-            <img
-              src="/images/decarbonization/decarbonization photo - ev charger.webp"
-              alt="decarbonization photo - ev charger"
-              style={{
-                display: 'block',
-                marginLeft: '60px',
-                marginRight: 'auto',
-                width: '170px',
-                borderRadius: '12px',
-                height: '240px',
-                objectFit: 'cover',
-                objectPosition: 'center',
-              }}
-            />
-            <img
-              src="/images/decarbonization/decarbonization photo - batteries.webp"
-              alt="decarbonization photo - batteries"
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                width: '170px',
-                borderRadius: '12px',
-                height: '240px',
-                objectFit: 'cover',
-                objectPosition: 'center',
-              }}
-            />
-          </Box>
-        )}
       </Box>
     </Box>
   );
