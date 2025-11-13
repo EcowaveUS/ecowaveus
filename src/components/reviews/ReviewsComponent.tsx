@@ -15,7 +15,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
   const data = reviews;
 
   return cat === 3 ? (
-    <Box bgcolor={"#0C4200"} id="google-reviews">
+    <Box bgcolor={"#1a1a1a"} id="google-reviews">
       <Box
         component={"div"}
         paddingTop={isDesktop ? "80px" : "48px"}
@@ -23,30 +23,35 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
         paddingBottom={isDesktop ? "74px" : "48px"}
         display={"flex"}
         flexDirection={"column"}
-        gap={isDesktop ? "32px" : "48px"}
+        gap={isDesktop ? "16px" : "32px"}
         alignItems={"center"}
       >
         <Typography
-            fontWeight={600}
-            fontFamily={"Inter !important"}
-            fontSize={isDesktop ? "48px" : "24px"}
-            lineHeight={isDesktop ? "58px" : "32px"}
-            textAlign={isDesktop ? "left" : "center"}
-            color={"#fff"}
-          >
-            What our clients say about us
-          </Typography>
-          <Typography
-            fontWeight={400}
-            fontFamily={"Inter !important"}
-            fontSize={isDesktop ? "16px" : "14px"}
-            color={"#fff"}
-            textAlign={isDesktop ? "left" : "center"}
-            lineHeight={isDesktop ? "32px" : "20px"}
-          >
-            Explore the personal stories of our customers and see how Ecowave's
-            sustainable solutions have enriched their lives.
-          </Typography>
+          fontWeight={600}
+          fontFamily={"Inter !important"}
+          fontSize={isDesktop ? "48px" : "24px"}
+          lineHeight={isDesktop ? "58px" : "32px"}
+          textAlign={isDesktop ? "left" : "center"}
+          color={"#fff"}
+        >
+          What our clients say about us
+        </Typography>
+        <img
+          src="/images/google review icon.webp"
+          alt="google review icon"
+          width={isDesktop ? "100px" : "80px"}
+        />
+        <Typography
+          fontWeight={400}
+          fontFamily={"Inter !important"}
+          fontSize={isDesktop ? "16px" : "14px"}
+          color={"#fff"}
+          textAlign={isDesktop ? "left" : "center"}
+          lineHeight={isDesktop ? "32px" : "20px"}
+        >
+          Explore the personal stories of our customers and see how Ecowave's
+          sustainable solutions have enriched their lives.
+        </Typography>
         <GoogleReviews />
       </Box>
     </Box>) : (
