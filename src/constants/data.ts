@@ -171,11 +171,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '295px',
-          left: 'calc(50% - 280px)',
+          left: 'calc(50% - 237px)',
         },
         desktop: {
           top: '363px',
-          left: 'calc(50% - 350px)',
+          left: 'calc(50% - 280px)',
         },
       },
       height: {
@@ -275,11 +275,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '754px',
-          left: 'calc(50% - 280px)',
+          left: 'calc(50% - 237px)',
         },
         desktop: {
           top: '936px',
-          left: 'calc(50% - 350px)',
+          left: 'calc(50% - 280px)',
         },
       },
       height: {
@@ -379,11 +379,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '1119px',
-          left: 'calc(50% - 280px)',
+          left: 'calc(50% - 237px)',
         },
         desktop: {
           top: '1404px',
-          left: 'calc(50% - 350px)',
+          left: 'calc(50% - 280px)',
         },
       },
       height: {
