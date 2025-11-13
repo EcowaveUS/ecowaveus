@@ -53,8 +53,8 @@ export const OurSolutions = () => {
           </Typography>
         </Box>
         <img src="/images/one_stop_shop.webp" alt="one_stop_shop" style={{
-          width: "100%",
-          maxWidth: "612px",
+          width: "80%",
+          maxWidth: "500px",
           height: "auto",
           marginLeft: "auto",
           marginRight: "auto",
@@ -96,8 +96,6 @@ export const OurSolutions = () => {
                   >
                     <Box display={"flex"} alignItems={"stretch"}>
                       <Box
-                        component={Link}
-                        to={s.url}
                         width={"259px"}
                         minWidth={"259px"}
                         maxWidth={"259px"}
@@ -106,18 +104,32 @@ export const OurSolutions = () => {
                         flexDirection={"column"}
                         justifyContent={"center"}
                       >
-                        <Box
-                          width={"48px"}
-                          height={"48px"}
-                          borderRadius={"999px"}
-                          display={"flex"}
-                          alignItems={"center"}
-                          justifyContent={"center"}
-                          bgcolor={"#1FA500"}
-                          border={"1px solid #FFFFFF1A"}
-                        >
-                          <img src={s.iconNew} width={_idx > 3 ? 48 : undefined} height={_idx > 3 ? 48 : undefined} alt={s.title} />
-                        </Box>
+                        {_idx === 2 ? (
+                          <Box
+                            width={"48px"}
+                            height={"48px"}
+                            borderRadius={"999px"}
+                            display={"flex"}
+                            alignItems={"center"}
+                            justifyContent={"center"}
+                            bgcolor={"#1FA500"}
+                            border={"1px solid #FFFFFF1A"}
+                          >
+                            <img src={s.iconNew} width={48} height={48} alt={s.title} />
+                          </Box>) : (
+                          <Box
+                            width={"48px"}
+                            height={"48px"}
+                            borderRadius={"999px"}
+                            display={"flex"}
+                            alignItems={"center"}
+                            justifyContent={"center"}
+                            bgcolor={"#1FA500"}
+                            border={"1px solid #FFFFFF1A"}
+                          >
+                            <img src={s.iconNew} width={_idx > 3 ? 48 : undefined} height={_idx > 3 ? 48 : undefined} alt={s.title} />
+                          </Box>
+                        )}
                         <Typography
                           marginTop={"24px"}
                           fontWeight={600}
@@ -154,7 +166,10 @@ export const OurSolutions = () => {
                             fontFamily: "Inter !important",
                             lineHeight: "16px",
                             display: "block",
+                            width: "fit-content",
                           }}
+                          to={s.url}
+                          component={Link}
                         >
                           Learn more
                         </Typography>
@@ -193,8 +208,6 @@ export const OurSolutions = () => {
                   >
                     <Box display={"flex"} alignItems={"stretch"}>
                       <Box
-                        component={Link}
-                        to={s.url}
                         width={"259px"}
                         minWidth={"259px"}
                         maxWidth={"259px"}
@@ -251,7 +264,10 @@ export const OurSolutions = () => {
                             fontFamily: "Inter !important",
                             lineHeight: "16px",
                             display: "block",
+                            width: "fit-content",
                           }}
+                          to={s.url}
+                          component={Link}
                         >
                           Learn more
                         </Typography>
@@ -298,7 +314,7 @@ export const OurSolutions = () => {
                   bgcolor={"#1FA500"}
                   border={"1px solid #FFFFFF1A"}
                 >
-                  <img src={s.iconNew} width={_idx > 3 ? 48 : 32} height={_idx > 3 ? 48 : 32} alt={s.title} />
+                  <img src={s.iconNew} width={(_idx === 2 ||_idx > 3) ? 40 : 32} height={(_idx === 2 || _idx > 3) ? 40 : 32} alt={s.title} />
                 </Box>
                 <Typography
                   marginTop={"16px"}
