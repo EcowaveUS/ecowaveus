@@ -107,29 +107,29 @@ export const decarbonization = [
     imgPosition: {
       mobile: {
         top: '105px',
-        left: 'calc(50% - 79px)',
+        left: 'calc(50% - 87px)',
       },
       tablet: {
         top: '141px',
-        left: 'calc(50% - 95px)',
+        left: 'calc(50% - 110px)',
       },
       desktop: {
         top: '185px',
-        left: 'calc(50% - 100px)',
+        left: 'calc(50% - 120px)',
       },
     },
     titlePosition: {
       mobile: {
-        top: '81px',
-        left: 'calc(50% - 173px)',
+        top: '142px',
+        left: 'calc(50% - 175px)',
       },
       tablet: {
-        top: '114px',
-        left: 'calc(50% - 280px)',
+        top: '142px',
+        left: 'calc(50% - 290px)',
       },
       desktop: {
-        top: '141px',
-        left: 'calc(50% - 350px)',
+        top: '192px',
+        left: 'calc(50% - 390px)',
       },
     },
   },
@@ -140,29 +140,29 @@ export const decarbonization = [
     imgPosition: {
       mobile: {
         top: '257px',
-        left: 'calc(50% - 14px)',
+        left: 'calc(50% - 6px)',
       },
       tablet: {
         top: '342px',
-        left: 'calc(50% - 27px)',
+        left: 'calc(50% - 13px)',
       },
       desktop: {
         top: '439px',
-        left: 'calc(50% - 34px)',
+        left: 'calc(50% - 14px)',
       },
     },
     titlePosition: {
       mobile: {
-        top: '231px',
-        left: 'calc(50% + 78px)',
+        top: '271px',
+        left: 'calc(50% + 90px)',
       },
       tablet: {
-        top: '312px',
-        left: 'calc(50% + 110px)',
+        top: '331px',
+        left: 'calc(50% + 123px)',
       },
       desktop: {
-        top: '392px',
-        left: 'calc(50% + 125px)',
+        top: '426px',
+        left: 'calc(50% + 152px)',
       },
     },
     img: {
@@ -172,11 +172,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '295px',
-          left: 'calc(50% - 237px)',
+          left: 'calc(50% - 257px)',
         },
         desktop: {
           top: '363px',
-          left: 'calc(50% - 280px)',
+          left: 'calc(50% - 310px)',
         },
       },
       height: {
@@ -192,29 +192,29 @@ export const decarbonization = [
     imgPosition: {
       mobile: {
         top: '410px',
-        left: 'calc(50% - 79px)',
+        left: 'calc(50% - 87px)',
       },
       tablet: {
         top: '546px',
-        left: 'calc(50% - 95px)',
+        left: 'calc(50% - 110px)',
       },
       desktop: {
         top: '691px',
-        left: 'calc(50% - 100px)',
+        left: 'calc(50% - 120px)',
       },
     },
     titlePosition: {
       mobile: {
-        top: '386px',
-        left: 'calc(50% - 173px)',
+        top: '445px',
+        left: 'calc(50% - 175px)',
       },
       tablet: {
-        top: '521px',
-        left: 'calc(50% - 280px)',
+        top: '541px',
+        left: 'calc(50% - 290px)',
       },
       desktop: {
-        top: '657px',
-        left: 'calc(50% - 350px)',
+        top: '685px',
+        left: 'calc(50% - 390px)',
       },
     },
     img: {
@@ -224,11 +224,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '490px',
-          left: 'calc(50% + 110px)',
+          left: 'calc(50% + 130px)',
         },
         desktop: {
           top: '622px',
-          left: 'calc(50% + 125px)',
+          left: 'calc(50% + 152px)',
         },
       },
       height: {
@@ -244,29 +244,29 @@ export const decarbonization = [
     imgPosition: {
       mobile: {
         top: '560px',
-        left: 'calc(50% - 14px)',
+        left: 'calc(50% - 6px)',
       },
       tablet: {
         top: '747px',
-        left: 'calc(50% - 27px)',
+        left: 'calc(50% - 13px)',
       },
       desktop: {
         top: '946px',
-        left: 'calc(50% - 34px)',
+        left: 'calc(50% - 14px)',
       },
     },
     titlePosition: {
       mobile: {
-        top: '538px',
-        left: 'calc(50% + 78px)',
+        top: '587px',
+        left: 'calc(50% + 90px)',
       },
       tablet: {
-        top: '719px',
-        left: 'calc(50% + 110px)',
+        top: '756px',
+        left: 'calc(50% + 123px)',
       },
       desktop: {
-        top: '902px',
-        left: 'calc(50% + 125px)',
+        top: '960px',
+        left: 'calc(50% + 152px)',
       },
     },
     img: {
@@ -276,11 +276,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '754px',
-          left: 'calc(50% - 237px)',
+          left: 'calc(50% - 257px)',
         },
         desktop: {
           top: '936px',
-          left: 'calc(50% - 280px)',
+          left: 'calc(50% - 310px)',
         },
       },
       height: {
@@ -296,29 +296,29 @@ export const decarbonization = [
     imgPosition: {
       mobile: {
         top: '714px',
-        left: 'calc(50% - 79px)',
+        left: 'calc(50% - 87px)',
       },
       tablet: {
         top: '950px',
-        left: 'calc(50% - 95px)',
+        left: 'calc(50% - 110px)',
       },
       desktop: {
         top: '1197px',
-        left: 'calc(50% - 100px)',
+        left: 'calc(50% - 120px)',
       },
     },
     titlePosition: {
       mobile: {
-        top: '690px',
-        left: 'calc(50% - 173px)',
+        top: '751px',
+        left: 'calc(50% - 175px)',
       },
       tablet: {
-        top: '928px',
-        left: 'calc(50% - 280px)',
+        top: '966px',
+        left: 'calc(50% - 290px)',
       },
       desktop: {
-        top: '1161px',
-        left: 'calc(50% - 350px)',
+        top: '1219px',
+        left: 'calc(50% - 390px)',
       },
     },
     img: {
@@ -328,11 +328,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '936px',
-          left: 'calc(50% + 110px)',
+          left: 'calc(50% + 130px)',
         },
         desktop: {
           top: '1182px',
-          left: 'calc(50% + 125px)',
+          left: 'calc(50% + 152px)',
         },
       },
       height: {
@@ -348,29 +348,29 @@ export const decarbonization = [
     imgPosition: {
       mobile: {
         top: '864px',
-        left: 'calc(50% - 14px)',
+        left: 'calc(50% - 6px)',
       },
       tablet: {
         top: '1152px',
-        left: 'calc(50% - 27px)',
+        left: 'calc(50% - 13px)',
       },
       desktop: {
         top: '1452px',
-        left: 'calc(50% - 34px)',
+        left: 'calc(50% - 14px)',
       },
     },
     titlePosition: {
       mobile: {
-        top: '840px',
-        left: 'calc(50% + 78px)',
+        top: '891px',
+        left: 'calc(50% + 90px)',
       },
       tablet: {
-        top: '1124px',
-        left: 'calc(50% + 110px)',
+        top: '1162px',
+        left: 'calc(50% + 123px)',
       },
       desktop: {
-        top: '1408px',
-        left: 'calc(50% + 125px)',
+        top: '1465px',
+        left: 'calc(50% + 152px)',
       },
     },
     img: {
@@ -380,11 +380,11 @@ export const decarbonization = [
       position: {
         tablet: {
           top: '1119px',
-          left: 'calc(50% - 237px)',
+          left: 'calc(50% - 257px)',
         },
         desktop: {
           top: '1404px',
-          left: 'calc(50% - 280px)',
+          left: 'calc(50% - 310px)',
         },
       },
       height: {

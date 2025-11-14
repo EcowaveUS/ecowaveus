@@ -12,7 +12,6 @@ export const Decarbonization = () => {
       <Box
         component={"div"}
         paddingTop={isDesktop ? "80px" : "48px"}
-        paddingBottom={isDesktop ? "74px" : "48px"}
         display={"flex"}
         justifyContent={"center"}
         className={isDesktop ? "container" : ""}
@@ -59,7 +58,7 @@ export const Decarbonization = () => {
                 width: isMobile ? '150px' : isTablet ? '200px' : '250px',
               }}
             />
-            {decarbonization.map((item) => (
+            {decarbonization.map((item, _idx) => (
               <React.Fragment key={item.title}>
                 <img
                   src={`/images/decarbonization/${item.image}`}
@@ -74,7 +73,7 @@ export const Decarbonization = () => {
                 />
                 <Box
                   component={'div'}
-                  width={isMobile ? '100px' : isTablet ? '180px' : "250px"}
+                  width={isMobile ? '80px' : isTablet ? '160px' : "250px"}
                   position="absolute"
                   top={isMobile ? item.titlePosition.mobile.top : isTablet ? item.titlePosition.tablet.top : item.titlePosition.desktop.top}
                   left={isMobile ? item.titlePosition.mobile.left : isTablet ? item.titlePosition.tablet.left : item.titlePosition.desktop.left}
@@ -84,6 +83,7 @@ export const Decarbonization = () => {
                     fontSize={isMobile ? '14px' : isTablet ? '16px' : "18px"}
                     fontWeight={'700'}
                     color={"white"}
+                    textAlign={isMobile && _idx % 2 === 0 ? 'right' : 'left'}
                   >
                     {item.title}
                   </Typography>
