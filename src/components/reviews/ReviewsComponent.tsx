@@ -23,7 +23,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
         paddingBottom={isDesktop ? "74px" : "48px"}
         display={"flex"}
         flexDirection={"column"}
-        gap={isDesktop ? "16px" : "32px"}
+        gap={"48px"}
         alignItems={"center"}
       >
         <Typography
@@ -39,7 +39,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
         <img
           src="/images/google review icon.webp"
           alt="google review icon"
-          width={isDesktop ? "100px" : "80px"}
+          width={isDesktop ? "200px" : "120px"}
         />
         <Typography
           fontWeight={400}
