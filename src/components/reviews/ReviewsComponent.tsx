@@ -39,7 +39,7 @@ export const ReviewsComponent = ({ cat = 1 }: { cat?: number }) => {
         <img
           src="/images/google review icon.webp"
           alt="google review icon"
-          width={isDesktop ? "200px" : "120px"}
+          width={isDesktop ? "165px" : "120px"}
         />
         <Typography
           fontWeight={400}
