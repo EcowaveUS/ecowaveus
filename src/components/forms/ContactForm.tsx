@@ -295,8 +295,14 @@ export const ContactForm = ({
             transition: "background 0.3s ease",
             fontFamily: "Inter !important",
             "&:hover": { backgroundColor: btnColor },
+            "&:disabled": {
+              backgroundColor: btnColor,
+              color: "white",
+              cursor: "not-allowed",
+            },
           }}
           type="submit"
+          disabled={isSending}
         >
           Submit
         </Button>
