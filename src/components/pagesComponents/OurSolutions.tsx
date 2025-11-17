@@ -94,7 +94,12 @@ export const OurSolutions = () => {
                     paddingRight={_idx !== 3? "8px" : "24px"}
                     bgcolor={"white"}
                   >
-                    <Box display={"flex"} alignItems={"stretch"}>
+                    <Box
+                      display={"flex"}
+                      alignItems={"stretch"}
+                      component={Link}
+                      to={s.url}
+                    >
                       <Box
                         width={"259px"}
                         minWidth={"259px"}
@@ -168,8 +173,6 @@ export const OurSolutions = () => {
                             display: "block",
                             width: "fit-content",
                           }}
-                          to={s.url}
-                          component={Link}
                         >
                           Learn more
                         </Typography>
@@ -206,7 +209,12 @@ export const OurSolutions = () => {
                     paddingRight={_idx !== 1 ? "8px" : "24px"}
                     bgcolor={"white"}
                   >
-                    <Box display={"flex"} alignItems={"stretch"}>
+                    <Box
+                      display={"flex"}
+                      alignItems={"stretch"}
+                      component={Link}
+                      to={s.url}
+                    >
                       <Box
                         width={"259px"}
                         minWidth={"259px"}
@@ -266,8 +274,6 @@ export const OurSolutions = () => {
                             display: "block",
                             width: "fit-content",
                           }}
-                          to={s.url}
-                          component={Link}
                         >
                           Learn more
                         </Typography>
@@ -303,6 +309,8 @@ export const OurSolutions = () => {
                 bgcolor={"white"}
                 width={'90%'}
                 minWidth={'259px'}
+                component={Link}
+                to={s.url}
               >
                 <Box
                   width={"40px"}
