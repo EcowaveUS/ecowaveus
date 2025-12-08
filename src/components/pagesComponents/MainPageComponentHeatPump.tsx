@@ -40,7 +40,7 @@ export const MainPageComponentHeatPump = () => {
           position={"absolute"}
           zIndex={2}
           left={0}
-          bottom={isDesktop ? "100px" : "47px"}
+          bottom={isDesktop ? "50px" : "47px"}
           // sx={{
           //   transform: "translateY(-50%)",
           // }}
@@ -61,7 +61,7 @@ export const MainPageComponentHeatPump = () => {
           >
             Efficient and Eco-Friendly:
           </Typography> */}
-          <Typography
+          {/* <Typography
             fontWeight={500}
             fontFamily={"Inter !important"}
             fontSize={isDesktop ? "40px" : "36px"}
@@ -70,10 +70,11 @@ export const MainPageComponentHeatPump = () => {
           >
             <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>
             {!isDesktop && <br />} Heat Pump Leaders
-          </Typography>
+          </Typography> */}
+          <img src="/images/Mass_Save_logo_HPL_White.webp" alt="Mass Save logo HPL White" width={isDesktop ? "180px" : "200px"} height="auto" />
           <Typography
             component="h1"
-            mt={"24px"}
+            // mt={"24px"}
             fontWeight={600}
             fontFamily={"Inter !important"}
             letterSpacing={"0 !important"}

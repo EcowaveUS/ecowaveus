@@ -25,7 +25,7 @@ export const SwitchFuture = () => {
         <Box
           paddingTop={isDesktop ? "100px" : "0"}
           component={"div"}
-          maxWidth={isDesktop ? "900px" : "100%"}
+          // maxWidth={isDesktop ? "900px" : "100%"}
           position={"absolute"}
           zIndex={2}
           left={0}
@@ -33,8 +33,13 @@ export const SwitchFuture = () => {
           sx={{
             transform: "translateY(-50%)",
           }}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={isDesktop ? "32px" : "20px"}
+          alignItems={"center"}
+          justifyContent={"center"}
         >
-          <Typography
+          {/* <Typography
             fontWeight={500}
             fontFamily={"Inter !important"}
             fontSize={isDesktop ? "60px" : "40px"}
@@ -43,46 +48,35 @@ export const SwitchFuture = () => {
           >
             <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>{" "}
             Heat Pump Leaders
-          </Typography>
+          </Typography> */}
           <Typography
             component="h1"
-            marginTop={isDesktop ? "24px" : "20px"}
+            // marginTop={isDesktop ? "24px" : "20px"}
             fontWeight={600}
             fontFamily={"Inter !important"}
             letterSpacing={"0 !important"}
-            fontSize={isDesktop ? "80px" : "48px"}
+            fontSize={isDesktop ? "76px" : "48px"}
             color={"white"}
             lineHeight={isDesktop ? "100%" : "52px"}
+            textAlign={"center"}
           >
-            {isDesktop ? (
-              <>
-                Riding the Wave of{" "}
-                <span
-                  style={{
-                    height: "86px",
-                    display: "inline-block",
-                  }}
-                >
-                  Eco-Innovation
-                </span>
-              </>
-            ) : (
-              "Riding the Wave of Eco-Innovation"
-            )}
+            Riding the Wave of Eco-Innovation
           </Typography>
+          <img src="/images/Mass_Save_logo_HPL_White.webp" alt="Mass Save logo HPL White" width={isDesktop ? "230px" : "200px"} height="auto" />
           <Typography
             fontWeight={400}
             fontFamily={"Inter !important"}
             fontSize={isDesktop ? "18px" : "20px"}
             color={"white"}
             lineHeight={isDesktop ? "26px" : "28px"}
-            marginTop={isDesktop ? "24px" : "20px"}
+            // marginTop={isDesktop ? "24px" : "20px"}
+            textAlign={"center"}
           >
             Affordable solutions tailored for savings and efficiency.
           </Typography>
           <Button
             sx={{
-              marginTop: isDesktop ? "40px" : "32px",
+              // marginTop: isDesktop ? "40px" : "32px",
               backgroundColor: "#198400",
               color: "white",
               borderRadius: "999px",

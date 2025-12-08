@@ -60,7 +60,7 @@ export default function FreeEstimateHero() {
             color={"#053b74"}
             textAlign={"center"}
           >
-            <b>Act Now! Federal Incentive Is Expiring!</b>
+            {/* <b>Act Now! Federal Incentive Is Expiring!</b>
             <br />
             <br />
             The $2,000 Federal Tax Credit for new heat pump installations ends
@@ -68,7 +68,13 @@ export default function FreeEstimateHero() {
             <br />
             <b>
               <u>December 31, 2025</u>.
-            </b>
+            </b> */}
+            <b>Final call! The $2,000 federal credit ends Dec 31, 2025.</b>
+            <br />
+            <b>If you miss it, schedule your installation with EcowaveUS Jan-Mar 2026 and we'll rebate $2,000.</b>
+            <br />
+            <br />
+            *Offer applies to projects of $15,000+
           </Typography>
           <Typography
             component="h1"
@@ -81,7 +87,7 @@ export default function FreeEstimateHero() {
           >
             Transform Your Comfort with Our Heating & Cooling Solutions
           </Typography>
-          <Typography
+          {/* <Typography
             fontWeight={600}
             fontFamily={"Inter !important"}
             fontSize={isDesktop ? "22px" : "18px"}
@@ -91,7 +97,7 @@ export default function FreeEstimateHero() {
           >
             Get a Free Consultation and Discover Tailored Solutions for Your
             Home
-          </Typography>
+          </Typography> */}
           <Box
             display={"flex"}
             flexDirection={isDesktop ? "row" : "column"}
@@ -123,7 +129,7 @@ export default function FreeEstimateHero() {
               Get a FREE Estimate
             </GreenButton>
           </Box>
-          <Typography
+          {/* <Typography
             fontWeight={600}
             fontFamily={"Inter !important"}
             letterSpacing={"0 !important"}
@@ -132,7 +138,14 @@ export default function FreeEstimateHero() {
             lineHeight={isDesktop ? "120%" : "40px"}
           >
             Mass Save® Partners
-          </Typography>
+          </Typography> */}
+          <img
+            src="/images/Mass_Save_logo_HPL_White.webp"
+            alt="Mass Save logo HPL White"
+            width={isDesktop ? "180px" : "200px"}
+            height="auto"
+            style={{ marginBlock: isDesktop ? "-24px" : "-16px" }}
+          />
           <Typography
             py={"12px"}
             px={"8px"}
