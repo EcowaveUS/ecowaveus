@@ -6,7 +6,7 @@ export default function FreeEstimateHero() {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
   return (
     <Box
-      height={isDesktop ? "1000px" : "1010px"}
+      height={isDesktop ? "1000px" : "1080px"}
       sx={{
         backgroundImage: `url(/images/free-estimate.webp)`,
         backgroundSize: "cover",
@@ -39,7 +39,7 @@ export default function FreeEstimateHero() {
           position={"absolute"}
           zIndex={2}
           left={0}
-          bottom={isDesktop ? "90px" : "30px"}
+          bottom={isDesktop ? "90px" : "60px"}
           display={"flex"}
           flexDirection={"column"}
           gap={isDesktop ? "24px" : "16px"}
@@ -144,7 +144,11 @@ export default function FreeEstimateHero() {
             alt="Mass Save logo HPL White"
             width={isDesktop ? "180px" : "200px"}
             height="auto"
-            style={{ marginBlock: isDesktop ? "-24px" : "-16px" }}
+            style={{ 
+              marginBlock: isDesktop ? "-24px" : "-16px",
+              marginInline: isDesktop ? "0" : "auto",
+              display: 'block'
+            }}
           />
           <Typography
             py={"12px"}

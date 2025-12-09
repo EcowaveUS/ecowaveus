@@ -71,7 +71,13 @@ export const MainPageComponentHeatPump = () => {
             <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography> */}
-          <img src="/images/Mass_Save_logo_HPL_White.webp" alt="Mass Save logo HPL White" width={isDesktop ? "180px" : "200px"} height="auto" />
+          <img
+            src="/images/Mass_Save_logo_HPL_White.webp"
+            alt="Mass Save logo HPL White"
+            width={isDesktop ? "180px" : "180px"}
+            height="auto"
+            style={{ marginInline: isDesktop ? "0" : "auto", display: 'block' }}
+          />
           <Typography
             component="h1"
             // mt={"24px"}
