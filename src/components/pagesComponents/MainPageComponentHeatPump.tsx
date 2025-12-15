@@ -4,15 +4,20 @@ import { ContactForm } from "../forms/ContactForm";
 
 export const MainPageComponentHeatPump = () => {
   const navigate = useNavigate();
+  // const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
+  // const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm") && theme.breakpoints.down("md"));
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
+  // const isBigDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("lg"));
   return (
     <Box
-      height={isDesktop ? "800px" : "820px"}
+      // height={isMobile ? "1030px" : isTablet ? "800px" : isBigDesktop ? "1020px" : "1150px"}
       sx={{
         backgroundImage: `url(/images/heat-pumps-light.webp)`,
         backgroundSize: "cover",
         backgroundPosition: isDesktop ? "center" : "60% center",
         backgroundRepeat: "no-repeat",
+        paddingTop: isDesktop ? "120px" : "50px",
+        paddingBottom: '50px'
       }}
       position={"relative"}
     >
@@ -32,15 +37,19 @@ export const MainPageComponentHeatPump = () => {
         height={"100%"}
         className="container"
         position={"relative"}
+        display={"grid"}
+        gridTemplateColumns={isDesktop ? "1fr 1fr" : "1fr"}
+        gap={"40px"}
+        alignItems={"center"}
       >
         <Box
-          paddingTop={isDesktop ? "100px" : "0"}
+          // paddingTop={isDesktop ? "100px" : "0"}
           component={"div"}
-          maxWidth={isDesktop ? "min(712px, 50% - 20px)" : "100%"}
-          position={"absolute"}
+          // maxWidth={isDesktop ? "min(712px, 50% - 20px)" : "100%"}
+          // position={"absolute"}
           zIndex={2}
-          left={0}
-          bottom={isDesktop ? "50px" : "47px"}
+          // left={0}
+          // bottom={isDesktop ? "50px" : "47px"}
           // sx={{
           //   transform: "translateY(-50%)",
           // }}
@@ -71,6 +80,35 @@ export const MainPageComponentHeatPump = () => {
             <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography> */}
+          <Typography
+            py={"12px"}
+            px={"8px"}
+            bgcolor={"#fdd643"}
+            borderRadius={"12px"}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "20px" : "16px"}
+            fontWeight={600}
+            lineHeight={isDesktop ? "24px" : "20px"}
+            letterSpacing={"5%"}
+            color={"#053b74"}
+            textAlign={"center"}
+          >
+            {/* <b>Act Now! Federal Incentive Is Expiring!</b>
+            <br />
+            <br />
+            The $2,000 Federal Tax Credit for new heat pump installations ends
+            permanently on
+            <br />
+            <b>
+              <u>December 31, 2025</u>.
+            </b> */}
+            <b>Final call! The $2,000 federal credit ends Dec 31, 2025.</b>
+            <br />
+            <b>If you miss it, schedule your installation with EcowaveUS Jan-Mar 2026 and we'll rebate $2,000.</b>
+            <br />
+            <br />
+            *Offer applies to projects of $15,000+
+          </Typography>
           <img
             src="/images/Mass_Save_logo_HPL_White.webp"
             alt="Mass Save logo HPL White"
@@ -152,14 +190,14 @@ export const MainPageComponentHeatPump = () => {
         {isDesktop && (
           <Box
             component={"div"}
-            position={"absolute"}
-            right={0}
-            top={"50%"}
-            width={"calc(50% - 20px)"}
-            mt={"40px"}
-            sx={{
-              transform: "translateY(-50%)",
-            }}
+            // position={"absolute"}
+            // right={0}
+            // top={"50%"}
+            // width={"calc(50% - 20px)"}
+            // mt={"40px"}
+            // sx={{
+            //   transform: "translateY(-50%)",
+            // }}
           >
             <ContactForm btnColor="#022241" />
           </Box>
