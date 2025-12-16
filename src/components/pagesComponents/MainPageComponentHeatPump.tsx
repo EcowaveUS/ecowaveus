@@ -80,35 +80,6 @@ export const MainPageComponentHeatPump = () => {
             <span style={{ color: "#1fa500", fontWeight: 700 }}>Mass Save</span>
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography> */}
-          <Typography
-            py={"12px"}
-            px={"8px"}
-            bgcolor={"#fdd643"}
-            borderRadius={"12px"}
-            fontFamily={"Inter !important"}
-            fontSize={isDesktop ? "20px" : "16px"}
-            fontWeight={600}
-            lineHeight={isDesktop ? "24px" : "20px"}
-            letterSpacing={"5%"}
-            color={"#053b74"}
-            textAlign={"center"}
-          >
-            {/* <b>Act Now! Federal Incentive Is Expiring!</b>
-            <br />
-            <br />
-            The $2,000 Federal Tax Credit for new heat pump installations ends
-            permanently on
-            <br />
-            <b>
-              <u>December 31, 2025</u>.
-            </b> */}
-            <b>Final call! The $2,000 federal credit ends Dec 31, 2025.</b>
-            <br />
-            <b>If you miss it, schedule your installation with EcowaveUS Jan-Mar 2026 and we'll rebate $2,000.</b>
-            <br />
-            <br />
-            *Offer applies to projects of $15,000+
-          </Typography>
           <img
             src="/images/Mass_Save_logo_HPL_White.webp"
             alt="Mass Save logo HPL White"
@@ -163,7 +134,7 @@ export const MainPageComponentHeatPump = () => {
           >
             Schedule now
           </Button>
-          <Typography
+          {/* <Typography
             py={"12px"}
             px={"8px"}
             bgcolor={"#fdd643"}
@@ -185,6 +156,36 @@ export const MainPageComponentHeatPump = () => {
             <b>
               <u>December 31, 2025</u>.
             </b>
+          </Typography> */}
+          <Typography
+            py={"12px"}
+            px={"8px"}
+            bgcolor={"#fdd643"}
+            borderRadius={"12px"}
+            fontFamily={"Inter !important"}
+            fontSize={isDesktop ? "20px" : "16px"}
+            fontWeight={600}
+            marginTop={isDesktop ? "24px" : "20px"}
+            lineHeight={isDesktop ? "24px" : "20px"}
+            letterSpacing={"5%"}
+            color={"#053b74"}
+            textAlign={"center"}
+          >
+            {/* <b>Act Now! Federal Incentive Is Expiring!</b>
+            <br />
+            <br />
+            The $2,000 Federal Tax Credit for new heat pump installations ends
+            permanently on
+            <br />
+            <b>
+              <u>December 31, 2025</u>.
+            </b> */}
+            <b>Final call! The $2,000 federal credit ends Dec 31, 2025.</b>
+            <br />
+            <b>If you miss it, schedule your installation with EcowaveUS Jan-Mar 2026 and we'll rebate $2,000.</b>
+            <br />
+            <br />
+            *Offer applies to projects of $15,000+
           </Typography>
         </Box>
         {isDesktop && (
