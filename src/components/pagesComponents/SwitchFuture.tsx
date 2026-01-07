@@ -62,7 +62,7 @@ export const SwitchFuture = () => {
           >
             Riding the Wave of Eco-Innovation
           </Typography>
-          <img src="/images/Mass_Save_logo_HPL_White.webp" alt="Mass Save logo HPL White" width={isDesktop ? "230px" : "200px"} height="auto" />
+          <img src="/images/Mass save heat pump installers.webp" alt="Mass Save logo HPL White" width={isDesktop ? "230px" : "200px"} height="auto" />
           <Typography
             fontWeight={400}
             fontFamily={"Inter !important"}

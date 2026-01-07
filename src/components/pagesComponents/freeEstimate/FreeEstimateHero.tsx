@@ -140,7 +140,7 @@ export default function FreeEstimateHero() {
             Mass Save® Partners
           </Typography> */}
           <img
-            src="/images/Mass_Save_logo_HPL_White.webp"
+            src="/images/Mass save heat pump installers.webp"
             alt="Mass Save logo HPL White"
             width={isDesktop ? "180px" : "200px"}
             height="auto"
@@ -150,6 +150,16 @@ export default function FreeEstimateHero() {
               display: 'block'
             }}
           />
+          <Typography
+            fontWeight={400}
+            fontFamily={"Inter !important"}
+            fontSize={"16px"}
+            color={"white"}
+            lineHeight={isDesktop ? "24px" : "28px"}
+            letterSpacing={"0 !important"}
+            >
+            Mass Save Heat Pump Leaders
+          </Typography>
           <Typography
             py={"12px"}
             px={"8px"}

@@ -98,7 +98,7 @@ export const HeatPumpsPage = () => {
               Whole-home rebates are available to customers who install heat
               pumps as the sole source of heating and cooling{" "}
               <span style={{ fontWeight: 700, color: "#1FA500" }}>
-                ($3,000 per ton, up to $16,000).
+                ($2,650 per ton, up to $8,500).
               </span>
               <br />
               <br />
@@ -106,7 +106,7 @@ export const HeatPumpsPage = () => {
               unit (tonnage) to customers who plan to keep an existing boiler or
               furnace in place to supplement a new heat pump system{" "}
               <span style={{ fontWeight: 700, color: "#1FA500" }}>
-                ($1,250 per ton, up to $10,000).
+                ($1,125 per ton, up to $8,500).
               </span>
               <br />
               <br />
@@ -118,10 +118,10 @@ export const HeatPumpsPage = () => {
                 lineHeight={"26px"}
                 color={"#0B081F"}
               >
-                Federal Incentives
+                Other Incentives
               </Typography>
               <br />
-              Federal tax credit 30% of the cost of the installation up to&nbsp;
+              EcowaveUS Federal Tax Credit Compensation Rebates up to&nbsp;
               <span style={{ fontWeight: 700, color: "#1FA500" }}>$2,000</span>
               <br />
               <br />
@@ -136,7 +136,7 @@ export const HeatPumpsPage = () => {
               >
                 Don't miss out! This is only available for installations
                 completed by{" "}
-                <span style={{ whiteSpace: "nowrap" }}>December 31, 2025.</span>
+                <span style={{ whiteSpace: "nowrap" }}>March 31, 2026.</span>
               </span>
               <br />
               <Typography

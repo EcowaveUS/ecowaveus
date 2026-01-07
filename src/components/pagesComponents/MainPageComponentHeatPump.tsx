@@ -81,12 +81,23 @@ export const MainPageComponentHeatPump = () => {
             {!isDesktop && <br />} Heat Pump Leaders
           </Typography> */}
           <img
-            src="/images/Mass_Save_logo_HPL_White.webp"
+            src="/images/Mass save heat pump installers.webp"
             alt="Mass Save logo HPL White"
             width={isDesktop ? "180px" : "180px"}
             height="auto"
             style={{ marginInline: isDesktop ? "0" : "auto", display: 'block' }}
           />
+          <Typography
+            fontWeight={400}
+            fontFamily={"Inter !important"}
+            fontSize={"16px"}
+            color={"white"}
+            lineHeight={isDesktop ? "24px" : "28px"}
+            letterSpacing={"0 !important"}
+            marginTop={isDesktop ? "-12px" : "-8px"}
+            >
+            Mass Save Heat Pump Leaders
+          </Typography>
           <Typography
             component="h1"
             // mt={"24px"}
@@ -95,6 +106,7 @@ export const MainPageComponentHeatPump = () => {
             letterSpacing={"0 !important"}
             fontSize={isDesktop ? "64px" : "48px"}
             color={"white"}
+            marginTop={isDesktop ? "16px" : "12px"}
             lineHeight={isDesktop ? "100%" : "52px"}
           >
             Efficient Heating and Cooling for Your Home

@@ -47,8 +47,7 @@ export default function FreeEstimateSavings() {
           maxWidth={"550px"}
         >
           As a Mass Save® Partner, we provide information and guidance to help
-          you apply for and claim Mass Save® rebates and incentives. Federal
-          incentives are also available through the 25C tax credit.
+          you apply for and claim Mass Save® rebates and incentives. We are also offering a limited-time Compensation Rebate to cover the difference from the recently expired 25C federal tax credit.
         </Typography>
         <Box
           display={"grid"}
@@ -58,18 +57,18 @@ export default function FreeEstimateSavings() {
           <SavingComponent
             title1="whole-home rebates"
             title2="up to"
-            price="$16,000"
+            price="$8,500"
           />
           <SavingComponent
             title1="partial-home rebates"
             title2="up to"
-            price="$10,000"
+            price="$8,500"
           />
           <SavingComponent
-            title1="tax credit 30% of the cost of"
-            title2="the installation up to"
+            title1="Ecowaveus federal tax credit"
+            title2="compensation rebates up to"
             price="$2,000"
-            title3="Don't miss out! This is only available for installations completed by December 31, 2025."
+            title3="Don't miss out! This is only available for installations completed by March 31, 2026."
           />
         </Box>
         <Typography
