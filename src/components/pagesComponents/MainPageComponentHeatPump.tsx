@@ -95,6 +95,7 @@ export const MainPageComponentHeatPump = () => {
             lineHeight={isDesktop ? "24px" : "28px"}
             letterSpacing={"0 !important"}
             marginTop={isDesktop ? "-12px" : "-8px"}
+            textAlign={isDesktop ? "left" : "center"}
             >
             Mass Save Heat Pump Leaders
           </Typography>

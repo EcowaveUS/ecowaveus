@@ -57,18 +57,20 @@ export default function FreeEstimateSavings() {
           <SavingComponent
             title1="whole-home rebates"
             title2="up to"
-            price="$8,500"
+            price1="$8,500"
           />
           <SavingComponent
             title1="partial-home rebates"
             title2="up to"
-            price="$8,500"
+            price1="$8,500"
           />
           <SavingComponent
-            title1="Ecowaveus federal tax credit"
-            title2="compensation rebates up to"
-            price="$2,000"
-            title3="Don't miss out! This is only available for installations completed by March 31, 2026."
+            title1="EcowaveUS federal tax credit"
+            title2="compensation rebates"
+            title3="up to"
+            title4="(projects of $15,000+)"
+            title5="Don't miss out! This is only available for installations completed by March 31, 2026."
+            price2="$2,000"
           />
         </Box>
         <Typography

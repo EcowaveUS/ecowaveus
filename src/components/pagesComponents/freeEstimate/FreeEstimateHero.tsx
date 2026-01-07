@@ -157,6 +157,8 @@ export default function FreeEstimateHero() {
             color={"white"}
             lineHeight={isDesktop ? "24px" : "28px"}
             letterSpacing={"0 !important"}
+            textAlign={isDesktop ? "left" : "center"}
+            marginTop={isDesktop ? "-12px" : "-8px"}
             >
             Mass Save Heat Pump Leaders
           </Typography>

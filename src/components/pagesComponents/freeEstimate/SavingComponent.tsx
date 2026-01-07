@@ -3,13 +3,19 @@ import { Box, Typography } from "@mui/material";
 export default function SavingComponent({
   title1,
   title2,
-  price,
   title3,
+  title4,
+  title5,
+  price1,
+  price2,
 }: {
   title1: string;
   title2: string;
-  price: string;
   title3?: string;
+  title4?: string;
+  title5?: string;
+  price1?: string;
+  price2?: string;
 }) {
   return (
     <Box
@@ -44,9 +50,24 @@ export default function SavingComponent({
         textTransform={"uppercase"}
       >
         {title2}&nbsp;
-        <span style={{ fontWeight: 700, color: "#198400" }}>{price}</span>
+        {price1 && (<span style={{ fontWeight: 700, color: "#198400" }}>{price1}</span>)}
       </Typography>
       {title3 && (
+        <Typography
+          fontSize={"14px"}
+          fontFamily={"Inter !important"}
+          color={"#181a1c"}
+          fontWeight={400}
+          textAlign={"center"}
+          textTransform={"uppercase"}
+          marginBlock={"4px"}
+        >
+          {title3}&nbsp;
+          {price2 && (<span style={{ fontWeight: 700, color: "#198400" }}>{price2}&nbsp;</span>)}
+          {title4 && (<span style={{ textTransform: 'none'}}>{title4}</span>)}
+        </Typography>
+      )}
+      {title5 && (
         <Typography
           fontSize={"14px"}
           fontFamily={"Inter !important"}
@@ -56,7 +77,7 @@ export default function SavingComponent({
           textTransform={"uppercase"}
           mt={"2px"}
         >
-          {title3}
+          {title5}
         </Typography>
       )}
     </Box>

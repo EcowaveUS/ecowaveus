@@ -122,7 +122,7 @@ export const HeatPumpsPage = () => {
               </Typography>
               <br />
               EcowaveUS Federal Tax Credit Compensation Rebates up to&nbsp;
-              <span style={{ fontWeight: 700, color: "#1FA500" }}>$2,000</span>
+              <span style={{ fontWeight: 700, color: "#1FA500" }}>$2,000</span>&nbsp;(projects of $15,000+)
               <br />
               <br />
               <span

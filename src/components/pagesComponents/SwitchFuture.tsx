@@ -66,6 +66,17 @@ export const SwitchFuture = () => {
           <Typography
             fontWeight={400}
             fontFamily={"Inter !important"}
+            fontSize={"16px"}
+            color={"white"}
+            lineHeight={isDesktop ? "24px" : "28px"}
+            letterSpacing={"0 !important"}
+            marginTop={isDesktop ? "-44px" : "-28px"}
+            >
+            Mass Save Heat Pump Leaders
+          </Typography>
+          <Typography
+            fontWeight={400}
+            fontFamily={"Inter !important"}
             fontSize={isDesktop ? "18px" : "20px"}
             color={"white"}
             lineHeight={isDesktop ? "26px" : "28px"}
