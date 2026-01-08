@@ -1,9 +1,10 @@
 import { Box, Theme, useMediaQuery } from "@mui/material";
-import SolutionCard from "./SolutionCard";
+// import SolutionCard from "./SolutionCard";
+import { OurSolutionsCards } from "../OurSolutionsCards";
 
 export default function FreeEstimateMoreSolutions() {
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up("md"));
-  const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
+  // const isTablet = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   return (
     <Box
       component={"div"}
@@ -16,6 +17,9 @@ export default function FreeEstimateMoreSolutions() {
       }}
       pt={isDesktop ? "120px" : "60px"}
       pb={isDesktop ? "120px" : "60px"}
+      display={"flex"}
+      flexDirection={"column"}
+      gap={isDesktop ? "48px" : "24px"}
     >
       <Box
         component={"div"}
@@ -31,7 +35,7 @@ export default function FreeEstimateMoreSolutions() {
       >
         More Solutions for You
       </Box>
-      <Box
+      {/* <Box
         component={"div"}
         className="container-2"
         mt={isDesktop ? "48px" : "24px"}
@@ -69,7 +73,8 @@ export default function FreeEstimateMoreSolutions() {
           title="Solar Panels"
           image="/images/solution-4.webp"
         />
-      </Box>
+      </Box> */}
+      <OurSolutionsCards allowedLinks={false} />
     </Box>
   );
 }
