@@ -7,7 +7,7 @@ import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
 import { VehicleCharger } from "../components/pagesComponents/VehicleCharger";
-import { MainPageComponentEvChargers } from "../components/pagesComponents/MainPageComponentEvChargers";
+import { MainPageComponentMultiFamily } from "../components/pagesComponents/MainPageComponentMultiFamily";
 
 export const MultiFamilyPage = () => {
   const location = useLocation();
@@ -16,19 +16,19 @@ export const MultiFamilyPage = () => {
   return (
     <StyledPage>
       <Helmet>
-        <title>EV Charger Installation | Level 2 Home & Commercial | EcowaveUS</title>
+        <title>Multi-Family Heat Pump Installation | Apartments, Condos & Commercial | EcowaveUS</title>
         <meta
           name="description"
-          content="Professional EV charger installation in Beverly, MA. Level 2 home & commercial charging stations. Federal tax credits available. Call EcowaveUS at 978-500-4081!"
+          content="Professional multi-family heat pump installation in Beverly, MA. Multi-family heat pumps. Mass Save rebates available. Call EcowaveUS at 978-500-4081!"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.ecowaveus.com/ev-chargers" />
+        <link rel="canonical" href="https://www.ecowaveus.com/multi-family" />
       </Helmet>
-      <MainPageComponentEvChargers
-        title="Charge Faster, Go Further"
-        content="We are dedicated to helping drivers switch to clean and sustainable transportation, by providing top-quality EV charger installation solutions that are both cost-effective and affordable."
+      <MainPageComponentMultiFamily
+        title="Upgrade Multi‑Family Comfort with Efficient Heating & Cooling"
+        content="From heat pumps and heat pump water heaters to EV charging, solar, batteries, and electrical upgrades, we design, install, and maintain end-to-end solutions that make buildings smarter, safer, and more profitable."
         pathLocation={pathLocation}
-        backgroundImage="/images/ev-charger-background.webp"
+        backgroundImage="/images/multi-family-home-image.webp"
       />
       <Box width="100%">
         <ServiceBenefits
