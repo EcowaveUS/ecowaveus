@@ -61,7 +61,7 @@ export const OurSolutionsCards = ({ allowedLinks = true }: { allowedLinks?: bool
                   flexDirection={"column"}
                   justifyContent={"center"}
                 >
-                  {_idx === 2 ? (
+                  {[1, 2, 3].includes(_idx) ? (
                     <Box
                       width={"48px"}
                       height={"48px"}

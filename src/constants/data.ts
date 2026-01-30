@@ -8,9 +8,9 @@ import iconEvCharger from "../assets/icons/Icon-ev-charger.png";
 import iconEnergyStorage from "../assets/icons/Icon-energy-storage.png";
 
 import iconHeatPumpsNew from "../assets/icons/Icon-heat-pumps-new.svg";
-import iconEvChargerNew from "../assets/icons/Icon-ev-charger-new.svg";
+import iconEvChargerNew from "../assets/icons/Multi-family-ev-charger-circle.webp";
 import iconEnergyStorageNew from "../assets/icons/Icon-energy-storage.webp";
-import iconSolarPanelsNew from "../assets/icons/Icon-solar-panels.svg";
+import iconSolarPanelsNew from "../assets/icons/Multi-family-solar-circle.webp";
 import iconElectricalUpgrades from "../assets/icons/Icon-electrical-upgrades.webp";
 import iconHPWaterHeaters from "../assets/icons/Icon-h-p-water-heaters.webp";
 
