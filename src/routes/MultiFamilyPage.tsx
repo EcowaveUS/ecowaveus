@@ -1,13 +1,14 @@
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { ServiceBenefits } from "../components/services/ServiceBenefits";
 import { OursBrands } from "../components/brands/OursBrands";
 import { motion } from "framer-motion";
-import { RebatesIncentives } from "../components/services/RebatesIncentives";
 import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
-import { VehicleCharger } from "../components/pagesComponents/VehicleCharger";
 import { MainPageComponentMultiFamily } from "../components/pagesComponents/MainPageComponentMultiFamily";
+import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
+import { ContactComponent } from "../components/forms/ContactComponent";
+import { brandImagesNew } from "../constants/data";
+import { BenefitsForMultiFamily } from "../components/pagesComponents/MultiFamily";
 
 export const MultiFamilyPage = () => {
   const location = useLocation();
@@ -24,76 +25,17 @@ export const MultiFamilyPage = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.ecowaveus.com/multi-family" />
       </Helmet>
-      <MainPageComponentMultiFamily
-        title="Upgrade Multi‑Family Comfort with Efficient Heating & Cooling"
-        content="From heat pumps and heat pump water heaters to EV charging, solar, batteries, and electrical upgrades, we design, install, and maintain end-to-end solutions that make buildings smarter, safer, and more profitable."
-        pathLocation={pathLocation}
-        backgroundImage="/images/multi-family-home-image.webp"
-      />
       <Box width="100%">
-        <ServiceBenefits
-          title="Benefits of EV-Chargers"
-          subTitle="Maximize Time and Comfort"
-          color="#022D57"
+        <MainPageComponentMultiFamily
+          title="Upgrade Multi‑Family Comfort with Efficient Heating & Cooling"
+          content="From heat pumps and heat pump water heaters to EV charging, solar, batteries, and electrical upgrades, we design, install, and maintain end-to-end solutions that make buildings smarter, safer, and more profitable."
+          pathLocation={pathLocation}
+          backgroundImage="/images/multi-family-home-image.webp"
         />
-      </Box>
-      <ImageBrackground>
-        <StyledImage
-          style={{ display: "block" }}
-          src="/images/ev-chargers-types-background.webp"
-          alt="heatpumps-background"
-        />
-      </ImageBrackground>
-      <div style={{ background: "#0c4200", width: "100%" }}>
-        <ProccesComponent>
-          <TypesTitle>Types of Electric Vehicle Chargers</TypesTitle>
-          <TypesText>
-            Powering your electric vehicle is more flexible than ever. Whether
-            you're at home, at work, or on a long journey, there's a charging
-            solution that fits your lifestyle.
-          </TypesText>
-          <CarsContainer>
-            {[0, 1, 2].map((l) => (
-              <VehicleCharger level={l} key={l} />
-            ))}
-          </CarsContainer>
-          <TypesText>
-            EcowaveUS recommends Level 2 charging, as it offers the perfect
-            balance of fast charging speeds and practical installation for both
-            home and business use.
-          </TypesText>
-          <TypesText>
-            Let's explore the three levels of EV charging to see which is right
-            for you.
-          </TypesText>
-        </ProccesComponent>
-      </div>
-      <RebatesIncentives>
-        <Text>
-          From the National Grid website: "The Residential EV Charging
-          Infrastructure Program supports residential electric customers by
-          providing rebates for upgrading home-wiring in their garage or parking
-          area (up to $700 for single family homes, with additional rebates for
-          2-4 units). Customers living in an environmental justice community or
-          enrolled in the low-income discount rate (R-2) are eligible for
-          additional wiring and charger rebates."
-        </Text>
-        <Subtitle>Federal Incentives</Subtitle>
-        <Text>
-          A recently expired federal tax break for electric vehicle (EV)
-          chargers got new life under the recently passed Inflation Reduction
-          Act—a move that will give taxpayers up to $1,000 in a tax credit.
-        </Text>
-      </RebatesIncentives>
-      <Box width="100%">
-        <OursBrands
-          images={[
-            "/images/brands/tesla-logo.webp",
-            "/images/brands/chargepoint-logo.webp",
-            "/images/brands/legrand-logo.webp",
-            "/images/brands/siemens-logo.webp",
-          ]}
-        />
+        <BenefitsForMultiFamily />
+        <ReviewsComponent cat={3} />
+        <OursBrands color="#F6F8FA" images={brandImagesNew} />
+        <ContactComponent cat={2} />
       </Box>
     </StyledPage>
   );
