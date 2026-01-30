@@ -10,6 +10,7 @@ import { TermsAndConditionsPage } from "../../routes/TermsAndConditionsPage";
 import { FreeEstimatePage } from "../../routes/FreeEstimatePage";
 import { AnimatePresence } from "framer-motion";
 import { SolarPanelsPage } from "../../routes/SolarPanelsPage";
+import { MultiFamilyPage } from "../../routes/MultiFamilyPage";
 
 export const AnimateRoutes = () => {
   const location = useLocation();
@@ -29,6 +30,7 @@ export const AnimateRoutes = () => {
           element={<TermsAndConditionsPage />}
         />
         <Route path="/free-estimate" element={<FreeEstimatePage />} />
+        <Route path="/multi-family" element={<MultiFamilyPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>

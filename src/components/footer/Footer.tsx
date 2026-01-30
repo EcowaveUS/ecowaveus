@@ -66,6 +66,7 @@ export const Footer = () => {
             title="Services"
             links={[
               { text: "Heating & Cooling", url: "/heat-pumps" },
+              { text: "Multi-Family", url: "/multi-family" },
               { text: "EV Chargers", url: "/ev-chargers" },
               { text: "Solar Panels", url: "/solar-panels" },
               { text: "Energy Storage", url: "/energy-storage" },
