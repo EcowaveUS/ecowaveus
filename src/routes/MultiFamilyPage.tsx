@@ -7,7 +7,7 @@ import { Box, Typography } from "@mui/material";
 import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 import { ContactComponent } from "../components/forms/ContactComponent";
 import { brandImagesNew } from "../constants/data";
-import { MainPageComponentMultiFamily, BenefitsForMultiFamily, SaveBigUnitProperties } from "../components/pagesComponents/MultiFamily";
+import { MainPageComponentMultiFamily, BenefitsForMultiFamily, SaveBigUnitProperties, CompleteElectrification } from "../components/pagesComponents/MultiFamily";
 
 export const MultiFamilyPage = () => {
   const location = useLocation();
@@ -33,6 +33,7 @@ export const MultiFamilyPage = () => {
         />
         <BenefitsForMultiFamily />
         <SaveBigUnitProperties />
+        <CompleteElectrification />
         <ReviewsComponent cat={3} />
         <OursBrands color="#F6F8FA" images={brandImagesNew} />
         <ContactComponent cat={2} />
