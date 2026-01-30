@@ -204,7 +204,7 @@ export const HeaderNew = () => {
               }
               to="/energy-storage"
             >
-              Home Batteries
+              Energy Storage
             </LinkItem>
             <LinkItem
               className={location.pathname === "/about-us" ? "active" : ""}
