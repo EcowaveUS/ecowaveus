@@ -69,7 +69,7 @@ export const Footer = () => {
               { text: "Multi-Family", url: "/multi-family" },
               { text: "EV Chargers", url: "/ev-chargers" },
               { text: "Solar Panels", url: "/solar-panels" },
-              { text: "Energy Storage", url: "/energy-storage" },
+              { text: "Home Batteries", url: "/energy-storage" },
             ]}
             clickable
           />
