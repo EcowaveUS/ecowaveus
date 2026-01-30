@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ContactForm } from "../forms/ContactForm";
+import { ContactForm } from "../../forms/ContactForm";
 import { Button, Theme, Typography, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router";
 

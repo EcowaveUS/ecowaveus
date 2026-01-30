@@ -4,11 +4,10 @@ import { OursBrands } from "../components/brands/OursBrands";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Box, Typography } from "@mui/material";
-import { MainPageComponentMultiFamily } from "../components/pagesComponents/MainPageComponentMultiFamily";
 import { ReviewsComponent } from "../components/reviews/ReviewsComponent";
 import { ContactComponent } from "../components/forms/ContactComponent";
 import { brandImagesNew } from "../constants/data";
-import { BenefitsForMultiFamily } from "../components/pagesComponents/MultiFamily";
+import { MainPageComponentMultiFamily, BenefitsForMultiFamily, SaveBigUnitProperties } from "../components/pagesComponents/MultiFamily";
 
 export const MultiFamilyPage = () => {
   const location = useLocation();
@@ -33,6 +32,7 @@ export const MultiFamilyPage = () => {
           backgroundImage="/images/multi-family-home-image.webp"
         />
         <BenefitsForMultiFamily />
+        <SaveBigUnitProperties />
         <ReviewsComponent cat={3} />
         <OursBrands color="#F6F8FA" images={brandImagesNew} />
         <ContactComponent cat={2} />
