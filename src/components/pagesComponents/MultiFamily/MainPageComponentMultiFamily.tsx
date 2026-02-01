@@ -141,36 +141,6 @@ const HeaderContent = styled.div<Props>`
   }
 `;
 
-const Title = styled.h1<Props>`
-  width: 90%;
-  align-self: right;
-  color: var(--White, var(--fore-allways---white, #fff));
-  text-align: right;
-  font-family: Inter;
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 66px */
-  text-align: ${(props) =>
-    props.pathLocation === "/ev-chargers" ? "right" : "left"};
-  @media (max-width: 1024px) {
-    font-size: 3rem;
-    width: 100%;
-  }
-`;
-
-const Text = styled.p<Props>`
-  width: 90%;
-  color: var(--White, var(--fore-allways---white, #fff));
-  font-family: Inter;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%; /* 38.4px */
-  text-align: ${(props) =>
-    props.pathLocation === "/ev-chargers" ? "right" : "left"};
-`;
-
 const AuxiliarText = styled.p`
   color: var(--fore-allways---white, #fff);
 

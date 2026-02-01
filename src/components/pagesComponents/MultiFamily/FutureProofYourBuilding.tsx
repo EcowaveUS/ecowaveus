@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
 
 const items = [
