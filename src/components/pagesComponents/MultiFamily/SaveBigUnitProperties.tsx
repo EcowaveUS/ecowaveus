@@ -14,7 +14,7 @@ const items = [
       },
       {
         isBold: false,
-        title: 'Incentives based on assessment findings including no-cost air sealing. and up to 100% off insulation'
+        title: 'Incentives based on assessment findings including no-cost air sealing, and up to 100% off insulation'
       },
       {
         isBold: false,
@@ -95,7 +95,7 @@ export const SaveBigUnitProperties: React.FC = () => {
                   <ul style={{ paddingLeft: '38px' }}>
                     {item2.items.map((item3, key3) => (
                       <li key={key3}>
-                        <Typography color="#252529" fontWeight={400} fontSize="16px" letterSpacing="0 !important" fontFamily="Inter !important">{item3}</Typography>
+                        <Typography color="#252529" fontWeight={400} fontSize="16px" letterSpacing="0 !important" fontFamily="Inter !important" lineHeight="1.75">{item3}</Typography>
                       </li>
                     ))}
                   </ul>
@@ -115,10 +115,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  padding: 48px 0;
+  padding: 48px 0 0;
   background-color: #252529;
   @media (min-width: 900px) {
-    padding: 92px 0;
+    padding: 92px 0 0;
   }
 `;
 

@@ -61,7 +61,7 @@ export const FutureProofYourBuilding = () => {
           Future-Proof Your Building
         </Typography>
         <Box
-          marginTop={'24px'}
+          marginTop={'48px'}
           display={'grid'}
           gap={'24px'}
           maxWidth={'1200px'}

@@ -77,6 +77,7 @@ export const UnlockNationalGrid: React.FC = () => {
         gap={isDesktop ? "0px" : "24px"}
         flexDirection={isDesktop ? "row" : "column"}
         maxWidth={'100%'}
+        marginTop={'24px'}
       >
         {items.map((item, _idx) => (
           <div
@@ -95,7 +96,7 @@ export const UnlockNationalGrid: React.FC = () => {
               <Typography mb={'8px'} color={"#252529"} fontSize="14px" letterSpacing="0 !important" fontFamily="Inter !important"><span style={{ fontWeight: 'bold'}}>{item2.title}</span>{item2.description}</Typography>
               {item2.items && (
                 <ul style={{ paddingLeft: '24px' }}>
-                  {item2.items.map((item3, _idx3) => <li key={_idx3} style={{ color: '#252529', marginBottom: '8px', fontSize: '14px', fontFamily: 'Inter !important', fontWeight: '300'}}>{item3}</li>)}
+                  {item2.items.map((item3, _idx3) => <li key={_idx3} style={{ color: '#252529', marginBottom: '8px', fontSize: '14px', fontFamily: 'Inter !important', fontWeight: '300', lineHeight: '1.75'}}>{item3}</li>)}
                 </ul>
               )}
             </div>)}
