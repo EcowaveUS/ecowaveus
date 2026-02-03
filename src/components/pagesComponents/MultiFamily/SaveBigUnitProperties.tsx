@@ -53,7 +53,11 @@ const items = [
       },
       {
         isBold: false,
-        title: '0% HEAT Loan financing for equipment costs',
+        title: 'Air-source heat pump rebates (2026): Per-unit amounts are the same as 2-4 units.',
+      },
+      {
+        isBold: true,
+        title: '0% HEAT Loan financing of up to $25,000 per owner-occupied unit on a residential rate'
       },
       {
         isBold: false,
