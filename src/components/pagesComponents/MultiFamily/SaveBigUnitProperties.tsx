@@ -45,7 +45,6 @@ const items = [
         items: [
           'no-cost air sealing',
           'up to 100% off insulation;',
-          'rebates for high-efficiency heating, cooling and water heating (e.g., heat pumps and controls)',
           'programmable/Wi-Fi thermostats',
           'water-saving devices',
           'occupancy sensors'
