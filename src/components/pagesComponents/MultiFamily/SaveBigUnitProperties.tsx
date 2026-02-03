@@ -44,7 +44,7 @@ const items = [
         title: 'Incentives based on assessment findings, commonly including:',
         items: [
           'no-cost air sealing',
-          'up to 100% off insulation;',
+          'up to 100% off insulation',
           'programmable/Wi-Fi thermostats',
           'water-saving devices',
           'occupancy sensors'
@@ -52,11 +52,15 @@ const items = [
       },
       {
         isBold: false,
-        title: 'Air-source heat pump rebates (2026): Per-unit amounts are the same as 2-4 units.',
+        title: 'Air-source heat pump rebates (2026):',
+        items: [
+          'Whole-home $2,650/ton up to $8,500',
+          'Partial-home $1,125/ton up to $8,500'
+        ]
       },
       {
         isBold: true,
-        title: '0% HEAT Loan financing of up to $25,000 per owner-occupied unit on a residential rate'
+        title: '0% HEAT Loan financing of up to $25,000 per unit'
       },
       {
         isBold: false,
