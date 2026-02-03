@@ -9,7 +9,7 @@ const items = [
       {
         image: "/images/multi-family/Multi-family-ev-charger-bullet.webp",
         title: "Best for: ",
-        description: "2-4 unit buildings where charging is typically installed as part of a residential-style upgrade (e.g., adding a 240V circuit/outlet)."
+        description: "2-4 unit buildings"
       },
       {
         image: "/images/multi-family/Multi-family-ev-charger-bullet.webp",
@@ -35,12 +35,12 @@ const items = [
       {
         image: "/images/multi-family/Multi-family-ev-charger-bullet.webp",
         title: "Best for: ",
-        description: "Apartment/condo properties with 5+ residential units, where chargers are installed as an amenity in shared/common parking areas."
+        description: "Apartment/condo properties with 5+ residential units."
       },
       {
         image: "/images/multi-family/Multi-family-ev-charger-bullet.webp",
         title: "What it helps pay for: ",
-        description: "Major incentives that can cover EV charging electrical infrastructure (utility-side and customer-side “make-ready” work) plus charger (EVSE) rebates."
+        description: "Major incentives that can cover EV charging electrical infrastructure (utility-side and customer-side “make-ready” work) plus charger rebates."
       },
       {
         image: "/images/multi-family/Multi-family-ev-charger-bullet.webp",
@@ -70,7 +70,7 @@ export const UnlockNationalGrid: React.FC = () => {
         fontFamily={"Inter !important"}
         maxWidth={"1200px"}
       >
-        Unlock National Grid EV Charging Incentives Designed for Your Properties
+        Unlock National Grid EV Charging Incentives
       </Typography>
       <Box
         display={"flex"}

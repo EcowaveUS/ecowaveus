@@ -5,7 +5,7 @@ const items = [
     id: 1,
     icon: "/images/multi-family/Multi-family-solar-icon.webp",
     title: "Solar Panels",
-    description: "Generate your own clean energy to power your heat pumps and other electrical loads"
+    description: "Generate your own clean energy to power your heating & cooling and other electrical loads"
   },
   {
     id: 2,

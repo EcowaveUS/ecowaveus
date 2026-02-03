@@ -84,7 +84,7 @@ export const SaveBigUnitProperties: React.FC = () => {
         fontFamily={"Inter !important"}
         maxWidth={"900px"}
       >
-        Save Big on Energy Upgrades for Multi-Family Unit Properties
+        Save Big on Energy Upgrades for Your Properties
       </Typography>
       <ImageContainer>
         {items.map(item => (

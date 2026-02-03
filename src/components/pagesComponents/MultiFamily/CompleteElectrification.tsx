@@ -12,19 +12,19 @@ const items = [
     id: 2,
     icon: "/images/multi-family/Multi-family-flexible-install.webp",
     title: "Flexible installation",
-    description: "available as wall-mounted or pedestal-mounted, with single or dual ports depending on how many parking spots you want to serve"
+    description: "wall-mounted or pedestal-mounted, with single or dual ports"
   },
   {
     id: 3,
     icon: "/images/multi-family/Multi-family-cable.webp",
     title: "Clean, safe cable setup",
-    description: "options include integrated cable management and longer cable lengths (commonly 18 ft / 23 ft) to reach different vehicles while keeping parking areas tidy"
+    description: "integrated cable management and longer cable lengths to reach different vehicles"
   },
   {
     id: 4,
     icon: "/images/multi-family/Multi-family-payment-access.webp",
     title: "Easy payment access",
-    description: "supports Tap to Charge (NFC), app-based starts, and ChargePoint card access, great for resident-only setups or shared resident/guest parking!"
+    description: "Tap to Charge (NFC), and card access, great for resident-only setups or shared resident/guest parking!"
   },
 ];
 
@@ -44,14 +44,14 @@ export const CompleteElectrification: React.FC = () => {
       >
         Complete Your Electrification with Smart EV Charging
       </Typography>
-      <Typography
+      {/* <Typography
         color={"#919293"}
         fontSize={isDesktop ? "16px" : "14px"}
         letterSpacing={"0 !important"}
         fontFamily={"Inter !important"}
       >
         Recommended Charger: <span style={{ fontWeight: 700 }}>ChargePoint for Multi-Family</span>
-      </Typography>
+      </Typography> */}
       <Typography
         color={"#919293"}
         fontSize={isDesktop ? "16px" : "14px"}
@@ -59,7 +59,7 @@ export const CompleteElectrification: React.FC = () => {
         fontFamily={"Inter !important"}
         textAlign={"center"}
       >
-        Give residents an EV charging experience that’s as simple as it should be: tap with a phone or ChargePoint card, plug in, and charge.
+        Give residents an EV charging experience that’s as simple as it should be: tap with a phone or card, plug in, and charge.
       </Typography>
       <ItemsWrapper>
         {items.map((item) => (
